@@ -1,7 +1,11 @@
 BpsFishingTour::Application.routes.draw do
+
   get "static_pages/home"
   get "static_pages/register"
   get "static_pages/login"
+
+  devise_for :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
