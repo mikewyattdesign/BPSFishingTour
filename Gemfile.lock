@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.9)
+    bcrypt-ruby (3.0.1)
     bourbon (3.1.6)
       sass (>= 3.2.0)
       thor
@@ -39,6 +40,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    devise (3.0.0.rc)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -74,6 +80,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.3)
+    orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -148,6 +155,8 @@ GEM
     uglifier (2.1.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.1)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -155,6 +164,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon (= 3.1.6)
   coffee-rails (= 4.0.0)
+  devise (= 3.0.0.rc)
   guard-rspec (= 3.0.0)
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
