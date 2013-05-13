@@ -2,6 +2,8 @@
 
 * JIRA URL: https://group360.atlassian.net/browse/FISHING
 * Bitbucket URL: https://bitbucket.org/group360/bps-fishing-tour
+* Development URL: https://fishing-tour-dev.herokuapp.com/
+* Production URL: https://fishing-tour.herokuapp.com/
 
 ## Dependencies
 
