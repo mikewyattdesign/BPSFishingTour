@@ -27,6 +27,9 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.9)
+    bourbon (3.1.6)
+      sass (>= 3.2.0)
+      thor
     builder (3.1.4)
     coderay (1.0.9)
     coffee-rails (4.0.0)
@@ -150,6 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon (= 3.1.6)
   coffee-rails (= 4.0.0)
   guard-rspec (= 3.0.0)
   jbuilder (= 1.0.2)
