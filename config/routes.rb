@@ -1,5 +1,5 @@
 BpsFishingTour::Application.routes.draw do
-
+  root "static_pages#home"
   get "static_pages/home"
   get "static_pages/register"
   get "static_pages/login"
