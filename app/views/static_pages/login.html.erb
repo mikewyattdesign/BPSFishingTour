@@ -1,2 +1,13 @@
-<h1>StaticPages#login</h1>
-<p>Find me in app/views/static_pages/login.html.erb</p>
+
+
+<div class="loginForm">
+	<%= form_tag("/login", method: "get") do %>
+		<%= label_tag(:email) %>
+		<%= text_field_tag(:email) %>
+
+		<%= label_tag(:password) %>
+		<%= text_field_tag(:password) %>
+
+		<button class="submit" type="submit">Register</button>
+	<% end %>
+</div>
