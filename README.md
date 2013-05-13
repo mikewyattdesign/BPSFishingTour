@@ -16,3 +16,8 @@ already have bundler installed.
 
 1. `cd` to the project in your terminal.
 1. Run `bundle install` to grab dependencies
+
+## Development
+
+1. Run `rails s` in the terminal to start the server.
+1. Run `guard` to have the RSpec tests auto-run as you develop.
