@@ -1,9 +1,19 @@
 .loginForm {
     width: 400px;
-    height: 530px;
+    height: 548px;
     margin: 250px auto;
     text-align: center;
-    background-color: white;
+    background-color: #fffbf3;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px #888888;
+}
+
+.regForm {
+    width: 400px;
+    height: 608px;
+    margin: 250px auto;
+    text-align: center;
+    background-color: #fffbf3;
 	border-radius: 15px;
 	box-shadow: 0px 0px 10px #888888;
 }
@@ -29,12 +39,40 @@ button {
 
 }
 
+form {
+	width: 300px;
+	margin-left: auto;
+	margin-right:auto;
+	text-align: left;
+	line-height: 25px;
+}
+
 .submitButton {
     width: 280px;
     height: 50px;
     position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 15px;
+	clear: both;
+	border-radius: 8px;
+	box-shadow: 0 0 5px black;
+	font-size: 25px;
+	font-family: arial;
+	color: white;
+	background-image: url('registerButton.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 290px;
+}
+
+.regButton {
+    width: 280px;
+    height: 50px;
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
 	margin-bottom: 15px;
 	clear: both;
 	border-radius: 8px;
@@ -79,19 +117,16 @@ button {
 }
 
 .submitLoginCheck {
+	margin: 5px 5px 0 12px;
 	float: left;
-	margin: 7px 5px 0 60px;
 }
 
 .submitLoginRemember {
 	float: left;
-	margin-top: 5px;
 }
 
 .submitLoginText {
-	float: left;
-	margin-left: 60px;
-	margin-top: 5px;
+	margin: 5px 0 5px 15px;
 	clear: both;
 	font-family: arial;
 }
@@ -104,13 +139,29 @@ button {
 }
 
 .submitLoginTextSign {
-	line-height: 60px;
+	line-height: 70px;
+	text-decoration: none;
+	color: #5f5f5f;
+	font-family: arial;
+}
+
+.regLoginTextSign {
+	line-height: 70px;
 	text-decoration: none;
 	color: #5f5f5f;
 	font-family: arial;
 }
 
 .loginBottomBanner {
+	background-color: #ded8cf;
+	background-repeat: no-repeat;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	overflow: hidden;
+	height: 70px;
+}
+
+.regBottomBanner {
 	background-color: #ded8cf;
 	background-repeat: no-repeat;
 	border-bottom-right-radius: 15px;
