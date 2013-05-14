@@ -1,6 +1,6 @@
 .loginForm {
     width: 405px;
-    height: 548px;
+    overflow: hidden;
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
@@ -10,7 +10,7 @@
 
 .regForm {
     width: 405px;
-    height: 608px;
+    overflow: hidden;
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
@@ -20,7 +20,7 @@
 
 .forgotForm {
     width: 405px;
-    height: 533px;
+    overflow: hidden;
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
