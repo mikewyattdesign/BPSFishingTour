@@ -7,7 +7,7 @@
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <div class="loginBottomBanner"><%= link_to "Don't have an account? Sign up here!", new_registration_path(resource_name), class: "submitLoginTextSign" %></div>
+  <div class="loginBottomBanner"><%= link_to "Don't have an account? Sign up here!", new_user_registration_path, class: "submitLoginTextSign" %><br /></div>
 <% end -%>
 
 
