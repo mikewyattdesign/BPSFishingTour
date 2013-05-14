@@ -1,12 +1,17 @@
 require 'spec_helper'
 
-describe "Login form" do
+describe 'Login form' do
     before :each do
         visit '/login'
     end
+
     it 'should have the proper labels' do
         expect(page).to have_content('Email')
         expect(page).to have_content('Password')
+    end
+
+    it 'should have "Login" as the submit button' do
+        expect(page).to have_button('Login')
     end
 
     it 'should have the "Forgot your password?" link' do
