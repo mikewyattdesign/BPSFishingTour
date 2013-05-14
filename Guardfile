@@ -19,5 +19,13 @@ guard 'rspec', all_after_pass: false do
     watch(%r{^app/controllers/sessions_controller\.rb$}) do |m|
         "spec/requests/authentication_pages_spec.rb"
     end
+
+    watch('config/routes.rb') do
+        'spec/routing/'
+    end
+
+    watch(%r{^spec/(.+)/(.+)\.rb$}) do |match|
+        "spec/#{match[1]}/#{match[2]}.rb"
+    end
 end
 
