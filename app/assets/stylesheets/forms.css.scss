@@ -59,6 +59,10 @@ h2 {
 	font-family: verdana;
 }
 
+body {
+	background-image: url('woodBackground.jpg');
+}
+
 .submitButton {
     width: 280px;
     height: 50px;
@@ -137,7 +141,7 @@ h2 {
 }
 
 .submitLoginText {
-	margin: 5px 0 5px 15px;
+	margin: 5px 0 5px 10px;
 	clear: both;
 	font-family: verdana;
 }
