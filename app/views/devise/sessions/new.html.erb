@@ -1,21 +1,23 @@
-<div class="loginForm">
-    <div class="bassLoginLogo">
-        <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
+<div class="backgroundLogin">
+    <div class="loginForm">
+        <div class="bassLoginLogo">
+            <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.label :email, class: "submitLoginText" %>
+            <%= f.email_field :email, :autofocus => true, class: "submitLoginEmail" %>
+
+            <%= f.label :password, class: "submitLoginText" %>
+            <%= f.password_field :password, class: "submitLoginPass" %>
+
+            <% if devise_mapping.rememberable? -%>
+                <%= f.check_box :remember_me, class: "submitLoginCheck" %> <%= f.label :remember_me, class: "submitLoginRemember" %>
+            <% end -%>
+
+            <%= f.submit "Register", class: "submitButton" %>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
     </div>
-
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= f.label :email, class: "submitLoginText" %>
-        <%= f.email_field :email, :autofocus => true, class: "submitLoginEmail" %>
-
-        <%= f.label :password, class: "submitLoginText" %>
-        <%= f.password_field :password, class: "submitLoginPass" %>
-
-        <% if devise_mapping.rememberable? -%>
-            <%= f.check_box :remember_me, class: "submitLoginCheck" %> <%= f.label :remember_me, class: "submitLoginRemember" %>
-        <% end -%>
-
-        <%= f.submit "Register", class: "submitButton" %>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
 </div>

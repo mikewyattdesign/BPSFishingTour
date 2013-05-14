@@ -1,7 +1,9 @@
 .loginForm {
     width: 400px;
+    height: 600px;
     margin: 250px auto;
     text-align: center;
+    background-color: white;
 }
 
 input {
@@ -21,13 +23,27 @@ button {
     @include box-sizing(border-box);
 }
 
+.backgroundLogin {
+	background-color: brown;
+}
+
 .submitButton {
     width: 280px;
-    height: 100px;
+    height: 50px;
     position: relative;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 15px;
 	clear: both;
+	border-radius: 8px;
+	box-shadow: 0 0 5px black;
+	font-size: 25px;
+	font-family: arial;
+	color: white;
+	background-image: url('registerButton.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 290px;
 }
 
 .submitLoginEmail {
@@ -85,5 +101,5 @@ button {
 }
 
 .submitLoginTextSign {
-	margin: 10px 0 20px 0;
+	line-height: 50px;
 }
