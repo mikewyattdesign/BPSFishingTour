@@ -11,6 +11,7 @@ group :development, :test do
 end
 
 group :test do
+    gem 'capybara', '2.1.0'
     gem 'terminal-notifier-guard', '1.5.3'
 end
 
