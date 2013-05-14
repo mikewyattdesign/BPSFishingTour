@@ -1,6 +1,6 @@
 .loginForm {
+    @include clearfix;
     width: 405px;
-    overflow: hidden;
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
