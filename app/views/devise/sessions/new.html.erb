@@ -1,6 +1,6 @@
 <div class="loginForm">
     <div class="bassLoginLogo">
-        <img class="bassLoginLogo" src="/assets/images/bassLoginLogo.png" alt="Bass Logo">
+        <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
     </div>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
