@@ -1,10 +1,7 @@
 .loginForm {
-    width: 300px;
+    width: 400px;
     margin: 250px auto;
-}
-
-form {
-    width: 200px;
+    text-align: center;
 }
 
 input {
@@ -14,14 +11,79 @@ input {
     &[type=text] {
         width: 100%;
     }
+
+    &:focus {
+    	box-shadow: 0 0 5px green;
+    }
 }
 
 button {
     @include box-sizing(border-box);
 }
 
-.submit {
-    width: 100%;
-    height: 30px;
+.submitButton {
+    width: 280px;
+    height: 100px;
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
 }
 
+.submitLoginEmail {
+	width: 280px;
+	height: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	border-radius: 8px;
+	outline: none;
+	font-size: 20px;
+	background-color: #e5ded5;
+	background-image: url('fishLoginLogo.png');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.submitLoginPass {
+	width: 280px;
+	height: 45px;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	border-radius: 8px;
+	outline: none;
+	font-size: 20px;
+	background-color: #e5ded5;
+	background-image: url('keyLoginLogo.png');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.submitLoginCheck {
+	float: left;
+	margin: 7px 5px 0 60px;
+}
+
+.submitLoginRemember {
+	float: left;
+	margin-top: 5px;
+}
+
+.submitLoginText {
+	float: left;
+	margin-left: 60px;
+	margin-top: 5px;
+	clear: both;
+	font-family: arial;
+}
+
+.bassLoginLogo {
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.submitLoginTextSign {
+	margin: 10px 0 20px 0;
+}
