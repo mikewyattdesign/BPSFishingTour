@@ -1,6 +1,6 @@
 require 'active_support/core_ext'
 
-guard 'rspec', all_after_pass: false do
+guard 'rspec', all_on_start: true, all_after_pass: false do
     watch(%r{^app/controllers/(.+)_(controller)\.rb$})  do |m|
         [
             "spec/routing/#{m[1]}_routing_spec.rb",
