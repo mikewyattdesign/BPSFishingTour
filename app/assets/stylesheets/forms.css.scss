@@ -1,11 +1,11 @@
 /*Font Styles*/
-h1 {
+#wrapper h1 {
 	font-size: 30px;
 	color: yellow;
 	margin: 0;
 }
 
-h2 {
+#wrapper h2 {
 	font-size: 18px;
 	font-weight: bold;
 	font-family: "Helvetica Neue";
@@ -13,13 +13,13 @@ h2 {
 	margin: 0;
 }
 
-h3 {
+#wrapper h3 {
 	font-size: 15px;
 	color: red;
 	margin: 0;
 }
 
-p {
+#wrapper p {
 	font-size: 15px;
 	font-weight: lighter;
 	font-family: "Helvetica Neue";
@@ -34,7 +34,7 @@ p {
 }
 
 #wrapper {
-	width: 1900px;
+	width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -317,7 +317,9 @@ h2 {
 }
 
 body {
+	background-color: white;
 	background-image: url('woodBackground.jpg');
+	background-size:100%;
 }
 
 .submitButton {
