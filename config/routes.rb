@@ -1,6 +1,6 @@
 BpsFishingTour::Application.routes.draw do
     root "static_pages#home"
-    get "static_pages/home"
+    get '/thanks' => 'static_pages#thanks'
 
     devise_for :users, skip: [:sessions, :registration]
     as :user do
