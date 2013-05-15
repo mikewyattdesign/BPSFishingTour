@@ -7,6 +7,12 @@
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
 
+            <% flash.each do |name, msg| %>
+                <% if msg =~ /email|password/ %>
+                    <%= content_tag :div, msg, id: "flash_#{name}" %>
+                <% end %>
+            <% end %>
+
             <%= f.label :email, class: "submitLoginText" %>
             <%= f.email_field :email, :autofocus => true, class: "submitLoginEmail" %>
 

@@ -23,4 +23,14 @@ describe 'Login form' do
     it 'should have the "Register" link' do
         expect(page).to have_link('', href: '/register')
     end
+
+    it 'does not display the "invalid email" message in the main flash area' do
+        click_button('Login')
+        expect(find('#container')).to_not have_css('> #flash_alert')
+    end
+
+    it 'displays the "invalid email" message in the form area' do
+        click_button('Login')
+        expect(find('form')).to have_css('#flash_alert')
+    end
 end
