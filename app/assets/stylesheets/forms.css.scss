@@ -55,10 +55,18 @@ form {
 	text-align: left;
 }
 
+h1 {
+	margin: 0;
+}
+
 h2 {
 	font-size: 22px;
 	color: #5f5f5f;
 	font-family: verdana;
+}
+
+p {
+	margin: 0;
 }
 
 body {
@@ -234,7 +242,7 @@ body {
 /*Thanks Page*/
 
 .thankContainer {
-	width: 575px;
+	width: 535px;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
@@ -243,40 +251,47 @@ body {
 	box-shadow: 0px 0px 30px black;
 }
 
-.thankContainerText {
+.bassLoginLogoText {
 	float: left;
-	margin: 20px 15px 20px 15px;
+	margin: 20px 15px 0 15px;
 }
 
-.thankContainerText h1 {
-	font-size: 12px;
-	font-family: verdana, Sans-serif;
-}
-
-.thankContainerText p {
+.bassLoginLogoThankText h1 {
+	margin: 5px 0 5px 0;
 	font-size: 11px;
 	font-family: verdana, Sans-serif;
+	color: #797979;
 }
 
-.thankContainerText a {
-	font-size: 11px;
+.bassLoginLogoThankText p {
+	font-size: 10px;
 	font-family: verdana, Sans-serif;
-	color: black;
+	color: #797979;
+}
+
+.bassLoginLogoThankText a {
+	font-size: 10px;
+	font-family: verdana, Sans-serif;
+	color: #797979;
 }
 
 .bassLoginLogoThankText {
-	margin-right: 30px;
+	margin-top: 30px;
+	margin-right: 50px;
+	margin-left: 255px;
+	margin-bottom: 15px;
 }
 
+
 .bassLoginLogoThank {
-	@include clearfix;
-	float: left;
+	position: absolute;
 	margin-right: 20px;
+	margin-left: 10px;
 }
 
 .thankRegButton {
 	height: 50px;
-	width: 200px;
+	width: 160px;
 	border-radius: 10px;
 	background-image: url('/assets/regButtonRed.png');
 	background-size: 101%;
@@ -290,11 +305,13 @@ body {
 	text-decoration: none;
 	color: white;
 	line-height: 50px;
+	font-size: 12px;
 }
 
 .thankRegSkip a {
 	color: black;
 	margin-left: 20px;
+	font-size: 12px;
 }
 
 .thankRegSkip {
@@ -303,7 +320,9 @@ body {
 
 .thankContainerBottom {
 	float: left;
-	padding: 20px 40px 20px 220px;
+	padding: 10px 0 10px 220px;
 	background-image: url('bottomBannerTexture.png');
+	border-top: solid 1px white;
+	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
 }
