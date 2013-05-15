@@ -269,6 +269,7 @@ body {
 }
 
 .bassLoginLogoThank {
+	@include clearfix;
 	float: left;
 	margin-right: 20px;
 }
@@ -288,21 +289,21 @@ body {
 .thankRegButton a {
 	text-decoration: none;
 	color: white;
+	line-height: 50px;
 }
 
 .thankRegSkip a {
 	color: black;
+	margin-left: 20px;
 }
 
 .thankRegSkip {
-	height: 50px;
-	margin: 20px 0 20px 20px;
 	display: inline-block;
 }
 
 .thankContainerBottom {
 	float: left;
-	padding: 20px 40px 20px 250px;
+	padding: 20px 40px 20px 220px;
 	background-image: url('bottomBannerTexture.png');
 	width: 100%;
 }
