@@ -1,61 +1,64 @@
-<%= form_for(@profile) do |f| %>
-    <% if @profile.errors.any? %>
-        <div id="error_explanation">
-            <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+<div class="teamRegContainer">
+    <div class="teamRegContainerForm">
+        <%= form_for(@profile) do |f| %>
+            <% if @profile.errors.any? %>
+                <div id="error_explanation">
+                    <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
-            <ul>
-                <% @profile.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-            </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-        <%= f.label :first_name %>
-        <%= f.text_field :first_name %>
-    </div>
-    <div class="field">
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name %>
-    </div>
-    <div class="field">
-        <%= f.label :street_address %>
-        <%= f.text_field :street_address %>
-    </div>
-    <div class="field">
-        <%= f.label :suite %>
-        <%= f.text_field :suite %>
-    </div>
-    <div class="field">
-        <%= f.label :city %>
-        <%= f.text_field :city %>
-    </div>
-    <div class="field">
-        <%= f.label :state %>
-        <%= f.text_field :state %>
-    </div>
-    <div class="field">
-        <%= f.label :zip %>
-        <%= f.text_field :zip %>
-    </div>
-    <div class="field">
-        <%= f.label :phone %>
-        <%= f.text_field :phone %>
-    </div>
-    <div class="field">
-        <%= f.label :ext %>
-        <%= f.text_field :ext %>
-    </div>
-    <div class="field">
-        <%= f.label :shirt %>
-        <%= f.text_field :shirt %>
-    </div>
-    <div class="field">
-        <%= f.label :outdoor_rewards_number %>
-        <%= f.text_field :outdoor_rewards_number %>
-    </div>
-    <div class="actions">
-        <%= f.submit 'Continue' %>
-    </div>
-<% end %>
+                    <ul>
+                        <% @profile.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+            <div class="half">
+                <%= f.label :first_name %>
+                <%= f.text_field :first_name %>
+            </div>
+            <div class="half">
+                <%= f.label :last_name %>
+                <%= f.text_field :last_name %>
+            </div>
+            <div class="full">
+                <%= f.label :street_address %>
+                <%= f.text_field :street_address %>
+            </div>
+            <div class="third">
+                <%= f.label :suite %>
+                <%= f.text_field :suite %>
+            </div>
+            <div class="two thirds">
+                <%= f.label :city %>
+                <%= f.text_field :city %>
+            </div>
+            <div class="thirds">
+                <%= f.label :state %>
+                <%= f.text_field :state %>
+            </div>
+            <div class="two thirds">
+                <%= f.label :zip %>
+                <%= f.text_field :zip %>
+            </div>
+            <div class="two thirds">
+                <%= f.label :phone %>
+                <%= f.text_field :phone %>
+            </div>
+            <div class="third">
+                <%= f.label :ext %>
+                <%= f.text_field :ext %>
+            </div>
+            <div class="third">
+                <%= f.label :shirt %>
+                <%= f.text_field :shirt %>
+            </div>
+            <div class="full">
+                <%= f.label :outdoor_rewards_number %>
+                <%= f.text_field :outdoor_rewards_number %>
+            </div>
+            </div>
+            <div class="actions">
+                <%= f.submit 'Continue' %>
+            </div>
+        <% end %>
+</div>
