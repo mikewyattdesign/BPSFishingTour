@@ -202,3 +202,25 @@ body {
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 }
+
+#error_explanation {
+	background-color: red;
+    margin-left:10px;
+    margin-right:10px;
+	padding: 1px 15px 1px 15px;
+	border-radius: 10px;
+}
+
+#error_explanation h2 {
+    font-family: verdana, Sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+#error_explanation ul {
+	font-family: verdana, Sans-serif;
+	font-weight: normal;
+	font-size: 13px;
+	color: white;
+	border-radius: 10px;
+}
