@@ -32,6 +32,7 @@
 
 input {
     display: block;
+    padding: 3px 25px 3px 25px;
     @include box-sizing(border-box);
 
     &[type=text] {
@@ -110,11 +111,14 @@ body {
 	clear: both;
 	border-radius: 8px;
 	outline: none;
-	font-size: 20px;
+	font-size: 15px;
+	color: #5a5a5a;
+	font-family: verdana;
 	background-color: #e5ded5;
 	background-image: url('fishLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: right;
+	background-position: 91% 50%;
 }
 
 .submitLoginPass {
@@ -125,11 +129,13 @@ body {
 	clear: both;
 	border-radius: 8px;
 	outline: none;
-	font-size: 20px;
+	font-size: 15px;
+	color: #5a5a5a;
+	font-family: verdana;
 	background-color: #e5ded5;
 	background-image: url('keyLoginLogo.png');
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: 90% 50%;
 }
 
 .submitLoginCheck {
