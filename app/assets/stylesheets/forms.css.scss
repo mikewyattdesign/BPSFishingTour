@@ -230,3 +230,79 @@ body {
 	color: white;
 	border-radius: 10px;
 }
+
+/*Thanks Page*/
+
+.thankContainer {
+	width: 575px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fffbf3;
+	border-radius: 10px;
+	box-shadow: 0px 0px 30px black;
+}
+
+.thankContainerText {
+	float: left;
+	margin: 20px 15px 20px 15px;
+}
+
+.thankContainerText h1 {
+	font-size: 12px;
+	font-family: verdana, Sans-serif;
+}
+
+.thankContainerText p {
+	font-size: 11px;
+	font-family: verdana, Sans-serif;
+}
+
+.thankContainerText a {
+	font-size: 11px;
+	font-family: verdana, Sans-serif;
+	color: black;
+}
+
+.bassLoginLogoThankText {
+	margin-right: 30px;
+}
+
+.bassLoginLogoThank {
+	float: left;
+	margin-right: 20px;
+}
+
+.thankRegButton {
+	height: 50px;
+	width: 200px;
+	border-radius: 10px;
+	background-image: url('/assets/regButtonRed.png');
+	background-size: 101%;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	display: inline-block;
+}
+
+.thankRegButton a {
+	text-decoration: none;
+	color: white;
+}
+
+.thankRegSkip a {
+	color: black;
+}
+
+.thankRegSkip {
+	height: 50px;
+	margin: 20px 0 20px 20px;
+	display: inline-block;
+}
+
+.thankContainerBottom {
+	float: left;
+	padding: 20px 40px 20px 250px;
+	background-image: url('bottomBannerTexture.png');
+	width: 100%;
+}
