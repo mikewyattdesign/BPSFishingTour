@@ -24,4 +24,8 @@ describe User do
     it 'should respond to :profile' do
         expect(dan).to respond_to(:profile)
     end
+
+    it 'should respond to :teams' do
+        expect(dan).to respond_to(:teams)
+    end
 end
