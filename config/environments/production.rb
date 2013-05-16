@@ -77,13 +77,13 @@ BpsFishingTour::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.default_url_options = { :host => 'ishing-tour-dev.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'fishing-tour-dev.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
   :address        => 'smtp.sendgrid.net',
   :port           => '587',
   :authentication => :plain,
-  :user_name      => ENV['SENDGRID_USERNAME'],
-  :password       => ENV['SENDGRID_PASSWORD'],
+  :user_name      => 'app15657518@heroku.com',
+  :password       => '1t6mjzbz',
   :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
