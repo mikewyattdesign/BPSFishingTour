@@ -1,4 +1,25 @@
 <div class="teamRegContainer">
+    <div class="topGreenBanner">
+        <p>Team Registration</p>
+    </div>
+    <div class="progressBarContainer">
+        <div class="progressBarCircle">
+            <h2>1</h2>
+        </div>
+        <div class="progressBarCircle2">
+            <h2>2</h2>
+        </div>
+        <div class="progressBarCircle3">
+            <h2>3</h2>
+        </div>
+        <div class="progressBarCircle4">
+            <h2>4</h2>
+        </div>
+        <div class="progressBarLineContainer">
+            <div class="progressBarLine">
+            </div>
+        </div>
+    </div>
     <div class="teamRegContainerForm">
         <%= form_for(@profile) do |f| %>
             <% if @profile.errors.any? %>
@@ -12,6 +33,13 @@
                     </ul>
                 </div>
             <% end %>
+            <div class="regTopText">
+                <h3>Register Your Team</h3>
+                <p>By registering for a Team Membership, you'll unlock the full benifits of the tour, including opportunities to win exciting prize and to qualify for regional and national championship events.</p>
+                <h2>Learn more about Team Memberships.</h2>
+            </div>
+            <h3>Personal Information</h3>
+            <div class="divideLine"></div>
             <div class="half">
                 <%= f.label :first_name %>
                 <%= f.text_field :first_name %>
@@ -55,9 +83,11 @@
             <div class="full">
                 <%= f.label :outdoor_rewards_number %>
                 <%= f.text_field :outdoor_rewards_number %>
+                <p>I don't have an Outdoor Rewards Number. Sign me up!</p>
             </div>
             </div>
             <div class="actions">
+                <%= link_to 'Back', profiles_path %>
                 <%= f.submit 'Continue' %>
             </div>
         <% end %>
