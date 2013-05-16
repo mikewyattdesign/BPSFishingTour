@@ -8,16 +8,16 @@ describe User do
 
     it { should be_valid }
     it "should be valid" do
-        subject.should be_valid
+      dan.should be_valid
     end
 
     it "should not valid without email" do
-      subject.email = nil
-      subject.should_not be_nil
+      dan.email = nil
+      dan.should_not be_nil
     end
 
     it "should not be vaild without password" do
-        subject.password = nil
-        subject.should_not be_nil
+      dan.password = nil
+      dan.should_not be_nil
     end
 end
