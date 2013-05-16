@@ -20,4 +20,8 @@ describe User do
       dan.password = nil
       dan.should_not be_nil
     end
+
+    it 'should respond to :profile' do
+        expect(dan).to respond_to(:profile)
+    end
 end
