@@ -36,7 +36,7 @@
 }
 
 .bannerTop {
-    background-image: url('/assets/bannerGreenTop.png');
+    background-image: image-url('/assets/bannerGreenTop.png');
     background-repeat: no-repeat;
     background-position: center;
     height:74px;
@@ -102,7 +102,7 @@
         }
 
 .bannerBigTop {
-    background-image: url('/assets/bannerBigTop.jpg');
+    background-image: image-url('/assets/bannerBigTop.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height:515px;
@@ -128,7 +128,7 @@
 
 
 .bannerMiddle {
-    background-image: url('/assets/woodBackground.jpg');
+    background-image: image-url('/assets/woodBackground.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height:735px;
@@ -154,7 +154,7 @@
     }
 
     .glowBackground {
-        background-image: url('/assets/bannerMiddleGlow.png');
+        background-image: image-url('/assets/bannerMiddleGlow.png');
         background-repeat: no-repeat;
         opacity:0.4;
         height: 335px;
@@ -200,7 +200,7 @@
     }
 
 .bannerBottomSponsor {
-    background-image: url('/assets/bannerBottomBlack.png');
+    background-image: image-url('/assets/bannerBottomBlack.png');
     background-repeat: no-repeat;
     background-position: center;
     height:120px;
@@ -215,7 +215,7 @@
     }
 
 .bannerBottom {
-    background-image: url('/assets/bannerBottomGreen.png');
+    background-image: image-url('/assets/bannerBottomGreen.png');
     background-repeat: no-repeat;
     background-position: center;
     height:105px;

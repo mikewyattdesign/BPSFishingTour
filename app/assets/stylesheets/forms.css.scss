@@ -97,7 +97,7 @@ a {
 
 body {
 	background-color: white;
-	background-image: url('woodBackground.jpg');
+	background-image: image-url('woodBackground.jpg');
 }
 
 .submitButton {
@@ -111,7 +111,7 @@ body {
 	border-radius: 8px;
 	font-size: 25px;
 	color: white;
-	background-image: url('registerButton.png');
+	background-image: image-url('registerButton.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
@@ -129,7 +129,7 @@ body {
 	border-radius: 8px;
 	font-size: 25px;
 	color: white;
-	background-image: url('registerButton.png');
+	background-image: image-url('registerButton.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
@@ -145,7 +145,7 @@ body {
 	outline: none;
 	font-size: 15px;
 	background-color: #e5ded5;
-	background-image: url('fishLoginLogo.png');
+	background-image: image-url('fishLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: right;
 	background-position: 91% 50%;
@@ -161,7 +161,7 @@ body {
 	outline: none;
 	font-size: 15px;
 	background-color: #e5ded5;
-	background-image: url('keyLoginLogo.png');
+	background-image: image-url('keyLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: 90% 50%;
 }
@@ -203,7 +203,7 @@ body {
 }
 
 .loginBottomBanner {
-	background-image: url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	overflow: hidden;
@@ -213,7 +213,7 @@ body {
 }
 
 .regBottomBanner {
-	background-image: url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
 	overflow: hidden;
@@ -313,7 +313,7 @@ body {
 	height: 50px;
 	width: 160px;
 	border-radius: 10px;
-	background-image: url('/assets/regButtonRed.png');
+	background-image: image-url('/assets/regButtonRed.png');
 	background-size: 101%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -341,7 +341,7 @@ body {
 .thankContainerBottom {
 	float: left;
 	padding: 10px 0 10px 220px;
-	background-image: url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
@@ -394,7 +394,7 @@ body {
 
 .actions {
 	clear: both;
-	background-image: url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
