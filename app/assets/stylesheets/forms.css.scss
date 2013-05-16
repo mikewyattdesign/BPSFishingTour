@@ -478,7 +478,7 @@ body {
 
 .progressBarLine {
 	height: 10px;
-	width: 100px;
+	width: 80px;
 	background-color: #613e08;
 	border-radius: 2px;
 }
@@ -517,6 +517,16 @@ body {
 	color: white;
 }
 
+.progressBarCircle2 .inactive{
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #e8d8bf;
+    margin-left: 158px;
+}
+
 .progressBarCircle3 {
 	position: absolute;
 	margin-top: -10px;
@@ -533,6 +543,17 @@ body {
 	font-size: 14px;
 	color: white;
 }
+
+.progressBarCircle3 .inactive{
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #e8d8bf;
+    margin-left: 266px;
+}
+
 .progressBarCircle4 {
 	position: absolute;
 	margin-top: -10px;
@@ -548,4 +569,14 @@ body {
 	margin-top: 6px;
 	font-size: 14px;
 	color: white;
+}
+
+.progressBarCircle4 .inactive{
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #e8d8bf;
+    margin-left: 374px;
 }
