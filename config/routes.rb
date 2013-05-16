@@ -1,5 +1,6 @@
 BpsFishingTour::Application.routes.draw do
-    root "static_pages#home"
+    match '/' => redirect('/login'), via: :get
+
     get '/thanks' => 'static_pages#thanks'
 
     devise_for :users, skip: [:sessions, :registration]
