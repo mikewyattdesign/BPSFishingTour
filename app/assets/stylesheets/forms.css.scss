@@ -6,8 +6,8 @@
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
-	border-radius: 10px;
-	box-shadow: 0px 0px 30px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
 }
 
 .regForm {
@@ -16,12 +16,12 @@
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
-	border-radius: 10px;
-	box-shadow: 0px 0px 30px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
 }
 
 .forgotForm h2 {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .forgotForm {
@@ -30,8 +30,8 @@
     margin: 250px auto;
     text-align: center;
     background-color: #fffbf3;
-	border-radius: 10px;
-	box-shadow: 0px 0px 30px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
 }
 
 input {
@@ -40,11 +40,11 @@ input {
     @include box-sizing(border-box);
 
     &[type=text] {
-        width: 100%;
+    width: 100%;
     }
 
     &:focus {
-    	box-shadow: 0 0 5px green;
+        box-shadow: 0 0 5px green;
     }
 }
 
@@ -53,57 +53,63 @@ button {
 }
 
 form {
-	width: 300px;
-	margin-left: auto;
-	margin-right:auto;
-	text-align: left;
+    width: 300px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
 }
 
 label {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 h1 {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 h2 {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 h3 {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 p {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 a {
-	margin: 0;
-	font-family: verdana, Sans-serif;
-	color: #5f5f5f;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #5f5f5f;
 }
 
 body {
+<<<<<<< HEAD
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
+=======
+    background-color: white;
+    background-image: url('woodBackground.jpg');
+>>>>>>> CSS Edits
 }
 
 .submitButton {
     width: 280px;
     height: 50px;
     position: relative;
+<<<<<<< HEAD
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 15px;
@@ -115,12 +121,26 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
+=======
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    clear: both;
+    border-radius: 8px;
+    font-size: 25px;
+    color: white;
+    background-image: url('registerButton.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 288px;
+>>>>>>> CSS Edits
 }
 
 .regButton {
     width: 280px;
     height: 50px;
     position: relative;
+<<<<<<< HEAD
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;
@@ -164,45 +184,91 @@ body {
 	background-image: image-url('keyLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: 90% 50%;
+=======
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    clear: both;
+    border-radius: 8px;
+    font-size: 25px;
+    color: white;
+    background-image: url('registerButton.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 288px;
+}
+
+.submitLoginEmail {
+    width: 280px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background-color: #e5ded5;
+    background-image: url('fishLoginLogo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position: 91% 50%;
+}
+
+.submitLoginPass {
+    width: 280px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background-color: #e5ded5;
+    background-image: url('keyLoginLogo.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+>>>>>>> CSS Edits
 }
 
 .submitLoginCheck {
-	margin: 5px 5px 0 12px;
-	float: left;
+    margin: 5px 5px 0 12px;
+    float: left;
 }
 
 .submitLoginRemember {
-	float: left;
-	margin: 5px 0 5px 10px;
+    float: left;
+    margin: 5px 0 5px 10px;
 }
 
 .submitLoginText {
-	margin: 5px 0 5px 10px;
-	clear: both;
-	line-height: 30px;
+    margin: 5px 0 5px 10px;
+    clear: both;
+    line-height: 30px;
 }
 
 .bassLoginLogo {
-	width: 240px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -45px;
-	margin-bottom: -15px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -45px;
+    margin-bottom: -15px;
 }
 
 .submitLoginTextSign {
-	line-height: 70px;
-	text-decoration: none;
-	color: #5f5f5f;
+    line-height: 70px;
+    text-decoration: none;
+    color: #5f5f5f;
 }
 
 .regLoginTextSign {
-	line-height: 70px;
-	text-decoration: none;
-	color: #5f5f5f;
+    line-height: 70px;
+    text-decoration: none;
+    color: #5f5f5f;
 }
 
 .loginBottomBanner {
+<<<<<<< HEAD
 	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -220,96 +286,117 @@ body {
 	height: 70px;
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
+=======
+    background-image: url('bottomBannerTexture.png');
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    height: 70px;
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
+}
+
+.regBottomBanner {
+    background-image: url('bottomBannerTexture.png');
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+    height: 70px;
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
+>>>>>>> CSS Edits
 }
 
 .noStyle .regBottomBanner{
-	background-image: none;
-	border-top: none;
-	box-shadow: none;
+    background-image: none;
+    border-top: none;
+    box-shadow: none;
 }
 
 .noStyle .loginBottomBanner {
-	box-shadow: none;
-	border-top: solid 1px white;
-	box-shadow: 0 -2px 0 #a6a6a6;
+    box-shadow: none;
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
 }
 
 #error_explanation {
-	background-color: red;
+    background-color: red;
     margin-left:10px;
     margin-right:10px;
-	padding: 1px 15px 1px 15px;
-	border-radius: 10px;
+    padding: 1px 15px 1px 15px;
+    border-radius: 10px;
 }
 
 #error_explanation h2 {
+    margin-top: 10px;
     font-size: 16px;
     color: white;
 }
 
 #error_explanation ul {
-	font-weight: normal;
-	font-size: 13px;
-	color: white;
-	border-radius: 10px;
+    font-weight: normal;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
 }
 
 #flash_alert {
-	background-color: red;
+    background-color: red;
     margin-left:10px;
     margin-right:10px;
-	padding: 10px 15px 10px 15px;
-	border-radius: 10px;
-	text-align: center;
-	color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
 }
 
 /*Thanks Page*/
 
 .thankContainer {
-	width: 575px;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #fffbf3;
-	border-radius: 10px;
-	box-shadow: 0px 0px 30px black;
+    width: 575px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fffbf3;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
 }
 
 .bassLoginLogoText {
-	float: left;
-	margin: 20px 15px 0 15px;
+    float: left;
+    margin: 20px 15px 0 15px;
 }
 
 .bassLoginLogoThankText h1 {
-	margin: 5px 0 5px 0;
-	font-size: 13px;
-	color: #797979;
+    margin: 5px 0 5px 0;
+    font-size: 13px;
+    color: #797979;
 }
 
 .bassLoginLogoThankText p {
-	font-size: 11px;
-	line-height: 17px;
+    font-size: 11px;
+    line-height: 17px;
 }
 
 .bassLoginLogoThankText a {
-	font-size: 11px;
+    font-size: 11px;
 }
 
 .bassLoginLogoThankText {
-	margin-top: 30px;
-	margin-right: 50px;
-	margin-left: 260px;
-	margin-bottom: 15px;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 260px;
+    margin-bottom: 15px;
 }
 
 
 .bassLoginLogoThank {
-	position: absolute;
-	margin-right: 20px;
+    position: absolute;
+    margin-right: 20px;
 }
 
 .thankRegButton {
+<<<<<<< HEAD
 	height: 50px;
 	width: 160px;
 	border-radius: 10px;
@@ -319,32 +406,52 @@ body {
 	background-position: center;
 	text-align: center;
 	display: inline-block;
+=======
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+    background-image: url('/assets/regButtonRed.png');
+    background-size: 101%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    display: inline-block;
+>>>>>>> CSS Edits
 }
 
 .thankRegButton a {
-	text-decoration: none;
-	color: white;
-	line-height: 50px;
-	font-size: 12px;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    font-size: 12px;
 }
 
 .thankRegSkip a {
-	color: black;
-	margin-left: 20px;
-	font-size: 12px;
+    color: black;
+    margin-left: 20px;
+    font-size: 12px;
 }
 
 .thankRegSkip {
-	display: inline-block;
+    display: inline-block;
 }
 
 .thankContainerBottom {
+<<<<<<< HEAD
 	float: left;
 	padding: 10px 0 10px 220px;
 	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
+=======
+    float: left;
+    padding: 10px 0 10px 220px;
+    background-image: url('bottomBannerTexture.png');
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
+    width: 100%;
+>>>>>>> CSS Edits
 }
 
 #flash_notice {
@@ -359,40 +466,41 @@ body {
 /*Team Register*/
 
 .teamRegContainer {
-	width: 505px;
-	margin-left: auto;
-	margin-right: auto;
+    width: 505px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 150px;
     background-color: #fffbf3;
-	border-radius: 10px;
-	box-shadow: 0px 0px 30px black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px black;
 }
 
 .teamRegContainerForm {
-	padding: 0px 50px 0 50px;
+    padding: 0px 50px 0 50px;
 }
 
 .teamRegContainerForm form {
-	width: 90%;
-	margin-bottom: 20px;
-	overflow: hidden;
+    width: 90%;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .teamRegContainerForm h3 {
-	font-size: 12px;
-	color: #865105;
-	margin-left: 10px;
+    font-size: 12px;
+    color: #865105;
+    margin-left: 10px;
 }
 
 .divideLine {
-	border-top: 1px solid #865105;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: 5px;
+    border-top: 1px solid #865105;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
 }
 
 .actions {
+<<<<<<< HEAD
 	clear: both;
 	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
@@ -400,131 +508,140 @@ body {
 	width: 100%;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+=======
+    clear: both;
+    background-image: url('bottomBannerTexture.png');
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+>>>>>>> CSS Edits
 }
 
 .actions a {
-	margin: 20px 20px 20px 170px;
-	font-size: 10px;
-	font-weight: bold;
+    margin: 20px 20px 20px 170px;
+    font-size: 10px;
+    font-weight: bold;
 }
 
 .actions input {
-	display: inline-block;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .topGreenBanner {
-	clear: both;
-	background-color: #1a9b0b;
-	width: 100%;
-	height: 30px;
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-	border-top: solid 1px #d8d8d8;
+    clear: both;
+    background-color: #1a9b0b;
+    width: 100%;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: solid 1px #d8d8d8;
 }
 
 .topGreenBanner p{
-	font-size: 12px;
-	color: white;
-	margin: 8px 0 auto 20px;
+    font-size: 12px;
+    color: white;
+    margin: 8px 0 auto 20px;
 }
 
 .teamRegContainer input {
-	border-radius: 5px;
-	background-color: #f9eddf;
+    border-radius: 5px;
+    background-color: #f9eddf;
 }
 
 .teamRegContainer label {
-	font-size: 12px;
-	font-weight: bold;
-	color: #865105;
+    font-size: 12px;
+    font-weight: bold;
+    color: #865105;
 }
 
 .actions input {
-	background-color: #1a9b0b;
-	color: white;
-	border-top: solid 1px #d8d8d8;
-	box-shadow: 0 -2px 0 #a6a6a6;
+    background-color: #1a9b0b;
+    color: white;
+    border-top: solid 1px #d8d8d8;
+    box-shadow: 0 -2px 0 #a6a6a6;
 }
 
 .full p {
-	font-size: 10px;
-	color: #865105;
-	font-style: italic;
-	font-weight: bold;
-	margin: 10px auto auto auto;
+    font-size: 10px;
+    color: #865105;
+    font-style: italic;
+    font-weight: bold;
+    margin: 10px auto auto auto;
 }
 
 .regTopText h2 {
-	font-size: 10px;
-	color: #865105;
-	font-style: italic;
-	font-weight: bold;
-	margin: auto auto 20px 10px;
+    font-size: 10px;
+    color: #865105;
+    font-style: italic;
+    font-weight: bold;
+    margin: auto auto 20px 10px;
 }
 
 .regTopText p {
-	font-size: 9px;
-	color: #865105;
-	margin: 5px auto auto 10px;
+    font-size: 9px;
+    color: #865105;
+    margin: 5px auto auto 10px;
 }
 
 .progressBarContainer {
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .progressBarLineContainer {
-	width: 100%;
-	height: 10px;
-	background-color: #e8d8bf;
-	border-radius: 2px;
+    width: 100%;
+    height: 10px;
+    background-color: #e8d8bf;
+    border-radius: 2px;
 }
 
 .progressBarLine {
-	height: 10px;
-	width: 80px;
-	background-color: #613e08;
-	border-radius: 2px;
+    height: 10px;
+    width: 80px;
+    background-color: #613e08;
+    border-radius: 2px;
 }
 
 .progressBarCircle {
-	position: absolute;
-	margin-top: -10px;
-	height: 30px;
-	width: 30px;
-	border-radius: 15px;
-	background-color: #613e08;
-	margin-left: 50px;
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #613e08;
+    margin-left: 50px;
 }
 
 .progressBarCircle h2 {
-	text-align: center;
+    text-align: center;
     margin-top: 6px;
-	font-size: 14px;
-	color: white;
+    font-size: 14px;
+    color: white;
 }
 
 .progressBarCircle2 {
-	position: absolute;
-	margin-top: -10px;
-	height: 30px;
-	width: 30px;
-	border-radius: 15px;
-	background-color: #613e08;
-	margin-left: 158px;
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #613e08;
+    margin-left: 158px;
 }
 
 .progressBarCircle2 h2 {
-	text-align: center;
+    text-align: center;
     margin-top: 6px;
-	font-size: 14px;
-	color: white;
+    font-size: 14px;
+    color: white;
 }
 
 .progressBarCircle2 .inactive{
@@ -538,20 +655,20 @@ body {
 }
 
 .progressBarCircle3 {
-	position: absolute;
-	margin-top: -10px;
-	height: 30px;
-	width: 30px;
-	border-radius: 15px;
-	background-color: #613e08;
-	margin-left: 266px;
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #613e08;
+    margin-left: 266px;
 }
 
 .progressBarCircle3 h2 {
-	text-align: center;
+    text-align: center;
     margin-top: 6px;
-	font-size: 14px;
-	color: white;
+    font-size: 14px;
+    color: white;
 }
 
 .progressBarCircle3 .inactive{
@@ -565,20 +682,20 @@ body {
 }
 
 .progressBarCircle4 {
-	position: absolute;
-	margin-top: -10px;
-	height: 30px;
-	width: 30px;
-	border-radius: 15px;
-	background-color: #613e08;
-	margin-left: 374px;
+    position: absolute;
+    margin-top: -10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #613e08;
+    margin-left: 374px;
 }
 
 .progressBarCircle4 h2 {
-	text-align: center;
-	margin-top: 6px;
-	font-size: 14px;
-	color: white;
+    text-align: center;
+    margin-top: 6px;
+    font-size: 14px;
+    color: white;
 }
 
 .progressBarCircle4 .inactive{
