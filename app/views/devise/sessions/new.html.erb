@@ -1,5 +1,5 @@
 <div class="backgroundLogin">
-    <div class="loginForm">
+    <div class="formContainer">
         <div class="bassLoginLogo">
             <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
         </div>
@@ -14,16 +14,16 @@
             <% end %>
 
             <%= f.label :email, class: "submitLoginText" %>
-            <%= f.email_field :email, :autofocus => true, class: "submitLoginEmail" %>
+            <%= f.email_field :email, :autofocus => true, class: "submitLogin" %>
 
             <%= f.label :password, class: "submitLoginText" %>
-            <%= f.password_field :password, class: "submitLoginPass" %>
+            <%= f.password_field :password, class: "submitLogin" %>
 
             <% if devise_mapping.rememberable? -%>
                 <%= f.check_box :remember_me, class: "submitLoginCheck" %> <%= f.label :remember_me, class: "submitLoginRemember" %>
             <% end -%>
 
-            <%= f.submit "Login", class: "submitButton" %>
+            <%= f.submit "Login", class: "greenButton" %>
         <% end %>
 
         <%= render "devise/shared/links" %>

@@ -1,16 +1,5 @@
 /*Registration & Login*/
-
-.loginForm {
-    @include clearfix;
-    width: 405px;
-    margin: 250px auto;
-    text-align: center;
-    background-color: #fffbf3;
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px black;
-}
-
-.regForm {
+.formContainer{
     @include clearfix;
     width: 405px;
     margin: 250px auto;
@@ -22,16 +11,6 @@
 
 .forgotForm h2 {
     margin-bottom: 20px;
-}
-
-.forgotForm {
-    @include clearfix;
-    width: 405px;
-    margin: 250px auto;
-    text-align: center;
-    background-color: #fffbf3;
-    border-radius: 10px;
-    box-shadow: 0px 0px 30px black;
 }
 
 input {
@@ -59,37 +38,7 @@ form {
     text-align: left;
 }
 
-label {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
-}
-
-h1 {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
-}
-
-h2 {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
-}
-
-h3 {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
-}
-
-p {
-    margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
-}
-
-a {
+label, h1, h2, h3, p, a {
     margin: 0;
     font-family: Verdana, sans-serif;
     color: #5f5f5f;
@@ -100,13 +49,11 @@ body {
 	background-image: image-url('woodBackground.jpg');
 }
 
-.submitButton {
+.greenButton {
     width: 280px;
     height: 50px;
     position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 15px;
+	margin: 15px auto 15px auto;
 	clear: both;
 	border-radius: 8px;
 	font-size: 25px;
@@ -117,25 +64,7 @@ body {
 	background-size: 288px;
 }
 
-.regButton {
-    width: 280px;
-    height: 50px;
-    position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	clear: both;
-	border-radius: 8px;
-	font-size: 25px;
-	color: white;
-	background-image: image-url('registerButton.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 288px;
-}
-
-.submitLoginEmail {
+.submitLogin {
 	width: 280px;
 	height: 45px;
 	margin-left: auto;
@@ -149,21 +78,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: right;
 	background-position: 91% 50%;
-}
-
-.submitLoginPass {
-	width: 280px;
-	height: 45px;
-	margin-left: auto;
-	margin-right: auto;
-	clear: both;
-	border-radius: 8px;
-	outline: none;
-	font-size: 15px;
-	background-color: #e5ded5;
-	background-image: image-url('keyLoginLogo.png');
-	background-repeat: no-repeat;
-	background-position: 90% 50%;
 }
 
 .submitLoginCheck {
@@ -184,10 +98,7 @@ body {
 
 .bassLoginLogo {
     width: 240px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -45px;
-    margin-bottom: -15px;
+    margin:-45px auto -15px auto;
 }
 
 .submitLoginTextSign {
@@ -202,17 +113,7 @@ body {
     color: #5f5f5f;
 }
 
-.loginBottomBanner {
-	background-image: image-url('bottomBannerTexture.png');
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	overflow: hidden;
-	height: 70px;
-	border-top: solid 1px white;
-	box-shadow: 0 -2px 0 #a6a6a6;
-}
-
-.regBottomBanner {
+.loginBottomBanner, .regBottomBanner  {
 	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -298,10 +199,7 @@ body {
 }
 
 .bassLoginLogoThankText {
-    margin-top: 30px;
-    margin-right: 50px;
-    margin-left: 260px;
-    margin-bottom: 15px;
+    margin: 30px 50px 15px 260px;
 }
 
 
@@ -387,10 +285,7 @@ body {
 
 .divideLine {
     border-top: 1px solid #865105;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
+    margin: 5px 5px 10px 5px;
 }
 
 .actions {
@@ -472,10 +367,7 @@ body {
 }
 
 .progressBarContainer {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 30px 20px 30px;
     padding-top: 10px;
     padding-bottom: 10px;
 }

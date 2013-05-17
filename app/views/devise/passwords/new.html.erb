@@ -1,5 +1,5 @@
 <div class="backgroundLogin">
-    <div class="forgotForm">
+    <div class="formContainer">
         <div class="bassLoginLogo">
             <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
         </div>
@@ -9,9 +9,9 @@
           <%= devise_error_messages! %>
 
           <div><%= f.label :email, class: "submitLoginText" %>
-          <%= f.email_field :email, :autofocus => true, :autofocus => true, class: "submitLoginEmail" %></div>
+          <%= f.email_field :email, :autofocus => true, :autofocus => true, class: "submitLogin" %></div>
 
-          <div><%= f.submit "Send Request", class: "regButton"  %></div>
+          <div><%= f.submit "Send Request", class: "greenButton"  %></div>
         <% end %>
 
         <div class="noStyle"><%= render "devise/shared/links" %></div>
