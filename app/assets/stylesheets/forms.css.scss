@@ -96,20 +96,14 @@ a {
 }
 
 body {
-<<<<<<< HEAD
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
-=======
-    background-color: white;
-    background-image: url('woodBackground.jpg');
->>>>>>> CSS Edits
 }
 
 .submitButton {
     width: 280px;
     height: 50px;
     position: relative;
-<<<<<<< HEAD
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 15px;
@@ -121,26 +115,9 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
-=======
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    clear: both;
-    border-radius: 8px;
-    font-size: 25px;
-    color: white;
-    background-image: url('registerButton.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 288px;
->>>>>>> CSS Edits
 }
 
 .regButton {
-    width: 280px;
-    height: 50px;
-    position: relative;
-<<<<<<< HEAD
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;
@@ -184,19 +161,6 @@ body {
 	background-image: image-url('keyLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: 90% 50%;
-=======
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    clear: both;
-    border-radius: 8px;
-    font-size: 25px;
-    color: white;
-    background-image: url('registerButton.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 288px;
 }
 
 .submitLoginEmail {
@@ -228,7 +192,6 @@ body {
     background-image: url('keyLoginLogo.png');
     background-repeat: no-repeat;
     background-position: 90% 50%;
->>>>>>> CSS Edits
 }
 
 .submitLoginCheck {
@@ -268,7 +231,6 @@ body {
 }
 
 .loginBottomBanner {
-<<<<<<< HEAD
 	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -286,25 +248,6 @@ body {
 	height: 70px;
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
-=======
-    background-image: url('bottomBannerTexture.png');
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    overflow: hidden;
-    height: 70px;
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
-}
-
-.regBottomBanner {
-    background-image: url('bottomBannerTexture.png');
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    overflow: hidden;
-    height: 70px;
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
->>>>>>> CSS Edits
 }
 
 .noStyle .regBottomBanner{
@@ -396,7 +339,6 @@ body {
 }
 
 .thankRegButton {
-<<<<<<< HEAD
 	height: 50px;
 	width: 160px;
 	border-radius: 10px;
@@ -406,17 +348,6 @@ body {
 	background-position: center;
 	text-align: center;
 	display: inline-block;
-=======
-    height: 50px;
-    width: 160px;
-    border-radius: 10px;
-    background-image: url('/assets/regButtonRed.png');
-    background-size: 101%;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    display: inline-block;
->>>>>>> CSS Edits
 }
 
 .thankRegButton a {
@@ -437,21 +368,12 @@ body {
 }
 
 .thankContainerBottom {
-<<<<<<< HEAD
 	float: left;
 	padding: 10px 0 10px 220px;
 	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
-=======
-    float: left;
-    padding: 10px 0 10px 220px;
-    background-image: url('bottomBannerTexture.png');
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
-    width: 100%;
->>>>>>> CSS Edits
 }
 
 #flash_notice {
@@ -500,7 +422,6 @@ body {
 }
 
 .actions {
-<<<<<<< HEAD
 	clear: both;
 	background-image: image-url('bottomBannerTexture.png');
 	border-top: solid 1px white;
@@ -508,15 +429,6 @@ body {
 	width: 100%;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
-=======
-    clear: both;
-    background-image: url('bottomBannerTexture.png');
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
-    width: 100%;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
->>>>>>> CSS Edits
 }
 
 .actions a {
