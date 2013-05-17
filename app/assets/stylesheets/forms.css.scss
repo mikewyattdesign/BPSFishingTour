@@ -118,6 +118,9 @@ body {
 }
 
 .regButton {
+    width: 280px;
+    height: 50px;
+    position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15px;
@@ -163,37 +166,6 @@ body {
 	background-position: 90% 50%;
 }
 
-.submitLoginEmail {
-    width: 280px;
-    height: 45px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-    background-color: #e5ded5;
-    background-image: url('fishLoginLogo.png');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-position: 91% 50%;
-}
-
-.submitLoginPass {
-    width: 280px;
-    height: 45px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-    background-color: #e5ded5;
-    background-image: url('keyLoginLogo.png');
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-}
-
 .submitLoginCheck {
     margin: 5px 5px 0 12px;
     float: left;
@@ -231,6 +203,7 @@ body {
 }
 
 .loginBottomBanner {
+<<<<<<< HEAD
 	background-image: image-url('bottomBannerTexture.png');
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
