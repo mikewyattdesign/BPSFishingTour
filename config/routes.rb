@@ -1,5 +1,6 @@
 BpsFishingTour::Application.routes.draw do
-    match '/' => redirect('/login'), via: :get
+    # match '/' => redirect('/login'), via: :get
+
 
     get '/thanks' => 'static_pages#thanks'
 
@@ -12,12 +13,18 @@ BpsFishingTour::Application.routes.draw do
         patch  '/users'      => 'devise/registrations#update',  as: :patch_user_registration
         put    '/users'      => 'devise/registrations#update',  as: :update_user_registration
         delete '/users'      => 'devise/registrations#destroy', as: :destroy_user_registration
-
         # Sessions Routes
         get    '/login' =>  'devise/sessions#new',     as: :new_user_session
         post   '/login' =>  'devise/sessions#create',  as: :user_session
         delete '/logout' => 'devise/sessions#destroy', as: :destroy_user_session
+        root to: 'devise/registrations#edit', as: :user_root
+    end
+
+    authenticated :user do
+        # root :to => "main#dashboard", as: :user_root
     end
 
     resources :profiles
+    root to: 'static_pages#home'
+
 end
