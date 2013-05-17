@@ -64,7 +64,7 @@ body {
 	background-size: 288px;
 }
 
-.submitLogin {
+.submitLogin, .submitLoginKey {
 	width: 280px;
 	height: 45px;
 	margin-left: auto;
@@ -78,6 +78,10 @@ body {
 	background-repeat: no-repeat;
 	background-position: right;
 	background-position: 91% 50%;
+}
+
+.submitLoginKey {
+    background-image: image-url('keyLoginLogo.png');
 }
 
 .submitLoginCheck {
