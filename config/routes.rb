@@ -28,4 +28,8 @@ BpsFishingTour::Application.routes.draw do
     root to: 'static_pages#home'
 
     match '/teams' => 'teams#index', via: :get
+
+    scope '/teams' do
+        match '/requests/new' => 'teams/requests#new', via: :get
+    end
 end
