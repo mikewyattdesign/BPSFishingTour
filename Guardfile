@@ -16,6 +16,10 @@ guard 'rspec', all_on_start: true, all_after_pass: false do
                         : "spec/requests/#{m[1].singularize}_pages_spec.rb")
     end
 
+    watch(%r{^app/views/(.+)/(.+)/}) do |match|
+        "spec/requests/#{match[1]}/#{match[2]}_spec.rb"
+    end
+
     watch(%r{^app/controllers/sessions_controller\.rb$}) do |m|
         "spec/requests/authentication_pages_spec.rb"
     end
