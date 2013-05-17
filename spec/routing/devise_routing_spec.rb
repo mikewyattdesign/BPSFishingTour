@@ -11,12 +11,12 @@ describe 'Devise Routes' do
 
     describe 'registrations' do
         it 'has nice routes' do
-            expect(get: '/register').to route_to(controller: 'devise/registrations', action: 'new')
-            expect(post: '/users').to route_to(controller: 'devise/registrations', action: 'create')
-            expect(get: '/users/edit').to route_to(controller: 'devise/registrations', action: 'edit')
-            expect(patch: '/users').to route_to(controller: 'devise/registrations', action: 'update')
-            expect(put: '/users').to route_to(controller: 'devise/registrations', action: 'update')
-            expect(delete: '/users').to route_to(controller: 'devise/registrations', action: 'destroy')
+            expect(get: '/register').to route_to(controller: 'registrations', action: 'new')
+            expect(post: '/users').to route_to(controller: 'registrations', action: 'create')
+            expect(get: '/users/edit').to route_to(controller: 'registrations', action: 'edit')
+            expect(patch: '/users').to route_to(controller: 'registrations', action: 'update')
+            expect(put: '/users').to route_to(controller: 'registrations', action: 'update')
+            expect(delete: '/users').to route_to(controller: 'registrations', action: 'destroy')
         end
     end
 end

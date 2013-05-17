@@ -10,13 +10,12 @@ feature "authentication" do
 
     sign_up_with(dan.email, dan.password)
 
-    expect(current_path).to eq '/thanks'
-
+    pending 'Where should users go?'
   end
 
   scenario "user registers for the site" do
     sign_in_with dan.email, dan.password
-    expect(page).to have_text("Edit User")
+    expect(current_path).to eq '/thanks'
   end
 
   def sign_up_with(email, password)

@@ -4,20 +4,19 @@ BpsFishingTour::Application.routes.draw do
 
     get '/thanks' => 'static_pages#thanks'
 
-    devise_for :users, skip: [:sessions, :registration]
+    devise_for :users, skip: [:sessions, :registration], controllers: {registrations: 'registrations'}
     as :user do
         # Registrations Routes
-        get    '/register'   => 'devise/registrations#new',     as: :new_user_registration
-        post   '/users'      => 'devise/registrations#create',  as: :user_registration
-        get    '/users/edit' => 'devise/registrations#edit',    as: :edit_user_registration
-        patch  '/users'      => 'devise/registrations#update',  as: :patch_user_registration
-        put    '/users'      => 'devise/registrations#update',  as: :update_user_registration
-        delete '/users'      => 'devise/registrations#destroy', as: :destroy_user_registration
+        get    '/register'   => 'registrations#new',     as: :new_user_registration
+        post   '/users'      => 'registrations#create',  as: :user_registration
+        get    '/users/edit' => 'registrations#edit',    as: :edit_user_registration
+        patch  '/users'      => 'registrations#update',  as: :patch_user_registration
+        put    '/users'      => 'registrations#update',  as: :update_user_registration
+        delete '/users'      => 'registrations#destroy', as: :destroy_user_registration
         # Sessions Routes
         get    '/login' =>  'devise/sessions#new',     as: :new_user_session
         post   '/login' =>  'devise/sessions#create',  as: :user_session
         delete '/logout' => 'devise/sessions#destroy', as: :destroy_user_session
-        root to: 'devise/registrations#edit', as: :user_root
     end
 
     authenticated :user do
