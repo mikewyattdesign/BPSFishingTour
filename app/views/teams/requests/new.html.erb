@@ -1,12 +1,50 @@
-<%= form_tag do %>
-    <%= label_tag :first_name, 'First name' %>
-    <%= text_field_tag :first_name %>
+<div class="teamRegContainer">
+    <div class="topGreenBanner">
+        <p>Team Registration</p>
+    </div>
+    <div class="progressBarContainer">
+        <div class="progressBarCircle">
+            <h2>1</h2>
+        </div>
+        <div class="progressBarCircle2 inactive">
+            <h2>2</h2>
+        </div>
+        <div class="progressBarCircle3 inactive">
+            <h2>3</h2>
+        </div>
+        <div class="progressBarCircle4 inactive">
+            <h2>4</h2>
+        </div>
+        <div class="progressBarLineContainer">
+            <div class="progressBarLine">
+            </div>
+        </div>
+    </div>
+    <div class="teamRegContainerForm">
+            <%= form_tag do %>
+            <div class="regTopText">
+                <h3>Invite a Teammate</h3>
+                <div class="divideLine"></div>
+                <ul>
+                    <li>In order to complete the Team Membership registration process and compete in Bass Pro Shops Fishing Tour events, your must have a registered teamate.</li>
+                    <li>Enter your teammate's contact information below.</li>
+                    <li>They will recive an email asking them to complete their personal registration process.</li>
+                    <li>Once they complete their registration, your Team Membership will be active in the Bass Pro Fishing Tour. You will recive notification when your Team Membership is active.</li>
+                </ul>
+            </div>
+            <%= label_tag :first_name, 'First name' %>
+            <%= text_field_tag :first_name %>
 
-    <%= label_tag :last_name, 'Last name' %>
-    <%= text_field_tag :last_name %>
+            <%= label_tag :last_name, 'Last name' %>
+            <%= text_field_tag :last_name %>
 
-    <%= label_tag :email, 'Email' %>
-    <%= email_field_tag :email %>
+            <%= label_tag :email, 'Email' %>
+            <%= email_field_tag :email %>
+    </div>
+        <div class="actions">
+            <%= link_to 'Back', profiles_path %>
+            <%= submit_tag :continue, value: 'Continue' %>
+        </div>
+        <% end %>
 
-    <%= submit_tag :continue, value: 'Continue' %>
-<% end %>
+</div>
