@@ -13,6 +13,7 @@ end
 group :test do
     gem 'capybara', '2.1.0'
     gem 'terminal-notifier-guard', '1.5.3'
+    gem 'factory_girl_rails', '4.2.1'
 end
 
 group :assets do
