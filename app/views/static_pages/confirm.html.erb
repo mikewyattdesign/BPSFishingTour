@@ -1,0 +1,13 @@
+<div class="thankContainer">
+    <div class="bassLoginLogoThank">
+        <%= image_tag 'bassLoginLogo.png', alt: 'Bass Logo' %>
+    </div>
+    <div class="bassLoginLogoThankText">
+        <h1>Please confirm your registration</h1>
+        <p>We just sent you an email to confirm your registration.  Please click the link in that email to confirm your account, and you can get started!</p>
+    </div>
+
+    <div class="thankContainerBottom">
+        <%= link_to 'Confirmation email not sent?', new_user_confirmation_path, class: 'thankRegButton' %>
+    </div>
+</div>
