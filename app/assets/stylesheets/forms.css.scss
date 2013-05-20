@@ -266,7 +266,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
-    background-color: #fffbf3;
+    background-image: image-url('/assets/formBackgroundTexture.png');
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
 }
@@ -493,4 +493,8 @@ body {
     border-radius: 15px;
     background-color: #e8d8bf;
     margin-left: 374px;
+}
+
+#email {
+    width: 100%;
 }
