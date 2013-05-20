@@ -3,17 +3,16 @@
 <% end -%>
 
 <%- if controller_name != 'sessions' %>
-  <div class="regBottomBanner"><%= link_to "Already have an account? Login", new_session_path(resource_name), class: "regLoginTextSign" %></div>
+  <div class="BottomBanner"><%= link_to "Already have an account? Login", new_session_path(resource_name), class: "regLoginTextSign" %></div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <div class="loginBottomBanner"><%= link_to "Don't have an account? Sign up here!", new_user_registration_path, class: "submitLoginTextSign" %><br /></div>
+  <div class="BottomBanner"><%= link_to "Don't have an account? Sign up here!", new_user_registration_path, class: "submitLoginTextSign" %><br /></div>
 <% end -%>
-
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
-<% end -%>
+  <div class="BottomBanner"><%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: "submitLoginTextSign" %><br />
+<% end -%></div>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %>
