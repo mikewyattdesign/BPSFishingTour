@@ -139,12 +139,15 @@ body {
     box-shadow: 0 -2px 0 #a6a6a6;
 }
 
-#error_explanation {
+#error_explanation, #flash_alert {
     background-color: red;
     margin-left:10px;
     margin-right:10px;
-    padding: 1px 15px 1px 15px;
     border-radius: 10px;
+}
+
+#error_explanation {
+    padding: 1px 15px 1px 15px;
 }
 
 #error_explanation h2 {
@@ -161,11 +164,7 @@ body {
 }
 
 #flash_alert {
-    background-color: red;
-    margin-left:10px;
-    margin-right:10px;
     padding: 10px 15px 10px 15px;
-    border-radius: 10px;
     text-align: center;
     color: white;
 }
@@ -397,17 +396,20 @@ body {
     border-radius: 2px;
 }
 
-.progressBarCircle {
+.progressBarCircle, .progressBarCircle2, .progressBarCircle3, .progressBarCircle4 {
     position: absolute;
     margin-top: -10px;
     height: 30px;
     width: 30px;
     border-radius: 15px;
     background-color: #613e08;
+}
+
+.progressBarCircle {
     margin-left: 50px;
 }
 
-.progressBarCircle h2 {
+.progressBarCircle h2, .progressBarCircle2 h2, .progressBarCircle3 h2, .progressBarCircle4 h2  {
     text-align: center;
     margin-top: 6px;
     font-size: 14px;
@@ -415,83 +417,35 @@ body {
 }
 
 .progressBarCircle2 {
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #613e08;
     margin-left: 158px;
 }
 
-.progressBarCircle2 h2 {
-    text-align: center;
-    margin-top: 6px;
-    font-size: 14px;
-    color: white;
-}
-
-.progressBarCircle2 .inactive{
+.progressBarCircle2 .inactive, .progressBarCircle3 .inactive, .progressBarCircle4 .inactive{
     position: absolute;
     margin-top: -10px;
     height: 30px;
     width: 30px;
     border-radius: 15px;
     background-color: #e8d8bf;
+}
+
+.progressBarCircle2 .inactive {
     margin-left: 158px;
 }
 
 .progressBarCircle3 {
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #613e08;
     margin-left: 266px;
 }
 
-.progressBarCircle3 h2 {
-    text-align: center;
-    margin-top: 6px;
-    font-size: 14px;
-    color: white;
-}
-
 .progressBarCircle3 .inactive{
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #e8d8bf;
     margin-left: 266px;
 }
 
 .progressBarCircle4 {
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #613e08;
     margin-left: 374px;
 }
 
-.progressBarCircle4 h2 {
-    text-align: center;
-    margin-top: 6px;
-    font-size: 14px;
-    color: white;
-}
-
 .progressBarCircle4 .inactive{
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #e8d8bf;
     margin-left: 374px;
 }
 
