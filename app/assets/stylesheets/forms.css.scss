@@ -495,6 +495,8 @@ body {
     margin-left: 374px;
 }
 
-#email {
-    width: 100%;
+#email, #last_name, #first_name {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
 }
