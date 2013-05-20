@@ -23,6 +23,11 @@ feature "authentication" do
     sign_up_with(dan.email, dan.password)
     expect(ActionMailer::Base.deliveries.size).to eq 1
     expect(ActionMailer::Base.deliveries.last).to have_content("Welcome dan@example.com!")
+    expect(ActionMailer::Base.deliveries.last).to have_link('Confirm my account')
+    token = ActionMailer::Base.deliveries.last.to_s.match(/confirmation_token=(.+)"/)[1]
+
+    visit "/users/confirmation?confirmation_token=#{token}"
+    expect(current_path).to eq('/confirm')
   end
 
 
