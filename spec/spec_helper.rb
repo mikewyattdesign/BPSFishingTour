@@ -42,4 +42,5 @@ RSpec.configure do |config|
 
   # Add the Capybara DSL
   config.include Capybara::DSL
+  config.include Features::SessionHelpers, type: :feature
 end

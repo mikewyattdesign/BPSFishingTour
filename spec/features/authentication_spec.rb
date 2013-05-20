@@ -18,6 +18,7 @@ feature "authentication" do
   scenario "registered and confirmed user logs-in to site" do
     sign_in_with joe.email, joe.password
     expect(current_path).to eq '/'
+
   end
 
   scenario "user can register and confirm account" do
@@ -32,31 +33,11 @@ feature "authentication" do
     expect(current_path).to eq('/thanks')
   end
 
+  scenario "user attempts to log in with wrong password" do
+    sign_in_with joe.email, "wrongeffingpw"
 
-  def sign_in_with(email, password)
-    sign_up_with(email, password)
-    visit '/'
-
-    click_link :Login
-
-    fill_in :Email, with: email
-
-    fill_in :Password, with: password
-
-    click_button "Login"
+    expect(current_path).to  eq('/users/sign_in')
+    expect(page).to have_content("Invalid email or password")
   end
 
-  def sign_up_with(email, password)
-    visit '/'
-
-    click_link "Sign up"
-
-    fill_in :Email, with: email
-
-    fill_in :Password, with: password
-
-    fill_in "Password confirmation", with: password
-
-    click_button :GO
-  end
 end
