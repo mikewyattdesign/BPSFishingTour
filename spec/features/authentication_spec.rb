@@ -27,7 +27,7 @@ feature "authentication" do
     token = ActionMailer::Base.deliveries.last.to_s.match(/confirmation_token=(.+)"/)[1]
 
     visit "/users/confirmation?confirmation_token=#{token}"
-    expect(current_path).to eq('/confirm')
+    expect(current_path).to eq('/thanks')
   end
 
 
