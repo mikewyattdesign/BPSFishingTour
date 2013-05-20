@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def thanks
   end
+
+  def confirmation
+  end
 end

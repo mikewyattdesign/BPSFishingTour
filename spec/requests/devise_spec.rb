@@ -15,17 +15,17 @@ describe 'devise' do
         end
 
         it 'should have the "Login" link' do
-            expect(page).to have_link('', href: '/login')
+            expect(page).to have_link('', href: '/users/sign_in')
         end
 
         it 'should have the "Register" link' do
-            expect(page).to have_link('', href: '/register')
+            expect(page).to have_link('', href: '/users/sign_up')
         end
     end
 
     describe 'Registration form' do
         before :each do
-            visit '/register'
+            visit '/users/sign_up'
         end
 
         it 'should have the proper labels' do
@@ -39,7 +39,7 @@ describe 'devise' do
         end
 
         it 'should have the "Login" link' do
-            expect(page).to have_link('', href: '/login')
+            expect(page).to have_link('', href: '/users/sign_in')
         end
 
         it 'should have the "Forgot password?" link' do
@@ -49,7 +49,7 @@ describe 'devise' do
 
     describe 'Login form' do
         before :each do
-            visit '/login'
+            visit '/users/sign_in'
         end
 
         it 'should have the proper labels' do
@@ -68,7 +68,7 @@ describe 'devise' do
         end
 
         it 'should have the "Register" link' do
-            expect(page).to have_link('', href: '/register')
+            expect(page).to have_link('', href: '/users/sign_up')
         end
 
         it 'does not display the "invalid email" message in the main flash area' do
