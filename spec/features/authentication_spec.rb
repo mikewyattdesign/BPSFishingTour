@@ -18,6 +18,14 @@ feature "authentication" do
     expect(current_path).to eq '/thanks'
   end
 
+  scenario "user should receive registration email" do
+    ActionMailer::Base.deliveries.clear
+    sign_up_with(dan.email, dan.password)
+    expect(ActionMailer::Base.deliveries.size).to eq 1
+    expect(ActionMailer::Base.deliveries.last).to have_content("Welcome dan@example.com!")
+  end
+
+
   def sign_up_with(email, password)
     dan.save
     visit '/'
