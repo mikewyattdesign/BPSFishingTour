@@ -15,7 +15,7 @@ feature "authentication" do
 
   scenario "user registers for the site" do
     sign_in_with dan.email, dan.password
-    expect(current_path).to eq '/confirmation'
+    expect(current_path).to eq '/confirm'
   end
 
   scenario "user should receive registration email" do

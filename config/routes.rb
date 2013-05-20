@@ -2,7 +2,7 @@ BpsFishingTour::Application.routes.draw do
     # match '/' => redirect('/login'), via: :get
 
     get '/thanks' => 'static_pages#thanks'
-    get '/confirmation' => 'static_pages#confirmation'
+    get '/confirm' => 'static_pages#confirm'
 
     devise_for :users, controllers: {
         registrations: 'registrations',
