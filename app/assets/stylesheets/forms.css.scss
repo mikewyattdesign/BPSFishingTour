@@ -215,7 +215,7 @@ body {
 	height: 50px;
 	width: 160px;
 	border-radius: 10px;
-	background-image: image-url('/assets/regButtonRed.png');
+	background-image: image-url('regButtonRed.png');
 	background-size: 101%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -265,7 +265,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 150px;
-    background-image: image-url('/assets/formBackgroundTexture.png');
+    background-color: #f6efdf;
+    background-image: image-url('formBackgroundTexture.png');
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
 }
