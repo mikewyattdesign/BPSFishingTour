@@ -27,6 +27,6 @@ namespace :deploy do
             end
         end
         `git push #{environment} master`
-        Bundler.with_clean_env { p `heroku run --app fishing-tour#{ env == 'development' ? '-dev' : ''} rake db:migrate` }
+        puts Bundler.with_clean_env { `heroku run --app fishing-tour#{ env == 'development' ? '-dev' : ''} rake db:migrate` }
     end
 end
