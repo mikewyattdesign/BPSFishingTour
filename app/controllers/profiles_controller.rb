@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+        format.html { redirect_to requests_new_path, notice: 'Thanks for creating your profile, go ahead and set up a team!' }
         format.json { render action: 'show', status: :created, location: @profile }
       else
         format.html { render action: 'new' }

@@ -5,6 +5,7 @@ FactoryGirl.define do
         street_address "1234 Main Street"
         city           "St. Louis"
         zip            "63112"
+        state          "MO"
         phone          "5555551234"
     end
 end

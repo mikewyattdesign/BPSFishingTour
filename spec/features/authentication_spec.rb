@@ -6,10 +6,10 @@ feature "authentication" do
     @joe = OpenStruct.new(subject)
   end
 
-  scenario "registered and confirmed user logs-in to site" do
+  scenario "newly registered and confirmed user logs-in to site" do
     FactoryGirl.create(:user)
     sign_in_with @joe.email, @joe.password
-    expect(current_path).to eq '/'
+    expect(current_path).to eq '/thanks'
   end
 
   scenario "user can register and confirm account" do
