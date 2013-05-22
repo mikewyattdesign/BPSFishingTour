@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
     def after_sign_in_path_for(resource)
-        thanks_path
+        if !current_user.profile
+            user = User.find_by_email params[:user][:email]
+            puts user.profile
+            "/thanks"
+        else
+            "/"
+        end
     end
 end
