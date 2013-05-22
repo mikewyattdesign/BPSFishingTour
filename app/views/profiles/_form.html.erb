@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
+    <%= form_for(@profile) do |f| %>
     <div class="teamRegContainerForm">
-        <%= form_for(@profile) do |f| %>
             <% if @profile.errors.any? %>
                 <div id="error_explanation">
                     <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -36,7 +36,7 @@
             <div class="regTopText">
                 <h3>Register Your Team</h3>
                 <p>By registering for a Team Membership, you'll unlock the full benifits of the tour, including opportunities to win exciting prize and to qualify for regional and national championship events.</p>
-                <h2>Learn more about Team Memberships.</p>
+                <h2>Learn more about Team Memberships.</h2>
             </div>
             <h3>Personal Information</h3>
             <div class="divideLine"></div>
@@ -85,7 +85,7 @@
                 <%= f.text_field :outdoor_rewards_number %>
                 <p>I don't have an Outdoor Rewards Number. Sign me up!</p>
             </div>
-            </div>
+    </div>
             <div class="actions">
                 <%= link_to 'Back', profiles_path %>
                 <%= f.submit 'Continue' %>
