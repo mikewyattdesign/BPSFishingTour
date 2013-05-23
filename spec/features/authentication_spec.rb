@@ -20,7 +20,6 @@ feature "authentication" do
     token = last_email.to_s.match(/confirmation_token=(.+)"/)[1]
     visit "/users/confirmation?confirmation_token=#{token}"
     expect(current_path).to eq('/thanks')
-    puts current_path
   end
 
   scenario "user attempts to log in with wrong password" do
