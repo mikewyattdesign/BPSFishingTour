@@ -139,8 +139,10 @@ body {
 
 #error_explanation, #flash_alert {
     background-color: red;
-    margin-left:10px;
-    margin-right:10px;
+    width: 255px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
     border-radius: 10px;
 }
 
@@ -201,7 +203,7 @@ body {
 
 .bassLoginLogoThankText {
     min-height: 180px;
-    margin: 30px 50px 15px 260px;
+    margin: 30px 50px 30px 260px;
 }
 
 
