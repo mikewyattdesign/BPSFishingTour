@@ -6,6 +6,7 @@ feature "Create a Team" do
 
     scenario "User would like to add unregistered individual to his team" do
 
+        puts requester.profile.first_name
         sign_in_with(requester.email, requester.password)
         page.current_path.should eq '/'
         page.should have_content('What\'s next? Find a teammate so you two can join some tournaments!')
@@ -19,6 +20,12 @@ feature "Create a Team" do
 
         click_button "Continue"
 
-        page.current_path.should eq '/'
+        page.current_path.should eq '/invite_teammate'
+
+        last_email.should_not be_nil
+
+        last_email.to.should include requestee.email
+
+        last_email.body.should have_content("Jon Dagrassi wants you on his team?")
     end
 end
