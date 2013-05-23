@@ -20,31 +20,31 @@
             </div>
         </div>
     </div>
-    <div class="teamRegContainerForm">
-            <%= form_tag do %>
-            <div class="regTopText">
-                <h3>Invite a Teammate</h3>
-                <div class="divideLine"></div>
-                <ul>
-                    <li>In order to complete the Team Membership registration process and compete in Bass Pro Shops Fishing Tour events, your must have a registered teamate.</li>
-                    <li>Enter your teammate's contact information below.</li>
-                    <li>They will recive an email asking them to complete their personal registration process.</li>
-                    <li>Once they complete their registration, your Team Membership will be active in the Bass Pro Fishing Tour. You will recive notification when your Team Membership is active.</li>
-                </ul>
-            </div>
-            <%= label_tag :first_name, 'First name' %>
-            <%= text_field_tag :first_name %>
+    <%= form_tag do %>
+        <div class="teamRegContainerForm">
+                <div class="regTopText">
+                    <h3>Invite a Teammate</h3>
+                    <div class="divideLine"></div>
+                    <ul>
+                        <li>In order to complete the Team Membership registration process and compete in Bass Pro Shops Fishing Tour events, your must have a registered teammate.</li>
+                        <li>Enter your teammate's contact information below.</li>
+                        <li>They will receive an email asking them to complete their personal registration process.</li>
+                        <li>Once they complete their registration, your Team Membership will be active in the Bass Pro Fishing Tour. You will receive notification when your Team Membership is active.</li>
+                    </ul>
+                </div>
+                <%= label_tag :first_name, 'First name' %>
+                <%= text_field_tag :first_name %>
 
-            <%= label_tag :last_name, 'Last name' %>
-            <%= text_field_tag :last_name %>
+                <%= label_tag :last_name, 'Last name' %>
+                <%= text_field_tag :last_name %>
 
-            <%= label_tag :email, 'Email' %>
-            <%= email_field_tag :email %>
-    </div>
-    <div class="actions">
-        <%= link_to 'Back', profiles_path %>
-        <%= submit_tag :continue, value: 'Continue' %>
-    </div>
+                <%= label_tag :email, 'Email' %>
+                <%= email_field_tag :email %>
+        </div>
+        <div class="actions">
+            <%= link_to 'Back', profiles_path %>
+            <%= submit_tag :continue, value: 'Continue' %>
+        </div>
     <% end %>
 
 </div>

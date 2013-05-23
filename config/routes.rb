@@ -15,7 +15,7 @@ BpsFishingTour::Application.routes.draw do
 
     resources :profiles
     root to: 'static_pages#home'
-
+    resources :teams
     match '/teams' => 'teams#index', via: :get
 
     scope '/teams' do

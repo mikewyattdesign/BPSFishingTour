@@ -8,12 +8,12 @@ group :development, :test do
     gem 'sqlite3', '1.3.7'
     gem 'rspec-rails', '2.13.1'
     gem 'guard-rspec', '3.0.0'
+    gem 'factory_girl_rails', '4.2.1'
 end
 
 group :test do
     gem 'capybara', '2.1.0'
     gem 'terminal-notifier-guard', '1.5.3'
-    gem 'factory_girl_rails', '4.2.1'
 end
 
 group :assets do

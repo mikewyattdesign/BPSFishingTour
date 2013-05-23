@@ -27,7 +27,7 @@ feature "profile_managment" do
         joe.create_profile(profile.attributes)
         joe
       end
-      scenario "signs in and is aked to create a team" do
+      scenario "signs in and is asked to create a team" do
         sign_in_with(subject.email, subject.password)
         page.current_path.should eq '/' # for the moment its going to root
       end
