@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 feature "profile_managment" do
-    # subject(:joe) { FactoryGirl.create(:user)}
     let(:profile) { FactoryGirl.build(:user_profile)}
     context "User with no profile created" do
-      subject { FactoryGirl.create(:user)}
+      subject { profile.user }
       scenario "sign in and create profile" do
           sign_in_with(subject.email, subject.password)
           expect(current_path).to eq '/thanks'
@@ -24,7 +23,7 @@ feature "profile_managment" do
 
     context "User with a profile already created" do
       subject do
-        joe = FactoryGirl.create(:user)
+        joe = profile.user
         joe.create_profile(profile.attributes)
         joe
       end
