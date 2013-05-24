@@ -26,7 +26,7 @@
 /*Landing Page*/
 
 #backgroundMain {
-    background-color: #464646;
+    background:none;
 }
 
 #wrapper {
@@ -62,13 +62,14 @@
 
     .loginIcon {
         float: right;
+        font-size: 14px;
     }
 
     .loginIconLine {
         float: right;
         padding: 0 20px 0 20px;
         color: white;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .navTop {
@@ -79,6 +80,7 @@
     .navIcon {
         float: left;
         margin: 0 10px 0 10px;
+        font-size: 11px;
     }
 
     .standingsText {
@@ -98,7 +100,7 @@
         }
 
         .standingsText p {
-            line-height: 50%;
+            line-height: 50px;
         }
 
 .bannerBigTop {
@@ -115,11 +117,11 @@
     }
 
         .bannerBigText h2 {
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .bannerBigText h1 {
-            font-size: 18px;
+            font-size: 12px;
         }
 
         .bannerBigTextCont {
@@ -153,12 +155,17 @@
         margin: 30px 0 0 400px;
     }
 
+        .bassHandText h2 {
+            font-size: 18px;
+            line-height: 50px;
+        }
+
     .glowBackground {
         background-image: image-url('/assets/bannerMiddleGlow.png');
         background-repeat: no-repeat;
         opacity:0.4;
         height: 335px;
-        background-position: -8px 0px;
+        background-position: 0;
     }
 
     .eventLeaderContainer {
@@ -192,12 +199,36 @@
         color: white;
     }
 
+        .findEventText h1 {
+            font-size: 20px;
+        }
+
+        .findEventText h3 {
+            font-size: 12px;
+        }
+
+        .findEventText p {
+            margin: 15px auto;
+        }
+
     .leaderboardText {
         float: left;
         width: 300px;
         margin: 0 0 0 270px;
         color: white;
     }
+
+        .leaderboardText h1 {
+            font-size: 20px;
+        }
+
+        .leaderboardText h3 {
+            font-size: 12px;
+        }
+
+        .leaderboardText p {
+            margin: 15px auto;
+        }
 
 .bannerBottomSponsor {
     background-image: image-url('/assets/bannerBottomBlack.png');
@@ -232,7 +263,7 @@
         float: left;
         color: yellow;
         font-weight: normal;
-        font-size: 15px;
+        font-size: 12px;
         margin: 30px 15px 0 15px;
     }
 
@@ -243,6 +274,7 @@
     }
 
     .navBottomLegal p {
+        margin-top: 10px;
         font-size: 10px;
         color: white;
     }
