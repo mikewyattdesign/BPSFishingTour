@@ -1,0 +1,40 @@
+<div class="teamRegContainer">
+    <div class="topGreenBanner">
+        <p>Team Registration</p>
+    </div>
+    <div class="progressBarContainer">
+        <div class="progressBarCircle">
+            <h2>1</h2>
+        </div>
+        <div class="progressBarCircle2 inactive">
+            <h2>2</h2>
+        </div>
+        <div class="progressBarCircle3 inactive">
+            <h2>3</h2>
+        </div>
+        <div class="progressBarCircle4 inactive">
+            <h2>4</h2>
+        </div>
+        <div class="progressBarLineContainer">
+            <div class="progressBarLine">
+            </div>
+        </div>
+    </div>
+        <div class="teamRegContainerForm">
+                <div class="regTopText">
+                    <h3>Team Up!</h3>
+                    <div class="divideLine"></div>
+                    <%= if @unregistered %>
+                        <p><%= @ungegiseterd.first_name %> does not <b>yet</b> have an account; Invite <%= @ungegiseterd.first_name %> to join and team up! Once <%= @ungegiseterd.first_name %> has finished registering, your team membership will be activated. </p>
+
+                        <%= link_to "Invite #{@unregistered.first_name}", invite_teammate_path, user: {@unregistered.attributes} %>
+                    <% end %>
+                </div>s
+
+        </div>
+        <div class="actions">
+            <%= link_to 'Back', profiles_path %>
+            <%= submit_tag :continue, value: 'Continue' %>
+
+
+</div>

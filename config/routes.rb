@@ -5,6 +5,7 @@ BpsFishingTour::Application.routes.draw do
     get '/confirm' => 'static_pages#confirm'
     post '/invite_teammate' => 'teams#invite_teammate'
 
+
     devise_for :users, controllers: {
         registrations: 'registrations',
         confirmations: 'confirmations'
@@ -18,7 +19,7 @@ BpsFishingTour::Application.routes.draw do
     root to: 'static_pages#home'
     resources :teams
     match '/teams' => 'teams#index', via: :get
-
+    match '/teamate/search' => 'teams/requests#search', as: 'invite_teammate', via: :get
     scope '/teams' do
         match '/requests/new' => 'teams/requests#new', via: :get
     end
