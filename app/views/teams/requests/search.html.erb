@@ -20,21 +20,20 @@
             </div>
         </div>
     </div>
-        <div class="teamRegContainerForm">
-                <div class="regTopText">
-                    <h3>Team Up!</h3>
-                    <div class="divideLine"></div>
-                    <%= if @unregistered %>
-                        <p><%= @ungegiseterd.first_name %> does not <b>yet</b> have an account; Invite <%= @ungegiseterd.first_name %> to join and team up! Once <%= @ungegiseterd.first_name %> has finished registering, your team membership will be activated. </p>
+    <div class="teamRegContainerForm">
+        <div class="regTopText">
+            <h3>Team Up!</h3>
+            <div class="divideLine"></div>
+            <% if @unregistered %>
 
-                        <%= link_to "Invite #{@unregistered.first_name}", invite_teammate_path, user: {@unregistered.attributes} %>
-                    <% end %>
-                </div>s
-
+                <div class="inviteToJoin">
+                    <p>Ask Them To Join You!</p>
+                    <%= link_to "Invite #{@unregistered_user[:first_name]}", invite_teammate_path, user: @unregistered %>
+                </di>
+            <% end %>
         </div>
-        <div class="actions">
-            <%= link_to 'Back', profiles_path %>
-            <%= submit_tag :continue, value: 'Continue' %>
-
-
-</div>
+    </div>
+    <div class="actions">
+        <%= link_to 'Back', profiles_path %>
+        <%= submit_tag :continue, value: 'Continue' %>
+    </div>

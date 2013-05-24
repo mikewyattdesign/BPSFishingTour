@@ -7,4 +7,19 @@ class User < ActiveRecord::Base
 
     has_and_belongs_to_many :teams
     has_one :profile, dependent: :destroy
+
+    def full_name
+        if self.profile.nil?
+            return self.email
+        end
+        "#{self.profile.first_name} #{self.profile.last_name}"
+    end
+    def hit_team_limit?
+        max_teams = 1
+        if self.teams.size < max_teams
+            false
+        else
+            true
+        end
+    end
 end

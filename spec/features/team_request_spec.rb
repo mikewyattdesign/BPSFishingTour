@@ -1,5 +1,5 @@
 require 'spec_helper'
-# in need of major refactor  
+# in need of major refactor
 feature "Create a Team" do
     subject(:requester) { FactoryGirl.create(:profile).user }
     let!(:requestee) { FactoryGirl.build(:unregistered_user) }

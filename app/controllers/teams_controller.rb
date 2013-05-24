@@ -7,8 +7,8 @@ class TeamsController < ApplicationController
     end
 
     def invite_teammate
-        
-        @user = User.find_by_email(params[:email])
+
+
         if @user
             TeammateInviteMailer.sign_up_and_team_up(@user, params[:first_name], params[:last_name], current_user).deliver
             flash[:notice] = "Your request has been sent to your teammate. If #{params[:first_name]} #{params[:last_name]} accepts, you may eneter a tournament."
