@@ -19,6 +19,8 @@ BpsFishingTour::Application.routes.draw do
     resources :teams
     match '/teams' => 'teams#index', via: :get
     match '/teammate/search' => 'teams/requests#search', as: 'invite_teammate', via: :post
+    match '/teammate/send_invite' => 'teams/requests#send_invite', as: 'send_invite', via: :get
+
     scope '/teams' do
         match '/requests/new' => 'teams/requests#new', via: :get
     end

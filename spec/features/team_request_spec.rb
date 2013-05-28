@@ -6,7 +6,6 @@ feature "Create a Team" do
 
     scenario "User would like to add unregistered individual to his team" do
 
-        puts requester.profile.first_name
         sign_in_with(requester.email, requester.password)
         page.current_path.should eq '/'
         page.should have_content('What\'s next? Find a teammate so you two can join some tournaments!')
@@ -21,14 +20,14 @@ feature "Create a Team" do
         click_button "Continue"
 
         page.current_path.should eq '/teammate/search'
-        page.should have_content("Don Stevies is not in our system, send him an invitaiton to join and team up.")
+        page.should have_content("No such email in our database. Send them an invite.")
+        expect{click_link "Invite Don"}.to change{Request.count}.from(0).to(1)
+        last_email.to.should include requestee.email
+        last_email.subject.should have_content("#{requester.full_name} wants to go fishing!")
 
         page.current_path.should eq '/'
-        page.should have_content("Your request has been sent to your teammate. If Don Stevies accepts, you may eneter a tournament.")
+        page.should have_content("Your request has been sent to your teammate. If Don Stevies accepts, you may enter a tournament.")
 
-        last_email.should_not be_nil
-        last_email.to.should include requestee.email
-        last_email.subject.should have_content("#{requester.profile.first_name} #{requester.profile.last_name} wants to go fishing!")
         last_email.body.should have_content("#{requester.profile.first_name} #{requester.profile.last_name} wants you on his team")
     end
 end

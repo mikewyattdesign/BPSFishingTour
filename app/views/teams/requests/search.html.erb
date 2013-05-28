@@ -24,12 +24,11 @@
         <div class="regTopText">
             <h3>Team Up!</h3>
             <div class="divideLine"></div>
-            <% if @unregistered %>
-
+            <% if @unregistered_user %>
                 <div class="inviteToJoin">
                     <p>Ask Them To Join You!</p>
-                    <%= link_to "Invite #{@unregistered_user[:first_name]}", invite_teammate_path, user: @unregistered %>
-                </di>
+                    <%= link_to "Invite #{@unregistered_user[:first_name]}", send_invite_path(user: @unregistered_user) %>
+                </div>
             <% end %>
         </div>
     </div>
