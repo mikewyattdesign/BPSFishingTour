@@ -21,7 +21,7 @@ input {
     box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
     border: 1px solid #adadad;
     padding: 3px 25px 3px 25px;
-    height: 25px;
+    height: 28px;
     @include box-sizing(border-box);
 
     &[type=text] {
@@ -394,27 +394,19 @@ select {
 
 .progressBarCircle, .progressBarCircle2, .progressBarCircle3, .progressBarCircle4 {
     position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
+    margin-top: -15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
     background-color: #613e08;
     box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
 }
 
-.progressBarCircle {
-    margin-left: 50px;
-}
-
 .progressBarCircle h2, .progressBarCircle2 h2, .progressBarCircle3 h2, .progressBarCircle4 h2  {
     text-align: center;
-    margin-top: 6px;
+    margin-top: 10px;
     font-size: 14px;
     color: white;
-}
-
-.progressBarCircle2 {
-    margin-left: 158px;
 }
 
 .progressBarCircle2 .inactive, .progressBarCircle3 .inactive, .progressBarCircle4 .inactive{
@@ -427,24 +419,32 @@ select {
     box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
 }
 
+.progressBarCircle {
+    margin-left: 30px;
+}
+
+.progressBarCircle2 {
+    margin-left: 145px;
+}
+
 .progressBarCircle2 .inactive {
-    margin-left: 158px;
+    margin-left: 145px;
 }
 
 .progressBarCircle3 {
-    margin-left: 266px;
+    margin-left: 260px;
 }
 
 .progressBarCircle3 .inactive{
-    margin-left: 266px;
+    margin-left: 260px;
 }
 
 .progressBarCircle4 {
-    margin-left: 374px;
+    margin-left: 375px;
 }
 
 .progressBarCircle4 .inactive{
-    margin-left: 374px;
+    margin-left: 375px;
 }
 
 #email, #last_name, #first_name {
