@@ -23,6 +23,7 @@ input {
     padding: 3px 25px 3px 25px;
     height: 28px;
     @include box-sizing(border-box);
+    outline: none;
 
     &[type=text] {
     width: 100%;
