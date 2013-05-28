@@ -18,9 +18,10 @@
 
 input {
     display: block;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
     border: 1px solid #adadad;
     padding: 3px 25px 3px 25px;
+    height: 25px;
     @include box-sizing(border-box);
 
     &[type=text] {
@@ -41,7 +42,6 @@ form {
     margin-left: auto;
     margin-right:auto;
     text-align: left;
-
 }
 
 label, h1, h2, h3, p, a {
@@ -53,6 +53,10 @@ label, h1, h2, h3, p, a {
 body {
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
+}
+
+select {
+    width: 118px;
 }
 
 .greenButton {
@@ -290,7 +294,8 @@ body {
 }
 
 .actions a {
-    margin: 20px 20px 20px 170px;
+    float: left;
+    margin: 28px 20px 20px 150px;
     font-size: 10px;
     font-weight: bold;
 }
@@ -299,6 +304,8 @@ body {
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
 }
 
 .topGreenBanner {
@@ -329,10 +336,16 @@ body {
 }
 
 .actions input {
-    background-color: #1a9b0b;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    @include background-image(linear-gradient(#14c300, #095200));
+    text-decoration: none;
     color: white;
-    border-top: solid 1px #d8d8d8;
-    box-shadow: 0 -2px 0 #a6a6a6;
+    box-shadow: inset 0 2px 2px #14c300,
+                inset 0 -1px 2px #095300,
+                0 0 1px 1px #095200;
+    font-size: 12px;
 }
 
 .full p {
