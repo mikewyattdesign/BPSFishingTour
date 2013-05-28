@@ -34,8 +34,10 @@ ActiveRecord::Schema.define(version: 20130528164508) do
 
   create_table "requests", force: true do |t|
     t.integer  "requester"
-    t.integer  "invitee"
-    t.boolean  "accepted"
+    t.string   "invitee"
+    t.boolean  "accepted",   default: false
+    t.boolean  "denied",     default: false
+    t.datetime "replied_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

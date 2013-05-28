@@ -20,9 +20,12 @@ class Teams::RequestsController < ApplicationController
 
     def send_invite
         @invitee = OpenStruct.new params[:user]
-        request = Request.create({requester: current_user.id, invitee: @invitee.email})
-        TeammateInviteMailer.sign_up_and_team_up(@invitee.first_name, @invitee.last_name, @invitee.email, current_user).deliver
-        flash[:notice] = "Your request has been sent to your teammate. If #{@invitee.first_name} #{@invitee.last_name} accepts, you may enter a tournament."
-        redirect_to '/'
+        @request = Request.create({requester: current_user.id, invitee: @invitee.email})
+        if @request
+            TeammateInviteMailer.sign_up_and_team_up(@invitee.first_name, @invitee.last_name, @invitee.email, current_user, @request.acceptance_url).deliver
+            flash[:notice] = "Your request has been sent to your teammate. If #{@invitee.first_name} #{@invitee.last_name} accepts, you may enter a tournament."
+            redirect_to '/'
+        end
+
     end
 end

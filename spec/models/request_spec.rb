@@ -1,5 +1,6 @@
 require 'spec_helper'
 
 describe Request do
-  pending "add some examples to (or delete) #{__FILE__}"
+    subject (FactoryGirl.create(:request))
+    it { should respond_to(:acceptance_url) }
 end

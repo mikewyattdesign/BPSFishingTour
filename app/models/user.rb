@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
     def full_name
         if self.profile.nil?
-            return self.email
+            return nil
         end
         "#{self.profile.first_name} #{self.profile.last_name}"
     end

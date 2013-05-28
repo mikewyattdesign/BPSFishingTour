@@ -44,6 +44,7 @@ RSpec.configure do |config|
   # Add the Capybara DSL
   config.include Capybara::DSL
   config.include Features::SessionHelpers, type: :feature
+  config.include Features::TeamRequest, type: :feature
   config.include(MailerMacros)
   config.before(:each) { reset_email }
 end
