@@ -97,13 +97,13 @@ select {
 }
 
 .submitLoginCheck {
-    margin: 5px 5px 0 60px;
+    margin: 0 5px 0 60px;
     float: left;
 }
 
 .submitLoginRemember {
     float: left;
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 0 10px;
 }
 
 .submitLoginText {
@@ -262,10 +262,11 @@ select {
 }
 
 .teamRegContainerForm li {
-    width: 280px;
+    width: 300px;
     font-size: 10px;
     color: #865105;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .teamRegContainerForm form {
