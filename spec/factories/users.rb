@@ -3,11 +3,13 @@ FactoryGirl.define do
     factory :user do
         email "joe@example.com"
         password "secretpassword"
-        confirmed_at Time.now
 
-        factory :unregistered_user do
-            email "don@example.com"
-            password "sensitivestuff"
+        factory :registered_user do
+            confirmed_at Time.now
+        end
+
+        factory :unregisterd_user do
+            email "unregisterd@example.com"
         end
     end
 end

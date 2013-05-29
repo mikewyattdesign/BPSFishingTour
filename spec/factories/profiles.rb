@@ -1,6 +1,6 @@
 FactoryGirl.define do
     factory :profile, aliases: [:user_profile] do
-        user
+        association     :user, factory: :registered_user
         first_name    "Joe"
         last_name     "Daggrassi"
         street_address "1234 Main Street"

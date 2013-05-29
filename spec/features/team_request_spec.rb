@@ -1,11 +1,11 @@
 require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
+        subject(:requester) { FactoryGirl.create(:profile).user }
 
     context "User sends team request" do
 
-        subject(:requester) { FactoryGirl.create(:profile).user }
-        let!(:requestee) { FactoryGirl.build(:unregistered_user) }
+        let!(:requestee) { FactoryGirl.build(:unregisterd_user) }
 
         scenario "to unregistered user" do
 

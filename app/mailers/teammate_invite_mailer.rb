@@ -4,6 +4,6 @@ class TeammateInviteMailer < ActionMailer::Base
   def sign_up_and_team_up(invitee_first_name, invitee_last_name, invitee_email, current_user, request_url )
     @requester = current_user
     @request_url = request_url
-    mail(to: invitee_email, subject: "#{@requester.full_name} wants to gor fishing!")
+    mail(to: invitee_email, subject: "#{@requester.full_name} wants to go fishing!")
   end
 end
