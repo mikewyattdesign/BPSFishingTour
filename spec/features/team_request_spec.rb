@@ -43,6 +43,13 @@ feature "Teammate Request" do
                 page.current_path.should eq '/thanks'
                 expect(page).to have_content("You have 1 team invite pending")
                 click_link "View Invites"
+                page.current_path.should eq '/team_invites'
+
+                click_link "Join Team"
+
+                page.current_path.should eq '/teams/:id'
+
+                expect(page).to have_content("You have created a team")
 
             end
         end
