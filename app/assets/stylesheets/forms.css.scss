@@ -258,7 +258,7 @@ select {
 }
 
 .teamRegContainerForm {
-    padding: 0px 50px 0 50px;
+    padding: 0px 50px 30px 50px;
 }
 
 .teamRegContainerForm li {
@@ -269,7 +269,6 @@ select {
 }
 
 .teamRegContainerForm form {
-    width: 90%;
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -452,7 +451,7 @@ select {
 }
 
 #email, #last_name, #first_name {
-    width: 98%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
