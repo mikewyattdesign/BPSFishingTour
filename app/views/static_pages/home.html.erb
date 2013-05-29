@@ -71,7 +71,37 @@
                     <div class="bannerBigTextCont"><h1>Get your team on board the Bass Pro Fishing tour and take your first step to winning prizes and reaching qualifying regional and national events to get started with a free account. </h1></div>
                     <div class="bannerBigTextContButton">CREATE AN ACCOUNT</div>
                 </div>
-                <!-- <img class="bassImage1" src="/assets/bannerBigImage.png" alt="Bass Image"> -->
+                <div class="bannerBigImage">
+                    <script type="text/javascript">
+
+                    var image1=new Image()
+                    image1.src="/assets/bannerBigImage.png"
+                    var image2=new Image()
+                    image2.src="/assets/bannerBigImage2.png"
+                    var image3=new Image()
+                    image3.src="/assets/bannerBigImage3.png"
+
+                    </script>
+                    <img src="/assets/bannerBigImage.png" name="slide" height="515" />
+                    <script>
+
+                    var step=1
+                    function slideit(){
+
+                    if (!document.images)
+                    return
+                    document.images.slide.src=eval("image"+step+".src")
+                    if (step<3)
+                    step++
+                    else
+                    step=1
+
+                    setTimeout("slideit()",5000)
+                    }
+                    slideit()
+
+                    </script>
+                </div>
             </div>
         </div>
 
