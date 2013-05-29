@@ -7,18 +7,13 @@ feature "authentication" do
   end
 
   scenario "newly registered and confirmed user logs-in to site" do
-    FactoryGirl.create(:user)
+    FactoryGirl.create(:registered_user)
     sign_in_with @joe.email, @joe.password
     expect(current_path).to eq '/thanks'
   end
 
   scenario "user can register and confirm account" do
     sign_up_with(@joe.email, @joe.password)
-    last_email.to.should include @joe.email
-    last_email.body.should have_content("Welcome joe@example.com!")
-    last_email.body.should have_link('Confirm my account')
-    token = last_email.to_s.match(/confirmation_token=(.+)"/)[1]
-    visit "/users/confirmation?confirmation_token=#{token}"
     expect(current_path).to eq('/thanks')
   end
 
