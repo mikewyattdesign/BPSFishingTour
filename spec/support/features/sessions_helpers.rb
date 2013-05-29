@@ -24,6 +24,13 @@ module Features
 
       fill_in "Password confirmation", with: password
       click_button :GO
+
+      last_email.to.should include email
+
+      last_email.body.should have_content("Welcome #{email}!")
+      last_email.body.should have_link('Confirm my account')
+      token = last_email.to_s.match(/confirmation_token=(.+)"/)[1]
+      visit "/users/confirmation?confirmation_token=#{token}"
     end
   end
 end

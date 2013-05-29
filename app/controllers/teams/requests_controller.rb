@@ -28,4 +28,18 @@ class Teams::RequestsController < ApplicationController
         end
 
     end
+
+    def respond_to_invite
+        @request = Request.where(id: params[:id]).first
+        requester = User.where(id: @request.requester).first
+        # see if the invitee already has an account
+        if(invitee = User.where(email: @request.invitee).first)
+            puts 'blasfh'
+        else
+            session[:unregistered_invite] = @request.id
+            flash[:notic] = "Before teaming up with #{requester.full_name} you need to register an account."
+            redirect_to new_user_registration_path
+        end
+        # render text: params
+    end
 end

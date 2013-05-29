@@ -2,11 +2,9 @@ require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
         subject(:requester) { FactoryGirl.create(:profile).user }
+        let(:requestee) { FactoryGirl.build(:unregisterd_user) }
 
     context "User sends team request" do
-
-        let!(:requestee) { FactoryGirl.build(:unregisterd_user) }
-
         scenario "to unregistered user" do
 
             sign_in_with(requester.email, requester.password)
@@ -32,13 +30,21 @@ feature "Teammate Request" do
             last_email.body.should have_content("#{requester.profile.first_name}
                 #{requester.profile.last_name} wants you on his team")
         end
-
     end
 
     context "Receiving teammate request" do
-        scenario "as an unregistered user" do
+        let(:request) { FactoryGirl.create(:request, requester: requester.id)}
+        context "accept teammate invite" do
+            scenario "as an unregistered user" do
+                visit request.acceptance_url
+                page.current_path.should eq '/users/sign_up'
+                # register and confirm
+                sign_up_with(requestee.email, requestee.password)
+                page.current_path.should eq '/thanks'
+                expect(page).to have_content("You have 1 team invite pending")
+                click_link "View Invites"
 
-
+            end
         end
     end
 
