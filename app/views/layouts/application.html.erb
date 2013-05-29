@@ -19,12 +19,11 @@
                 <% end %>
             </div>
             <% flash.each do |name, msg| %>
-                <% unless msg =~ /email|password/ %>
-                    <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
-                        <%= msg %> <%= content_tag :button, "x", class: "close", "data-dismiss" => "alert"  %>
-                    <% end %>
+                <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
+                    <%= msg %> <%= content_tag :button, "×", class: "close", "data-dismiss" => "alert" %>
                 <% end %>
             <% end %>
+
             <%= yield %>
         </div>
     </body>

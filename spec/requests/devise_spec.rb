@@ -71,14 +71,9 @@ describe 'devise' do
             expect(page).to have_link('', href: '/users/sign_up')
         end
 
-        it 'does not display the "invalid email" message in the main flash area' do
+        it 'displays the "invalid email" message' do
             click_button('Login')
-            expect(find('#container')).to_not have_css('> #flash_alert')
-        end
-
-        it 'displays the "invalid email" message in the form area' do
-            click_button('Login')
-            expect(find('form')).to have_css('#flash_alert')
+            expect(page).to have_css('#flash_alert')
         end
     end
 end
