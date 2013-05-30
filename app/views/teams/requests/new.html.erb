@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <%= form_tag invite_teammate_path do %>
+    <%= form_tag send_invite_path do %>
         <div class="teamRegContainerForm">
                 <div class="regTopText">
                     <h3>Invite a Teammate</h3>
@@ -32,11 +32,6 @@
                         <li>Once they complete their registration, your Team Membership will be active in the Bass Pro Fishing Tour. You will receive notification when your Team Membership is active.</li>
                     </ul>
                 </div>
-                <%= label_tag :first_name, 'First name' %>
-                <%= text_field_tag :first_name %>
-
-                <%= label_tag :last_name, 'Last name' %>
-                <%= text_field_tag :last_name %>
 
                 <%= label_tag :email, 'Email' %>
                 <%= email_field_tag :email %>
