@@ -1,0 +1,17 @@
+<h1>You have the following Pending Team Request</h1>
+<table>
+    <tr>
+        <th>Invited By</th>
+        <th>Accept</th>
+        <th>Reject</th>
+    </tr>
+
+<% @invites.each do |i| %>
+    <tr>
+        <td><%= User.find(i.requester).full_name %></td>
+        <td><%= link_to "Accept Invitation", accept_invite_path(i.id) %></td>
+        <td><%= link_to "Don't Join", reject_invite_path(i.id) %></td>
+    </tr>
+<% end %>
+
+</table>

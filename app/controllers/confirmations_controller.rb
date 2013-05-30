@@ -1,6 +1,17 @@
 class ConfirmationsController < Devise::ConfirmationsController
     def after_confirmation_path_for(resource_name, resource)
-        flash[:team_invite] = "You have 1 team invite pending <br>  #{ActionController::Base.helpers.link_to "View Invites", "#"}" if session[:unregistered_invite]
+        # check for the existence of an invitation in session
+        # if there is one, delete it and associate the new user
+        # with the invitation in the database
+        if req_id = session.delete(:unregistered_invite)
+            # find the Request record
+            request = Request.find(req_id)
+            # add the user to request
+            request.invitee_id = current_user.id
+            if request.save
+                flash[:team_invite] = "You have 1 team invite pending <br>  #{ActionController::Base.helpers.link_to "View Invites", team_invitations_path(current_user)}"
+            end
+        end
         # puts session.as_json
         thanks_path
     end

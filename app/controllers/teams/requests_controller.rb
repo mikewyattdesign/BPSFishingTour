@@ -20,7 +20,7 @@ class Teams::RequestsController < ApplicationController
 
     def send_invite
         @invitee = OpenStruct.new params[:user]
-        @request = Request.create({requester: current_user.id, invitee: @invitee.email})
+        @request = Request.create({requester: current_user.id, invitee_email: @invitee.email})
         if @request
             TeammateInviteMailer.sign_up_and_team_up(@invitee.first_name, @invitee.last_name, @invitee.email, current_user, @request.acceptance_url).deliver
             flash[:notice] = "Your request has been sent to your teammate. If #{@invitee.first_name} #{@invitee.last_name} accepts, you may enter a tournament."
@@ -33,13 +33,33 @@ class Teams::RequestsController < ApplicationController
         @request = Request.where(id: params[:id]).first
         requester = User.where(id: @request.requester).first
         # see if the invitee already has an account
-        if(invitee = User.where(email: @request.invitee).first)
+        if(invitee = User.where(email: @request.invitee_email).first)
             puts 'blasfh'
         else
             session[:unregistered_invite] = @request.id
-            flash[:notic] = "Before teaming up with #{requester.full_name} you need to register an account."
+            flash[:notice] = "Before teaming up with #{requester.full_name} you need to register an account."
             redirect_to new_user_registration_path
         end
         # render text: params
+    end
+
+    def team_invitations
+        @invites = Request.where(invitee_id: current_user.id)
+    end
+
+    def accept_invitation
+        request = Request.find params[:request_id]
+        requester =
+        request.accepted = true
+        request.replied_at = Time.now
+        if request.save
+            @team = Team.new
+            @team << (current_user, )
+        end
+        redirect_to
+    end
+
+    def reject_invitation
+
     end
 end
