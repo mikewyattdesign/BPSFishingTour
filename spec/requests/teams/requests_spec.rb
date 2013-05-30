@@ -7,8 +7,6 @@ describe Teams::RequestsController do
         end
 
         it 'should have the proper labels' do
-            expect(page).to have_field('First name')
-            expect(page).to have_field('Last name')
             expect(page).to have_field('Email')
         end
 
