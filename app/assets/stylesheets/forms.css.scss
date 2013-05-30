@@ -18,10 +18,12 @@
 
 input {
     display: block;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
     border: 1px solid #adadad;
     padding: 3px 25px 3px 25px;
+    height: 28px;
     @include box-sizing(border-box);
+    outline: none;
 
     &[type=text] {
     width: 100%;
@@ -41,7 +43,6 @@ form {
     margin-left: auto;
     margin-right:auto;
     text-align: left;
-
 }
 
 label, h1, h2, h3, p, a {
@@ -53,6 +54,11 @@ label, h1, h2, h3, p, a {
 body {
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
+    margin: 0;
+}
+
+select {
+    width: 118px;
 }
 
 .greenButton {
@@ -68,6 +74,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
+    cursor: pointer;
 }
 
 .submitLogin, .submitLoginKey {
@@ -91,13 +98,13 @@ body {
 }
 
 .submitLoginCheck {
-    margin: 5px 5px 0 60px;
+    margin: 0 5px 0 60px;
     float: left;
 }
 
 .submitLoginRemember {
     float: left;
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 0 10px;
 }
 
 .submitLoginText {
@@ -123,18 +130,6 @@ body {
 	height: 70px;
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
-}
-
-.noStyle .BottomBanner{
-    background-image: none;
-    border-top: none;
-    box-shadow: none;
-}
-
-.noStyle .BottomBanner {
-    box-shadow: none;
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
 }
 
 #error_explanation {
@@ -224,6 +219,7 @@ body {
                 inset 0 -1px 2px #710502,
                 0 0 1px 1px #9c6864;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .thankRegSkip {
@@ -264,18 +260,18 @@ body {
 }
 
 .teamRegContainerForm {
-    padding: 0px 50px 0 50px;
+    padding: 0px 50px 30px 50px;
 }
 
 .teamRegContainerForm li {
-    width: 280px;
+    width: 300px;
     font-size: 10px;
     color: #865105;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .teamRegContainerForm form {
-    width: 90%;
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -302,7 +298,8 @@ body {
 }
 
 .actions a {
-    margin: 20px 20px 20px 170px;
+    float: left;
+    margin: 28px 20px 20px 150px;
     font-size: 10px;
     font-weight: bold;
 }
@@ -311,6 +308,9 @@ body {
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .topGreenBanner {
@@ -341,10 +341,16 @@ body {
 }
 
 .actions input {
-    background-color: #1a9b0b;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    @include background-image(linear-gradient(#14c300, #095200));
+    text-decoration: none;
     color: white;
-    border-top: solid 1px #d8d8d8;
-    box-shadow: 0 -2px 0 #a6a6a6;
+    box-shadow: inset 0 2px 2px #14c300,
+                inset 0 -1px 2px #095300,
+                0 0 1px 1px #095200;
+    font-size: 12px;
 }
 
 .full p {
@@ -379,6 +385,7 @@ body {
     width: 100%;
     height: 10px;
     background-color: #e8d8bf;
+    border: 2px solid #f7f7f7;
     border-radius: 2px;
     box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
 }
@@ -393,27 +400,19 @@ body {
 
 .progressBarCircle, .progressBarCircle2, .progressBarCircle3, .progressBarCircle4 {
     position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
+    margin-top: -15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
     background-color: #613e08;
     box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
 }
 
-.progressBarCircle {
-    margin-left: 50px;
-}
-
 .progressBarCircle h2, .progressBarCircle2 h2, .progressBarCircle3 h2, .progressBarCircle4 h2  {
     text-align: center;
-    margin-top: 6px;
+    margin-top: 10px;
     font-size: 14px;
     color: white;
-}
-
-.progressBarCircle2 {
-    margin-left: 158px;
 }
 
 .progressBarCircle2 .inactive, .progressBarCircle3 .inactive, .progressBarCircle4 .inactive{
@@ -426,28 +425,36 @@ body {
     box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
 }
 
+.progressBarCircle {
+    margin-left: 30px;
+}
+
+.progressBarCircle2 {
+    margin-left: 145px;
+}
+
 .progressBarCircle2 .inactive {
-    margin-left: 158px;
+    margin-left: 145px;
 }
 
 .progressBarCircle3 {
-    margin-left: 266px;
+    margin-left: 260px;
 }
 
 .progressBarCircle3 .inactive{
-    margin-left: 266px;
+    margin-left: 260px;
 }
 
 .progressBarCircle4 {
-    margin-left: 374px;
+    margin-left: 375px;
 }
 
 .progressBarCircle4 .inactive{
-    margin-left: 374px;
+    margin-left: 375px;
 }
 
 #email, #last_name, #first_name {
-    width: 98%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }

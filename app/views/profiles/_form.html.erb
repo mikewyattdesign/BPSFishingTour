@@ -78,7 +78,7 @@
             </div>
             <div class="third">
                 <%= f.label :shirt %>
-                <%= f.text_field :shirt %>
+                <%= f.select :shirt, [['Select Size', 1], ['XS', 2], ['S', 3], ['M', 4], ['L', 5], ['XXL', 6], ['XXXL', 7]] %>
             </div>
             <div class="full">
                 <%= f.label :outdoor_rewards_number %>

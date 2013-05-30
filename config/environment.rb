@@ -3,7 +3,6 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application.
 BpsFishingTour::Application.initialize!
-ActionMailer::Base.default_url_options = { :host => 'localhost:3000' }
 ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
