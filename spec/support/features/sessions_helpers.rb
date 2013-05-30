@@ -4,19 +4,19 @@ module Features
       # sign_up_with(email, password)
       visit '/'
 
-      click_link :Login
+      click_link :Login, match: :first
 
       fill_in :Email, with: email
 
       fill_in :Password, with: password
 
-      click_button "Login"
+      click_button("Login")
     end
 
     def sign_up_with(email, password)
       visit '/'
 
-      click_link "Sign up"
+      click_link "Sign up", match: :first
 
       fill_in :Email, with: email
 
