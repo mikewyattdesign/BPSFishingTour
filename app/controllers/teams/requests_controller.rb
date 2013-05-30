@@ -49,14 +49,14 @@ class Teams::RequestsController < ApplicationController
 
     def accept_invitation
         request = Request.find params[:request_id]
-        requester =
+        requester = User.find request.requester
         request.accepted = true
         request.replied_at = Time.now
         if request.save
-            @team = Team.new
-            @team << (current_user, )
+            @team = Team.create
+            @team.users<<([current_user, requester])
         end
-        redirect_to
+        # redirect_to
     end
 
     def reject_invitation
