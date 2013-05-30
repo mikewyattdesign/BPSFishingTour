@@ -36,13 +36,9 @@ feature "Teammate Request" do
                 page.current_path.should eq '/users/sign_up'
                 # register and confirm
                 sign_up_with(requestee.email, requestee.password)
-                page.current_path.should eq '/thanks'
-                expect(page).to have_content("You have 1 team invite pending")
                 # the invitee_id of the request record should now
                 # be equal to the id of the last registered user
                 expect(Request.first.invitee_id).to eq User.last.id
-
-                click_link "", href: team_invitations_path(User.last.id)
 
                 page.current_path.should eq "/users/#{User.find_by_email(requestee.email).id}/team_invitations"
                 expect(page).to have_content("#{requester.full_name}")

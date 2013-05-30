@@ -9,7 +9,7 @@ class ConfirmationsController < Devise::ConfirmationsController
             # add the user to request
             request.invitee_id = current_user.id
             if request.save
-                flash[:team_invite] = "You have 1 team invite pending <br>  #{ActionController::Base.helpers.link_to "View Invites", team_invitations_path(current_user)}"
+                return team_invitations_path(current_user)
             end
         end
         # puts session.as_json
