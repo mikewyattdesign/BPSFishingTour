@@ -56,7 +56,7 @@ class Teams::RequestsController < ApplicationController
             @team = Team.create
             @team.users<<([current_user, requester])
         end
-        # redirect_to
+       render text: "success"
     end
 
     def reject_invitation

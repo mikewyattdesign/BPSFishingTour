@@ -42,16 +42,14 @@ feature "Teammate Request" do
                 # be equal to the id of the last registered user
                 expect(Request.first.invitee_id).to eq User.last.id
 
-                click_link "View Invites"
+                click_link "", href: team_invitations_path(User.last.id)
 
                 page.current_path.should eq "/users/#{User.find_by_email(requestee.email).id}/team_invitations"
                 expect(page).to have_content("#{requester.full_name}")
 
-                click_link "Accept Invitation"
+                expect{ click_link "Accept Invitation" }.to change{Team.count}.from(0).to(1)
 
-                page.current_path.should eq '/teams/:id'
-
-                expect(page).to have_content("You have created a team")
+                expect(Team.first.users.count).to eq 2
             end
         end
     end
