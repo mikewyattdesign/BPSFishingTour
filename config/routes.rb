@@ -4,6 +4,9 @@ BpsFishingTour::Application.routes.draw do
     get '/thanks' => 'static_pages#thanks'
     get '/confirm' => 'static_pages#confirm'
 
+    get '/events' => 'static_pages#events'
+    post '/invite_teammate' => 'teams#invite_teammate'
+
 
     devise_for :users, controllers: {
         registrations: 'registrations',
