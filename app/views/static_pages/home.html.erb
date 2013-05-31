@@ -1,58 +1,20 @@
+<% content_for :leaderboard do %>
+    <div class="standingsLogo">
+        <img src="/assets/standingsBackground.png" alt="Standings">
+        <div class="standingsText">
+            <h2>Standings</h2>
+            <h1>Midwest Region</h1>
+    <!--    <p>Jason Cambel</p>
+            <p>Jason Cambel</p>
+            <p>Jason Cambel</p>
+            <p>Jason Cambel</p>
+            <p>Jason Cambel</p> -->
+        </div>
+    </div>
+<% end %>
+
 <div id="backgroundMain">
     <div id="wrapper">
-        <div class="bannerTopBackground">
-            <div class="bannerTop">
-                <div class="bassFishingLogo">
-                    <div class="standingsLogo">
-                        <%= image_tag 'standingsBackground.png', alt: 'Standings' %>
-                        <div class="standingsText">
-                            <h2>Standings</h2>
-                            <h1>Midwest Region</h1>
-<!--                        <p>Jason Cambel</p>
-                            <p>Jason Cambel</p>
-                            <p>Jason Cambel</p>
-                            <p>Jason Cambel</p>
-                            <p>Jason Cambel</p> -->
-                        </div>
-                    </div>
-                    <%= image_tag 'bassProLogo.png', class: 'bassLogo', alt: 'Bass Logo' %>
-                </div>
-
-                <div class="loginTop">
-                    <div class="loginIcon">
-                        <h2>Help</h2>
-                    </div>
-                    <div class="loginIconLine">
-                        |
-                    </div>
-                    <div class="loginIcon">
-                        <a href="/users/sign_in"><h2>Login</h2></a>
-                    </div>
-                </div>
-
-                <div class="navTop">
-                    <div class="navIcon">
-                        <h2>About</h2>
-                    </div>
-                    <div class="navIcon">
-                        <a href="/events"><h2>Tour Events</h2></a>
-                    </div>
-                    <div class="navIcon">
-                        <h2>Leaderboard</h2>
-                    </div>
-                    <div class="navIcon">
-                        <h2>News</h2>
-                    </div>
-                    <div class="navIcon">
-                        <h2>Anglers</h2>
-                    </div>
-                    <div class="navIcon">
-                        <a href="/profiles/new"><h2>Register</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="bannerBigTopBackground">
             <div class="bannerBigTop">
                 <div class="bannerBigText">
@@ -107,18 +69,18 @@
                 <div class="glowBackground"></div>
                 <div class="eventLeaderContainer">
                     <div class="findEvent">
-                        <%= image_tag 'eventLogo.png', class: 'eventLogo', alt: 'Event Logo' %>
+                        <a href="/events"><%= image_tag 'eventLogo.png', class: 'eventLogo', alt: 'Event Logo' %></a>
                     </div>
                     <div class="leaderboard">
                         <%= image_tag 'leaderboardLogo.png', class: 'leaderLogo', alt: 'Leader Logo' %>
                     </div>
                 </div>
                 <div class="eventLeaderContainerText">
-                    <div class="findEventText">
+                    <a href="/events"><div class="findEventText">
                         <h1>Find an Event</h1>
                         <p>Locate a Fishing Tour event near you. then register your team to participate.</p>
                         <h3>Locate Event</h3>
-                    </div>
+                    </div></a>
                     <div class="leaderboardText">
                         <h1>Leaderboard</h1>
                         <p>If you've recently participated in your local Fishing Tour event, don't forget to submit tour team results!</p>
@@ -127,54 +89,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="bannerBottomSponsorBackground">
-            <div class="bannerBottomSponsor">
-                <div class="sponsorArea">
-                    <%= image_tag 'trackerLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'notroLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'mercuryLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'planoLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'toyotaLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'bassProLogoBottom.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                </div>
-            </div>
-        </div>
-
-        <div class="bannerBottomBackground">
-            <div class="bannerBottom">
-                <div class="navBottom">
-                    <div class="navIconBot">
-                        About
-                    </div>
-                    <a href="/profiles/new"><div class="navIconBot">
-                        Register Yout Team
-                    </div></a>
-                    <div class="navIconBot">
-                        Find an Event
-                    </div>
-                    <div class="navIconBot">
-                        Leaderboard
-                    </div>
-                    <div class="navIconBot">
-                        News
-                    </div>
-                    <div class="navIconBot">
-                        Team Profiles
-                    </div>
-                    <div class="navIconBot">
-                        My Account
-                    </div>
-                    <div class="navIconBot">
-                        Contact Us
-                    </div>
-                </div>
-
-                <div class="navBottomLegal">
-                     <p>2013©  BPS Direct, L.L.C. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>

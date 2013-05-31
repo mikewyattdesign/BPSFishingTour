@@ -95,6 +95,10 @@
         cursor: pointer;
     }
 
+    .navIcon h2 {
+        color: white;
+    }
+
     .navIcon a {
         text-decoration: none;
     }
@@ -343,7 +347,7 @@
     }
 
 #user_nav {
-    display: none;
+
 }
 /*End Landing Page*/
 
@@ -445,6 +449,7 @@
     background-position:center;
     margin-top: 90px;
     height: 485px;
+    opacity: .8;
 }
 
 .bannerSmallTopBackground {
