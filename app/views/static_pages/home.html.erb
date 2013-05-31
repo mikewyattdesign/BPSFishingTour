@@ -4,7 +4,7 @@
             <div class="bannerTop">
                 <div class="bassFishingLogo">
                     <div class="standingsLogo">
-                        <img src="/assets/standingsBackground.png" alt="Standings">
+                        <%= image_tag 'standingsBackground.png', alt: 'Standings' %>
                         <div class="standingsText">
                             <h2>Standings</h2>
                             <h1>Midwest Region</h1>
@@ -15,7 +15,7 @@
                             <p>Jason Cambel</p> -->
                         </div>
                     </div>
-                    <img class="bassLogo" src="/assets/bassProLogo.png" alt="Bass Logo">
+                    <%= image_tag 'bassProLogo.png', class: 'bassLogo', alt: 'Bass Logo' %>
                 </div>
 
                 <div class="loginTop">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="bannerBigImage">
                     <div class="controller">
-                        <div class="sliderButton" onclick="ss.move(1)"> <img src="/assets/nextButton.png" alt="Next Button"> </div>
+                        <div class="sliderButton" onclick="ss.move(1)"> <%= image_tag 'nextButton.png', alt: 'Next Button' %> </div>
                         <ol id="dots" class="dots">
                             <li></li>
                             <li></li>
@@ -72,9 +72,9 @@
 
                     <div id="slideShow">
                         <ul id="slides">
-                            <li><img src="/assets/bannerBigImage.png" height="513" alt="Bass Pro Fishing"></li>
-                            <li><img src="/assets/bannerBigImage2.png" height="513" alt="Bass Pro Fishing"></li>
-                            <li><img src="/assets/bannerBigImage3.png" height="513" alt="Bass Pro Fishing"></li>
+                            <li><%= image_tag 'bannerBigImage.png', height: '513', alt: 'Bass Pro Fishing' %></li>
+                            <li><%= image_tag 'bannerBigImage2.png', height: '513', alt: 'Bass Pro Fishing' %></li>
+                            <li><%= image_tag 'bannerBigImage3.png', height: '513', alt: 'Bass Pro Fishing' %></li>
                         </ul>
                     </div>
 
@@ -96,7 +96,7 @@
         <div class="bannerMiddleBackground">
             <div class="bannerMiddle">
                 <div class="bassHandContainer">
-                    <img class="bassHand" src="/assets/bassHandImage.png" alt="Bass Hand">
+                    <%= image_tag 'bassHandImage.png', class: 'bassHand', alt: 'Bass Hand' %>
                     <div class="bassHandText">
                         <h3>THE 2014 BASS PRO SHOPS FISHING TOUR</h3>
                         <h1>About the Tour</h1>
@@ -107,10 +107,10 @@
                 <div class="glowBackground"></div>
                 <div class="eventLeaderContainer">
                     <div class="findEvent">
-                        <img class="eventLogo" src="/assets/eventLogo.png" alt="Event Logo">
+                        <%= image_tag 'eventLogo.png', class: 'eventLogo', alt: 'Event Logo' %>
                     </div>
                     <div class="leaderboard">
-                        <img class="leaderLogo" src="/assets/leaderboardLogo.png" alt="Leader Logo">
+                        <%= image_tag 'leaderboardLogo.png', class: 'leaderLogo', alt: 'Leader Logo' %>
                     </div>
                 </div>
                 <div class="eventLeaderContainerText">
@@ -131,12 +131,12 @@
         <div class="bannerBottomSponsorBackground">
             <div class="bannerBottomSponsor">
                 <div class="sponsorArea">
-                    <img class="sponsorLogo" src="/assets/trackerLogo.png" alt="Bass Logo">
-                    <img class="sponsorLogo" src="/assets/notroLogo.png" alt="Bass Logo">
-                    <img class="sponsorLogo" src="/assets/mercuryLogo.png" alt="Bass Logo">
-                    <img class="sponsorLogo" src="/assets/planoLogo.png" alt="Bass Logo">
-                    <img class="sponsorLogo" src="/assets/toyotaLogo.png" alt="Bass Logo">
-                    <img class="sponsorLogo" src="/assets/bassProLogoBottom.png" alt="Bass Logo">
+                    <%= image_tag 'trackerLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                    <%= image_tag 'notroLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                    <%= image_tag 'mercuryLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                    <%= image_tag 'planoLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                    <%= image_tag 'toyotaLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                    <%= image_tag 'bassProLogoBottom.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
                 </div>
             </div>
         </div>

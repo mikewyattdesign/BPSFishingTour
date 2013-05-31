@@ -36,7 +36,7 @@
 }
 
 .bannerTopBackground {
-    background-image: image-url('/assets/bannerGreenTop.png');
+    background-image: image-url('bannerGreenTop.png');
     background-position: center;
     height:74px;
 }
@@ -120,7 +120,7 @@
         }
 
 .bannerBigTopBackground {
-    background-image: image-url('/assets/bannerBigTop.jpg');
+    background-image: image-url('bannerBigTop.jpg');
     background-position: center;
 }
 
@@ -155,7 +155,7 @@
             border-radius: 2px;
             text-align: center;
             display: inline-block;
-            background-image: url('/assets/createAccountLogo.png');
+            background-image: image-url('createAccountLogo.png');
             background-position: center;
             text-decoration: none;
             box-shadow: inset 0 2px 2px #fc5c5c,
@@ -177,7 +177,7 @@
     }
 
 .bannerMiddleBackground {
-    background-image: image-url('/assets/woodBackground.jpg');
+    background-image: image-url('woodBackground.jpg');
     background-position: center;
     box-shadow:inset 0 5px 20px #000000;
     overflow: hidden;
@@ -212,7 +212,7 @@
         }
 
     .glowBackground {
-        background-image: image-url('/assets/bannerMiddleGlow.png');
+        background-image: image-url('bannerMiddleGlow.png');
         background-repeat: no-repeat;
         opacity:0.2;
         height: 335px;
@@ -284,7 +284,7 @@
         }
 
 .bannerBottomSponsorBackground {
-    background-image: image-url('/assets/bannerBottomBlack.png');
+    background-image: image-url('bannerBottomBlack.png');
     background-position: center;
     height:120px;
     overflow: hidden;
@@ -304,7 +304,7 @@
     }
 
 .bannerBottomBackground {
-    background-image: image-url('/assets/bannerBottomGreen.png');
+    background-image: image-url('bannerBottomGreen.png');
     background-position: center;
     height:105px;
     overflow: hidden;
