@@ -2,6 +2,6 @@
   "name": "bps-fishing-tour",
   "version": "0.0.0",
   "dependencies": {
-    "normalize.scss": "~2.1.2"
+    "normalize-scss": "2.1.2"
   }
 }

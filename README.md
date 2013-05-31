@@ -10,7 +10,9 @@
 This project requires Ruby 2.0, so if you don't already have at least
 2.0.0-p0, please install it via rvm or rbenv.  To install gem
 dependencies, you'll need to run `gem install bundler` if you don't
-already have bundler installed.
+already have bundler installed.  This also depends on `bower` to install
+client-side dependencies.  If you don't have bower, run
+`npm install -g bower`
 
 ## Setup
 
