@@ -78,7 +78,7 @@
 
     .loginIconLine {
         float: right;
-        padding: 0 20px 0 20px;
+        padding: 0 20px 0 8px;
         color: white;
         font-size: 20px;
     }
@@ -348,7 +348,13 @@
     }
 
 #user_nav {
+    color: white;
+    font-size: 20px;
+}
 
+#user_nav a {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #user_nav a, h2{
