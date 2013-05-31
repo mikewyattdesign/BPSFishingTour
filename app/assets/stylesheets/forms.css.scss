@@ -162,6 +162,10 @@ select {
     border-radius: 10px;
 }
 
+.formSpace {
+    height: 200px;
+}
+
 /*#flash_alert {
     padding: 10px 15px 10px 15px;
     text-align: center;
@@ -497,4 +501,18 @@ color: #000000;
 text-shadow: 0 1px 0 #ffffff;
 opacity: 0.2;
 filter: alpha(opacity=20);
+}
+
+.adSpace {
+    height: 250px;
+}
+
+.adImg {
+    margin-top: 20px;
+    margin-left: 3px;
+    width: 223px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    box-shadow: 0px 0px 35px black;
 }
