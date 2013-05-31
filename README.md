@@ -15,7 +15,8 @@ already have bundler installed.
 ## Setup
 
 1. `cd` to the project in your terminal.
-1. Run `bundle install` to grab dependencies
+1. Run `bundle install` to grab dependencies.
+1. Run `bower install` to grab client-side dependencies.
 
 ## Development
 
