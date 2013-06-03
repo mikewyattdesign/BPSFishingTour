@@ -1,23 +1,27 @@
-<script>
-    $('#myTab a').click(function (e) {
-    e.preventDefault();
-    $(this).tab('show');
-    })
-</script>
-
 <ul class="nav nav-tabs" id="myTab">
-<li class="active"><a href="#home">Home</a></li>
-<li><a href="#profile">Profile</a></li>
-<li><a href="#messages">Messages</a></li>
-<li><a href="#settings">Settings</a></li>
+    <li class="active"><a href="#home">My Tour</a></li>
+    <li><a href="#profile">Team Profile</a></li>
+    <li><a href="#messages">My Account</a></li>
 </ul>
 
 <div class="tab-content">
-<div class="tab-pane active" id="home">...</div>
-<div class="tab-pane" id="profile">...</div>
-<div class="tab-pane" id="messages">...</div>
-<div class="tab-pane" id="settings">...</div>
+    <div class="tab-pane fade active in" id="home">My Tour</div>
+        <p>asdasdsadasdsa</p>
+    <div class="tab-pane fade" id="profile">Team Profile</div>
+        <p>a1111111</p>
+    <div class="tab-pane fade" id="messages">My Account</div>
+        <p>000000000a</p>
 </div>
+
+<script>
+    $('#myTab a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show', function(e){
+        e.target.show();
+        e.relatedTarget.hide();
+    });
+    })
+</script>
 
 <p id="notice"><%= notice %></p>
 
