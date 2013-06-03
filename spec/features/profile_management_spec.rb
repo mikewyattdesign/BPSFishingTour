@@ -16,7 +16,6 @@ feature "profile_managment" do
           fill_in 'State', with: profile.state
           fill_in 'Zip', with: profile.zip
           click_button 'Continue'
-
           current_path.should eq '/teams/requests/new'
       end
     end
