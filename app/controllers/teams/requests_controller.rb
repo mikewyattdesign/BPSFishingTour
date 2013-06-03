@@ -21,7 +21,7 @@ class Teams::RequestsController < ApplicationController
     def send_invite
         @request = Request.create({requester: current_user.id, invitee_email: params[:email]})
         if @request
-            TeammateInviteMailer.sign_up_and_team_up(params[:email], current_user, @request.acceptance_url).deliver
+            TeammateInviteMailer.sign_up_and_team_up(params[:email], current_user, @request.invitation_url).deliver
             flash[:notice] = "Your request has been sent to your teammate. If #{params[:email]} accepts, you may enter a tournament."
             redirect_to '/'
         end
@@ -33,7 +33,8 @@ class Teams::RequestsController < ApplicationController
         requester = User.where(id: @request.requester).first
         # see if the invitee already has an account
         if(invitee = User.where(email: @request.invitee_email).first)
-            puts 'blasfh'
+            profile = invitee.profile
+            redirect_to new_user_session_path
         else
             session[:unregistered_invite] = @request.id
             flash[:notice] = "Before teaming up with #{requester.full_name} you need to register an account."

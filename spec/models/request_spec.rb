@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Request do
     subject {FactoryGirl.create(:request)}
 
-    it { should respond_to(:acceptance_url) }
+    it { should respond_to(:invitation_url) }
 
-    its(:acceptance_url) { should eq("/teammate/invite_response/#{subject.id}")}
+    its(:invitation_url) { should eq("/teammate/invite_response/#{subject.id}")}
 end

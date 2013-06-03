@@ -10,11 +10,8 @@ FactoryGirl.define do
         phone          "5555551234"
 
 
+        factory :registered_user_2_profile do
+            association :user, factory: :registered_user_2
+        end
     end
-
-    # factory :unregister_profile do
-    #     unregisterd_user
-    #     first_name      "don"
-    #     last_name       "Stevies"
-    # end
 end
