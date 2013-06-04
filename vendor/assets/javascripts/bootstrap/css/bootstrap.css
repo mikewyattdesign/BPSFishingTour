@@ -514,3 +514,38 @@
 .adImg2, .adImg3, .adImg4 {
     display: none;
 }
+
+/*Bottom Containers*/
+
+.tabMiddleContainer {
+    width: 1010px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabMidLeftCont {
+    width: 66.66%;
+}
+
+.teamEvents, .upcomingTeamEvents {
+    width: 670px;
+    height: 100%;
+    margin: 25px 25px 25px 10px;
+}
+
+.topDarkBrown {
+    background-color: #623d02;
+    height: 50px;
+    width: 670px;
+}
+
+.topLightBrown {
+    background-color: #956923;
+    height: 50px;
+    width: 670px;
+}
+
+.bottomBrown {
+    background-color: #d7c8b9;
+    height: 100px;
+}
