@@ -1,8 +1,8 @@
 require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
-        let(:requester) { FactoryGirl.create(:profile).user }
-        let(:requestee) { FactoryGirl.build(:unregisterd_user) }
+    let(:requester) { FactoryGirl.create(:profile).user }
+    let(:requestee) { FactoryGirl.build(:unregisterd_user) }
 
     scenario "User sends team request" do
         sign_in_with(requester.email, requester.password)
@@ -42,12 +42,13 @@ feature "Teammate Request" do
             end
 
             scenario "as a non logged-in registered user" do
-                request2.invitee_email = registered_requestee.email
-                request2.save
+                # request2.invitee_email = registered_requestee.email
+                # request2.save
                 visit request2.invitation_url
                 page.current_path.should eq '/users/sign_in'
                 sign_in_with registered_requestee.email, registered_requestee.password
                 page.current_path.should eq "/profiles/#{registered_requestee.profile.id}"
+
 
             end
         end
