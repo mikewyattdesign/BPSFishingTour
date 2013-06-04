@@ -8,8 +8,8 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 .nav.nav-tabs {
-    padding:0 5px;
-    margin: 0;
+    padding:0 6px;
+    margin: 50px 0 0 0;
 }
 
 .clearfix {
@@ -143,7 +143,7 @@
         padding-top: 8px;
         padding-bottom: 8px;
         line-height: 20px;
-        width: 215px;
+        width: 220px;
     }
 
 .nav-tabs > li > a:hover,
@@ -156,10 +156,9 @@
     .nav-tabs > .active > a:focus {
       color: #555555;
       background-color: #efece5;
-      border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default;
-      width: 215px;
+      width: 220px;
     }
 .nav-pills > li > a {
   padding-top: 8px;
@@ -276,7 +275,7 @@
   border-color: #999999;
 }
 .tabContainer {
-    width: 999px;
+    width: 1010px;
     margin-left: auto;
     margin-right: auto
 }
