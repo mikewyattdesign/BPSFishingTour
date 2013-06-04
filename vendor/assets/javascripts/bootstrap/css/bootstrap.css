@@ -511,3 +511,6 @@
     margin-top: -10px;
 }
 
+.adImg2, .adImg3, .adImg4 {
+    display: none;
+}
