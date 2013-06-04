@@ -521,14 +521,18 @@
     width: 1010px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+    clear: both;
 }
 
 .tabMidLeftCont {
     width: 66.66%;
+    display:block;
+    float: left;
 }
 
 .teamEvents, .upcomingTeamEvents {
-    width: 670px;
+    width: 95%;
     height: 100%;
     margin: 25px 25px 25px 10px;
 }
@@ -536,16 +540,45 @@
 .topDarkBrown {
     background-color: #623d02;
     height: 50px;
-    width: 670px;
+    width: 100%;
 }
 
 .topLightBrown {
     background-color: #956923;
     height: 50px;
-    width: 670px;
+    width: 100%;
 }
 
 .bottomBrown {
     background-color: #d7c8b9;
     height: 100px;
+}
+
+.tabMidRightCont {
+    width: 33.33%;
+    display:block;
+    float: left;
+}
+
+.leaderboard, .myRegion {
+    width: 95%;
+    height: 100%;
+    margin: 25px 0px 25px 10px;
+}
+
+.topBlue {
+    background-color: #0a4d6d;
+    height: 50px;
+    width: 100%;
+}
+
+.topGreen {
+    background-color: #437808;
+    height: 50px;
+    width: 100%;
+}
+
+.bottomGrey {
+    background-color: #d7c8b9;
+    height: 90px;
 }
