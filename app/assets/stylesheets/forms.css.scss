@@ -509,10 +509,25 @@ filter: alpha(opacity=20);
 
 .adImg {
     margin-top: 20px;
-    margin-left: 3px;
-    width: 223px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: center;
-    box-shadow: 0px 0px 35px black;
+    width: 220px;
+    box-shadow: 0 0 30px black;
+}
+
+.verticalAds {
+    width: 220px;
+}
+
+.standingsLogo {
+    width: 220px;
+}
+
+.go {
+    margin: 0;
+    width: 100%;
+    border-radius: 0px;
+    background-image: none;
+}
+
+.no {
+    background-image: none;
 }

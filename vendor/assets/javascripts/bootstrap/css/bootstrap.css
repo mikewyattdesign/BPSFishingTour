@@ -137,6 +137,7 @@
 }
 .nav-tabs > li {
   margin-bottom: -1px;
+  background-color: yellow;
 }
 
     .nav-tabs > li > a {
@@ -391,5 +392,122 @@
   text-decoration: none;
   background-color: transparent;
   cursor: default;
+}
+
+.teamRegMod form{
+    border-radius: 10px;
+}
+
+.actions {
+    background-image: none;
+    width: 120px;
+    border-top: none;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accountInput {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.overRank {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.headText {
+    margin-top: 40px;
+    clear: both;
+}
+
+.iconMedal {
+    margin: 5px 15px 5px 35px;
+    display: block;
+    float: left;
+}
+
+.iconMedalText {
+    width: 132px;
+    margin: 25px 35px 25px 15px;
+    display: block;
+    float: left;
+    text-align: center;
+}
+
+    .iconMedalText h1 {
+        font-size: 90px;
+        line-height: 100px;
+        margin-top: -30px
+    }
+
+    .iconMedalText h2 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .iconMedalText p {
+        font-size: 8px;
+    }
+
+.myTourCont {
+    display: inline;
+}
+
+.tourContLeft {
+    display: block;
+    float: left;
+    margin-left: 25px;
+}
+
+.iconMedalText.divideLine {
+    margin: 0;
+}
+
+.iconFish {
+    margin: 3px -8px;
+    width: 25%;
+}
+
+.tourContRight {
+    display: block;
+    float: left;
+}
+
+.picBox {
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.manFish {
+    position: absolute;
+    margin: 40px auto auto 165px;
+}
+
+.tourContRightBot {
+    margin-left: 20px;
+}
+
+.tourPersonText {
+    margin-left: 100px;
+    margin-top: 15px;
+    width: 220px;
+}
+
+    .tourPersonText h2 {
+        font-size: 15px;
+    }
+
+    .tourPersonText p {
+        font-size: 10px;
+    }
+
+.tourPerson {
+    position: absolute;
+    margin-top: -10px;
 }
 
