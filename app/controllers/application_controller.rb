@@ -6,11 +6,15 @@ class ApplicationController < ActionController::Base
   # after_filter :any_invites?
 
   def after_sign_in_path_for(resource)
+      # if user is signing in after receiving an email to join a team take them to the invitations page
+      return team_invitations_path(current_user) if session[:respond_to_invitation]
       unless current_user.profile
-          "/thanks"
+          thanks_path()
       else
+
+          puts params
           if current_user.teams.empty?
-            flash[:notice] = "What's next? Find a teammate so you two can join some tournaments! #{ActionController::Base.helpers.link_to "Grab A Teammate", requests_new_path }".html_safe
+            flash[:find_team_member] = "What's next? Find a teammate so you two can join some tournaments! #{ActionController::Base.helpers.link_to "Grab A Teammate", requests_new_path }".html_safe
 
             return profile_path(current_user)
           end

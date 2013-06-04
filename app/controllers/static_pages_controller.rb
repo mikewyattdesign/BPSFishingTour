@@ -7,7 +7,6 @@ class StaticPagesController < ApplicationController
   end
 
   def thanks
-
   end
 
   def confirm

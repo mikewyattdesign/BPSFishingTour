@@ -34,6 +34,7 @@ class Teams::RequestsController < ApplicationController
         # see if the invitee already has an account
         if(invitee = User.where(email: @request.invitee_email).first)
             profile = invitee.profile
+            session[:respond_to_invitation] = true
             redirect_to new_user_session_path
         else
             session[:unregistered_invite] = @request.id
@@ -45,6 +46,7 @@ class Teams::RequestsController < ApplicationController
 
     def team_invitations
         @invites = Request.where(invitee_id: current_user.id)
+        # puts current_user.full_name
     end
 
     def accept_invitation

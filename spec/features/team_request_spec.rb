@@ -42,13 +42,18 @@ feature "Teammate Request" do
             end
 
             scenario "as a non logged-in registered user" do
-                # request2.invitee_email = registered_requestee.email
-                # request2.save
                 visit request2.invitation_url
                 page.current_path.should eq '/users/sign_in'
-                sign_in_with registered_requestee.email, registered_requestee.password
-                page.current_path.should eq "/profiles/#{registered_requestee.profile.id}"
-
+                sign_in_from_sign_in_page registered_requestee.email, registered_requestee.password
+                page.current_path.should eq team_invitations_path(registered_requestee)
+                 puts request2.as_json
+                 puts requester.full_name
+                 puts requester.id
+                 puts User.all.as_json
+                # puts registered_requestee.profile.as_json
+                # puts Request.all.as_json
+                expect(Request.count).to eq 1
+                expect(page).to have_content("#{requester.full_name}")
 
             end
         end

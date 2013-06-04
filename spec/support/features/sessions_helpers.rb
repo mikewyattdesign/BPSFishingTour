@@ -32,5 +32,13 @@ module Features
       token = last_email.to_s.match(/confirmation_token=(.+)"/)[1]
       visit "/users/confirmation?confirmation_token=#{token}"
     end
+
+    def sign_in_from_sign_in_page(email, password)
+      fill_in :Email, with: email
+
+      fill_in :Password, with: password
+
+      click_button("Login")
+    end
   end
 end
