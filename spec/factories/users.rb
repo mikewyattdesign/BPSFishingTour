@@ -13,8 +13,8 @@ FactoryGirl.define do
             confirmed_at Time.now
         end
 
-        factory :unregisterd_user do
-            email "unregisterd@example.com"
+        factory :unregistered_user do
+            email "unregistered@example.com"
         end
     end
 end
