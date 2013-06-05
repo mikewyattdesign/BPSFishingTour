@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
       else
           if current_user.teams.empty?
             flash[:notice] = "What's next? Find a teammate so you two can join some tournaments! #{ActionController::Base.helpers.link_to "Grab A Teammate", requests_new_path }".html_safe
-
             return "/"
           end
           "/"

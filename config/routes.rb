@@ -1,5 +1,5 @@
 BpsFishingTour::Application.routes.draw do
-  resources :events
+    resources :events
 
     # match '/' => redirect('/login'), via: :get
 
