@@ -8,8 +8,14 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 .nav.nav-tabs {
-    padding:0 6px;
-    margin: 50px 0 0 0;
+    padding:0;
+    margin: 50px 0 0 6px;
+    text-align: center;
+}
+
+.nav.nav-tabs a {
+    color: #c5af91;
+    text-decoration: none;
 }
 
 .clearfix {
@@ -50,7 +56,7 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+/*  background-color: #eeeeee;*/
 }
 .nav > li > a > img {
   max-width: none;
@@ -135,10 +141,13 @@
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
-.nav-tabs > li {
-  margin-bottom: -1px;
-  background-color: yellow;
-}
+    .nav-tabs > li {
+        margin-bottom: -1px;
+        background-image: url('/assets/tabMiddle.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 -9px;
+    }
 
     .nav-tabs > li > a {
         padding-top: 8px;
@@ -155,11 +164,15 @@
     .nav-tabs > .active > a,
     .nav-tabs > .active > a:hover,
     .nav-tabs > .active > a:focus {
-      color: #555555;
-      background-color: #efece5;
-      border-bottom-color: transparent;
-      cursor: default;
-      width: 220px;
+        color: #555555;
+        background-image: url('/assets/tabLeft.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 -9px;
+        border-bottom-color: transparent;
+        cursor: default;
+        color: #4f8d09;
+        width: 220px;
     }
 .nav-pills > li > a {
   padding-top: 8px;
@@ -296,7 +309,7 @@
 }
 .tab-content {
   overflow: auto;
-  background-color: #efece5;
+  background-color: #efebe4;
 }
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
@@ -507,8 +520,7 @@
     }
 
     .tourPersonText p {
-        font-size: 8px;
-        width: 150px;
+        font-size: 10px;
     }
 
 .tourPerson {
@@ -548,7 +560,10 @@
 }
 
 .bottomBrown {
-    background-color: #d7c8b9;
+    background-image:url('/assets/eventBackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     height: 170px;
 }
 
@@ -636,7 +651,7 @@
 }
 
 .myCont {
-    margin: 20px auto 40px auto;
+    margin: 25px auto 25px auto;
 }
 
 .teamContLeft {
@@ -655,22 +670,19 @@
 
 .gearTextCont {
     width: 250px;
-    margin: auto auto 20px 100px;
+    margin: auto auto 0 100px;
 }
 
-.gearTextCont input {
-    height: 70px;
-}
-
-.gearTextCont input[placeholder] {
+.gearTextCont textarea {
+    height: 60px;
+    width: 250px;
+    resize: none;
     font-size: 8px;
     color: black;
 }
 
-textarea {
-    resize: none;
-    width: 250px;
-    font-size: 8px;
+.gearTextCont input[placeholder] {
+    font-size: 12px;
     color: black;
 }
 
@@ -687,7 +699,7 @@ textarea {
 .dateRow, .eventRow, .pointRow{
     display: inline-block;
     margin: auto 30px;
-    line-height: 30px;
+    line-height: 35px;
 }
 
 .eventRow {
@@ -697,7 +709,7 @@ textarea {
 
 .pointRow {
     float: right;
-    margin: 5px 30px auto auto;
+    margin: auto 30px auto auto;
 }
 
 .bottomGrey {
