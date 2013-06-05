@@ -283,6 +283,7 @@
 .tabbable {
   *zoom: 1;
   margin-left: 260px;
+  box-shadow: 0px 0px 35px black;
 }
 .tabbable:before,
 .tabbable:after {
@@ -537,6 +538,7 @@
     width: 95%;
     height: 100%;
     margin: 25px 25px 25px 10px;
+    box-shadow: 0px 0px 35px black;
 }
 
 .topDarkBrown {
@@ -553,7 +555,7 @@
 
 .bottomBrown {
     background-color: #d7c8b9;
-    height: 100px;
+    height: 170px;
 }
 
 .tabMidRightCont {
@@ -566,6 +568,7 @@
     width: 95%;
     height: 100%;
     margin: 25px 0px 25px 10px;
+    box-shadow: 0px 0px 35px black;
 }
 
 .topBlue {
@@ -582,7 +585,7 @@
 
 .bottomGrey {
     background-color: #d7c8b9;
-    height: 90px;
+    height: 220px;
 }
 
 .teamContRight {
@@ -616,6 +619,7 @@
 .tourLure, .tourBoat {
     position: absolute;
     margin-top: 10px;
+    margin-left: 15px;
 }
 
 .picBoxRight {
