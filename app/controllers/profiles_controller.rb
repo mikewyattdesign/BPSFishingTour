@@ -10,7 +10,8 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @profile = current_user.profile
+    # return render text: @profile.as_json
+    # @profile = current_user.profile
   end
 
   # GET /profiles/new
