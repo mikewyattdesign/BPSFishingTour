@@ -15,6 +15,13 @@ describe User do
         dan.save
         dan.profile.should_not be(nil)
     end
+
+    it "should take its profile with it when deleted" do
+        dan.save
+        profile = dan.profile
+        expect{ dan.destroy }.to change{ Profile.count }.from(1).to(0)
+    end
+
     it "should not valid without email" do
         dan.email = nil
         dan.should_not be_nil
