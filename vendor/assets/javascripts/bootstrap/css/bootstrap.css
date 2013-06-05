@@ -481,6 +481,7 @@
 .picBox {
     margin-left: 30px;
     margin-top: 8px;
+    margin-bottom: 20px;
 }
 
 .manFish {
@@ -494,16 +495,17 @@
 
 .tourPersonText {
     margin-left: 100px;
-    margin-top: 15px;
     width: 220px;
+    margin-bottom: 32px;
 }
 
     .tourPersonText h2 {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .tourPersonText p {
-        font-size: 10px;
+        font-size: 8px;
+        width: 150px;
     }
 
 .tourPerson {
@@ -581,4 +583,63 @@
 .bottomGrey {
     background-color: #d7c8b9;
     height: 90px;
+}
+
+.teamContRight {
+    display: block;
+    float: right;
+    width: 380px;
+    padding: auto 20px auto auto;
+}
+
+.teamContRight p, .teamContRight h3{
+    width: 220px;
+    margin-left: 100px;
+}
+
+.teamContRight p {
+    font-size: 10px;
+}
+
+.teamContRight h3 {
+    font-size: 12px;
+}
+
+.myCont {
+    margin: 20px auto 40px auto;
+}
+
+.teamContLeft {
+    margin-bottom: 8px;
+}
+
+.tourLure, .tourBoat {
+    position: absolute;
+    margin-top: 10px;
+}
+
+.picBoxRight {
+    margin: 10px;
+}
+
+.gearTextCont {
+    margin-left: 100px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.gearTextCont input {
+    height: 70px;
+}
+
+.gearTextCont input[placeholder] {
+    font-size: 8px;
+    color: black;
+}
+
+textarea {
+    resize: none;
+    width: 250px;
+    font-size: 8px;
+    color: black;
 }

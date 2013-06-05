@@ -3,58 +3,12 @@
 <div class="tabContainer">
     <div class="tabbable">
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#tab1">Mt Tour</a></li>
+        <li class="active"><a data-toggle="tab" href="#tab1">My Tour</a></li>
         <li><a data-toggle="tab" href="#tab2">Team Profile</a></li>
         <li><a data-toggle="tab" href="#tab3">My Account</a></li>
       </ul>
       <div class="tab-content">
         <div id="tab1" class="tab-pane active">
-            <div class="myTourCont">
-                <div class="tourContLeft">
-                    <div class="overRank">Overall Rankings</div>
-                    <img class="iconMedal" src="/assets/iconMedal.png" alt="Medal Logo">
-                    <div class="iconMedalText">
-                        <h1>00</h1>
-                        <h2>Event Points</h2>
-                        <div class="divideLine"></div>
-                            <p>3 Events Needed to Qualify</p>
-                            <div class="lineFish">
-                                <img class="iconFish" src="/assets/fishLoginLogo.png" alt="Fish">
-                                <img class="iconFish" src="/assets/fishLoginLogo.png" alt="Fish">
-                                <img class="iconFish" src="/assets/fishLoginLogo.png" alt="Fish">
-                                <img class="iconFish" src="/assets/fishLoginLogo.png" alt="Fish">
-                                <img class="iconFish" src="/assets/fishLoginLogo.png" alt="Fish">
-                            </div>
-                        <div class="divideLine"></div>
-                    </div>
-                </div>
-
-                <div class="tourContRight">
-                    <img class="manFish" src="/assets/iconManFish.png" alt="Man Fish">
-                    <img class="picBox" src="/assets/picBox.png" alt="Picture Box">
-                    <div class="tourContRightBot">
-                        <img class="tourPerson" src="/assets/iconPersonBig.png" alt="Person Icon">
-                        <div class="tourPersonText">
-                            <h2>My Teammate</h2>
-                            <p>Your team information will propogate here once the pending approval is has gone through.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="tab2" class="tab-pane">
-            <div class="tourContRight">
-                <img class="manFish" src="/assets/iconManFish.png" alt="Man Fish">
-                <img class="picBox" src="/assets/picBox.png" alt="Picture Box">
-                <div class="tourContRightBot">
-                    <img class="tourPerson" src="/assets/iconPersonBig.png" alt="Person Icon">
-                    <div class="tourPersonText">
-                        <h2>My Teammate</h2>
-                        <p>Your team information will propogate here once the pending approval is has gone through.</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="tourContLeft">
                 <div class="overRank">Overall Rankings</div>
                 <img class="iconMedal" src="/assets/iconMedal.png" alt="Medal Logo">
@@ -73,12 +27,62 @@
                     <div class="divideLine"></div>
                 </div>
             </div>
+            <div class="tourContRight">
+                <img class="manFish" src="/assets/iconManFish.png" alt="Man Fish">
+                <img class="picBox" src="/assets/picBox.png" alt="Picture Box">
+                <div class="tourContRightBot">
+                    <img class="tourPerson" src="/assets/iconPersonBig.png" alt="Person Icon">
+                    <div class="tourPersonText">
+                        <h2>My Teammate</h2>
+                        <p>Your team information will propogate here once the pending approval is has gone through.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tab-pane">
+            <div class="myTourCont">
+                <div class="teamContRight">
+                    <div class="myCont">
+                        <img class="tourBoat" src="/assets/iconBoat.png" alt="Boat Icon">
+                        <h3>My Boat:</h3>
+                        <p>Find out your boat info here!</p>
+                    </div>
+                    <div class="divideLine"></div>
+                    <div class="myCont no">
+                        <img class="tourLure" src="/assets/iconLure.png" alt="Lure Icon">
+                        <h3>Favorite Gear:</h3>
+                        <div class="gearTextCont">
+                            <form method="post">
+                                <textarea name="comments" cols="25" rows="3" placeholder="Share your favorite gear here or the equipment you have had the best luck with!">
+                                </textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="divideLine"></div>
+                    <div class="myCont">
+                        <img class="tourPerson" src="/assets/iconPersonBig.png" alt="Person Icon">
+                        <h3>My Teammates</h3>
+                        <p>Franki “Five-Fishes” Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season. </p>
+                    </div>
+                </div>
 
+                <div class="teamContLeft">
+                    <img class="manFish" src="/assets/iconManFish.png" alt="Man Fish">
+                    <img class="picBoxRight" src="/assets/picBoxRight.png" alt="Picture Box">
+                    <div class="tourContRightBot">
+                        <img class="tourPerson" src="/assets/iconPersonBig.png" alt="Person Icon">
+                        <div class="tourPersonText">
+                            <h2>My Teammate</h2>
+                            <p>Your team information will propogate here once the pending approval is has gone through.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="tab3" class="tab-pane">
             <p id="notice"><%= notice %></p>
 
-        <div class="teamRegContainer go">
+        <div class="teamRegContainer no">
             <%= form_for(@profile) do |f| %>
             <div class="teamRegContainerForm">
                     <% if @profile.errors.any? %>
