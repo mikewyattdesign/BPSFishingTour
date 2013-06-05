@@ -18,6 +18,20 @@
     text-decoration: none;
 }
 
+#tab1, #tab2 {
+    height: 330px;
+}
+
+.iconSmall {
+    position: absolute;
+    margin-left: -90px;
+}
+
+.iconSmallEvents {
+    position: absolute;
+    margin: 8px 20px;
+}
+
 .clearfix {
   *zoom: 1;
 }
@@ -556,7 +570,7 @@
 }
 
 .topDarkBrown h2{
-    padding: 10px 80px;
+    padding: 10px 70px;
 }
 
 .bottomBrown {
@@ -574,7 +588,7 @@
 }
 
 .topBlue h2, .topGreen h2{
-    padding: 10px 60px;
+    padding: 10px 70px;
 }
 
 .topDarkBrown, .topBlue, .topLightBrown, .topGreen {
