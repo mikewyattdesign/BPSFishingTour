@@ -395,6 +395,8 @@
   cursor: default;
 }
 
+/*TabBox Edits*/
+
 .teamRegMod form{
     border-radius: 10px;
 }
@@ -534,28 +536,15 @@
     float: left;
 }
 
-.teamEvents, .upcomingTeamEvents {
-    width: 95%;
+.teamEvents, .upcomingTeamEvents, .leaderboard, .myRegion {
+    width: 97%;
     height: 100%;
     margin: 25px 25px 25px 10px;
     box-shadow: 0px 0px 35px black;
 }
 
-.topDarkBrown {
-    background-color: #623d02;
-    height: 50px;
-    width: 100%;
-}
-
 .topDarkBrown h2{
-    padding: 10px 40px;
-}
-
-.topLightBrown {
-    background-color: #956923;
-    height: 50px;
-    width: 100%;
-    text-align: center;
+    padding: 10px 80px;
 }
 
 .bottomBrown {
@@ -569,32 +558,61 @@
     float: left;
 }
 
-.leaderboard, .myRegion {
-    width: 97%;
-    height: 100%;
-    margin: 25px 0px 25px 10px;
-    box-shadow: 0px 0px 35px black;
-}
-
 .topBlue h2, .topGreen h2{
     padding: 10px 60px;
 }
 
-.topBlue {
-    background-color: #0a4d6d;
+.topDarkBrown, .topBlue, .topLightBrown, .topGreen {
     height: 50px;
     width: 100%;
 }
 
+.topDarkBrown {
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6b4302), to(#5b3902));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #6b4302, #5b3902);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #6b4302, #5b3902);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #6b4302, #5b3902);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #6b4302, #5b3902);
+}
+
+.topBlue {
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0b597d), to(#083e58));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #0b597d, #083e58);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #0b597d, #083e58);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #0b597d, #083e58);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #0b597d, #083e58);
+}
+
+.topLightBrown {
+    background-color: #956923;
+}
+
 .topGreen {
-    background-color: #437808;
-    height: 50px;
-    width: 100%;
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#589e0a), to(#3d6d07));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #589e0a, #3d6d07);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #589e0a, #3d6d07);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #589e0a, #3d6d07);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #589e0a, #3d6d07);
 }
 
 .bottomGrey {
     background-color: #d7c8b9;
-    height: 220px;
+    height: 190px;
 }
 
 .teamContRight {
@@ -636,9 +654,8 @@
 }
 
 .gearTextCont {
-    margin-left: 100px;
     width: 250px;
-    margin-bottom: 20px;
+    margin: auto auto 20px 100px;
 }
 
 .gearTextCont input {
@@ -659,5 +676,43 @@ textarea {
 
 .teamList {
     display: inline-block;
-    margin: auto 60px;
+    margin: 15px 110px auto 30px;
+}
+
+.teamListL {
+    float: right;
+    margin: 15px 35px auto auto;
+}
+
+.dateRow, .eventRow, .pointRow{
+    display: inline-block;
+    margin: auto 30px;
+    line-height: 30px;
+}
+
+.eventRow {
+    width: 250px;
+    margin-left: 90px;
+}
+
+.pointRow {
+    float: right;
+    margin: 5px 30px auto auto;
+}
+
+.bottomGrey {
+    padding: 15px;
+}
+
+.greyCont {
+    margin: 10px auto 10px 50px;
+}
+
+.greyCont p {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.bottomGreyPt {
+    float: right;
 }

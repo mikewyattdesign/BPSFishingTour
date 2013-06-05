@@ -10,8 +10,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    # return render text: @profile.as_json
-    # @profile = current_user.profile
+    @bootstrap = true
   end
 
   # GET /profiles/new
