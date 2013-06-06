@@ -534,22 +534,43 @@ h3, p {
 }
 
 .tourPersonText {
-    margin-left: 100px;
-    width: 220px;
+    margin-left: 120px;
+    width: 200px;
     margin-bottom: 32px;
 }
 
     .tourPersonText h3 {
         font-size: 12px;
+        margin-bottom: 5px;
     }
 
     .tourPersonText p {
         font-size: 10px;
     }
 
+.teamPersonText {
+    margin-left: 100px;
+    width: 150px;
+}
+
+    .teamPersonText h3 {
+        font-size: 12px;
+    }
+
+    .teamPersonText p {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+.teamPerson {
+    position: absolute;
+    margin-top: -15px;
+}
+
 .tourPerson {
     position: absolute;
     margin-top: -10px;
+    margin-left: 30px;
 }
 
 .adImg2, .adImg3, .adImg4 {
@@ -669,7 +690,8 @@ h3, p {
     display: block;
     float: right;
     width: 380px;
-    padding: auto 20px auto auto;
+    height: 100%;
+    background-image: url('/assets/teamBackground.png');
 }
 
 .teamContRight p, .teamContRight h3{
@@ -688,6 +710,10 @@ h3, p {
 .myCont {
     margin: 25px auto 25px auto;
     background: none;
+}
+
+.myCont h3 {
+    padding-top: 3px;
 }
 
 .teamContLeft {
@@ -713,9 +739,11 @@ h3, p {
     height: 60px;
     width: 250px;
     resize: none;
-    font-size: 8px;
+    font-size: 12px;
     border-radius: 5px;
     border: 1px solid #b29f84;
+    background-color: #f6e4cc;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
     color: black;
 }
 
