@@ -8,10 +8,12 @@ class CreateEvents < ActiveRecord::Migration
       t.string :province
       t.string :state
       t.string :country
-      t.datetime :start_date
-      t.datetime :end_date
+      t.string :postal_code
+      t.datetime :date
 
       t.timestamps
     end
   end
 end
+
+

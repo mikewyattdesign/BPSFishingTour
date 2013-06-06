@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20130605194946) do
     t.string   "province"
     t.string   "state"
     t.string   "country"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.string   "postal_code"
+    t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
