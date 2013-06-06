@@ -562,15 +562,16 @@ h3, p {
         margin-top: 10px;
     }
 
-.teamPerson {
-    position: absolute;
-    margin-top: -15px;
-}
-
-.tourPerson {
+.tourPerson, .teamPerson {
     position: absolute;
     margin-top: -10px;
-    margin-left: 30px;
+    margin-left: 5px;
+}
+
+.tourPersonMain {
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 26px;
 }
 
 .adImg2, .adImg3, .adImg4 {
@@ -799,4 +800,14 @@ h3, p {
 
 .bottomGreyPt {
     float: right;
+}
+
+#profile_shirt {
+    clear: both;
+    float: left;
+}
+
+.shirtSize {
+    display: inline-block;
+    margin-left: 10px;
 }
