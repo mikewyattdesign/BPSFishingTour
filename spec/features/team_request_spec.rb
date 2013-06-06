@@ -2,7 +2,7 @@ require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
     let(:requester) { FactoryGirl.create(:profile).user }
-    let(:requestee) { FactoryGirl.build(:unregistered_user) }
+    let(:requestee) { FactoryGirl.build(:user) }
 
     scenario "User sends team request" do
         sign_in_with(requester.email, requester.password)
@@ -21,7 +21,7 @@ feature "Teammate Request" do
 
     context "Receiving teammate request" do
         let(:request) { FactoryGirl.create(:request, requester: requester.id)}
-        let(:registered_requestee) { FactoryGirl.create(:registered_user_2_profile).user}
+        let(:registered_requestee) { FactoryGirl.create(:user_profile).user}
         let(:request2) { FactoryGirl.create(:request, requester: requester.id, invitee_email: registered_requestee.email)}
         context "accept teammate invite" do
             scenario "as an unregistered user" do
