@@ -23,7 +23,6 @@ module Features
         end
 
         def confirm_registration!(user, confirmation_email)
-            puts confirmation_email
             expect(confirmation_email.to).to include user
             expect(confirmation_email.body).to have_content("Welcome #{user}!")
             expect(confirmation_email.body).to have_link('Confirm my account')

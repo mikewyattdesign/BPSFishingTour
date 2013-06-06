@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature "profile_managment" do
-    given(:profile) { FactoryGirl.build(:user_profile)}
-    given(:user) { profile.user }
+    given(:profile) { OpenStruct.new FactoryGirl.attributes_for(:user_profile) }
+    given(:user) { OpenStruct.new FactoryGirl.attributes_for(:user) }
 
     context "User with no profile created" do
         scenario "sign in and create profile" do
@@ -22,15 +22,10 @@ feature "profile_managment" do
 
             click_button 'Continue'
             expect(current_path).to eq '/teams/requests/new'
-        end
-    end
 
-    context "User with a profile already created" do
-        given(:user_with_profile) { FactoryGirl.create(:user_profile).user }
-
-        scenario "signs in and is asked to create a team" do
-            sign_in_with(user_with_profile.email, user_with_profile.password)
-            expect(current_path).to eq '/' # for the moment its going to root
+            click_link :Logout
+            sign_in_with(user.email, user.password)
+            expect(current_path).to eq "/profiles/#{User.where(email: user.email).first.id}"
         end
     end
 end
