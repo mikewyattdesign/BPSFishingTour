@@ -7,9 +7,10 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
 .nav.nav-tabs {
     padding:0;
-    margin: 50px 0 0 6px;
+    margin: 50px 0 0px 6px;
     text-align: center;
 }
 
@@ -171,11 +172,11 @@ h3, p {
   border-bottom: 1px solid #ddd;
 }
     .nav-tabs > li {
-        margin-bottom: -1px;
         background-image: url('/assets/tabMiddle.png');
         background-size: 100%;
         background-repeat: no-repeat;
-        background-position: 0 -9px;
+        background-position: -1px -9px;
+        margin-bottom: -1px;
     }
 
     .nav-tabs > li > a {
