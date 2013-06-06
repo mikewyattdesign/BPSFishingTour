@@ -3,9 +3,9 @@
 <div class="tabContainer">
     <div class="tabbable">
       <ul class="nav nav-tabs">
-        <li class="active"><img class="iconSmall" src="/assets/fishLoginLogo.png" alt="Person Icon"><a data-toggle="tab" href="#tab1">My Tour</a></li>
+        <li class="active"><img class="iconSmall" src="/assets/iconFish.png" alt="Fish Icon"><a data-toggle="tab" href="#tab1">My Tour</a></li>
         <li><img class="iconSmall" src="/assets/iconPerson.png" alt="Person Icon"><a data-toggle="tab" href="#tab2">Team Profile</a></li>
-        <li><img class="iconSmall" src="/assets/iconSettings.png" alt="Person Icon"><a data-toggle="tab" href="#tab3">My Account</a></li>
+        <li id="accountOn"><a data-toggle="tab" href="#tab3"><img class="iconSmallS" src="/assets/iconSettings.png" alt="Setting Icon">My Account</a></li>
       </ul>
       <div class="tab-content">
         <div id="tab1" class="tab-pane active">
@@ -168,6 +168,19 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $("#accountOn").on("click", function(event){
+        if(($(this).attr("class")) != "active"){
+            $(".tabMidLeftCont, .tabMidRightCont").hide();
+        }
+    });
+    $(".nav-tabs li").on("click", function(event){
+        if((($(this).attr("id")) != "accountOn")){
+            $(".tabMidLeftCont, .tabMidRightCont").show();
+        }
+    });
+</script>
 
 <div class="tabMiddleContainer">
     <div class="tabMidLeftCont">

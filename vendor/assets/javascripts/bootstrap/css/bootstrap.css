@@ -22,9 +22,20 @@
     height: 330px;
 }
 
+#tab1, #tab2, #tab3 {
+    background-image: url('/assets/tabBackground.png');
+    background-size: 100%;
+}
+
 .iconSmall {
     position: absolute;
     margin-left: -90px;
+}
+
+.iconSmallS {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -8px;
 }
 
 .iconSmallEvents {
@@ -327,7 +338,6 @@ h3, p {
 }
 .tab-content {
   overflow: auto;
-  background-color: #efebe4;
 }
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
@@ -670,6 +680,7 @@ h3, p {
 
 .myCont {
     margin: 25px auto 25px auto;
+    background: none;
 }
 
 .teamContLeft {
