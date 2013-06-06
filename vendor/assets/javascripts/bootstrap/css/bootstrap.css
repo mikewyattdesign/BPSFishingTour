@@ -654,8 +654,19 @@ h3, p {
 }
 
 .bottomGrey {
-    background-color: #d7c8b9;
+    background-image: url('/assets/leaderBackground.jpg');
+    background-position: top;
     height: 190px;
+    padding: 15px;
+}
+
+.bottomGreyFlat {
+    height: 190px;
+    padding: 15px;
+    background-color: #cccece;
+    background-image: url('/assets/iconMap.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .teamContRight {
@@ -748,12 +759,13 @@ h3, p {
     margin: auto 30px auto auto;
 }
 
-.bottomGrey {
-    padding: 15px;
+.greyCont {
+    margin: auto auto 36px 70px;
 }
 
-.greyCont {
-    margin: 10px auto 10px 50px;
+.faceCont {
+    position: absolute;
+    margin: -6px auto auto -60px;
 }
 
 .greyCont p {

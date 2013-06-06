@@ -2,7 +2,7 @@
 .formContainer{
     @include clearfix;
     width: 405px;
-    margin: 250px auto;
+    margin: 140px auto;
     text-align: center;
     background-color: #fffbf3;
     border-radius: 10px;
@@ -528,10 +528,9 @@ filter: alpha(opacity=20);
     width: 220px;
 }
 
-.no {
-    margin: 0;
+.teamRegContainer.no {
+    margin: 0 0 25px 0;
     width: 100%;
     border-radius: 0px;
     background: none;
-    margin-bottom: 25px;
 }
