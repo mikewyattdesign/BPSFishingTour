@@ -3,17 +3,9 @@
 <div class="tabContainer">
     <div class="tabbable">
       <ul class="nav nav-tabs">
-        <li class="active">
-            <%= image_tag 'iconFish.png', class: 'iconSmall', alt: 'Fish Icon' %>
-            <a data-toggle="tab" href="#tab1">My Tour</a>
-        </li>
-        <li>
-            <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
-            <a data-toggle="tab" href="#tab2">Team Profile</a>
-        </li>
-        <li id="accountOn">
-            <a data-toggle="tab" href="#tab3"><%= image_tag 'iconSettings.png', class: 'iconSmallS', alt: 'Settings Icon Icon' %>My Accounts</a>
-        </li>
+        <li class="active"><a data-toggle="tab" href="#tab1"><%= image_tag 'iconFish.png', class: 'iconSmall', alt: 'Fish Icon' %>My Tour</a></li>
+        <li><a data-toggle="tab" href="#tab2"><%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>Team Profile</a></li>
+        <li id="accountOn"><a data-toggle="tab" href="#tab3"><%= image_tag 'iconSettings.png', class: 'iconSmall', alt: 'Settings Icon Icon' %>My Accounts</a></li>
       </ul>
       <div class="tab-content">
         <div id="tab1" class="tab-pane active">
@@ -196,7 +188,7 @@
     });
     $("#accountOn").on("click", function(event){
         if((($(this).attr("id")) != "active")){
-            $(".adImg2, .adImg3, .adImg4").show();
+            $(".adImg2, .adImg3").show();
         }
     });
 </script>
