@@ -188,6 +188,17 @@
             $(".tabMidLeftCont, .tabMidRightCont").show();
         }
     });
+
+    $(".nav-tabs li").on("click", function(event){
+        if(($(this).attr("class")) != "accountOn"){
+            $(".adImg2, .adImg3, .adImg4").hide();
+        }
+    });
+    $("#accountOn").on("click", function(event){
+        if((($(this).attr("id")) != "active")){
+            $(".adImg2, .adImg3, .adImg4").show();
+        }
+    });
 </script>
 
 <div class="tabMiddleContainer">

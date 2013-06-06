@@ -8,46 +8,6 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-.nav.nav-tabs {
-    padding:0;
-    margin: 50px 0 0px 6px;
-    text-align: center;
-}
-
-.nav.nav-tabs a {
-    color: #c5af91;
-    text-decoration: none;
-}
-
-#tab1, #tab2 {
-    height: 330px;
-}
-
-#tab1, #tab2, #tab3 {
-    background-image: url('/assets/tabBackground.png');
-    background-size: 100%;
-}
-
-.iconSmall {
-    position: absolute;
-    margin-left: -90px;
-}
-
-.iconSmallS {
-    position: absolute;
-    margin-left: -40px;
-    margin-top: -8px;
-}
-
-.iconSmallEvents {
-    position: absolute;
-    margin: 8px 20px;
-}
-
-h3, p {
-    color: #876e49;
-}
-
 .clearfix {
   *zoom: 1;
 }
@@ -438,6 +398,46 @@ h3, p {
 }
 
 /*TabBox Edits*/
+
+h3, p {
+    color: #876e49;
+}
+
+.iconSmall {
+    position: absolute;
+    margin-left: -90px;
+}
+
+.iconSmallS {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -8px;
+}
+
+.iconSmallEvents {
+    position: absolute;
+    margin: 8px 20px;
+}
+
+.nav.nav-tabs {
+    padding:0;
+    margin: 50px 0 0px 6px;
+    text-align: center;
+}
+
+.nav.nav-tabs a {
+    color: #c5af91;
+    text-decoration: none;
+}
+
+#tab1, #tab2 {
+    height: 330px;
+}
+
+#tab1, #tab2, #tab3 {
+    background-image: url('/assets/tabBackground.png');
+    background-size: 100%;
+}
 
 .teamRegMod form{
     border-radius: 10px;
