@@ -386,7 +386,11 @@
                 1px 1px 2px -1px #fff;
 }
 
-.dots li:hover {
+.dots li:active {
+    background: $yellow;
+}
+
+#dots .current {
     background: $yellow;
 }
 
