@@ -92,3 +92,15 @@ local.properties
 # PDT-specific
 .buildpath
 /.idea/
+node_modules/.bin/bower
+node_modules/bower/node_modules/.bin/hulk
+node_modules/bower/node_modules/.bin/lodash
+node_modules/bower/node_modules/.bin/nopt
+node_modules/bower/node_modules/.bin/semver
+node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modules/.bin/beep
+node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modules/.bin/clear
+node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modules/.bin/imgcat
+node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modules/.bin/starwars
+node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/json2yaml
+node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/lodash
+node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/yaml2json
