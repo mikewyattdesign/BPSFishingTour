@@ -1,4 +1,5 @@
 BpsFishingTour::Application.routes.draw do
+    resources :events
 
     # match '/' => redirect('/login'), via: :get
 
@@ -7,7 +8,6 @@ BpsFishingTour::Application.routes.draw do
 
     get '/events' => 'static_pages#events'
 
-    resources :events
 
     devise_for :users, controllers: {
         registrations: 'registrations',
