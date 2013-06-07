@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20130606170709) do
 
+  create_table "divisions", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "divisions_events", force: true do |t|
     t.integer  "event_id"
     t.integer  "division_id"
@@ -28,8 +34,8 @@ ActiveRecord::Schema.define(version: 20130606170709) do
     t.string   "province"
     t.string   "state"
     t.string   "country"
-    t.string   "postal_code"
-    t.datetime "date"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
