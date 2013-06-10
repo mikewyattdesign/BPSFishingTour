@@ -192,15 +192,59 @@ h3, p {
     float: left;
 }
 
-.picBox {
+.picBoxContainer {
+    width: 323px;
+    height: 192px;
+    position: relative;
+    overflow: hidden;
     margin-left: 30px;
     margin-top: 8px;
     margin-bottom: 8px;
 }
 
-.manFish {
+.picBoxContainerLeft {
+    width: 349px;
+    height: 221px;
+    position: relative;
+    overflow: hidden;
+}
+
+.picBox {
+    position: absolute;
+    z-index: 9999;
+}
+
+.picBoxLeft {
+    position: absolute;
+    z-index: 9999;
+}
+
+.teamPic {
+    position: absolute;
+}
+
+.manFishRight {
     position: absolute;
     margin: 40px auto auto 165px;
+}
+
+.manFishLeft {
+    position: absolute;
+    margin: 55px auto auto 155px;
+}
+
+.manFishTextRight {
+    position: absolute;
+    font-size: 10px;
+    margin-top: 150px;
+    margin-left: 125px;
+}
+
+.manFishTextLeft {
+    position: absolute;
+    font-size: 10px;
+    margin-top: 170px;
+    margin-left: 115px;
 }
 
 .tourContRightBot {
@@ -209,7 +253,7 @@ h3, p {
 }
 
 .teamContLeftBot {
-    margin-left: 30px;
+    margin-top: 10px;
 }
 
 .tourPersonText {
@@ -410,16 +454,15 @@ h3, p {
 
 .teamContLeft {
     margin-bottom: 8px;
+    display: block;
+    float: left;
+    margin: 10px;
 }
 
 .tourLure, .tourBoat {
     position: absolute;
     margin-top: 10px;
     margin-left: 15px;
-}
-
-.picBoxRight {
-    margin: 10px;
 }
 
 .gearTextCont {
