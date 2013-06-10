@@ -2,14 +2,9 @@
 
 FactoryGirl.define do
   factory :event do
-    name "MyString"
-    address "MyString"
-    address2 "MyString"
-    city "MyString"
-    province "MyString"
-    state "MyString"
-    country "MyString"
+    name "Chippawa, Upper Niagara"
+    country "Canada"
+    postal_codCe "123456"
     start_date "2013-06-05 14:49:46"
-    end_date "2013-06-05 14:49:46"
   end
 end
