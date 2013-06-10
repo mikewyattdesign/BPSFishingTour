@@ -471,7 +471,18 @@
 }
 
 .bassEventAttendBackbround {
-    background-image: image-url('eventAttendBackground.png');
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255, 0.1)), to(rgba(8,8,8,0.4)));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
+    /* IE 10 */
+    background: -ms-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
     background-repeat: no-repeat;
     height: 125px;
     width: 873px;
