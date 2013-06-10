@@ -426,17 +426,16 @@
 /*Event Page*/
 
 .bannerMiddleEvent {
-    width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .findAnEvent {
-    position: absolute;
+    text-align: center;
 }
 
 .findAnEventText {
-    margin-left: 550px;
+    margin-top: 80px;
 }
 
 .findAnEventText h4 {
@@ -449,7 +448,6 @@
     background-image: image-url('eventMap.png');
     background-repeat: no-repeat;
     background-position:center;
-    margin-top: 90px;
     height: 485px;
     opacity: .8;
 }
