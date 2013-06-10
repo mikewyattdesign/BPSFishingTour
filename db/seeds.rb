@@ -5,8 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-   user = User.create email: "joe@example.com", password: "secret1", confirmed_at: Time.now
-
+   puts User.count
+   user = User.create({email: "joe@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
+   puts User.count
     profile = Profile.create first_name: "Joe", last_name: "Daggrassi", street_address: "1234 Main Street", city: "St. Louis", zip: "63112", state: "MO", phone: "3211234321", user_id: user.id
 
     division1 = Division.create({name: "BM Great Lakes Tour"})

@@ -1,0 +1,35 @@
+<div class="teamEvents">
+    <div class="topDarkBrown">
+        <%= image_tage 'iconCal.png', class:  %>
+        <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
+        <h2>Team Events</h2>
+    </div>
+    <table>
+        <div class="topLightBrown">
+            <thead>
+                <div class="teamList"><h3>Date</h3></div>
+                <div class="teamList"><h3>Event Title</h3></div>
+                <div class="teamListL"><h3>Points</h3></div>
+            </thead>
+        </div>
+
+        <div class="bottomBrown">
+            <div class="dateRow">
+                <% @myEvents.each do |event| %>
+                    <p>event.date</p>
+                <% end %>
+            </div>
+            <div class="eventRow">
+                <% @myEvents.each do |event| %>
+                    <p>event.name</p>
+                <% end %>
+            </div>
+            <div class="pointRow">
+                <p>03/12/13</p>
+                <p>03/12/13</p>
+                <p>03/12/13</p>
+                <p>03/12/13</p>
+            </div>
+        </div>
+    </table>
+</div>
