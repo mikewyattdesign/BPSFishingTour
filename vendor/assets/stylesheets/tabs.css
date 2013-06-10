@@ -1,9 +1,17 @@
+.nav-tabs {
+    border:none;
+}
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-    text-decoration: none;
-    background: none;
-    border: none;
+.tabbable {
+    *zoom: 1;
+    margin-left: 260px;
+    box-shadow: 0px 0px 35px black;
+}
+
+.tabContainer {
+    width: 1010px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-tabs > li {
@@ -24,6 +32,13 @@
     border:none;
 }
 
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
@@ -36,22 +51,6 @@
     border: none;
     cursor: default;
     width: 220px;
-}
-
-.nav-tabs {
-  border:none;
-}
-
-.tabContainer {
-    width: 1010px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tabbable {
-  *zoom: 1;
-  margin-left: 260px;
-  box-shadow: 0px 0px 35px black;
 }
 
 /*Tab Edits*/
