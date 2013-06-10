@@ -374,7 +374,16 @@ h3, p {
     float: right;
     width: 380px;
     height: 100%;
-    background-image: url('/assets/teamBackground.jpg');
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee9de), to(#e1cfb6));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #eee9de, #e1cfb6);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #eee9de, #e1cfb6);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #eee9de, #e1cfb6);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #eee9de, #e1cfb6);
 }
 
 .teamContRight p, .teamContRight h3{
