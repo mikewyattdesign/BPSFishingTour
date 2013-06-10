@@ -1,55 +1,41 @@
-<h1>Listing events</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Address2</th>
-      <th>City</th>
-      <th>Province</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <div class="bassEventAttendBackbround">
-        <div class="bassEventAttendContainer">
-            <div class="bassEventAttendText">
-                <h2><%= event.name %></h2>
-                <p>5<%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-            </div>
-            <div class="bassEventAttendButton">
-                <h2>ATTEND</h2>
+<div id="backgroundMain">
+    <div id="wrapper">
+        <div class="bannerSmallTopBackground">
+            <div class="bannerSmallTop">
+                <div class="bannerBigText">
+                    <div class="bannerBigTextCont"><h2>Welcome to the events page! Checkout our lineup below.</h2></div>
+                    <div class="bannerBigTextCont"><h1>Choose your region below to find the tournaments near you. </h1></div>
+                </div>
             </div>
         </div>
+
+        <div class="bannerMiddleBackground">
+            <div class="bannerMiddleEvent">
+                <dul class="findAnEvent">
+                    <div class="findAnEventText"><h4>FIND AN EVENT</h4></div>
+                </div>
+                <div class="bassEventMap"></div>
+                <div class="bassEventAttend">
+                  <% @events.each do |event| %>
+                    <div class="bassEventAttendBackbround">
+                      <div class="bassEventAttendContainer">
+                          <div class="bassEventAttendText">
+                              <h2><%= event.name %></h2>
+                              <p>5<%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+                          </div>
+                          <div class="bassEventAttendButton">
+                              <h2>ATTEND</h2>
+                          </div>
+                      </div>
+                    </div>
+                  <% end %>
+                  <br>
+                  <%= link_to 'New Event', new_event_path %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.address %></td>
-        <td><%= event.address2 %></td>
-        <td><%= event.city %></td>
-        <td><%= event.province %></td>
-        <td><%= event.state %></td>
-        <td><%= event.country %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>

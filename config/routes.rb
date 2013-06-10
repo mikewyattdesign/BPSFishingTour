@@ -1,7 +1,7 @@
 BpsFishingTour::Application.routes.draw do
-    resources :events
 
     # match '/' => redirect('/login'), via: :get
+    resources :events
 
     get '/thanks' => 'static_pages#thanks'
     get '/confirm' => 'static_pages#confirm'
