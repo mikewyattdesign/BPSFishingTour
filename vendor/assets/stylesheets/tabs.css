@@ -14,6 +14,24 @@
     margin-right: auto;
 }
 
+.tabContBackground {
+    width: 1050px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(rgba(10,10,10,0.5)));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* IE 10 */
+    background: -ms-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+}
+
 .nav-tabs > li {
     background-image: url('/assets/tabMiddle.png');
     background-size: 100%;
@@ -72,7 +90,7 @@ h3, p {
 
 .nav.nav-tabs {
     padding:0;
-    margin: 50px 0 0px 6px;
+    margin: 50px 0 0 265px;
     text-align: center;
 }
 
