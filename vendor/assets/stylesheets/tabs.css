@@ -487,6 +487,25 @@ h3, p {
     color: black;
 }
 
+.teamListCover {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    width: 653px;
+    height: 220px;
+}
+
+.teamListCover h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.teamListCover p {
+    text-align: center;
+    color: white;
+}
+
 .teamList {
     display: inline-block;
     margin: 15px 110px auto 30px;
