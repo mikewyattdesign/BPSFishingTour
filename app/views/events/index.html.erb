@@ -23,9 +23,8 @@
                               <h2><%= event.name %></h2>
                               <p><%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
                           </div>
-                          <div class="bassEventAttendButton">
-                              <h2>ATTEND</h2>
-                          </div>
+
+                          <%= button_to "Details", event_path(event), class: 'bassEventAttendButton', method: :get %>
                       </div>
                     </div>
                   <% end %>

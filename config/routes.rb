@@ -21,6 +21,7 @@ BpsFishingTour::Application.routes.draw do
     resources :profiles
     root to: 'static_pages#home'
     resources :teams
+    match '/events/:id/attend' => 'events#register_event', as: 'register_event', via: :post
     match '/teams' => 'teams#index', via: :get
     match '/teammate/search' => 'teams/requests#search', as: 'invite_teammate', via: :post
     match '/teammate/send_invite' => 'teams/requests#send_invite', as: 'send_invite', via: :post

@@ -37,6 +37,13 @@ class EventsController < ApplicationController
     end
   end
 
+  def register_event
+    event = Event.find params[:id]
+    current_user.teams.first.events << event
+    flash[:register_event] = "Your team is now registered to participate in #{event.name}!"
+    redirect_to :back
+  end
+
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
