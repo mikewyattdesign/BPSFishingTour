@@ -1,49 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div id="backgroundMain">
+    <div id="wrapper">
+        <div class="bannerSmallTopBackground">
+            <div class="bannerSmallTop">
+                <div class="bannerBigText">
+                    <div class="bannerBigTextCont"><h2>Welcome to the events page! Checkout our lineup below.</h2></div>
+                    <div class="bannerBigTextCont"><h1>Choose your region below to find the tournaments near you. </h1></div>
+                </div>
+            </div>
+        </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
-
-<p>
-  <strong>Address2:</strong>
-  <%= @event.address2 %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @event.city %>
-</p>
-
-<p>
-  <strong>Province:</strong>
-  <%= @event.province %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @event.state %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @event.country %>
-</p>
-
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
-
-<p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+        <div class="bannerMiddleBackground">
+            <div class="bannerMiddleEvent">
+                <dul class="findAnEvent">
+                    <div class="findAnEventText"><h4>FIND AN EVENT</h4></div>
+                </div>
+                <div class="bassEventMap"></div>
+                <div class="bassEventEnter">
+                    <div class="bassEventEnterBackbround">
+                        <div class="bassEventEnterContainer">
+                            <%= image_tag 'eventEnterPicture.jpg', class: 'eventEnterPic', alt: 'Event Picture' %>
+                            <div class="bassEventEnterText">
+                                <h2>TOP BASS FISHING SERIES</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. onec id elit non mi porta gravida at eget metus. </p>
+                                <h1>Are you fishing this event?</h1>
+                                <div class="enterEventButton">
+                                    Yes
+                                </div>
+                                <div class="noEventButton">
+                                    No
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
