@@ -20,4 +20,15 @@ feature "Manage events" do
             expect(page).to have_content("Your team is now registered to participate in #{Event.first.name}")
             }.to change{subject.teams.first.events.count}.from(0).to(1)
     end
+
+    scenario "User should not be able to register for an event with out a team" do
+        subject.teams.count.should eq 0
+        sign_in_with(subject.email, subject.password)
+        expect(current_path).to eq('/')
+        click_link "Tour Events"
+        expect(page).to have_content("Chippawa, Upper Niagara")
+        click_button("Details")
+        expect(page).to have_content("You Must Find a Teammate in Order to Register this Event")
+    end
+
 end

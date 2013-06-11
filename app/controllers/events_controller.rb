@@ -10,6 +10,11 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    if(current_user.teams.size > 0)
+      @can_register = true
+    else
+      @can_register = false
+    end
   end
 
   # GET /events/new
