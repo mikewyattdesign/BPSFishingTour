@@ -10,6 +10,11 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    if(current_user.teams.size > 0)
+      @can_register = true
+    else
+      @can_register = false
+    end
     @profile = current_user.profile
     @bootstrap = true
   end

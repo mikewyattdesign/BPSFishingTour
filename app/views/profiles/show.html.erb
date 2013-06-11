@@ -203,6 +203,7 @@
         <div class="tabMiddleContainer">
             <div class="tabMidLeftCont">
    <!-- add render of partial with locals -->
+                <% unless @can_registger %>
                 <div class="teamEvents">
                     <div class="topDarkBrown">
                         <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
@@ -210,7 +211,7 @@
                     </div>
                     <div class="topLightBrown">
                         <div class="teamListCover">
-                            <h1>Your Have No Events</h1>
+                            <h1>You Have No Events</h1>
                             <p>To register for an event, first you need to find a teammate!</p>
                         </div>
                         <div class="teamList"><h3>Date</h3></div>
@@ -238,6 +239,9 @@
                         </div>
                     </div>
                 </div>
+                <% else %>
+                <%= render 'my_events', :locals => { :profile => @profile } %>
+                <% end %>
                 <div class="upcomingTeamEvents">
                     <div class="topDarkBrown">
                         <%= image_tag 'iconCal2.png', class: 'iconSmallEvents', alt: 'Icon' %>
