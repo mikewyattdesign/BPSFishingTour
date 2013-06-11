@@ -78,9 +78,10 @@ h3, p {
 }
 
 .iconSmall {
-    position: absolute;
-    margin-left: -50px;
+    float: left;
     margin-top: -7px;
+    margin-left: 30px;
+    margin-right: -50px;
 }
 
 .iconSmallEvents {

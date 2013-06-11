@@ -1,11 +1,26 @@
 <%= render "shared/ads_bps" %>
 <div class="tabContBackground">
     <div class="tabContainer">
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#tab1"><%= image_tag 'iconFish.png', class: 'iconSmall', alt: 'Fish Icon' %>My Tour</a></li>
-            <li><a data-toggle="tab" href="#tab2"><%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>Team Profile</a></li>
-            <li id="accountOn"><a data-toggle="tab" href="#tab3"><%= image_tag 'iconSettings.png', class: 'iconSmall', alt: 'Settings Icon Icon' %>My Accounts</a></li>
-          </ul>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#tab1">
+                    <%= image_tag 'iconFish.png', class: 'iconSmall', alt: 'Fish Icon' %>
+                    <div class="tabText">My Tour</div>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab2">
+                    <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
+                    <div class="tabText">Team Profile</div>
+                </a>
+            </li>
+            <li id="accountOn">
+                <a data-toggle="tab" href="#tab3">
+                    <%= image_tag 'iconSettings.png', class: 'iconSmall', alt: 'Settings Icon Icon' %>
+                    <div class="tabText">My Accounts</div>
+                </a>
+            </li>
+        </ul>
         <div class="tabbable">
           <div class="tab-content">
             <div id="tab1" class="tab-pane active">
