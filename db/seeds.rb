@@ -6,9 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
    puts User.count
-   user = User.create({email: "joe@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
+   user1 = User.create({email: "joe@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
+
+   user2 = User.create({email: "jane@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
+
+   team1 = Team.create
+
+   team1.users << [user1, user2]
+
    puts User.count
-    profile = Profile.create first_name: "Joe", last_name: "Daggrassi", street_address: "1234 Main Street", city: "St. Louis", zip: "63112", state: "MO", phone: "3211234321", user_id: user.id
+    profile = Profile.create first_name: "Joe", last_name: "Daggrassi", street_address: "1234 Main Street", city: "St. Louis", zip: "63112", state: "MO", phone: "3211234321", user_id: user1.id
 
     division1 = Division.create({name: "BM Great Lakes Tour"})
 
