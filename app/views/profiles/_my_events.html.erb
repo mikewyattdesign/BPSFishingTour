@@ -12,7 +12,7 @@
                 <th>Points</th>
             </tr>
             <% @profile.user.teams.first.events.each do |event| %>
-                <tr class"<%= cycle("odd", "even") %>">
+                <tr class="<%= cycle("odd", "even") %>">
                     <td><%= event.date %></td>
                     <td><%= event.name %></td>
                     <td><%= event.date %></td>
