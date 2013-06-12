@@ -212,16 +212,45 @@ h3, p {
 
 .picBox {
     position: absolute;
-    z-index: 5;
 }
 
 .picBoxLeft {
     position: absolute;
-    z-index: 5;
 }
 
 .teamPic {
     position: absolute;
+}
+
+.cutOutContainer {
+    position: absolute;
+    z-index: 10;
+    width: 331px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.cutOutContainerLeft {
+    position: absolute;
+    z-index: 10;
+    width: 370px;
+    height: 400px;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.cutOutRight {
+    position: absolute;
+    margin-top: 188px;
+    z-index: 10;
+}
+
+.cutOutLeft {
+    position: absolute;
+    margin-top: 215px;
+    z-index: 10;
 }
 
 .manFishRight {
@@ -330,6 +359,8 @@ h3, p {
 
 .topDarkBrown h2{
     padding: 10px 70px;
+    color: white;
+    font-size: 20px;
 }
 
 .bottomBrown {
@@ -347,6 +378,8 @@ h3, p {
 
 .topBlue h2, .topGreen h2{
     padding: 10px 70px;
+    color: white;
+    font-size: 20px;
 }
 
 .topDarkBrown, .topBlue, .topLightBrown, .topGreen {
@@ -577,7 +610,7 @@ tbody .odd, tbody .even {
 
 .table-container {
     overflow: scroll;
-    height: 165px;
+    height: 170px;
     background-color: #d6c7b8;
     padding: 0 20px;
     font-size: 12px;
