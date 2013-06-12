@@ -11,13 +11,19 @@
                 <th>Event Title</th>
                 <th>Points</th>
             </tr>
-            <% @profile.user.teams.first.events.each do |event| %>
+        </tbody>
+    </table>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <% @profile.user.teams.first.events.each do |event| %>
                 <tr class="<%= cycle("odd", "even") %>">
                     <td><%= event.date %></td>
                     <td><%= event.name %></td>
                     <td><%= event.date %></td>
                 </tr>
-            <% end %>
-        </tbody>
-    </table>
+                <% end %>
+            </tbody>
+        </table>
+    </div><!-- talbe container -->
 </div>
