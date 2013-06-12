@@ -20,7 +20,7 @@
                         <div class="bassEventEnterContainer">
                             <%= image_tag 'eventEnterPicture.jpg', class: 'eventEnterPic', alt: 'Event Picture' %>
                             <div class="bassEventEnterText">
-                                <h2>TOP BASS FISHING SERIES</h2>
+                                <h2><%= @event.name %></h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. onec id elit non mi porta gravida at eget metus. </p>
                                 <% if @can_register %>
                                 <h1>Are you fishing this event?</h1>
