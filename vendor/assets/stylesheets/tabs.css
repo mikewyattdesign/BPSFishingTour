@@ -212,6 +212,7 @@ h3, p {
 
 .picBox {
     position: absolute;
+    width: 321px;
 }
 
 .picBoxLeft {
@@ -331,7 +332,7 @@ h3, p {
     position: absolute;
     margin-top: -17px;
     margin-left: 4px;
-    z-index: 9;
+    z-index: 11;
 }
 
 .teamPersonText {
