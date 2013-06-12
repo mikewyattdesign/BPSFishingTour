@@ -223,12 +223,14 @@ h3, p {
     position: absolute;
     overflow: hidden;
     height: 233px;
+    width: 100%;
 }
 
 .tourPic {
     position: absolute;
     overflow: hidden;
     height: 220px;
+    width: 100%;
 }
 
 .iconNoPic {
@@ -255,6 +257,40 @@ h3, p {
     overflow: hidden;
     margin-left: -10px;
     margin-top: -10px;
+}
+
+.cutOutText {
+    position: absolute;
+    width: 200px;
+    margin-top: 220px;
+    margin-left: 120px;
+    z-index: 15;
+}
+
+.cutOutText h2 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.cutOutText p {
+    font-size: 10px;
+}
+
+.cutOutTextTeam {
+    position: absolute;
+    width: 150px;
+    margin-top: 230px;
+    margin-left: 130px;
+    z-index: 15;
+}
+
+.cutOutTextTeam h2 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.cutOutTextTeam p {
+    font-size: 10px;
 }
 
 .cutOutRight {
@@ -324,8 +360,8 @@ h3, p {
 
 .tourPersonMain {
     position: absolute;
-    margin-top: -4px;
-    margin-left: 23px;
+    margin-top: -5px;
+    margin-left: 22px;
 }
 
 .teamPerson {
