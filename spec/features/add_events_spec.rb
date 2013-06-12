@@ -31,4 +31,18 @@ feature "Manage events" do
         expect(page).to have_content("You Must Find a Teammate in Order to Register this Event")
     end
 
+    scenario "User should not be allowed to register an event they are already registered for" do
+        subject.teams << team
+        subject.teams.count.should eq 1
+        sign_in_with(subject.email, subject.password)
+        click_link("Tour Events")
+        expect{
+            expect(page).to have_content("Chippawa, Upper Niagara")
+            click_button("Details")
+            click_button("Yes") # add the event once
+            click_button("Yes") # attempt to add the event again
+            click_button("Yes") # But should not work
+            }.to change{subject.teams.first.events.count}.by(1)
+    end
+
 end
