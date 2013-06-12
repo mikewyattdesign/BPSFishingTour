@@ -610,7 +610,7 @@ tbody .odd, tbody .even {
 
 .table-container {
     overflow: scroll;
-    height: 170px;
+    height: 460px;
     background-color: #d6c7b8;
     padding: 0 20px;
     font-size: 12px;
