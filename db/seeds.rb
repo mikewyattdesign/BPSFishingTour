@@ -37,4 +37,5 @@
     event3 = Event.create({name: "Lake St. Clair", date: DateTime.new(2013, 10, 13)})
     puts Event.all
 
+    team1.events << [event1, event2, event3]
     event1.divisions<<([division1, division2, division3, division4, division5, division6])

@@ -4,22 +4,20 @@
         <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
         <h2>Team Events</h2>
     </div>
-    <table>
-        <div class="topLightBrown">
-            <thead>
+    <table>        
+        <tbody>
+            <tr class="topLightBrown">
                 <th>Date</th>
                 <th>Event Title</th>
                 <th>Points</th>
-            </thead>
-        </div>
-        <div class="bottomBrown">
-            <tbody>
-                <% @profile.user.teams.first.events.each do |event| %>
-                    <td>event.date</p>
-                    <td>event.name</td>
-                    <td>event.date</td>
-                <% end %>
-            </tbody>
-        </div>
+            </tr>
+            <% @profile.user.teams.first.events.each do |event| %>
+                <tr>
+                    <td><%= event.date %></td>
+                    <td><%= event.name %></td>
+                    <td><%= event.date %></td>
+                </tr>
+            <% end %>
+        </tbody>
     </table>
 </div>

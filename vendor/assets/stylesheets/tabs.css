@@ -27,7 +27,7 @@
     /* Firefox 3.6+ */
     background: -moz-linear-gradient(top, transparent, rgba(10,10,10,0.5));
     /* IE 10 */
-    background: -ms-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    background: -ms-l
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, transparent, rgba(10,10,10,0.5));
 }
@@ -381,8 +381,12 @@ h3, p {
     background: -o-linear-gradient(top, #0b597d, #083e58);
 }
 
+table {
+    width: 100%
+}
 .topLightBrown {
     background-color: #956923;
+    width: 100%;
 }
 
 .topGreen {
