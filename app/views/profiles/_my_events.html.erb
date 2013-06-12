@@ -4,7 +4,7 @@
         <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
         <h2>Team Events</h2>
     </div>
-    <table>        
+    <table>
         <tbody>
             <tr class="topLightBrown">
                 <th>Date</th>
@@ -12,7 +12,7 @@
                 <th>Points</th>
             </tr>
             <% @profile.user.teams.first.events.each do |event| %>
-                <tr>
+                <tr class"<%= cycle("odd", "even") %>">
                     <td><%= event.date %></td>
                     <td><%= event.name %></td>
                     <td><%= event.date %></td>
