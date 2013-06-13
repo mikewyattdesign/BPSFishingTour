@@ -691,9 +691,6 @@ tbody .odd, tbody .even {
     font-size: 12px;
 }
 
-table .odd {
-}
-
 table .even {
     background-image: url('/assets/eventBackgroundEven.jpg');
     background-size: 100%;
