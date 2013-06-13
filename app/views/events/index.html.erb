@@ -14,7 +14,14 @@
                 <div class="findAnEvent">
                     <div class="findAnEventText"><h4>FIND AN EVENT</h4></div>
                 </div>
-                <div class="bassEventMap"></div>
+                <div class="bassEventMap">
+                    <div class="eventMapContainer">
+                        <div class="mapOntarioText">
+                            <h2>Competitive Sports Fishing League Events</h2>
+                        </div>
+                        <%= image_tag 'mapOntario.png', class: 'mapOntario', alt: 'Map Ontario' %>
+                    </div>
+                </div>
                 <div class="bassEventAttend">
                   <% @events.each do |event| %>
                     <div class="bassEventAttendBackbround">
