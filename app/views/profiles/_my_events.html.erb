@@ -9,7 +9,7 @@
             <tr class="topLightBrown">
                 <th>Date</th>
                 <th>Event Title</th>
-                <th>Points</th>
+                <th>Status</th>
             </tr>
         </tbody>
     </table>
@@ -20,7 +20,7 @@
                 <tr class="<%= cycle("odd", "even") %>">
                     <td><%= event.date %></td>
                     <td><%= event.name %></td>
-                    <td><%= event.date %></td>
+                    <td><%= add_status(event) %></td>
                 </tr>
                 <% end %>
             </tbody>
