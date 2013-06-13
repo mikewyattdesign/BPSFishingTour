@@ -1,19 +1,5 @@
 /*Font Styles*/
 
-@font-face
-{
-font-family: Aachen;
-src: url('/assets/AachenRegular.ttf'),
-     url('/assets/AachenRegular.eot'); /* IE9 */
-}
-
-@font-face
-{
-font-family: Bebas;
-src: url('/assets/Bebas.ttf'),
-     url('/assets/Bebas.eot'); /* IE9 */
-}
-
 #wrapper h1 {
     color: $yellow;
     margin: 0;
@@ -362,7 +348,6 @@ src: url('/assets/Bebas.ttf'),
     font-weight: bold;
     font-family: "Helvetica Neue";
 }
-/*End Landing Page*/
 
 /*Slider CSS*/
 
@@ -572,15 +557,16 @@ src: url('/assets/Bebas.ttf'),
 
 .bassEventAttendButton {
     float:right;
-    margin: 8px 30px;
+    color: white;
+    cursor: pointer;
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 8px 30px;
     width: 145px;
     height: 40px;
     border-radius: 5px;
-    background-image: image-url('registerButton.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+    background-image: image-url('registerButtonGreen.png');
 }
 
 .bassEventAttendButton h2 {
@@ -589,28 +575,28 @@ src: url('/assets/Bebas.ttf'),
 }
 
 .enterEventButton, .noEventButton {
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
     width: 250px;
     height: 50px;
+    line-height: 40px;
+    background-size: 100%;
+    background-size: 288px;
     margin: 40px auto 15px auto;
     border-radius: 10px;
     font-size: 25px;
-    color: white;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-size: 288px;
-    text-align: center;
-    cursor: pointer;
-    line-height: 50px;
 }
 
 .enterEventButton {
     float: left;
     background-position: center;
-    background-image: image-url('registerButton.png');
+    background-image: image-url('registerButtonGreen.png');
 }
 
 .noEventButton {
     float: right;
-    background-position: top;
-    background-image: image-url('regButtonRed.png');
+    background-position: -10px -1px;
+    background-image: image-url('registerButtonRed.png');
 }

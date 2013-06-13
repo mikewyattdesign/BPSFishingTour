@@ -35,13 +35,13 @@
 }
 
 .nav-tabs > li {
-    background-image: url('/assets/tabMiddle.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 0 -8px;
-    background-color: none;
-    border: none;
     margin-bottom: 0px;
+    background-size: 100%;
+    background-position: 0 -8px;
+    border: none;
+    background-color: none;
+    background-repeat: no-repeat;
+    background-image: image-url('tabMiddle.png');
 }
 
 .nav-tabs > li > a {
@@ -63,7 +63,7 @@
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
     color: #4f8d09;
-    background-image: url('/assets/tabLeft.png');
+    background-image: image-url('tabLeft.png');
     background-size: 101%;
     background-repeat: no-repeat;
     background-position: 0 -8px;
@@ -113,7 +113,7 @@ p {
 }
 
 #tab1, #tab2, #tab3 {
-    background-image: url('/assets/tabBackground.jpg');
+    background-image: image-url('tabBackground.jpg');
     background-size: 100%;
 }
 
@@ -416,7 +416,7 @@ p {
 }
 
 .bottomBrown {
-    background-image:url('/assets/eventBackground.jpg');
+    background-image: image-url('eventBackground.jpg');
     background-position: top;
     background-size: 100%;
     height: 170px;
@@ -476,7 +476,7 @@ table {
 }
 
 .topLightBrown th {
-    margin-top: 10px;
+    margin-top: 15px;
     color: white;
     font-size: 15px;
 }
@@ -709,6 +709,6 @@ tbody .odd, tbody .even {
 }
 
 table .even {
-    background-image: url('/assets/eventBackgroundEven.jpg');
+    background-image: image-url('eventBackgroundEven.jpg');
     background-size: 100%;
 }
