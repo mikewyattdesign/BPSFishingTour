@@ -577,7 +577,7 @@ src: url('/assets/Bebas.ttf'),
     width: 145px;
     height: 40px;
     border-radius: 5px;
-    background-image: image-url('registerButton.png');
+    background-image: image-url('registerButtonGreen.png');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -600,17 +600,17 @@ src: url('/assets/Bebas.ttf'),
     background-size: 288px;
     text-align: center;
     cursor: pointer;
-    line-height: 50px;
+    line-height: 40px;
 }
 
 .enterEventButton {
     float: left;
     background-position: center;
-    background-image: image-url('registerButton.png');
+    background-image: image-url('registerButtonGreen.png');
 }
 
 .noEventButton {
     float: right;
-    background-position: top;
-    background-image: image-url('regButtonRed.png');
+    background-position: 0px -1px;
+    background-image: image-url('registerButtonRed.png');
 }
