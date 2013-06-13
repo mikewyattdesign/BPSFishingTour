@@ -192,8 +192,7 @@ p {
 }
 
 .iconFish {
-    margin: 3px -8px;
-    width: 25%;
+    margin: 3px -3px;
 }
 
 .tourContRight {
@@ -484,7 +483,7 @@ table {
 
 .thMiddle {
     float: left;
-    margin-left: 210px;
+    margin-left: 200px;
 }
 
 .thLeft{
@@ -495,7 +494,7 @@ table {
 
 .thRight {
     float: right;
-    margin-right: 105px;
+    margin-right: 95px;
 }
 
 .topGreen {
@@ -564,6 +563,12 @@ table {
 
 .myCont h3 {
     padding-top: 3px;
+}
+
+.writeIcon {
+    float: right;
+    margin-top: -20px;
+    margin-right: 10px;
 }
 
 .teamContLeft {
@@ -681,6 +686,18 @@ table {
 
 tbody .odd, tbody .even {
     line-height: 38px;
+}
+
+.tdDate, .tdName, .tdStatus {
+    color: #616262;
+}
+
+.tdDate {
+    font-style: italic;
+}
+
+.tdName {
+    font-weight: bold;
 }
 
 .table-container {
