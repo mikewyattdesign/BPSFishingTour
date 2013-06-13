@@ -27,7 +27,7 @@
     /* Firefox 3.6+ */
     background: -moz-linear-gradient(top, transparent, rgba(10,10,10,0.5));
     /* IE 10 */
-    background: -ms-l
+    background: -ms-linear-gradient(top, transparent, rgba(10,10,10,0.5));
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, transparent, rgba(10,10,10,0.5));
 }
@@ -212,7 +212,7 @@ h3, p {
 
 .picBox {
     position: absolute;
-    width: 321px;
+    width: 320px;
 }
 
 .picBoxLeft {
@@ -243,8 +243,8 @@ h3, p {
 .cutOutContainer {
     position: absolute;
     z-index: 10;
-    width: 331px;
-    height: 400px;
+    width: 330px;
+    height: 330px;
     overflow: hidden;
     margin-left: 30px;
 }
@@ -312,7 +312,7 @@ h3, p {
 
 .manFishLeft {
     position: absolute;
-    margin: 55px auto auto 155px;
+    margin: 40px auto auto 145px;
 }
 
 .manFishTextRight {
@@ -325,8 +325,8 @@ h3, p {
 .manFishTextLeft {
     position: absolute;
     font-size: 10px;
-    margin-top: 170px;
-    margin-left: 115px;
+    margin-top: 150px;
+    margin-left: 105px;
 }
 
 .tourContRightBot {
@@ -340,12 +340,13 @@ h3, p {
 
 .tourPersonText {
     margin-left: 110px;
-    width: 220px;
+    width: 210px;
 
 }
 
     .tourPersonText h3 {
         font-size: 12px;
+        line-height: 25px;
     }
 
     .tourPersonText p {
@@ -372,9 +373,10 @@ h3, p {
 }
 
 .teamPersonText {
-    margin-left: 100px;
+    margin-left: 115px;
     width: 150px;
     margin-bottom: 32px;
+    z-index: 15;
 }
 
 .teamPersonText h3 {
@@ -404,9 +406,16 @@ h3, p {
     float: left;
 }
 
-.teamEvents, .upcomingTeamEvents, .leaderboard, .myRegion {
+.upcomingTeamEvents, .leaderboard, .myRegion {
     width: 97%;
     height: 265px;
+    margin: 25px 25px 25px 10px;
+    box-shadow: 0px 0px 35px black;
+}
+
+.teamEvents {
+    width: 97%;
+    height: 560px;
     margin: 25px 25px 25px 10px;
     box-shadow: 0px 0px 35px black;
 }
@@ -475,6 +484,26 @@ table {
 .topLightBrown {
     background-color: #956923;
     width: 100%;
+}
+
+.topLightBrown th {
+    margin-top: 10px;
+}
+
+.thMiddle {
+    float: left;
+    margin-left: 195px;
+}
+
+.thLeft{
+    float: left;
+    margin-left: 20px;
+
+}
+
+.thRight {
+    float: right;
+    margin-right: 90px;
 }
 
 .topGreen {
