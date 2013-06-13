@@ -1,6 +1,6 @@
   namespace :load_data do
     desc "loads all of the event data into the database"
-    task :events do
+    task :events => :environment do
       # BM Great Lakes Tour = 1
       # BM SouthWestern Tour = 2
       # BM Wildcards = 3
@@ -9,7 +9,7 @@
       # BM Eastern Tour = 6
       # BM NorthWestern Tour = 7
       events = [
-        [{name: "Chippawa, Upper Niagra", date: DateTime.new(2013, 9, 29)}, {division: [1, 2, 3]}],
+        [{name: "Chippawa, Upper Niagra", address: "4173-4669 Lyons Creek Rd.", city: "Niagra Falls", province: "ON", country: "Canada", date: DateTime.new(2013, 9, 29)}, {division: [1, 2, 3]}],
         [{name: "Chippawa, Upper Niagra", date: DateTime.new(2013, 9, 30)}, {division: [2]}],
         [{name: "Lake St. Clair", date: DateTime.new(2013, 10, 13)}, {division: [2]}],
         [{name: "St. Clair", date: DateTime.new(2013, 10, 13)}, {division: [1]}],
@@ -31,8 +31,13 @@
         [{name: "Lindsay, Sturgeon Lake", date: DateTime.new(2013, 8, 10)}, {division: [5]}],
         [{name: "Port Perry, Lake Scugog", date: DateTime.new(2013, 8, 11)}, {division: [4, 5]}],
         [{name: "Coboconk, Balsam Lake", date: DateTime.new(2013, 8, 17)}, {division: [3]}],
-        [{name: "Coboconk, Balsam Lake", date: DateTime.new(2013, 8, 18)}, {division: [3]}],
+        [{name: "Coboconk, Balsam Lake", date: DateTime.new(2013, 8, 18)}, {division: [3]}]
       ]
-      puts events.first.last[:division]
+
+      events.each do |event|
+        if ev = Event.where("name = ? AND date = ?", event.first[:name], event.first[:date]..event.first[:date]+1.day)
+          puts event.first[:name] unless ev.empty?
+        end
+      end
     end
   end
