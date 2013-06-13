@@ -28,6 +28,8 @@
     division5 = Division.create({name: "BM Central Tour"})
 
     division6 = Division.create({name: "BM Eastern Tour"})
+
+    division7 = Division.create({name: "BM Northwestern Tour"})
     puts Division.all
 
     event1 = Event.create({name: "Chippawa, Upper Niagra", date: DateTime.new(2013, 9, 29)})
