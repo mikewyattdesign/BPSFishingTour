@@ -7,6 +7,13 @@ src: url('/assets/AachenRegular.ttf'),
      url('/assets/AachenRegular.eot'); /* IE9 */
 }
 
+@font-face
+{
+font-family: Bebas;
+src: url('/assets/Bebas.ttf'),
+     url('/assets/Bebas.eot'); /* IE9 */
+}
+
 #wrapper h1 {
     color: $yellow;
     margin: 0;
