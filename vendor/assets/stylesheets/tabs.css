@@ -1,3 +1,5 @@
+/*Bootstrap Edits*/
+
 .nav-tabs {
     border:none;
 }
@@ -73,20 +75,26 @@
 
 /*Tab Edits*/
 
-h3, p {
-    color: #876e49;
+p {
+    font-style: italic;
+}
+
+#tab1 p, #tab1 h3, #tab1 h1 {
+    color: #cbbdaa;
+}
+
+#tab2 p, #tab2 h3 {
+    color: #856a43;
 }
 
 .iconSmall {
     float: left;
-    margin-top: -7px;
-    margin-left: 30px;
-    margin-right: -50px;
+    margin: -7px -50px 0 30px;
 }
 
 .iconSmallEvents {
     position: absolute;
-    margin: 8px 20px;
+    margin: 8px 18px;
 }
 
 .nav.nav-tabs {
@@ -198,9 +206,7 @@ h3, p {
     height: 192px;
     position: relative;
     overflow: hidden;
-    margin-left: 32px;
-    margin-top: 10px;
-    margin-bottom: 8px;
+    margin: 10px 0 8px 32px;
 }
 
 .picBoxContainerLeft {
@@ -236,8 +242,7 @@ h3, p {
 .iconNoPic {
     position: absolute;
     width: 80px;
-    margin-top: 232px;
-    margin-left: 22px;
+    margin: 232px 0 0 22px;
 }
 
 .cutOutContainer {
@@ -255,15 +260,13 @@ h3, p {
     width: 370px;
     height: 400px;
     overflow: hidden;
-    margin-left: -10px;
-    margin-top: -10px;
+    margin: -10px 0 0 -10px;
 }
 
 .cutOutText {
     position: absolute;
     width: 200px;
-    margin-top: 220px;
-    margin-left: 120px;
+    margin: 220px 0 0 120px;
     z-index: 15;
 }
 
@@ -279,8 +282,7 @@ h3, p {
 .cutOutTextTeam {
     position: absolute;
     width: 150px;
-    margin-top: 230px;
-    margin-left: 130px;
+    margin: 230px 0 0 130px;
     z-index: 15;
 }
 
@@ -318,20 +320,17 @@ h3, p {
 .manFishTextRight {
     position: absolute;
     font-size: 10px;
-    margin-top: 150px;
-    margin-left: 125px;
+    margin: 150px 0 0 125px;
 }
 
 .manFishTextLeft {
     position: absolute;
     font-size: 10px;
-    margin-top: 150px;
-    margin-left: 105px;
+    margin: 150px 0 0 105px;
 }
 
 .tourContRightBot {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin: 20px 0 0 30px;
 }
 
 .teamContLeftBot {
@@ -355,20 +354,17 @@ h3, p {
 
 .tourPerson {
     position: absolute;
-    margin-top: -10px;
-    margin-left: 8px;
+    margin: -10px 0 0 8px;
 }
 
 .tourPersonMain {
     position: absolute;
-    margin-top: -5px;
-    margin-left: 22px;
+    margin: -5px 0 0 22px;
 }
 
 .teamPerson {
     position: absolute;
-    margin-top: -17px;
-    margin-left: 4px;
+    margin: -17px 0 0 4px;
     z-index: 11;
 }
 
@@ -420,12 +416,6 @@ h3, p {
     box-shadow: 0px 0px 35px black;
 }
 
-.topDarkBrown h2{
-    padding: 10px 70px;
-    color: white;
-    font-size: 20px;
-}
-
 .bottomBrown {
     background-image:url('/assets/eventBackground.jpg');
     background-position: top;
@@ -439,10 +429,10 @@ h3, p {
     float: left;
 }
 
-.topBlue h2, .topGreen h2{
-    padding: 10px 70px;
+.topDarkBrown h2, .topBlue h2, .topGreen h2{
+    padding: 15px 70px;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .topDarkBrown, .topBlue, .topLightBrown, .topGreen {
@@ -488,11 +478,13 @@ table {
 
 .topLightBrown th {
     margin-top: 10px;
+    color: white;
+    font-size: 15px;
 }
 
 .thMiddle {
     float: left;
-    margin-left: 195px;
+    margin-left: 210px;
 }
 
 .thLeft{
@@ -503,7 +495,7 @@ table {
 
 .thRight {
     float: right;
-    margin-right: 90px;
+    margin-right: 105px;
 }
 
 .topGreen {
