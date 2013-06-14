@@ -60,7 +60,7 @@
         new_event = Event.create(event.first)
         if new_event.persisted?
           puts new_event.divisions.size
-          event.last[:division].each { |x| event << Division.find(x)}
+          event.last[:division].each { |x| new_event.divisions << Division.find(x) }
           puts new_event.divisions.size
         end
       end
