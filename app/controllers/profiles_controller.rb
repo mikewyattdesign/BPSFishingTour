@@ -55,6 +55,7 @@ class ProfilesController < ApplicationController
       else
         format.html {
           @bootstrap = true
+          flash.now[:error] = "We could not update your profile!"
           render action: 'show'
         }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
