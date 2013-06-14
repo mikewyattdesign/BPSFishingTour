@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bass Pro Shops Fishing Tour</title>
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
-        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-        <%= stylesheet_link_tag("bootstrap/css/bootstrap", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
-        <%= stylesheet_link_tag("tabs", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
-        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-        <%= csrf_meta_tags %>
-    </head>
+<head>
+    <title>Bass Pro Shops Fishing Tour</title>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag("bootstrap/css/bootstrap", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
+    <%= stylesheet_link_tag("tabs", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+</head>
     <body>
-        <div id="container">
-            <% flash.each do |name, msg| %>
-                <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
-                    <%= msg.html_safe %> <%= content_tag :button, "×", class: "close", "data-dismiss" => "alert" %>
+        <div id="wrapper">
+            <div id="container">
+                <% flash.each do |name, msg| %>
+                    <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
+                        <%= msg.html_safe %> <%= content_tag :button, "×", class: "close", "data-dismiss" => "alert" %>
 
+                    <% end %>
                 <% end %>
-            <% end %>
                 <div class="bannerTopBackground">
                     <div class="bannerTop">
                         <div class="bassFishingLogo">
@@ -49,16 +50,18 @@
                     </div>
                 </div>
 
-            <%= yield %>
+                <%= yield %>
 <!--
-            <div class="bannerBottomSponsorBackground">
-            <%= link_to image_tag('trackerLogo.png', alt: 'TRACKER Boats logo'), 'http://www.trackerboats.com/' %>
-            <%= link_to image_tag('nitroLogo.png', alt: 'NITRO Performance Fishing Boats logo'), 'http://www.nitro.com/' %>
-            <%= link_to image_tag('mercuryLogo.png', alt: 'Mercury Marine logo'), 'http://www.mercurymarine.com/' %>
-            <%= link_to image_tag('planoLogo.png', alt: 'Plano logo'), 'http://www.planomolding.com/' %>
-            <%= link_to image_tag('toyotaLogo.png', alt: 'Toyota logo'), 'http://www.toyota.com/' %>
-            <%= link_to image_tag('bassProLogoBottom.png', alt: 'Bass Pro Shops logo'), 'http://www.basspro.com/' %>
- -->
+                <div class="bannerBottomSponsorBackground">
+                <%= link_to image_tag('trackerLogo.png', alt: 'TRACKER Boats logo'), 'http://www.trackerboats.com/' %>
+                <%= link_to image_tag('nitroLogo.png', alt: 'NITRO Performance Fishing Boats logo'), 'http://www.nitro.com/' %>
+                <%= link_to image_tag('mercuryLogo.png', alt: 'Mercury Marine logo'), 'http://www.mercurymarine.com/' %>
+                <%= link_to image_tag('planoLogo.png', alt: 'Plano logo'), 'http://www.planomolding.com/' %>
+                <%= link_to image_tag('toyotaLogo.png', alt: 'Toyota logo'), 'http://www.toyota.com/' %>
+                <%= link_to image_tag('bassProLogoBottom.png', alt: 'Bass Pro Shops logo'), 'http://www.basspro.com/' %>
+                </div>
+-->
+        </div>
             <div class="bannerBottomBackground">
                 <nav class="navBottom">
                     <%= link_to 'About', '#' %>
@@ -75,7 +78,6 @@
                      <p>2013©  BPS Direct, L.L.C. All rights reserved.</p>
                 </div>
             </div>
-
         </div>
     </body>
 </html>
