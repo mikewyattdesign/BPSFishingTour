@@ -36,8 +36,8 @@
 
 .nav-tabs > li {
     margin-bottom: 0px;
-    background-size: 100%;
-    background-position: 0 -8px;
+    background-size: 100% 100%;
+    background-position: 0;
     border: none;
     background-color: none;
     background-repeat: no-repeat;
@@ -48,7 +48,6 @@
     padding-top: 8px;
     padding-bottom: 8px;
     line-height: 20px;
-    width: 220px;
     border:none;
 }
 
@@ -64,13 +63,12 @@
 .nav-tabs > .active > a:focus {
     color: #4f8d09;
     background-image: image-url('tabLeft.png');
-    background-size: 101%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: 0 -8px;
+    background-position: 0;
     background-color: transparent;
     border: none;
     cursor: default;
-    width: 220px;
 }
 
 /*Tab Edits*/
@@ -87,9 +85,31 @@ p {
     color: #856a43;
 }
 
+.tabIconContainer {
+    width: 245px;
+    height: 40px;
+}
+
+#fishSolo {
+    width: 30px;
+    padding-left: 30px;
+}
+
+#setSolo {
+    padding-left: 17px;
+}
+
 .iconSmall {
     float: left;
-    margin: -7px -50px 0 30px;
+    margin-top: 4px;
+    margin-left: 33px;
+    margin-bottom: 0;
+}
+
+.tabText {
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 .iconSmallEvents {
@@ -104,6 +124,8 @@ p {
 }
 
 .nav.nav-tabs a {
+    margin: 0;
+    padding: 0;
     color: #c5af91;
     text-decoration: none;
 }
@@ -149,16 +171,16 @@ p {
 }
 
 .iconMedal {
-    margin: 5px 25px 5px 20px;
+    margin: 5px 20px 5px 0px;
     display: block;
     float: left;
 }
 
 .iconMedalText {
     width: 132px;
-    margin: 25px 35px 0 15px;
+    margin: 25px 0 0 0;
     display: block;
-    float: left;
+    float: right;
     text-align: center;
 }
 
@@ -184,7 +206,7 @@ p {
 .tourContLeft {
     display: block;
     float: left;
-    margin-left: 25px;
+    margin-left: 60px;
 }
 
 .iconMedalText.divideLine {
@@ -196,32 +218,29 @@ p {
 }
 
 .tourContRight {
-    display: block;
-    float: left;
+    float: right;
 }
 
 .picBoxContainer {
-    width: 322px;
-    height: 192px;
     position: relative;
     overflow: hidden;
-    margin: 10px 0 8px 32px;
+    margin: 5px 5px 0 0;
 }
 
 .picBoxContainerLeft {
-    width: 349px;
-    height: 221px;
     position: relative;
     overflow: hidden;
 }
 
 .picBox {
-    position: absolute;
     width: 320px;
+    height: 200px;
 }
 
 .picBoxLeft {
-    position: absolute;
+    width: 350px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .teamPic {
@@ -247,10 +266,9 @@ p {
 .cutOutContainer {
     position: absolute;
     z-index: 10;
-    width: 330px;
+    width: 325px;
     height: 330px;
     overflow: hidden;
-    margin-left: 30px;
 }
 
 .cutOutContainerLeft {
@@ -259,7 +277,6 @@ p {
     width: 370px;
     height: 400px;
     overflow: hidden;
-    margin: -10px 0 0 -10px;
 }
 
 .cutOutText {
@@ -296,7 +313,8 @@ p {
 
 .cutOutRight {
     position: absolute;
-    margin-top: 188px;
+    margin-top: 200px;
+    width: 100%;
     z-index: 10;
 }
 
@@ -308,28 +326,28 @@ p {
 
 .manFishRight {
     position: absolute;
-    margin: 40px auto auto 165px;
+    margin: 40px auto auto 140px;
 }
 
 .manFishLeft {
     position: absolute;
-    margin: 40px auto auto 145px;
+    margin: 40px auto auto 160px;
 }
 
 .manFishTextRight {
     position: absolute;
     font-size: 10px;
-    margin: 150px 0 0 125px;
+    margin: 150px 0 0 100px;
 }
 
 .manFishTextLeft {
     position: absolute;
     font-size: 10px;
-    margin: 150px 0 0 105px;
+    margin: 150px 0 0 120px;
 }
 
 .tourContRightBot {
-    margin: 20px 0 0 30px;
+    margin-top: 24px;
 }
 
 .teamContLeftBot {
@@ -357,13 +375,13 @@ p {
 }
 
 .tourPersonMain {
-    position: absolute;
-    margin: -5px 0 0 22px;
+    float: left;
+    margin: -5px 0 0 19px;
 }
 
 .teamPerson {
     position: absolute;
-    margin: -17px 0 0 4px;
+    margin: -21px 0 0 14px;
     z-index: 11;
 }
 
@@ -526,10 +544,16 @@ table {
     background-repeat: no-repeat;
 }
 
+.teamContLeft {
+    display: block;
+    float: left;
+}
+
 .teamContRight {
     display: block;
+    overflow: hidden;
     float: right;
-    width: 378px;
+    width: 380px;
     height: 100%;
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee9de), to(#e1cfb6));
@@ -569,13 +593,6 @@ table {
     float: right;
     margin-top: -20px;
     margin-right: 10px;
-}
-
-.teamContLeft {
-    margin-bottom: 8px;
-    display: block;
-    float: left;
-    margin: 10px;
 }
 
 .tourLure, .tourBoat {

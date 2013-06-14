@@ -4,20 +4,26 @@
         <ul class="nav nav-tabs">
             <li class="active">
                 <a data-toggle="tab" href="#tab1">
-                    <%= image_tag 'iconFish.png', class: 'iconSmall', alt: 'Fish Icon' %>
-                    <div class="tabText">My Tour</div>
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconFish.png', id: 'fishSolo', class: 'iconSmall', alt: 'Fish Icon' %>
+                        <div class="tabText">My Tour</div>
+                    </div>
                 </a>
             </li>
             <li>
                 <a data-toggle="tab" href="#tab2">
-                    <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
-                    <div class="tabText">Team Profile</div>
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
+                        <div class="tabText">My Team Profile</div>
+                    </div>
                 </a>
             </li>
             <li id="accountOn">
                 <a data-toggle="tab" href="#tab3">
-                    <%= image_tag 'iconSettings.png', class: 'iconSmall', alt: 'Settings Icon Icon' %>
-                    <div class="tabText">My Accounts</div>
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconSettings.png', id: 'setSolo', class: 'iconSmall', alt: 'Settings Icon Icon' %>
+                        <div class="tabText">My Accounts</div>
+                    </div>
                 </a>
             </li>
         </ul>
@@ -74,8 +80,8 @@
                         <div class="myCont">
                             <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                             <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
-                            <h3>My Boat:</h3>
-                            <p>Find out your boat info here!</p>
+                            <h3>Tournament Boat:</h3>
+                            <p>Tell us what boat your team will be using for the Bass Pro Fishing Tour here.</p>
                         </div>
                         <div class="divideLine"></div>
                         <div class="myCont no">
@@ -199,9 +205,8 @@
                             <%= f.select :shirt, [['Select Size', 1], ['XS', 2], ['S', 3], ['M', 4], ['L', 5], ['XXL', 6], ['XXXL', 7]] %>
                         </div>
                         <div class="full">
-                            <%= f.label :outdoor_rewards_number %>
+                            <%= f.label :outdoor_rewards_number, "Outdoor Rewards Number" %>
                             <%= f.text_field :outdoor_rewards_number %>
-                            <p>I don't have an Outdoor Rewards Number. Sign me up!</p>
                         </div>
                         <div class="actions no">
                             <%= f.submit 'Submit' %>
