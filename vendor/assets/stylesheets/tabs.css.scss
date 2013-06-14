@@ -543,10 +543,8 @@ table {
 }
 
 .bottomGrey {
-    background-image: url('/assets/leaderBackground.jpg');
-    background-position: top;
-    height: 190px;
-    padding: 15px;
+    height: 220px;
+    overflow: scroll;
 }
 
 .bottomGreyFlat {
@@ -689,17 +687,18 @@ table {
 }
 
 .greyCont {
-    margin: auto auto 36px 70px;
+    background-image: url('/assets/leaderBackground.jpg');
 }
 
 .faceCont {
-    position: absolute;
-    margin: -6px auto auto -60px;
+    display: inline-block;
+    margin: 5px 20px;
 }
 
 .greyCont p {
-    display: inline-block;
-    margin-right: 20px;
+    float: right;
+    margin-right: 45px;
+    margin-top: 15px;
 }
 
 .bottomGreyPt {
