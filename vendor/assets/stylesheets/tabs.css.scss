@@ -6,7 +6,7 @@
 
 .tabbable {
     *zoom: 1;
-    margin-left: 260px;
+    margin-left: 255px;
     box-shadow: 0px 0px 35px black;
 }
 
@@ -726,6 +726,6 @@ tbody .odd, tbody .even {
 }
 
 table .even {
-    background-image: image-url('eventBackgroundEven.jpg');
+    background-color: #d0bca4;
     background-size: 100%;
 }
