@@ -1,7 +1,7 @@
 <%= render "shared/ads_bps" %>
 <div class="tabContBackground">
     <div class="tabContainer">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" id="myTabs">
             <li class="active">
                 <a data-toggle="tab" href="#tab1">
                     <div class="tabIconContainer">
@@ -332,15 +332,24 @@
         </div>
 
         <script type="text/javascript">
+
             $(function() {
+                // if the there are errors make sure MyAccounts tab is displayed
+                if(<%= @showTab %>) {
+                    $('#myTabs a:last').tab('show');
+                    $(".adImg2, .adImg3").show();
+                    $(".tabMidLeftCont, .tabMidRightCont").hide();
 
-                $('.ajax').click(function (e) {
-                  var thisTab = e.target
-                  var pageTarget = $(thisTab).attr('href');
-                  var itemNumber = $(this).parent().index()+1;
-                  $("#tab"+itemNumber).load(pageTarget);
+                }
 
-                });
+
+
+                //   var thisTab = e.target
+                //   var pageTarget = $(thisTab).attr('href');
+                //   var itemNumber = $(this).parent().index()+1;
+                //   $("#tab"+itemNumber).load(pageTarget);
+
+                // });
             });
         </script>
 

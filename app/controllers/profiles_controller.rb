@@ -53,7 +53,13 @@ class ProfilesController < ApplicationController
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { head :no_content }
       else
+        if(current_user.teams.size > 0)
+          @can_register = true
+        else
+          @can_register = false
+        end
         format.html {
+          @showTab = true
           @bootstrap = true
           flash.now[:error] = "We could not update your profile!"
           render action: 'show'
