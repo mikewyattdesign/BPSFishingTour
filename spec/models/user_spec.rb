@@ -14,6 +14,7 @@ describe User do
     it "should have profile after creation" do
         dan.save
         dan.profile.should_not be(nil)
+        Profile.count.should > 0
     end
 
     it "should take its profile with it when deleted" do

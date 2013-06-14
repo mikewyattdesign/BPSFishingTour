@@ -53,7 +53,10 @@ class ProfilesController < ApplicationController
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html {
+          @bootstrap = true
+          render action: 'show'
+        }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
     end
