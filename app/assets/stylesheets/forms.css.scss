@@ -2,22 +2,15 @@
 .formContainer{
     @include clearfix;
     width: 405px;
-    margin: 250px auto;
+    margin: 140px auto;
     text-align: center;
     background-color: #fffbf3;
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
+    color: #bebebe;
     > :last-child {
         border-radius:0 0 10px 10px;
     }
-}
-
-.forgotForm h2 {
-    margin-bottom: 20px;
-}
-
-#user_nav {
-
 }
 
 input {
@@ -51,14 +44,12 @@ form {
 
 label, h1, h2, h3, p, a {
     margin: 0;
-    font-family: Verdana, sans-serif;
-    color: #5f5f5f;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 body {
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
-    margin: 0;
 }
 
 select {
@@ -74,7 +65,7 @@ select {
 	border-radius: 8px;
 	font-size: 25px;
 	color: white;
-	background-image: image-url('registerButton.png');
+	background-image: image-url('registerButtonGreen.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 288px;
@@ -91,14 +82,9 @@ select {
 	outline: none;
 	font-size: 15px;
 	background-color: #e5ded5;
-	background-image: image-url('fishLoginLogo.png');
 	background-repeat: no-repeat;
 	background-position: right;
 	background-position: 91% 50%;
-}
-
-.submitLoginKey {
-    background-image: image-url('keyLoginLogo.png');
 }
 
 .submitLoginCheck {
@@ -108,13 +94,15 @@ select {
 
 .submitLoginRemember {
     float: left;
-    margin: 5px 0 0 10px;
+    margin: 2px 0 0 10px;
+    color: #5f5f5f;
 }
 
 .submitLoginText {
     margin: 5px 0 5px 60px;
     clear: both;
     line-height: 30px;
+    color: #5f5f5f;
 }
 
 .bassLoginLogo {
@@ -129,7 +117,7 @@ select {
 }
 
 .BottomBanner  {
-	background-image: image-url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.jpg');
 	overflow: hidden;
 	height: 70px;
 	border-top: solid 1px white;
@@ -151,7 +139,7 @@ select {
 
 #error_explanation h2 {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 }
 
@@ -196,7 +184,7 @@ select {
 }
 
 .bassLoginLogoThankText p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 17px;
 }
 
@@ -239,7 +227,7 @@ select {
 
 .thankContainerBottom {
 	padding: 8px 32px;
-	background-image: image-url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.jpg');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
     text-align: right;
@@ -262,10 +250,9 @@ select {
     margin-right: auto;
     margin-top: 150px;
     background-color: #f6efdf;
-    background-image: image-url('formBackgroundTexture.png');
+    background-image: image-url('formBackgroundTexture.jpg');
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
-
 }
 
 .teamRegContainerForm {
@@ -286,9 +273,21 @@ select {
 }
 
 .teamRegContainerForm h3 {
-    font-size: 12px;
+    font-size: 16px;
     color: #865105;
     margin-left: 10px;
+}
+
+.formContainer h2 {
+    color: #5f5f5f;
+}
+
+.teamRegContainerForm h1, .teamRegContainerForm h2, .teamRegContainerForm h3, .teamRegContainerForm p{
+    text-shadow: none;
+}
+
+.formContainer h1, .formContainer h2, .formContainer h3, .formContainer p {
+    text-shadow: none;
 }
 
 .divideLine {
@@ -298,7 +297,7 @@ select {
 
 .actions {
 	clear: both;
-	background-image: image-url('bottomBannerTexture.png');
+	background-image: image-url('bottomBannerTexture.jpg');
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
 	width: 100%;
@@ -308,9 +307,11 @@ select {
 
 .actions a {
     float: left;
-    margin: 28px 20px 20px 150px;
-    font-size: 10px;
+    margin: 25px 20px 20px 150px;
+    font-size: 12px;
     font-weight: bold;
+    text-decoration: none;
+    color: #7d7d7d;
 }
 
 .actions input {
@@ -344,7 +345,7 @@ select {
 }
 
 .teamRegContainer label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: #865105;
 }
@@ -363,7 +364,7 @@ select {
 }
 
 .full p {
-    font-size: 10px;
+    font-size: 12px;
     color: #865105;
     font-style: italic;
     font-weight: bold;
@@ -371,7 +372,7 @@ select {
 }
 
 .regTopText h2 {
-    font-size: 10px;
+    font-size: 14px;
     color: #865105;
     font-style: italic;
     font-weight: bold;
@@ -379,12 +380,12 @@ select {
 }
 
 .regTopText p {
-    font-size: 9px;
+    font-size: 12px;
     color: #865105;
     margin: 5px auto auto 10px;
 }
 
-.progressBarContainer {
+/*.progressBarContainer {
     margin: 20px 30px 20px 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -460,7 +461,7 @@ select {
 
 .progressBarCircle4 .inactive{
     margin-left: 375px;
-}
+}*/
 
 #email, #last_name, #first_name {
     width: 100%;
@@ -468,23 +469,6 @@ select {
     margin-right: auto;
 }
 
-.alert {
-padding: 8px 35px 8px 14px;
-margin-bottom: 20px;
-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-background-color: #fcf8e3;
-border: 1px solid #fbeed5;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
-}
-
-.alert .close {
-position: relative;
-top: -2px;
-right: -21px;
-line-height: 20px;
-}
 button.close {
 padding: 0;
 cursor: pointer;
@@ -492,6 +476,7 @@ background: transparent;
 border: 0;
 -webkit-appearance: none;
 }
+
 .close {
 float: right;
 font-size: 20px;
@@ -507,13 +492,21 @@ filter: alpha(opacity=20);
     height: 250px;
 }
 
-.adImg {
+.adImg, .adImg2, .adImg3, .adImg4 {
     margin-top: 20px;
     margin-left: 3px;
     width: 223px;
     box-shadow: 0px 0px 35px black;
 }
 
-.verticalAds {
-    width: 223px;
+.verticalAds, .verticalAds, .standingsLogo {
+    width: 220px;
 }
+
+.teamRegContainer.no {
+    margin: 0 0 25px 0;
+    width: 100%;
+    border-radius: 0px;
+    background: none;
+}
+

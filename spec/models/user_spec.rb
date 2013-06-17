@@ -8,17 +8,29 @@ describe User do
 
     it { should be_valid }
     it "should be valid" do
-      dan.should be_valid
+        dan.should be_valid
+    end
+
+    it "should have profile after creation" do
+        dan.save
+        dan.profile.should_not be(nil)
+        Profile.count.should > 0
+    end
+
+    it "should take its profile with it when deleted" do
+        dan.save
+        profile = dan.profile
+        expect{ dan.destroy }.to change{ Profile.count }.from(1).to(0)
     end
 
     it "should not valid without email" do
-      dan.email = nil
-      dan.should_not be_nil
+        dan.email = nil
+        dan.should_not be_nil
     end
 
     it "should not be vaild without password" do
-      dan.password = nil
-      dan.should_not be_nil
+        dan.password = nil
+        dan.should_not be_nil
     end
 
     it 'should respond to :profile' do

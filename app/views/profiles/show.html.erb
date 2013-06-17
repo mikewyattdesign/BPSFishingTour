@@ -1,59 +1,356 @@
 <%= render "shared/ads_bps" %>
+<div class="tabContBackground">
+    <div class="tabContainer">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="active">
+                <a data-toggle="tab" href="#tab1">
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconFishTab.png', id: 'fishSolo', class: 'iconSmall', alt: 'Fish Icon' %>
+                        <div class="tabText">My Tour</div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#tab2">
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
+                        <div class="tabText">My Team Profile</div>
+                    </div>
+                </a>
+            </li>
+            <li id="accountOn">
+                <a data-toggle="tab" href="#tab3">
+                    <div class="tabIconContainer">
+                        <%= image_tag 'iconSettings.png', id: 'setSolo', class: 'iconSmall', alt: 'Settings Icon Icon' %>
+                        <div class="tabText">My Accounts</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="tabbable">
+          <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+                <div class="tourContLeft">
+                    <div class="overRank"><h3>Overall Rankings:</h3></div>
+                    <%= image_tag 'iconMedal.png', class: 'iconMedal', alt: 'Medal Logo' %>
+                    <div class="iconMedalText">
+                        <h1>00</h1>
+                        <h3>Event Points</h3>
+                        <div class="divideLine"></div>
+                            <p>3 Events Needed to Qualify</p>
+                            <div class="lineFish">
+                                <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
+                                <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
+                                <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
+                                <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
+                                <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
+                            </div>
+                        <div class="divideLine"></div>
+                    </div>
+                </div>
+                <div class="tourContRight">
+<!--
+                    <div class="cutOutContainer">
+                        <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
+                        <%= image_tag 'tourPic.jpg', class: 'tourPic', alt: 'Team Picture' %>
+                        <div class="cutOutText">
+                            <h2>My Teammates</h2>
+                            <p>Franki “Five-Fishes” Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
+                        </div>
+                    </div>
+ -->
+                    <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
+                    <div class="manFishTextRight"><p>Upload a Team Photo Here</p></div>
+                    <div class="picBoxContainer">
+                        <%= image_tag 'picBox.png', class: 'picBox', alt: 'Picture Box' %>
+                    </div>
+                    <div class="tourContRightBot">
+                        <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
+                        <div class="tourPersonText">
+                            <h3>My Teammate</h3>
+                            <p>Your team information will propagate here once your teammate completes registration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane">
+                <div class="myTourCont">
+                    <div class="teamContRight">
+                        <div class="myCont">
+                            <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                            <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
+                            <h3>Tournament Boat:</h3>
+                            <p>Tell us what boat your team will be using for the Bass Pro Fishing Tour here.</p>
+                        </div>
+                        <div class="divideLine"></div>
+                        <div class="myCont no">
+                            <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                            <%= image_tag 'iconLure.png', class: 'tourLure', alt: 'Lure Icon' %>
+                            <h3>Favorite Gear:</h3>
+                            <div class="gearTextCont">
+                                <form method="post">
+                                    <textarea name="comments" cols="25" rows="3" placeholder="Share your favorite gear here or the equipment you have had the best luck with!">
+                                    </textarea>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="divideLine"></div>
+                        <div class="myCont">
+                            <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                            <%= image_tag 'iconPersonSmall.png', class: 'tourPerson', alt: 'Person Icon' %>
+                            <h3>My Teammates</h3>
+                            <p>This information will propagate once your teammate has completed the registration process. </p>
+                        </div>
+                    </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user_id %>
-</p>
+                    <div class="teamContLeft">
+<!--
+                         <div class="cutOutContainerLeft">
+                            <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
+                            <%= image_tag 'teamPic.jpg', class: 'teamPic', alt: 'Team Picture' %>
+                            <div class="cutOutTextTeam">
+                                <h2>My Teammates</h2>
+                                <p>Franki “Five-Fishes” Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
+                            </div>
+                        </div>
+ -->
+                        <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
+                        <div class="manFishTextLeft"><p>Upload a Team Photo Here</p></div>
+                        <div class="picBoxContainerLeft">
+                            <%= image_tag 'picBoxLeft.png', class: 'picBoxLeft', alt: 'Picture Box' %>
+                        </div>
+                        <div class="teamContLeftBot">
+                            <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                            <%= image_tag 'iconPersonFull.png', class: 'teamPerson', alt: 'Person Icon' %>
+                            <div class="teamPersonText">
+                                <h3>Your Name</h3>
+                                <p>"Come up with some clever advice here or a brief bio."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-pane">
+            <p id="notice"><%= notice %></p>
+            <div class="teamRegContainer no">
+                <%= form_for(@profile) do |f| %>
+                <div class="teamRegContainerForm">
+                        <% if @profile.errors.any? %>
+                            <div id="error_explanation">
+                                <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
+                                <ul>
+                                    <% @profile.errors.full_messages.each do |msg| %>
+                                        <li><%= msg %></li>
+                                    <% end %>
+                                </ul>
+                            </div>
+                        <% end %>
+                        <div class="regTopText">
+                            <h3>My Account</h3>
+                            <div class="divideLine"></div>
+                            <div class="accountInput">
+                                <div class="emailInput">
+                                    <%= f.label :email %>
+                                    <%= f.text_field :phone %>
+                                </div>
+                                <div class="passwordInput">
+                                    <%= f.label :password %>
+                                    <%= f.text_field :phone %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="headText">
+                            <h3>Personal Information</h3>
+                        </div>
+                        <div class="divideLine"></div>
+                        <div class="half">
+                            <%= f.label :first_name %>
+                            <%= f.text_field :first_name %>
+                        </div>
+                        <div class="half">
+                            <%= f.label :last_name %>
+                            <%= f.text_field :last_name %>
+                        </div>
+                        <div class="full">
+                            <%= f.label :street_address %>
+                            <%= f.text_field :street_address %>
+                        </div>
+                        <div class="third">
+                            <%= f.label :suite %>
+                            <%= f.text_field :suite %>
+                        </div>
+                        <div class="two thirds">
+                            <%= f.label :city %>
+                            <%= f.text_field :city %>
+                        </div>
+                        <div class="thirds">
+                            <%= f.label :state %>
+                            <%= f.text_field :state %>
+                        </div>
+                        <div class="two thirds">
+                            <%= f.label :zip %>
+                            <%= f.text_field :zip %>
+                        </div>
+                        <div class="two thirds">
+                            <%= f.label :phone %>
+                            <%= f.text_field :phone %>
+                        </div>
+                        <div class="third">
+                            <%= f.label :ext %>
+                            <%= f.text_field :ext %>
+                        </div>
+                        <div class="shirtSize">
+                            <%= f.label :shirt %>
+                            <%= f.select :shirt, [['Select Size', 1], ['XS', 2], ['S', 3], ['M', 4], ['L', 5], ['XXL', 6], ['XXXL', 7]] %>
+                        </div>
+                        <div class="full">
+                            <%= f.label :outdoor_rewards_number, "Outdoor Rewards Number" %>
+                            <%= f.text_field :outdoor_rewards_number %>
+                        </div>
+                        <div class="actions no">
+                            <%= f.submit 'Submit' %>
+                        </div>
+                        <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
+        <script type="text/javascript">
+            $("#accountOn").on("click", function(event){
+                if(($(this).attr("class")) != "active"){
+                    $(".tabMidLeftCont, .tabMidRightCont").hide();
+                }
+            });
+            $(".nav-tabs li").on("click", function(event){
+                if((($(this).attr("id")) != "accountOn")){
+                    $(".tabMidLeftCont, .tabMidRightCont").show();
+                }
+            });
 
-<p>
-  <strong>Street address:</strong>
-  <%= @profile.street_address %>
-</p>
+            $(".nav-tabs li").on("click", function(event){
+                if(($(this).attr("class")) != "accountOn"){
+                    $(".adImg2, .adImg3, .adImg4").hide();
+                }
+            });
+            $("#accountOn").on("click", function(event){
+                if((($(this).attr("id")) != "active")){
+                    $(".adImg2, .adImg3").show();
+                }
+            });
+        </script>
 
-<p>
-  <strong>Suite:</strong>
-  <%= @profile.suite %>
-</p>
+        <div class="tabMiddleContainer">
+            <div class="tabMidLeftCont">
+   <!-- add render of partial with locals -->
+                <% unless @can_register %>
+                    <div class="teamEvents">
+                        <div class="topDarkBrown">
+                            <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
+                            <h2>My Events</h2>
+                        </div>
+                        <div class="topLightBrown">
+                            <div class="teamListCover">
+                                <h1>You Have No Events</h1>
+                                <p>To register for an event, first you need to find a teammate!</p>
+                            </div>
+                            <div class="teamList"><h3>Date</h3></div>
+                            <div class="teamList"><h3>Event Title</h3></div>
+                            <div class="teamListL"><h3>Points</h3></div>
+                        </div>
+                        <div class="bottomBrown">
+                            <div class="dateRow">
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                            </div>
+                            <div class="eventRow">
+                                <p>Lake of the Ozarks</p>
+                                <p>Lake of the Avarks</p>
+                                <p>Lake of the Fishies</p>
+                                <p>Lake of the Mayan Ruin</p>
+                            </div>
+                            <div class="pointRow">
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                                <p>03/12/13</p>
+                            </div>
+                        </div>
+                    </div>
+                <% else %>
+                    <%= render 'my_events', :locals => { :profile => @profile } %>
+                <% end %>
+            </div>
 
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
+            <div class="tabMidRightCont">
+                <div class="leaderboard">
+                    <div class="topBlue">
+                        <%= image_tag 'iconGlobe.png', class: 'iconSmallEvents', alt: 'Icon' %>
+                        <h2>Leaderboard</h2>
+                    </div>
+                    <div class="bottomGrey">
+                        <div class="greyCont">
+                            <%= image_tag 'iconFace.png', class: 'faceCont', alt: 'Icon' %>
+                            <p>37pts</p>
+                            <p>Team "JigHEad"</p>
+                        </div>
+                        <div class="greyCont">
+                            <%= image_tag 'iconFace.png', class: 'faceCont', alt: 'Icon' %>
+                            <p>37pts</p>
+                            <p>Team "JigHEad"</p>
+                        </div>
+                        <div class="greyCont">
+                            <%= image_tag 'iconFace.png', class: 'faceCont', alt: 'Icon' %>
+                            <p>37pts</p>
+                            <p>Team "JigHEad"</p>
+                        </div>
+                        <div class="greyCont">
+                            <%= image_tag 'iconFace.png', class: 'faceCont', alt: 'Icon' %>
+                            <p>37pts</p>
+                            <p>Team "JigHEad"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myRegion">
+                    <div class="topGreen">
+                        <%= image_tag 'iconMed.png', class: 'iconSmallEvents', alt: 'Icon' %>
+                        <h2>My Region</h2>
+                    </div>
+                    <div class="bottomGreyFlat">
+                        <div class="greyCont">
+                        </div>
+                        <div class="greyCont">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
+        <script type="text/javascript">
 
-<p>
-  <strong>Zip:</strong>
-  <%= @profile.zip %>
-</p>
+            $(function() {
+                // if the there are errors make sure MyAccounts tab is displayed
+                if(<%= @showTab %>) {
+                    $('#myTabs a:last').tab('show');
+                    $(".adImg2, .adImg3").show();
+                    $(".tabMidLeftCont, .tabMidRightCont").hide();
 
-<p>
-  <strong>Phone:</strong>
-  <%= @profile.phone %>
-</p>
+                }
 
-<p>
-  <strong>Ext:</strong>
-  <%= @profile.ext %>
-</p>
 
-<p>
-  <strong>Shirt:</strong>
-  <%= @profile.shirt %>
-</p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+                //   var thisTab = e.target
+                //   var pageTarget = $(thisTab).attr('href');
+                //   var itemNumber = $(this).parent().index()+1;
+                //   $("#tab"+itemNumber).load(pageTarget);
+
+                // });
+            });
+        </script>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:edit, :update, :destroy]
 
   # GET /profiles
   # GET /profiles.json
@@ -10,6 +10,13 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    if(current_user.teams.size > 0)
+      @can_register = true
+    else
+      @can_register = false
+    end
+    @profile = current_user.profile
+    @bootstrap = true
   end
 
   # GET /profiles/new
@@ -46,7 +53,17 @@ class ProfilesController < ApplicationController
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        if(current_user.teams.size > 0)
+          @can_register = true
+        else
+          @can_register = false
+        end
+        format.html {
+          @showTab = true
+          @bootstrap = true
+          flash.now[:error] = "We could not update your profile!"
+          render action: 'show'
+        }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
     end

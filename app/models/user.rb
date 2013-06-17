@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
     has_and_belongs_to_many :teams
     has_one :profile, dependent: :destroy
+    after_create :create_user_profile
 
     def full_name
         if self.profile.nil?
@@ -21,5 +22,9 @@ class User < ActiveRecord::Base
         else
             true
         end
+    end
+
+    def create_user_profile
+      self.create_profile
     end
 end

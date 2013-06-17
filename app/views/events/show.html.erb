@@ -1,0 +1,37 @@
+<div class="tourContrainer">
+    <div class="bannerSmallTopBackground">
+        <div class="bannerSmallTop">
+            <div class="bannerBigText">
+                <div class="bannerBigTextCont"><h2>Welcome to the events page! Checkout our lineup below.</h2></div>
+                <div class="bannerBigTextCont"><h1>Choose your region below to find the tournaments near you.</h1></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bannerMiddleBackground">
+        <div class="bannerMiddleEvent">
+            <div class="findAnEvent">
+                <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
+            </div>
+            <div class="bassEventMap"></div>
+            <div class="bassEventEnter">
+                <div class="bassEventEnterBackbround">
+                    <div class="bassEventEnterContainer">
+                        <%= image_tag 'eventEnterPicture.jpg', class: 'eventEnterPic', alt: 'Event Picture' %>
+                        <div class="bassEventEnterText">
+                            <h2><%= @event.name %></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. onec id elit non mi porta gravida at eget metus. </p>
+                            <% if @can_register %>
+                            <h1>Are you fishing this event?</h1>
+                              <%= button_to "Yes", register_event_path(@event), class: 'enterEventButton', method: :post %>
+                              <%= button_to "No", '#', class: 'noEventButton', method: :post %>
+                            <% else %>
+                              <h1>You Must Find a Teammate in Order to Register this Event</h1>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

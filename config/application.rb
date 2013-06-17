@@ -28,5 +28,10 @@ module BpsFishingTour
     config.assets.initialize_on_precompile = false
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts', 'bootstrap', 'css')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'javascripts', 'bootstrap', 'js')
+    config.assets.precompile += %w(bootstrap.css bootstrap.js)
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

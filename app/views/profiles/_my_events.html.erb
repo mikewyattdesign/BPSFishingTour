@@ -1,0 +1,29 @@
+<div class="teamEvents">
+    <div class="topDarkBrown">
+        <%= image_tag 'iconCal.png', class: 'iconSmallEvents', alt: 'Icon'  %>
+        <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
+        <h2>My Events <div class="seeAll"><a href="/events">See all events</a></div></h2>
+    </div>
+    <table>
+        <tbody>
+            <tr class="topLightBrown">
+                <th class="thLeft">Date</th>
+                <th class="thMiddle">Event Title</th>
+                <th class="thRight">Status</th>
+            </tr>
+        </tbody>
+    </table>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <% @profile.user.teams.first.events.each do |event| %>
+                <tr class="<%= cycle("odd", "even") %>">
+                    <td class="tdDate"><%= event.date %></td>
+                    <td class="tdName"><%= event.name %></td>
+                    <td class="tdStatus"><%= add_status(event) %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div><!-- talbe container -->
+</div>

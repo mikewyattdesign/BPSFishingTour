@@ -2,8 +2,19 @@
 @import "bourbon";
 @import "normalize-scss/normalize";
 
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/alerts";
+@import "bootstrap/sprites";
+
+@import "pnotify/pnotify.default.css";
+@import "pnotify/pines_icons/pnotify.default.icons.css";
+
 // Application
+@import "colors.css.scss";
 @import "typography.css.scss";
 @import "grids.css.scss";
 @import "forms.css.scss";
 @import "home.css.scss";
+@import "modal.css";
+@import "notifications.css.scss";

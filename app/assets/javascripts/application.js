@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap/js/bootstrap
+//= require pnotify/pnotify
 //= require_tree .

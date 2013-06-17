@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bass Pro Shops Fishing Tour</title>
-        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-        <%= csrf_meta_tags %>
-    </head>
-    <body>
-        <div id="container">
-            <% flash.each do |name, msg| %>
-                <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
-                    <%= msg.html_safe %> <%= content_tag :button, "×", class: "close", "data-dismiss" => "alert" %>
+<head>
+    <title>Bass Pro Shops Fishing Tour</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag("bootstrap/css/bootstrap", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
+    <%= stylesheet_link_tag("tabs", :media => "all", "data-turbolinks-track" => true) if defined? @bootstrap %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
-                <% end %>
-            <% end %>
+</head>
+    <body>
+        <div id="wrapper">
+            <div id="container">
                 <div class="bannerTopBackground">
                     <div class="bannerTop">
                         <div class="bassFishingLogo">
@@ -22,99 +21,91 @@
                             <a href="/"><%= image_tag 'bassProLogo.png', class: 'bassLogo', alt: 'Bass Logo' %></a>
                         </div>
 
-                        <div class="loginTop">
-                            <div class="loginIcon">
-                                <h2>Help</h2>
-                            </div>
-                            <div class="loginIconLine">
-                                |
-                            </div>
-                            <div class="loginIcon">
-                                <div id="user_nav">
-                                    <% if user_signed_in? %>
-                                        Logged in as <strong><%= current_user.email %></strong>.
-                                        <%= link_to 'Edit profile', edit_user_registration_path %> |
-                                        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-                                    <% else %>
-                                        <%= link_to "Sign up", new_user_registration_path %> |
-                                        <%= link_to "Login", new_user_session_path %>
-                                    <% end %>
-                                </div>
-                            </div>
+                        <div class="user-navigation">
+                            <% if user_signed_in? %>
+                                Logged in as <strong><%= current_user.email %></strong> |
+                                <%= link_to 'Edit profile', profile_path(current_user) %> |
+                                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                            <% else %>
+                                <%= link_to "Sign up", new_user_registration_path %> |
+                                <%= link_to "Login", new_user_session_path %>
+                            <% end %>
+                            | <%= link_to 'Help', '#' %>
+
                         </div>
 
                         <div class="navTop">
-                            <div class="navIcon">
-                                <h2>About</h2>
-                            </div>
-                            <div class="navIcon">
-                                <a href="/events"><h2>Tour Events</h2></a>
-                            </div>
-                            <div class="navIcon">
-                                <h2>Leaderboard</h2>
-                            </div>
-                            <div class="navIcon">
-                                <h2>News</h2>
-                            </div>
-                            <div class="navIcon">
-                                <h2>Anglers</h2>
-                            </div>
-                            <div class="navIcon">
-                                <a href="/profiles/new"><h2>Register</h2></a>
-                            </div>
+                            <%= link_to 'About', '#', class: 'navIcon' %>
+                            <%= link_to 'Tour Events', '/events', class: 'navIcon' %>
+                            <%= link_to 'Leaderboard', '#', class: 'navIcon' %>
+                            <%= link_to 'News', '#', class: 'navIcon' %>
+                            <%= link_to 'Anglers', '#', class: 'navIcon' %>
+                            <%= link_to 'Register', '/profiles/new', class: 'navIcon' %>
                         </div>
                     </div>
                 </div>
 
-            <%= yield %>
-
-        <div class="bannerBottomSponsorBackground">
-            <div class="bannerBottomSponsor">
-                <div class="sponsorArea">
-                    <%= image_tag 'trackerLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'notroLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'mercuryLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'planoLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'toyotaLogo.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
-                    <%= image_tag 'bassProLogoBottom.png', class: 'sponsorLogo', alt: 'Bass Logo' %>
+                <%= yield %>
+<!--
+                <div class="bannerBottomSponsorBackground">
+                <%= link_to image_tag('trackerLogo.png', alt: 'TRACKER Boats logo'), 'http://www.trackerboats.com/' %>
+                <%= link_to image_tag('nitroLogo.png', alt: 'NITRO Performance Fishing Boats logo'), 'http://www.nitro.com/' %>
+                <%= link_to image_tag('mercuryLogo.png', alt: 'Mercury Marine logo'), 'http://www.mercurymarine.com/' %>
+                <%= link_to image_tag('planoLogo.png', alt: 'Plano logo'), 'http://www.planomolding.com/' %>
+                <%= link_to image_tag('toyotaLogo.png', alt: 'Toyota logo'), 'http://www.toyota.com/' %>
+                <%= link_to image_tag('bassProLogoBottom.png', alt: 'Bass Pro Shops logo'), 'http://www.basspro.com/' %>
                 </div>
+-->
             </div>
-        </div>
+
             <div class="bannerBottomBackground">
-                <div class="bannerBottom">
-                    <div class="navBottom">
-                        <div class="navIconBot">
-                            About
-                        </div>
-                        <a href="/profiles/new"><div class="navIconBot">
-                            Register Your Team
-                        </div></a>
-                        <div class="navIconBot">
-                            Find an Event
-                        </div>
-                        <div class="navIconBot">
-                            Leaderboard
-                        </div>
-                        <div class="navIconBot">
-                            News
-                        </div>
-                        <div class="navIconBot">
-                            Team Profiles
-                        </div>
-                        <div class="navIconBot">
-                            My Account
-                        </div>
-                        <div class="navIconBot">
-                            Contact Us
-                        </div>
-                    </div>
+                <nav class="navBottom">
+                    <%= link_to 'About', '#' %>
+                    <%= link_to 'Register Your Team', '/profiles/new' %>
+                    <%= link_to 'Find an Event', '#' %>
+                    <%= link_to 'Leaderboard', '#' %>
+                    <%= link_to 'News', '#' %>
+                    <%= link_to 'Team Profiles', '#' %>
+                    <%= link_to 'My Account', '#' %>
+                    <%= link_to 'Contact Us', '#' %>
+                </nav>
 
-                    <div class="navBottomLegal">
-                         <p>2013©  BPS Direct, L.L.C. All rights reserved.</p>
-                    </div>
+                <div class="navBottomLegal">
+                     <p>2013©  BPS Direct, L.L.C. All rights reserved.</p>
                 </div>
             </div>
-
         </div>
+        <script type="text/javascript">
+            $(document).ready(function  () {
+                <% unless flash.empty? %>
+                    <% flash.each do |name, msg| %>
+                        var msgType;
+                        <% case name %>
+                        <% when "notice" %>
+                            msgType = 'info';
+                        <% when "alert" %>
+                            msgType = 'error';
+                        <% when "register_event" %>
+                            msgType = 'info'
+                        <% when "team_invite" %>
+                            msgType = 'success'
+                        <% when "error" %>
+                            msgType = 'error'
+                        <% end %>
+                        $.pnotify({
+                            title: "<%= name %>",
+                            text: "<%= msg %>",
+                            styling: "bootstrap",
+                            hide: false,
+                            icon: true,
+                            type: msgType,
+                            history: false,
+                            width: "300px"
+                        });
+                    <% end %>
+                <% end %>
+            });
+
+        </script>
     </body>
 </html>
