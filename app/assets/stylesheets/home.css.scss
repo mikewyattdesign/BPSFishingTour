@@ -90,7 +90,7 @@ p{
             text-decoration: none;
 
             &:hover {
-                color: $teal;
+                color: white;
                 text-decoration: underline;
             }
         }
@@ -269,6 +269,7 @@ p{
             font-size: 20px;
         }
 
+
         .findEventText h3, .leaderboardText h3 {
             font-size: 16px;
         }
@@ -310,7 +311,7 @@ p{
             text-decoration: none;
 
             &:hover {
-                color: $teal;
+                color: white;
                 text-decoration: underline;
             }
         }
@@ -332,7 +333,7 @@ p{
     margin-right: 15px;
 }
 
-#user_nav a, h2{
+#user_nav a, #user_nav h2{
     font-weight: bold;
     font-family: "Helvetica Neue";
 }
@@ -432,15 +433,16 @@ p{
     margin-right: auto;
 }
 .mapOntario {
-    margin-left: 305px;
-    margin-top: 100px;
+    margin-left: 430px;
+    margin-top: 15px;
+    width: 32%;
 }
 
 .mapOntarioText {
     width: 450px;
     position: absolute;
-    margin-top: 255px;
-    margin-left: 120px;
+    margin-top: 95px;
+    margin-left: 235px;
     font-size: 25px;
     font-family: Aachen;
     color: white;
@@ -450,7 +452,8 @@ p{
     background-image: image-url('eventMap.png');
     background-repeat: no-repeat;
     background-position:center;
-    height: 485px;
+    background-size: 70%;
+    height: 200px;
     width: 100%;
     opacity: .8;
 }
@@ -470,6 +473,7 @@ p{
 }
 
 .bassEventAttend {
+    margin-top: 50px;
     margin-bottom: 125px;
 }
 
@@ -478,8 +482,8 @@ p{
 }
 
 .bassEventAttendBackbround {
-    height: 125px;
-    width: 873px;
+    height: 70px;
+    width: 500px;
 }
 
 .bassEventEnterBackbround {
@@ -498,8 +502,8 @@ p{
     background: -ms-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, rgba(255,255,255, 0.1), rgba(8,8,8,0.4));
-    box-shadow: 0px 0px 10px black;
-    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 2px;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
@@ -507,7 +511,7 @@ p{
 }
 
 .bassEventAttendContainer {
-    padding: 35px 0px 35px 25px;
+    padding: 15px 0px 0px 25px;
 }
 
 .bassEventEnterContainer {
@@ -516,6 +520,7 @@ p{
 
 .bassEventAttendText h2 {
     color: white;
+    font-size: 14px;
 }
 
 .bassEventAttendText {
@@ -548,16 +553,18 @@ p{
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 8px 30px;
-    width: 145px;
-    height: 40px;
+    background-size: 100% 105%;
+    margin: 5px 30px;
+    width: 120px;
+    height: 30px;
     border-radius: 5px;
+    border: none;
     background-image: image-url('registerButtonGreen.png');
 }
 
 .bassEventAttendButton h2 {
     padding-top: 10px;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .enterEventButton, .noEventButton {
