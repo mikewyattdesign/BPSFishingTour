@@ -2,7 +2,7 @@ require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
     given(:bob) { FactoryGirl.create(:profile).user }
-    given(:tom) { FactoryGirl.build(:user) }
+    given(:tom) { OpenStruct.new FactoryGirl.attributes_for(:user) }
 
     scenario "User sends team request" do
         sign_in_with(bob.email, bob.password)
@@ -18,21 +18,20 @@ feature "Teammate Request" do
     end
 
     context "Receiving teammate request" do
-        let(:request) { FactoryGirl.create(:request, requester: requester.id)}
-        let(:registered_requestee) { FactoryGirl.create(:user_profile).user}
-        let(:request2) { FactoryGirl.create(:request, requester: requester.id, invitee_email: registered_requestee.email)}
+        given(:request) { FactoryGirl.create(:request, requester: bob.id, invitee_email: tom.email)}
+
         context "accept teammate invite" do
             scenario "as an unregistered user" do
                 visit request.invitation_url
                 page.current_path.should eq '/users/sign_up'
                 # register and confirm
-                sign_up_with(requestee.email, requestee.password)
+                sign_up_with(tom.email, tom.password)
                 # the invitee_id of the request record should now
                 # be equal to the id of the last registered user
                 expect(Request.first.invitee_id).to eq User.last.id
 
-                page.current_path.should eq "/users/#{User.find_by_email(requestee.email).id}/team_invitations"
-                expect(page).to have_content("#{requester.full_name}")
+                page.current_path.should eq "/users/#{User.find_by_email(tom.email).id}/team_invitations"
+                expect(page).to have_content("#{bob.full_name}")
 
                 expect{ click_link "Accept Invitation" }.to change{Team.count}.from(0).to(1)
 
@@ -40,18 +39,18 @@ feature "Teammate Request" do
             end
 
             scenario "as a non logged-in registered user" do
-                visit request2.invitation_url
-                page.current_path.should eq '/users/sign_in'
-                sign_in_from_sign_in_page registered_requestee.email, registered_requestee.password
-                page.current_path.should eq team_invitations_path(registered_requestee)
-                 puts request2.as_json
-                 puts requester.full_name
-                 puts requester.id
-                 puts User.all.as_json
-                # puts registered_requestee.profile.as_json
-                # puts Request.all.as_json
+                sign_up_with(tom.email, tom.password)
+                click_link :Logout
+
+                visit request.invitation_url
+                expect(current_path).to eq '/users/sign_in'
+
+                sign_in_with tom.email, tom.password
+                expect(current_path).to eq team_invitations_path(User.find_by_email(tom.email).id)
+
                 expect(Request.count).to eq 1
-                expect(page).to have_content("#{requester.full_name}")
+                puts User.find(bob.id).profile.first_name
+                expect(page).to have_content("#{bob.profile.first_name}")
 
             end
         end
