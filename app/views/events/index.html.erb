@@ -1,41 +1,38 @@
-<div id="backgroundMain">
-    <div id="wrapper">
-        <div class="bannerSmallTopBackground">
-            <div class="bannerSmallTop">
-                <div class="bannerBigText">
-                    <div class="bannerBigTextCont"><h2>Discover events to reel in the points! </h2></div>
-                    <div class="bannerBigTextCont"><h1>Choose your region below to find tournaments near you. </h1></div>
-                </div>
+<div class="tourContrainer">
+    <div class="bannerSmallTopBackground">
+        <div class="bannerSmallTop">
+            <div class="bannerBigText">
+                <div class="bannerBigTextCont"><h2>Discover events to reel in the points! </h2></div>
+                <div class="bannerBigTextCont"><h1>Choose your region below to find tournaments near you. </h1></div>
             </div>
         </div>
+    </div>
 
-        <div class="bannerMiddleBackground">
-            <div class="bannerMiddleEvent">
-                <div class="findAnEvent">
-                    <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
-                </div>
-                <div class="bassEventMap">
-                    <div class="eventMapContainer">
-                        <div class="mapOntarioText">
-                            Competitive Sports </br> Fishing League Events
-                        </div>
-                        <%= image_tag 'mapOntario.png', class: 'mapOntario', alt: 'Map Ontario' %>
+    <div class="bannerMiddleBackground">
+        <div class="bannerMiddleEvent">
+            <div class="findAnEvent">
+                <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
+            </div>
+            <div class="bassEventMap">
+                <div class="eventMapContainer">
+                    <div class="mapOntarioText">
+                        Competitive Sports </br> Fishing League Events
                     </div>
+                    <%= image_tag 'mapOntario.png', class: 'mapOntario', alt: 'Map Ontario' %>
                 </div>
-                <div class="bassEventAttend">
-                  <% @events.each do |event| %>
-                    <div class="bassEventAttendBackbround">
-                      <div class="bassEventAttendContainer">
-                          <div class="bassEventAttendText">
-                              <h2><%= event.name %></h2>
-                              <p><%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-                          </div>
-
-                          <%= button_to "Details", event_path(event), class: 'bassEventAttendButton', method: :get %>
+            </div>
+            <div class="bassEventAttend">
+              <% @events.each do |event| %>
+                <div class="bassEventAttendBackbround">
+                  <div class="bassEventAttendContainer">
+                      <div class="bassEventAttendText">
+                          <h2><%= event.name %></h2>
+                          <p><%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
                       </div>
-                    </div>
-                  <% end %>
+                      <%= button_to "Details", event_path(event), class: 'bassEventAttendButton', method: :get %>
+                  </div>
                 </div>
+              <% end %>
             </div>
         </div>
     </div>

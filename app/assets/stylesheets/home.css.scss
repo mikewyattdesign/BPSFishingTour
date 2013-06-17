@@ -1,3 +1,5 @@
+/*Footer Sticker*/
+
 html, body {
    margin:0;
    padding:0;
@@ -7,9 +9,6 @@ html, body {
    min-height:100%;
    position:relative;
 }
-.bannerTopBackground {
-   background:#ff0;
-}
 #container {
    padding-bottom:105px;   /* Height of the footer */
 }
@@ -18,47 +17,41 @@ html, body {
    bottom:0;
    width:100%;
    height:105px;   /* Height of the footer */
-   background:#6cf;
 }
 
-/*Font Styles*/
+/*Font Styles Home Container*/
 
-#homeWrapper h1 {
+h1 {
     color: $yellow;
     margin: 0;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
     font-family: Aachen, normal;
 }
 
-#homeWrapper h2 {
+h2 {
     font-family: Aachen, normal;
     color: white;
     margin: 0;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-#homeWrapper h3 {
+h3 {
     color: $red;
     margin: 0;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.37);
 }
 
-#homeWrapper p {
+p{
     font-weight: lighter;
     font-family: "Helvetica Neue";
     line-height:140%;
     color: #b3b3b3;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
 }
-/*End Font Style*/
 
-/*Landing Page*/
+/*Home Container*/
 
-#backgroundMain {
-    overflow: hidden;
-}
-
-#wrapper {
+#backgroundMain, #wrapper {
     overflow: hidden;
 }
 
@@ -80,13 +73,13 @@ html, body {
 
     .bassLogo {
         position: absolute;
-        z-index: 9999;
+        z-index: 20;
     }
 
     .standingsLogo {
         position: absolute;
         margin: 0 0 0 12px;
-        z-index: 9999;
+        z-index: 20;
     }
 
     .user-navigation {
@@ -104,7 +97,7 @@ html, body {
     }
 
     .navTop {
-        margin: 0 0 auto 275px;
+        margin: 0 0 0 275px;
         padding: 35px 0 0 0;
     }
 
@@ -134,7 +127,6 @@ html, body {
 
         .standingsText h1 {
             font-size: 15px;
-            color: $yellow;
         }
 
         .standingsText p {
@@ -159,17 +151,15 @@ html, body {
         margin-left: 285px;
         margin-top: 30px;
         width: 500px;
-        z-index: 9999;
+        z-index: 20;
     }
 
         .bannerBigText h2 {
-            font-size: 28px;
-            color: white;
+            font-size: 30px;
         }
 
         .bannerBigText h1 {
             font-size: 15px;
-            color: #e8c517;
         }
 
         .bannerBigTextCont {
@@ -197,7 +187,7 @@ html, body {
 
     .bannerBigImage {
         margin-left: -500px;
-        margin-top: -16px;
+        margin-top: -15px;
     }
 
 .bannerMiddleBackground {
@@ -268,10 +258,7 @@ html, body {
     }
 
     .eventLeaderContainerText {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 100px;
+        margin: 10px auto 100px auto;
         overflow: hidden;
         clear: both;
     }
@@ -362,7 +349,6 @@ html, body {
     .navBottomLegal p {
         margin-top: 10px;
         font-size: 12px;
-        color: white;
     }
 
 #user_nav a {
@@ -387,7 +373,7 @@ html, body {
 
 .controller {
     position: absolute;
-    z-index: 9999;
+    z-index: 30;
     margin-top: 225px;
 }
 
@@ -413,11 +399,7 @@ html, body {
                 1px 1px 2px -1px #fff;
 }
 
-.dots li:active {
-    background: $yellow;
-}
-
-#dots .current {
+.dots li:active, #dots .current {
     background: $yellow;
 }
 
@@ -612,7 +594,6 @@ html, body {
     width: 250px;
     height: 50px;
     line-height: 40px;
-    background-size: 100%;
     background-size: 288px;
     margin: 40px auto 15px auto;
     border-radius: 10px;

@@ -100,13 +100,15 @@ select {
 
 .submitLoginRemember {
     float: left;
-    margin: 5px 0 0 10px;
+    margin: 2px 0 0 10px;
+    color: #5f5f5f;
 }
 
 .submitLoginText {
     margin: 5px 0 5px 60px;
     clear: both;
     line-height: 30px;
+    color: #5f5f5f;
 }
 
 .bassLoginLogo {
@@ -280,6 +282,18 @@ select {
     font-size: 16px;
     color: #865105;
     margin-left: 10px;
+}
+
+.formContainer h2 {
+    color: #5f5f5f;
+}
+
+.teamRegContainerForm h1, .teamRegContainerForm h2, .teamRegContainerForm h3, .teamRegContainerForm p{
+    text-shadow: none;
+}
+
+.formContainer h1, .formContainer h2, .formContainer h3, .formContainer p {
+    text-shadow: none;
 }
 
 .divideLine {
@@ -505,15 +519,7 @@ filter: alpha(opacity=20);
     box-shadow: 0px 0px 35px black;
 }
 
-.verticalAds {
-    width: 220px;
-}
-
-.verticalAds {
-    width: 220px;
-}
-
-.standingsLogo {
+.verticalAds, .verticalAds, .standingsLogo {
     width: 220px;
 }
 

@@ -77,17 +77,34 @@ p {
     font-style: italic;
 }
 
+#tab1, #tab2 {
+    height: 330px;
+}
+
+#tab1, #tab2, #tab3 {
+    background-image: image-url('tabBackground.jpg');
+    background-size: 100%;
+}
+
 #tab1 p, #tab1 h3, #tab1 h1 {
     color: #cbbdaa;
+    text-shadow: none;
 }
 
 #tab2 p, #tab2 h3 {
     color: #856a43;
+    text-shadow: none;
 }
 
 .tabIconContainer {
     width: 245px;
     height: 40px;
+}
+
+.tabText {
+    float: left;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 #fishSolo {
@@ -106,12 +123,6 @@ p {
     margin-bottom: 0;
 }
 
-.tabText {
-    float: left;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-
 .iconSmallEvents {
     position: absolute;
     margin: 8px 18px;
@@ -128,15 +139,6 @@ p {
     padding: 0;
     color: #c5af91;
     text-decoration: none;
-}
-
-#tab1, #tab2 {
-    height: 330px;
-}
-
-#tab1, #tab2, #tab3 {
-    background-image: image-url('tabBackground.jpg');
-    background-size: 100%;
 }
 
 .teamRegMod form{
@@ -502,6 +504,7 @@ p {
 table {
     width: 100%
 }
+
 .topLightBrown {
     background-color: #956923;
     width: 100%;
