@@ -13,10 +13,6 @@
     }
 }
 
-.forgotForm h2 {
-    margin-bottom: 20px;
-}
-
 input {
     display: block;
     box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
@@ -54,8 +50,6 @@ label, h1, h2, h3, p, a {
 body {
 	background-color: white;
 	background-image: image-url('woodBackground.jpg');
-    margin: 0;
-    height: 100%;
 }
 
 select {
@@ -389,7 +383,7 @@ select {
     margin: 5px auto auto 10px;
 }
 
-.progressBarContainer {
+/*.progressBarContainer {
     margin: 20px 30px 20px 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -465,7 +459,7 @@ select {
 
 .progressBarCircle4 .inactive{
     margin-left: 375px;
-}
+}*/
 
 #email, #last_name, #first_name {
     width: 100%;
@@ -490,6 +484,7 @@ top: -2px;
 right: -21px;
 line-height: 20px;
 }
+
 button.close {
 padding: 0;
 cursor: pointer;
@@ -497,6 +492,7 @@ background: transparent;
 border: 0;
 -webkit-appearance: none;
 }
+
 .close {
 float: right;
 font-size: 20px;
