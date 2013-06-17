@@ -34,8 +34,11 @@ class Teams::RequestsController < ApplicationController
         # see if the invitee already has an account
         if(invitee = User.where(email: @request.invitee_email).first)
             profile = invitee.profile
-            session[:respond_to_invitation] = true
-            redirect_to new_user_session_path
+            @request.invitee_id = invitee.id
+            if @request.save
+                session[:respond_to_invitation] = true
+                redirect_to new_user_session_path
+            end
         else
             session[:unregistered_invite] = @request.id
             flash[:notice] = "Before teaming up with #{requester.full_name} you need to register an account."

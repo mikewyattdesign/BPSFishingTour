@@ -41,7 +41,6 @@ feature "Teammate Request" do
             scenario "as a non logged-in registered user" do
                 sign_up_with(tom.email, tom.password)
                 click_link :Logout
-
                 visit request.invitation_url
                 expect(current_path).to eq '/users/sign_in'
 
@@ -49,9 +48,7 @@ feature "Teammate Request" do
                 expect(current_path).to eq team_invitations_path(User.find_by_email(tom.email).id)
 
                 expect(Request.count).to eq 1
-                puts User.find(bob.id).profile.first_name
                 expect(page).to have_content("#{bob.profile.first_name}")
-
             end
         end
     end
