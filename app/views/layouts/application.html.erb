@@ -13,11 +13,6 @@
     <body>
         <div id="wrapper">
             <div id="container">
-                <% flash.each do |name, msg| %>
-                    <%= content_tag :div, id: "flash_#{name}", class: "alert" do %>
-                        <%= msg.html_safe %> <%= content_tag :button, "×", class: "close", "data-dismiss" => "alert" %>
-                    <% end %>
-                <% end %>
                 <div class="bannerTopBackground">
                     <div class="bannerTop">
                         <div class="bassFishingLogo">
@@ -99,12 +94,13 @@
                         <% end %>
                         $.pnotify({
                             title: "<%= name %>",
-                            text: "<%= msg %>!!!!!",
+                            text: "<%= msg %>",
                             styling: "bootstrap",
                             hide: false,
                             icon: true,
-                            type: 'success',
-                            width: "600px"
+                            type: msgType,
+                            history: false,
+                            width: "300px"
                         });
                     <% end %>
                 <% end %>
