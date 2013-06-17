@@ -4,6 +4,7 @@ BpsFishingTour::Application.routes.draw do
     resources :events
 
     get '/thanks' => 'static_pages#thanks'
+    get '/about' => 'static_pages#about'
     get '/confirm' => 'static_pages#confirm'
 
     devise_for :users, controllers: {

@@ -2,8 +2,10 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def events
+  def about
+  end
 
+  def events
   end
 
   def thanks
