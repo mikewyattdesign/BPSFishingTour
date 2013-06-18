@@ -164,15 +164,12 @@ form + .BottomBanner {
 /*Thanks Page*/
 
 .thankContainer {
-    width: 575px;
+    width: 400px;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 42px auto;
     background-color: #fffbf3;
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
-    margin-top: 200px;
-    margin-bottom: 200px;
 }
 
 .bassLoginLogoText {
@@ -180,33 +177,26 @@ form + .BottomBanner {
     margin: 20px 15px 0 15px;
 }
 
-.bassLoginLogoThankText h1 {
-    margin: 5px 0 5px 0;
-    font-size: 18px;
-    color: #797979;
-    text-shadow:none;
-}
-
-.bassLoginLogoThankText p {
-    font-size: 14px;
-    line-height: 17px;
-    text-shadow:none;
-}
-
-.bassLoginLogoThankText a {
-    font-size: 11px;
-    text-shadow:none;
-}
-
 .bassLoginLogoThankText {
-    min-height: 180px;
-    margin: 30px 50px 30px 260px;
-}
+    margin: 42px;
 
+    h1 {
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #797979;
+        text-shadow:none;
+    }
 
-.bassLoginLogoThank {
-    position: absolute;
-    margin-right: 20px;
+    p {
+        font-size: 14px;
+        line-height: 17px;
+        text-shadow:none;
+    }
+
+    a {
+        font-size: 11px;
+        text-shadow:none;
+    }
 }
 
 .thankRegButton {
