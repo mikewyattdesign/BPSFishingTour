@@ -244,7 +244,7 @@
         <div class="tabMiddleContainer">
             <div class="tabMidLeftCont">
    <!-- add render of partial with locals -->
-                <% unless !@can_register %>
+                <% unless @can_register %>
                     <div class="teamEvents">
                         <div class="topDarkBrown">
                             <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
@@ -253,15 +253,15 @@
                         <div class="topLightBrown">
                             <div class="teamListCover">
                                 <h1>You Have No Events</h1>
-                                <p>To register for an event, first you need to find a teammate!</p>
+                                <p>To register for an event, first you need to <a href="/teams/requests/new">find a teammate!</a></p>
                             </div>
                             <div class="teamList"><h3>Date</h3></div>
-                            <div class="teamList"><h3>Event Title</h3></div>
-                            <div class="teamListL"><h3>Points</h3></div>
+                            <div class="teamListM"><h3>Event Title</h3></div>
+                            <div class="teamListR"><h3>Status</h3></div>
                         </div>
                         <div class="bottomBrown">
                             <div class="dateRow">
-                                <% 5.times do %>
+                                <% 3.times do %>
                                     <p>03/12/13</p>
                                     <p>03/12/13</p>
                                     <p>03/12/13</p>
@@ -269,7 +269,7 @@
                                 <% end %>
                             </div>
                             <div class="eventRow">
-                                <% 5.times do %>
+                                <% 3.times do %>
                                 <p>Lake of the Ozarks</p>
                                 <p>Lake of the Avarks</p>
                                 <p>Lake of the Fishies</p>
@@ -277,11 +277,8 @@
                                 <% end %>
                             </div>
                             <div class="pointRow">
-                                <% 5.times do %>
-                                <p>03/12/13</p>
-                                <p>03/12/13</p>
-                                <p>03/12/13</p>
-                                <p>03/12/13</p>
+                                <% 12.times do %>
+                                <p>Coming Soon</p>
                                 <% end %>
                             </div>
                         </div>

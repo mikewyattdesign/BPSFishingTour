@@ -440,7 +440,7 @@ p {
 }
 
 .bottomBrown {
-    background-color: #d5c8b7;
+    background-image: url('/assets/doubleLineBackground.jpg');
     background-position: top;
     background-size: 100%;
     height: 460px;
@@ -659,38 +659,51 @@ table {
     color: white;
 }
 
+.teamListCover a {
+    color: white;
+}
+
 .teamList {
     display: inline-block;
-    margin: 15px 110px auto 30px;
+    margin: 5px auto auto 60px;
     color: white;
 }
 
-.teamList h3, .teamListL h3 {
-    color: white;
-}
-
-.teamListL {
-    float: right;
-    margin: 15px 35px auto auto;
-}
-
-.dateRow, .eventRow, .pointRow{
+.teamListM {
     display: inline-block;
-    margin: 10px 30px;
+    margin: auto 35px auto 140px;
 }
 
-.dateRow p, .eventRow p, .pointRow p{
-    line-height: 38px;
+.teamListR {
+    float: right;
+    margin: 5px 60px auto auto;
+}
+
+.dateRow {
+    margin-left: 60px;
 }
 
 .eventRow {
-    width: 250px;
-    margin-left: 90px;
+    margin-left: 120px;
 }
 
 .pointRow {
     float: right;
-    margin: auto 30px auto auto;
+    margin-right: 30px;
+}
+
+.teamList h3, .teamListM h3, .teamListR h3 {
+    color: white;
+}
+
+.dateRow, .eventRow, .pointRow{
+    display: inline-block;
+}
+
+.dateRow p, .eventRow p, .pointRow p{
+    line-height: 39px;
+    text-shadow: none;
+    color: #62616e;
 }
 
 .greyCont {
@@ -699,7 +712,7 @@ table {
 
 .faceCont {
     display: inline-block;
-    margin: 5px 20px;
+    margin: 5px 25px;
 }
 
 .greyCont p {
