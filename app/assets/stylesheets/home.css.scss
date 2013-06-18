@@ -331,6 +331,15 @@ p{
     font-size: 40px;
 }
 
+.findAnEventSmall {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.findAnEventSmall h2 {
+    color: $yellow;
+}
+
 .eventMapContainer {
     width:1200px;
     margin-left: auto;
@@ -362,14 +371,11 @@ p{
 }
 
 .bannerSmallTopBackground {
-    background-repeat: no-repeat;
-    background-image: image-url('bannerEvent.jpg');
-    background-color: #1f2a20;
-    background-position: center;
+    background: none;
 }
 
 .bannerSmallTop {
-    height:402px;
+    height:200px;
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -568,6 +574,6 @@ p{
 }
 
 .mapTextContainer {
-    padding: 85px 0 0 135px;
+    padding: 85px 0 0 195px;
     position: absolute;
 }
