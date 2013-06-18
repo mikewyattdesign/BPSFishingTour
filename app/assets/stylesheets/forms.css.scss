@@ -513,13 +513,14 @@ filter: alpha(opacity=20);
 
 .adImg, .adImg2, .adImg3, .adImg4 {
     margin-top: 20px;
-    margin-left: 3px;
     width: 223px;
     box-shadow: 0px 0px 35px black;
 }
 
 .verticalAds, .verticalAds, .standingsLogo {
-    width: 220px;
+    width: 223px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .teamRegContainer.no {
