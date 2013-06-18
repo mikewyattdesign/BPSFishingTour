@@ -40,7 +40,7 @@
                             <%= link_to 'Leaderboard', '#', class: 'navIcon' %>
                             <%= link_to 'News', '#', class: 'navIcon' %>
                             <%= link_to 'Anglers', '#', class: 'navIcon' %>
-                            <%= link_to 'Register', '/profiles/new', class: 'navIcon' %>
+                            <%= link_to 'Register', '/profiles/new', class: 'navIcon' if user_signed_in? && !is_registered? %>
                         </div>
                     </div>
                 </div>
