@@ -241,11 +241,10 @@ form + .BottomBanner {
 /*Team Register*/
 
 .teamRegContainer {
+    position: relative;
+    left: 32px; // Push off to the side away from the logo
     width: 505px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin: 42px auto;
     background-color: #f6efdf;
     background-image: image-url('formBackgroundTexture.jpg');
     border-radius: 10px;
