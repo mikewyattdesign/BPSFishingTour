@@ -1,4 +1,3 @@
-
 var bass = bass || {};
 
 function T$( i ) {
@@ -82,7 +81,7 @@ bass.bassPro = function() {
         this.pos(index, auto);
     };
 
-    // Transition the Dlideshow to a Particular Slide
+    // Transition the Slideshow to a Particular Slide
     init.prototype.pos = function( index, auto ) {
         if ( p.current != index ) {
             var slide = p.slides[index];

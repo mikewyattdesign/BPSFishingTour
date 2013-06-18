@@ -170,6 +170,8 @@ select {
     background-color: #fffbf3;
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .bassLoginLogoText {
@@ -179,17 +181,20 @@ select {
 
 .bassLoginLogoThankText h1 {
     margin: 5px 0 5px 0;
-    font-size: 13px;
+    font-size: 18px;
     color: #797979;
+    text-shadow:none;
 }
 
 .bassLoginLogoThankText p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
+    text-shadow:none;
 }
 
 .bassLoginLogoThankText a {
     font-size: 11px;
+    text-shadow:none;
 }
 
 .bassLoginLogoThankText {

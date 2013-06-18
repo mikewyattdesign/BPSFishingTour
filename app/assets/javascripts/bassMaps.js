@@ -1,4 +1,4 @@
-$(document).on('page:load', function(){
+$(document).on('page:load ready', function(){
   var currentPosition = 0;
   var slideWidth = 1100;
   var slides = $('.slide');
