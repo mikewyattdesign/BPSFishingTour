@@ -3,7 +3,7 @@
         <img src="/assets/standingsBackground.png" alt="Standings">
         <div class="standingsText">
             <h2>Standings</h2>
-            <h1>Midwest Region</h1>
+            <h1>Ontario Region</h1>
     <!--    <p>Jason Cambel</p>
             <p>Jason Cambel</p>
             <p>Jason Cambel</p>
@@ -18,17 +18,17 @@
         <div class="bannerBigText">
             <div class="bannerBigTextCont"><h2>Join for free and compete to win more than $25,000!</h2></div>
             <div class="bannerBigTextCont"><h1>Track your progress, net great prizes and qualify for big events.</h1></div>
-            <div class="bannerBigTextContButton"><a href="/users/sign_up">CREATE AN ACCOUNT</a></div>
+
+            <%= link_to 'CREATE AN ACCOUNT', '/users/sign_up', class: 'bannerBigTextContButton' %>
+
+            <div class="sliderButton" onclick="ss.move(1)"> <%= image_tag 'nextButton.png', alt: 'Next Button' %> </div>
+            <ol id="dots" class="dots">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
         </div>
         <div class="bannerBigImage">
-            <div class="controller">
-                <div class="sliderButton" onclick="ss.move(1)"> <%= image_tag 'nextButton.png', alt: 'Next Button' %> </div>
-                <ol id="dots" class="dots">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
-            </div>
 
             <div id="slideShow">
                 <ul id="slides">

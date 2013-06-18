@@ -25,11 +25,12 @@ h1 {
     color: $yellow;
     margin: 0;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
-    font-family: Aachen, normal;
+    font-family: Aachen, sans-serif;
+    font-size: 46px;
 }
 
 h2 {
-    font-family: Aachen, normal;
+    font-family: Aachen, sans-serif;
     color: white;
     margin: 0;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
@@ -64,18 +65,20 @@ p{
 
     .bannerBigText {
         position: absolute;
-        margin-left: 285px;
-        margin-top: 30px;
+        margin-left: 297px;
+        margin-top: 40px;
         width: 500px;
         z-index: 20;
     }
 
         .bannerBigTextCont {
-            margin: 0px 0 20px 0;
+            margin: 0px 0 30px 0;
         }
 
         .bannerBigTextContButton {
             padding: 2px 12px;
+            font-size: 20px;
+            font-weight: bold;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -84,11 +87,14 @@ p{
             background-color: mix(#d0362b, #a91d17);
             @include background-image(linear-gradient(#d0362b, #a91d17));
             cursor: pointer;
-        }
-
-        .bannerBigTextContButton a {
             text-decoration: none;
             color: white;
+
+            &:hover {
+                background-color: #a91d17;
+                background-position: center -10px;
+                background-repeat: no-repeat;
+            }
         }
 
     .bannerBigImage {
@@ -246,41 +252,35 @@ p{
 /*Slider CSS*/
 
 .sliderButton {
-    cursor:pointer;
     float: right;
-    font-size:30px;
-    margin-left: 680px;
-    margin-top: 20px;
-}
-
-.controller {
-    position: absolute;
-    z-index: 30;
-    margin-top: 225px;
+    margin-top: 14px;
+    margin-right: -300px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .dots {
-    float:left;
-    list-style:none;
-    height:20px;
-    display:none;
-    margin: 0px auto 0px 750px;
-}
+    display: none; // Overridden by JS, presumably
+    clear: left;
+    height: 20px;
+    padding: 0;
+    list-style: none;
 
-.dots li {
-    float:left;
-    cursor:pointer;
-    height:20px;
-    width:20px;
-    background:#222;
-    border-radius:20px;
-    margin-right:10px;
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
-                1px 1px 2px -1px #fff;
-}
+    li {
+        float:left;
+        cursor:pointer;
+        height:20px;
+        width:20px;
+        background:#222;
+        border-radius:20px;
+        margin-right:10px;
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
+                    1px 1px 2px -1px #fff;
+    }
 
-.dots li:active, #dots .current {
-    background: $yellow;
+    :active, .current {
+        background: $yellow;
+    }
 }
 
 #slides {
