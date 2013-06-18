@@ -12,38 +12,9 @@
 </head>
     <body>
         <div id="wrapper">
+            <%= render 'layouts/banner' %>
+
             <div id="container">
-                <div class="bannerTopBackground">
-                    <div class="bannerTop">
-                        <div class="bassFishingLogo">
-                            <%= yield :leaderboard %>
-                            <%= yield :advertise %>
-                            <a href="/"><%= image_tag 'bassProLogo.png', class: 'bassLogo', alt: 'Bass Logo' %></a>
-                        </div>
-
-                        <div class="user-navigation">
-                            <% if user_signed_in? %>
-                                Logged in as <strong><%= current_user.email %></strong> |
-                                <%= link_to 'Edit profile', profile_path(current_user) %> |
-                                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-                            <% else %>
-                                <%= link_to "Sign up", new_user_registration_path %> |
-                                <%= link_to "Login", new_user_session_path %>
-                            <% end %>
-                            | <%= link_to 'Help', '#' %>
-
-                        </div>
-
-                        <div class="navTop">
-                            <%= link_to 'About', '#', class: 'navIcon' %>
-                            <%= link_to 'Tour Events', '/events', class: 'navIcon' %>
-                            <%= link_to 'Leaderboard', '#', class: 'navIcon' %>
-                            <%= link_to 'News', '#', class: 'navIcon' %>
-                            <%= link_to 'Anglers', '#', class: 'navIcon' %>
-                            <%= link_to 'Register', '/profiles/new', class: 'navIcon' if user_signed_in? && !is_registered? %>
-                        </div>
-                    </div>
-                </div>
 
                 <%= yield %>
 <!--

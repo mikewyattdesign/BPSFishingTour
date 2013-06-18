@@ -55,90 +55,6 @@ p{
     overflow: hidden;
 }
 
-.bannerTopBackground {
-    background-image: image-url('bannerGreenTop.jpg');
-    background-position: center;
-    height:74px;
-}
-
-.bannerTop {
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    .bassFishingLogo {
-        margin: 0;
-    }
-
-    .bassLogo {
-        position: absolute;
-        z-index: 20;
-    }
-
-    .standingsLogo {
-        position: absolute;
-        margin: 0 0 0 12px;
-        z-index: 20;
-    }
-
-    .user-navigation {
-        float: right;
-        color: $yellow;
-        a {
-            color: $yellow;
-            text-decoration: none;
-
-            &:hover {
-                color: white;
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .navTop {
-        margin: 0 0 0 275px;
-        padding: 35px 0 0 0;
-    }
-
-    .navIcon {
-        float: left;
-        margin: 0 10px 0 10px;
-        color: white;
-        text-shadow: 1px 1px 0 #000;
-        text-decoration: none;
-        &:hover {
-            color: $yellow;
-            text-decoration: underline;
-        }
-    }
-
-    .standingsText {
-        margin-left: 40px;
-        position: absolute;
-        width: 150px;
-        top: 260px;
-        text-align: center;
-        color: white;
-    }
-        .standingsText h2, .bannerBigText h2  {
-            font-size: 30px;
-        }
-
-        .standingsText h1, .bannerBigText h1 {
-            font-size: 15px;
-        }
-
-        .standingsText p {
-            line-height: 50px;
-        }
-
-.bannerBigTopBackground {
-    background-color: #1f2920;
-    background-position: center;
-    margin-top: 14px;
-}
-
 .bannerBigTop {
     height:515px;
     width: 1028px;
@@ -194,20 +110,25 @@ p{
 }
 
     .bassHandContainer {
+        overflow: hidden;
         width: 1050px;
+        padding: 0 0 50px;
         margin-left: auto;
         margin-right: auto;
+        @include background-image(radial-gradient(rgba(255, 255, 255, 0.2), transparent));
+        background-position: center 175px;
+        background-repeat: no-repeat;
     }
 
     .bassHand {
-        position: absolute;
+        float: left;
         margin: 40px 0 0 0;
     }
 
     .bassHandText {
-        position: absolute;
+        float: left;
         width: 600px;
-        margin: 60px 0 0 400px;
+        margin: 60px 0 0 22px;
     }
 
         .bassHandText h3 {
@@ -222,61 +143,45 @@ p{
             line-height: 40px;
         }
 
-    .glowBackground {
-        background-image: image-url('bannerMiddleGlow.png');
-        background-repeat: no-repeat;
-        opacity:0.2;
-        height: 335px;
-        background-position: center;
-    }
-
     .eventLeaderContainer {
-        width: 750px;
+        width: 780px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20px;
+        padding: 20px 0 110px;
         overflow: hidden;
         clear: both;
-    }
 
-    .eventLogo {
-        float: left;
-    }
-
-    .leaderLogo {
-        float: right;
-    }
-
-    .eventLeaderContainerText {
-        margin: 10px auto 100px auto;
-        overflow: hidden;
-        clear: both;
-    }
-
-    .findEventText, .leaderboardText {
-        float: left;
-        width: 300px;
-    }
-
-    .findEventText {
-        margin-left: 125px;
-    }
-    .leaderboardText {
-        margin-left:  270px;
-    }
-
-        .findEventText h1, .leaderboardText h1  {
+        h1  {
             font-size: 20px;
         }
 
-
-        .findEventText h3, .leaderboardText h3 {
+        a {
             font-size: 16px;
+            font-weight: bold;
+            color: $red;
+            text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.37);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
-        .findEventText p, .leaderboardText p {
+        p {
             margin: 15px auto;
         }
+
+        .findEvent {
+            float: left;
+            width: 300px
+        }
+
+        .leaderboard {
+            float: right;
+            width: 300px
+        }
+    }
+
 
 .bannerBottomSponsorBackground {
     padding: 15px 0 5px;

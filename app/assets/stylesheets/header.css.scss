@@ -1,0 +1,91 @@
+.bannerTopBackground {
+    background-image: image-url('bannerGreenTop.jpg');
+    background-position: center;
+    height:74px;
+}
+
+.bannerTop {
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.user-navigation {
+    float: right;
+    color: $yellow;
+    a {
+        color: $yellow;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+.main-navigation {
+    float: left;
+    margin: 0 0 0 22px;
+
+    a {
+        float: left;
+        padding: 12px 10px;
+        color: white;
+        text-shadow: 1px 1px 0 #000;
+        text-decoration: none;
+
+        &:hover {
+            color: $yellow;
+            text-decoration: underline;
+        }
+    }
+}
+
+.bassFishingLogo {
+    float: left;
+    height: 73px; // I know, that's bad, but this prevents layout issues
+                  // with other elements futher down the page
+}
+
+.bassLogo {
+    position: relative;
+    z-index: 5;
+    display: block;
+    line-height: 0;
+}
+
+.standingsLogo {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    margin: 0 0 0 12px;
+}
+
+.standingsText {
+    margin-left: 40px;
+    position: absolute;
+    width: 150px;
+    top: 260px;
+    text-align: center;
+    color: white;
+}
+
+.standingsText h2, .bannerBigText h2  {
+    font-size: 30px;
+}
+
+.standingsText h1, .bannerBigText h1 {
+    font-size: 15px;
+}
+
+.standingsText p {
+    line-height: 50px;
+}
+
+
+.header-container {
+    background: #1f2920;
+    margin-top: 14px;
+}
