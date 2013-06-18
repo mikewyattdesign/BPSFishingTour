@@ -48,31 +48,34 @@
         </div>
         <script type="text/javascript">
             $(document).ready(function  () {
+                var settings = {
+                    styling: "bootstrap",
+                    hide: false,
+                    icon: true,
+                    history: false,
+                    width: "300px",
+                    text_escape: false,
+                    insert_brs: false
+                };
+
                 <% unless flash.empty? %>
                     <% flash.each do |name, msg| %>
                         var msgType;
                         <% case name %>
                         <% when "notice" %>
-                            msgType = 'info';
+                            settings.type = 'info'
                         <% when "alert" %>
-                            msgType = 'error';
+                            settings.type = 'error'
                         <% when "register_event" %>
-                            msgType = 'info'
+                            settings.type = 'info'
                         <% when "team_invite" %>
-                            msgType = 'success'
+                            settings.type = 'success'
                         <% when "error" %>
-                            msgType = 'error'
+                            settings.type = 'error'
                         <% end %>
-                        $.pnotify({
-                            title: "<%= name %>",
-                            text: "<%= msg %>",
-                            styling: "bootstrap",
-                            hide: false,
-                            icon: true,
-                            type: msgType,
-                            history: false,
-                            width: "300px"
-                        });
+                        settings.title =  "<%= name.capitalize %>" ;
+                        settings.text = "<%= msg %>";
+                        $.pnotify(settings);
                     <% end %>
                 <% end %>
             });

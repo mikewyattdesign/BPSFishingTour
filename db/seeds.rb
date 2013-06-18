@@ -10,6 +10,8 @@
 
    user2 = User.create({email: "jane@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
 
+   user3 = User.create({email: "tom@example.com", password: "secret123", password_confirmation: "secret123", confirmed_at: Time.now})
+
    team1 = Team.create
 
    team1.users << [user1, user2]
