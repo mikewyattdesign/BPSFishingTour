@@ -37,7 +37,7 @@
                     <li><%= image_tag 'bannerBigImage3.jpg', height: '513', alt: 'Bass Pro Fishing' %></li>
                 </ul>
             </div>
-
+            <%= javascript_include_tag "bassPro", "data-turbolinks-track" => true %>
             <script>
             var ss = new bass.bassPro.init('ss', {
                 id: 'slides',
@@ -49,6 +49,7 @@
                 pauseHover: false
             });
             </script>
+
         </div>
     </div>
 </div>
