@@ -1,9 +1,5 @@
 <div class="backgroundLogin">
     <div class="formContainer">
-        <div class="bassLoginLogo">
-            <%= image_tag 'bassLoginLogo.png', class: 'bassLoginLogo', alt: 'Bass Pro Shops Fishing Tour logo' %>
-        </div>
-
         <h2>Resend confirmation instructions</h2>
 
         <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>

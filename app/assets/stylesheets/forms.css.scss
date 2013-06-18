@@ -1,8 +1,9 @@
 /*Registration & Login*/
-.formContainer{
+.formContainer {
     @include clearfix;
     width: 405px;
-    margin: 175px auto;
+    padding: 32px 0 0;
+    margin: 42px auto;
     text-align: center;
     background-color: #fffbf3;
     border-radius: 10px;
@@ -122,6 +123,10 @@ select {
 	height: 52px;
 	border-top: solid 1px white;
 	box-shadow: 0 -2px 0 #a6a6a6;
+}
+
+form + .BottomBanner {
+    margin-top: 32px;
 }
 
 #error_explanation {
