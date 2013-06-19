@@ -24,7 +24,7 @@ input {
     outline: none;
 
     &[type=text] {
-    width: 100%;
+        width: 100%;
     }
 
     &:focus {
@@ -49,8 +49,8 @@ label, h1, h2, h3, p, a {
 }
 
 body {
-	background-color: white;
-	background-image: image-url('woodBackground.jpg');
+    background-color: white;
+    background-image: image-url('woodBackground.jpg');
 }
 
 select {
@@ -61,31 +61,31 @@ select {
     width: 280px;
     height: 50px;
     position: relative;
-	margin: 15px auto 0;
-	clear: both;
-	border-radius: 8px;
-	font-size: 25px;
-	color: white;
-	background-image: image-url('registerButtonGreen.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 288px;
+    margin: 15px auto 0;
+    clear: both;
+    border-radius: 8px;
+    font-size: 25px;
+    color: white;
+    background-image: image-url('registerButtonGreen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 288px;
     cursor: pointer;
 }
 
 .submitLogin, .submitLoginKey {
-	width: 280px;
-	height: 45px;
-	margin-left: auto;
-	margin-right: auto;
-	clear: both;
-	border-radius: 8px;
-	outline: none;
-	font-size: 15px;
-	background-color: #e5ded5;
-	background-repeat: no-repeat;
-	background-position: right;
-	background-position: 91% 50%;
+    width: 280px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background-color: #e5ded5;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position: 91% 50%;
 }
 
 .submitLoginCheck {
@@ -118,11 +118,11 @@ select {
 }
 
 .BottomBanner  {
-	background-image: image-url('bottomBannerTexture.jpg');
-	overflow: hidden;
-	height: 52px;
-	border-top: solid 1px white;
-	box-shadow: 0 -2px 0 #a6a6a6;
+    background-image: image-url('bottomBannerTexture.jpg');
+    overflow: hidden;
+    height: 52px;
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
 }
 
 form + .BottomBanner {
@@ -201,9 +201,9 @@ form + .BottomBanner {
 
 .thankRegButton {
     padding: 8px 12px;
-	border-radius: 5px;
-	text-align: center;
-	display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
     @include background-image(linear-gradient(#f21500, #b30d00));
     text-decoration: none;
     color: white;
@@ -222,10 +222,10 @@ form + .BottomBanner {
 }
 
 .thankContainerBottom {
-	padding: 8px 32px;
-	background-image: image-url('bottomBannerTexture.jpg');
-	border-top: solid 1px white;
-	box-shadow: 0 -2px 0 #a6a6a6;
+    padding: 8px 32px;
+    background-image: image-url('bottomBannerTexture.jpg');
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
     text-align: right;
 }
 
@@ -303,13 +303,13 @@ form + .BottomBanner {
 }
 
 .actions {
-	clear: both;
-	background-image: image-url('bottomBannerTexture.jpg');
-	border-top: solid 1px white;
-	box-shadow: 0 -2px 0 #a6a6a6;
-	width: 100%;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+    clear: both;
+    background-image: image-url('bottomBannerTexture.jpg');
+    border-top: solid 1px white;
+    box-shadow: 0 -2px 0 #a6a6a6;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .actions a {
@@ -396,22 +396,22 @@ form + .BottomBanner {
 }
 
 button.close {
-padding: 0;
-cursor: pointer;
-background: transparent;
-border: 0;
--webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
 }
 
 .close {
-float: right;
-font-size: 20px;
-font-weight: bold;
-line-height: 20px;
-color: #000000;
-text-shadow: 0 1px 0 #ffffff;
-opacity: 0.2;
-filter: alpha(opacity=20);
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
 }
 
 .adSpace {
