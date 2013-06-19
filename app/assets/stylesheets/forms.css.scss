@@ -286,11 +286,7 @@ form + .BottomBanner {
     color: #5f5f5f;
 }
 
-.teamRegContainerForm h1, .teamRegContainerForm h2, .teamRegContainerForm h3, .teamRegContainerForm p{
-    text-shadow: none;
-}
-
-.formContainer h1, .formContainer h2, .formContainer h3, .formContainer p {
+.teamRegContainerForm h1, .teamRegContainerForm h2, .teamRegContainerForm h3, .teamRegContainerForm p, .formContainer h1, .formContainer h2, .formContainer h3, .formContainer p {
     text-shadow: none;
 }
 
@@ -390,9 +386,9 @@ form + .BottomBanner {
 
 button.close {
     padding: 0;
+    border: 0;
     cursor: pointer;
     background: transparent;
-    border: 0;
     -webkit-appearance: none;
 }
 

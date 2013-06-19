@@ -33,9 +33,9 @@
 
                 <div id="slideshowWrapper">
                     <ul id="slideshow">
-                        <li><img src="assets/bannerBigImage.jpg" width="1920px" alt="Bass Pro Banner"/></li>
-                        <li><img src="assets/bannerBigImage2.jpg" width="1920px" alt="Bass Pro Banner"/></li>
-                        <li><img src="assets/bannerBigImage3.jpg" width="1920px" alt="Bass Pro Banner"/></li>
+                        <li><img src="assets/bannerBigImage.jpg" alt="Bass Pro Banner"/></li>
+                        <li><img src="assets/bannerBigImage2.jpg" alt="Bass Pro Banner"/></li>
+                        <li><img src="assets/bannerBigImage3.jpg" alt="Bass Pro Banner"/></li>
                     </ul><br clear="all" />
                 </div>
 
@@ -43,30 +43,28 @@
         </div>
     </div>
 
-    <div class="bannerMiddleBackground">
-        <div class="bannerMiddle">
-            <div class="bassHandContainer">
-                <%= image_tag 'bassHandImage.png', class: 'bassHand', alt: 'Bass Hand' %>
-                <div class="bassHandText">
-                    <h3>THE 2014 BASS PRO SHOPS FISHING TOUR</h3>
-                    <h1>About the Tour</h1>
-                    <h4>Welcome to the Bass Pro Shops Fishing Tour!</h4>
-                    <p> Register your team to become eligible for cash and prizes exclusive to Bass Pro Shops Fishing Tour members! We’ll also keep track of your tournament results so you can see how you rank among your rivals. Point leaders qualify for regional events where you’ll compete with the big boys. It’s free, so sign up now!</p>
-                </div>
+    <div class="bannerMiddle">
+        <div class="bassHandContainer">
+            <%= image_tag 'bassHandImage.png', class: 'bassHand', alt: 'Bass Hand' %>
+            <div class="bassHandText">
+                <h3>THE 2014 BASS PRO SHOPS FISHING TOUR</h3>
+                <h1>About the Tour</h1>
+                <h4>Welcome to the Bass Pro Shops Fishing Tour!</h4>
+                <p> Register your team to become eligible for cash and prizes exclusive to Bass Pro Shops Fishing Tour members! We’ll also keep track of your tournament results so you can see how you rank among your rivals. Point leaders qualify for regional events where you’ll compete with the big boys. It’s free, so sign up now!</p>
             </div>
-            <div class="eventLeaderContainer">
-                <div class="event">
-                    <%= link_to image_tag('eventLogo.png', alt: 'Event Logo'), events_path %>
-                    <h1>Find an Event</h1>
-                    <p>Locate a Fishing Tour event near you. then register your team to participate.</p>
-                    <%= link_to 'Locate Event', events_path %>
-                </div>
-                <div class="leader">
-                    <%= link_to image_tag('leaderboardLogo.png', alt: 'Leader Logo'), '#' %>
-                    <h1>Leaderboard</h1>
-                    <p>If you've recently participated in your local Fishing Tour event, don't forget to submit tour team results!</p>
-                    <%= link_to 'Locate Event', '#' %>
-                </div>
+        </div>
+        <div class="eventLeaderContainer">
+            <div class="event">
+                <%= link_to image_tag('eventLogo.png', alt: 'Event Logo'), events_path %>
+                <h1>Find an Event</h1>
+                <p>Locate a Fishing Tour event near you. then register your team to participate.</p>
+                <%= link_to 'Locate Event', events_path %>
+            </div>
+            <div class="leader">
+                <%= link_to image_tag('leaderboardLogo.png', alt: 'Leader Logo'), '#' %>
+                <h1>Leaderboard</h1>
+                <p>If you've recently participated in your local Fishing Tour event, don't forget to submit tour team results!</p>
+                <%= link_to 'Locate Event', '#' %>
             </div>
         </div>
     </div>

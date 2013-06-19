@@ -22,31 +22,31 @@ html, body {
 /*Font Styles Home Container*/
 
 h1 {
-    color: $yellow;
     margin: 0;
-    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
-    font-family: Aachen, sans-serif;
+    color: $yellow;
     font-size: 46px;
+    font-family: Aachen, sans-serif;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
 }
 
 h2 {
-    font-family: Aachen, sans-serif;
-    color: white;
     margin: 0;
+    color: white;
+    font-family: Aachen, sans-serif;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
-    color: $red;
     margin: 0;
+    color: $red;
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.37);
 }
 
 p{
+    color: #b3b3b3;
+    line-height:140%;
     font-weight: lighter;
     font-family: "Helvetica Neue";
-    line-height:140%;
-    color: #b3b3b3;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
 }
 
@@ -131,20 +131,20 @@ p{
         }
 
         .bassHandText h4 {
-            font-family: "Helvetica Neue";
-            color: white;
             margin: 0;
+            color: white;
             font-size: 20px;
             line-height: 40px;
+            font-family: "Helvetica Neue";
         }
 
     .eventLeaderContainer {
         width: 780px;
+        clear: both;
+        overflow: hidden;
         margin-left: auto;
         margin-right: auto;
         padding: 20px 0 110px;
-        overflow: hidden;
-        clear: both;
 
         h1  {
             font-size: 20px;
@@ -361,11 +361,7 @@ p{
     font-size: 14px;
 }
 
-.bassEventAttendText {
-    float: left;
-}
-
-.eventEnterPic {
+.bassEventAttendText, .eventEnterPic {
     float: left;
 }
 
