@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ProfilesController do
     it 'has nice routes' do
-        expect(get:    '/profile').to         route_to('profiles#show_current')
+        expect(get:    '/myprofile').to         route_to('profiles#show_current')
         expect(get:    '/profiles').to        route_to('profiles#index')
         expect(get:    '/profiles/new').to    route_to('profiles#new')
         expect(get:    '/profiles/1').to      route_to('profiles#show',    id: '1')
