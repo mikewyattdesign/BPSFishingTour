@@ -711,14 +711,20 @@ table {
 }
 
 .faceCont {
-    display: inline-block;
+
     margin: 5px 25px;
 }
 
-.greyCont p {
+.greyContText {
     float: right;
-    margin-right: 35px;
+    width: 200px;
     margin-top: 15px;
+    margin-right: 25px;
+}
+
+.greyCont p {
+    display: inline;
+    margin-right: 15px;
     color: #616262;
     text-shadow: none;
 }
