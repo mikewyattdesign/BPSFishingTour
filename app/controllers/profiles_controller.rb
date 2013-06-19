@@ -12,13 +12,11 @@ class ProfilesController < ApplicationController
     def show
         @profile = Profile.find(params[:id])
         @can_register = @profile.user.teams.size > 0
-        @bootstrap = true
     end
 
     def show_current
         @can_register = current_user.teams.size > 0
         @profile = current_user.profile
-        @bootstrap = true
     end
 
   # GET /profiles/new
@@ -62,7 +60,6 @@ class ProfilesController < ApplicationController
         end
         format.html {
           @showTab = true
-          @bootstrap = true
           flash.now[:error] = "We could not update your profile!"
           render action: 'show'
         }

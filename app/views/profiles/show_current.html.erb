@@ -323,7 +323,7 @@
 
             $(function() {
                 // if the there are errors make sure MyAccounts tab is displayed
-                if(<%= @showTab %>) {
+                if(<%= defined?(@showTab) != nil && @showTab %>) {
                     $('#myTabs a:last').tab('show');
                     $(".adImg2, .adImg3").show();
                     $(".tabMidLeftCont, .tabMidRightCont").hide();

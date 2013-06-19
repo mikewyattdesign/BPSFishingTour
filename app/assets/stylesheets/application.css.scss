@@ -6,6 +6,7 @@
 @import "bootstrap/mixins";
 @import "bootstrap/alerts";
 @import "bootstrap/sprites";
+@import "bootstrap/navs";
 
 @import "pnotify/pnotify.default.css";
 @import "pnotify/pines_icons/pnotify.default.icons.css";
@@ -17,5 +18,5 @@
 @import "forms.css.scss";
 @import "header.css.scss";
 @import "home.css.scss";
-@import "modal.css";
 @import "notifications.css.scss";
+@import "tabs.css.scss";
