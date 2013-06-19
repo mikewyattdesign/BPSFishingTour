@@ -132,7 +132,7 @@
                 </div>
                 <div id="tab3" class="tab-pane">
                     <div class="teamRegContainer no">
-                        <%= form_for(@profile) do |f| %>
+                        <%= form_for(@profile, url: profile_path(@profile.id), method: "patch") do |f| %>
                             <div class="teamRegContainerForm">
                                 <% if @profile.errors.any? %>
                                     <div id="error_explanation">

@@ -26,6 +26,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @profile = current_user.profile
   end
 
   # POST /profiles
@@ -59,9 +60,14 @@ class ProfilesController < ApplicationController
           @can_register = false
         end
         format.html {
+          path = URI::parse(request.referrer).path
           @showTab = true
           flash.now[:error] = "We could not update your profile!"
-          render action: 'show'
+          if path == "/myprofile"
+            render action: 'show_current'
+          else
+            render action: 'edit'
+          end
         }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end

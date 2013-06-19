@@ -14,6 +14,7 @@ end
 
 group :test do
     gem 'capybara', '2.1.0'
+    gem 'selenium-webdriver'
     gem 'terminal-notifier-guard', '1.5.3'
 end
 

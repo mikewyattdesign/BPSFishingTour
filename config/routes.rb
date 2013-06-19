@@ -7,7 +7,7 @@ BpsFishingTour::Application.routes.draw do
     get '/confirm' => 'static_pages#confirm'
 
     # Profile Routing
-    get '/profile' => 'profiles#show_current'
+    get '/myprofile' => 'profiles#show_current', as: 'my_profile'
     resources :profiles
 
     # Event Routing
