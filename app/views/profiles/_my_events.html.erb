@@ -14,16 +14,22 @@
         </tbody>
     </table>
     <div class="table-container">
-        <table>
-            <tbody>
-                <% @profile.user.teams.first.events.each do |event| %>
-                <tr class="<%= cycle("odd", "even") %>">
-                    <td class="tdDate"><%= event.date %></td>
-                    <td class="tdName"><%= event.name %></td>
-                    <td class="tdStatus"><%= add_status(event) %></td>
-                </tr>
-                <% end %>
-            </tbody>
-        </table>
+        <% if @profile.user.teams.first.nil? %>
+            <p>This user is not yet part of a team, and can't attend events.</p>
+        <% elsif @profile.user.teams.first.events.nil? %>
+            <p>This team isn't signed up for any events yet.</p>
+        <% else %>
+            <table>
+                <tbody>
+                    <% @profile.user.teams.first.events.each do |event| %>
+                        <tr class="<%= cycle("odd", "even") %>">
+                            <td class="tdDate"><%= event.date %></td>
+                            <td class="tdName"><%= event.name %></td>
+                            <td class="tdStatus"><%= add_status(event) %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        <% end %>
     </div><!-- talbe container -->
 </div>
