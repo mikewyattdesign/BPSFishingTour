@@ -155,6 +155,10 @@ form + .BottomBanner {
     border-radius: 10px;
 }
 
+#error_explanation {
+    color: white;
+}
+
 /*Thanks Page*/
 
 .thankContainer {
@@ -263,7 +267,6 @@ form + .BottomBanner {
 .teamRegContainerForm li {
     width: 300px;
     font-size: 10px;
-    color: #865105;
     margin-left: 10px;
     margin-bottom: 5px;
 }
