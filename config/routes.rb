@@ -1,12 +1,20 @@
 BpsFishingTour::Application.routes.draw do
 
-    # match '/' => redirect('/login'), via: :get
-    resources :events
-
-    get '/thanks' => 'static_pages#thanks'
-    get '/about' => 'static_pages#about'
+    # Static Page Routing
+    root to: 'static_pages#home'
+    get '/thanks'  => 'static_pages#thanks'
+    get '/about'   => 'static_pages#about'
     get '/confirm' => 'static_pages#confirm'
 
+    # Profile Routing
+    get '/profile' => 'profiles#show_current'
+    resources :profiles
+
+    # Event Routing
+    resources :events
+    match '/events/:id/attend' => 'events#register_event', as: 'register_event', via: :post
+
+    # Authentication Routing
     devise_for :users, controllers: {
         registrations: 'registrations',
         confirmations: 'confirmations'
@@ -16,10 +24,7 @@ BpsFishingTour::Application.routes.draw do
         # root :to => "main#dashboard", as: :user_root
     end
 
-    resources :profiles
-    root to: 'static_pages#home'
-    resources :teams
-    match '/events/:id/attend' => 'events#register_event', as: 'register_event', via: :post
+    # Team Routing
     match '/teams' => 'teams#index', via: :get
     match '/teammate/search' => 'teams/requests#search', as: 'invite_teammate', via: :post
     match '/teammate/send_invite' => 'teams/requests#send_invite', as: 'send_invite', via: :post
@@ -31,4 +36,6 @@ BpsFishingTour::Application.routes.draw do
     scope '/teams' do
         match '/requests/new' => 'teams/requests#new', via: :get
     end
+
+    resources :teams
 end

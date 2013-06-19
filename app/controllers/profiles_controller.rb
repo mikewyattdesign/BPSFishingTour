@@ -7,17 +7,19 @@ class ProfilesController < ApplicationController
     @profiles = Profile.all
   end
 
-  # GET /profiles/1
-  # GET /profiles/1.json
-  def show
-    if(current_user.teams.size > 0)
-      @can_register = true
-    else
-      @can_register = false
+    # GET /profiles/1
+    # GET /profiles/1.json
+    def show
+        @profile = Profile.find(params[:id])
+        @can_register = @profile.user.teams.size > 0
+        @bootstrap = true
     end
-    @profile = current_user.profile
-    @bootstrap = true
-  end
+
+    def show_current
+        @can_register = current_user.teams.size > 0
+        @profile = current_user.profile
+        @bootstrap = true
+    end
 
   # GET /profiles/new
   def new
