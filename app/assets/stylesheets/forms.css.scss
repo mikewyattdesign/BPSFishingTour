@@ -229,15 +229,6 @@ form + .BottomBanner {
     text-align: right;
 }
 
-/*#flash_notice {
-    background-color: red;
-    margin-left:10px;
-    margin-right:10px;
-    padding: 10px 15px 10px 15px;
-    border-radius: 10px;
-    color: white;
-}*/
-
 /*Team Register*/
 
 .teamRegContainer {
@@ -397,84 +388,6 @@ form + .BottomBanner {
 .full a {
     color: #865105;
 }
-
-/*.progressBarContainer {
-    margin: 20px 30px 20px 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.progressBarLineContainer {
-    width: 100%;
-    height: 10px;
-    background-color: #e8d8bf;
-    border: 2px solid #f7f7f7;
-    border-radius: 2px;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
-}
-
-.progressBarLine {
-    height: 10px;
-    width: 80px;
-    background-color: #613e08;
-    border-radius: 2px;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
-}
-
-.progressBarCircle, .progressBarCircle2, .progressBarCircle3, .progressBarCircle4 {
-    position: absolute;
-    margin-top: -15px;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    background-color: #613e08;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
-}
-
-.progressBarCircle h2, .progressBarCircle2 h2, .progressBarCircle3 h2, .progressBarCircle4 h2  {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-    color: white;
-}
-
-.progressBarCircle2 .inactive, .progressBarCircle3 .inactive, .progressBarCircle4 .inactive{
-    position: absolute;
-    margin-top: -10px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-color: #e8d8bf;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,.24);
-}
-
-.progressBarCircle {
-    margin-left: 30px;
-}
-
-.progressBarCircle2 {
-    margin-left: 145px;
-}
-
-.progressBarCircle2 .inactive {
-    margin-left: 145px;
-}
-
-.progressBarCircle3 {
-    margin-left: 260px;
-}
-
-.progressBarCircle3 .inactive{
-    margin-left: 260px;
-}
-
-.progressBarCircle4 {
-    margin-left: 375px;
-}
-
-.progressBarCircle4 .inactive{
-    margin-left: 375px;
-}*/
 
 #email, #last_name, #first_name {
     width: 100%;
