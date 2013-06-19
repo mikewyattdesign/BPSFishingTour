@@ -303,26 +303,25 @@ form + .BottomBanner {
 }
 
 .actions {
-    clear: both;
-    background-image: image-url('bottomBannerTexture.jpg');
-    border-top: solid 1px white;
-    box-shadow: 0 -2px 0 #a6a6a6;
-    width: 100%;
+    clear: left;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .actions a {
-    float: left;
-    margin: 25px 20px 20px 150px;
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
     color: #7d7d7d;
+    left: 150px;
+    margin-top: 25px;
+    position: absolute;
 }
 
 .actions input {
-    display: inline-block;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 120px;
