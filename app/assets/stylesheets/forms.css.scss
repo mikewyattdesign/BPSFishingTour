@@ -250,6 +250,10 @@ form + .BottomBanner {
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
 
+    .tab-content & {
+        position: static;
+    }
+
     label {
         font-size: 14px;
         font-weight: bold;
