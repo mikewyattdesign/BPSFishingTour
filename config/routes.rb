@@ -37,4 +37,7 @@ BpsFishingTour::Application.routes.draw do
 
     # Anglers Routing
     get '/anglers' => 'anglers#index'
+
+    # Leaderboard Routing
+    get '/leaderboard' => 'leaderboard#index'
 end
