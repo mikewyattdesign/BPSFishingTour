@@ -20,7 +20,7 @@ $(document).on('page:load ready', function(){
   $('#slideInner').css('width', slideWidth * numberOfSlides);
 
   // Insert controls in the DOM
-  $('#slideshow')
+  $('#slideshowMap')
     .prepend('<span class="control" id="leftControl"></span>')
     .append('<span class="control" id="rightControl"></span>');
 

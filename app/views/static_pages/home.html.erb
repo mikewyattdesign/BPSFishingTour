@@ -21,34 +21,22 @@
 
             <%= link_to 'CREATE AN ACCOUNT', '/users/sign_up', class: 'bannerBigTextContButton' %>
 
-            <div class="sliderButton" onclick="ss.move(1)"> <%= image_tag 'nextButton.png', alt: 'Next Button' %> </div>
-            <ol id="dots" class="dots">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
         </div>
         <div class="bannerBigImage">
 
-            <div id="slideShow">
-                <ul id="slides">
-                    <li><%= image_tag 'bannerBigImage.jpg', height: '513', alt: 'Bass Pro Fishing' %></li>
-                    <li><%= image_tag 'bannerBigImage2.jpg', height: '513', alt: 'Bass Pro Fishing' %></li>
-                    <li><%= image_tag 'bannerBigImage3.jpg', height: '513', alt: 'Bass Pro Fishing' %></li>
-                </ul>
-            </div>
-            <%= javascript_include_tag "bassPro", "data-turbolinks-track" => true %>
-            <script>
-            var ss = new bass.bassPro.init('ss', {
-                id: 'slides',
-                auto: false,
-                resume: false,
-                navid: 'dots',
-                navEvent: 'click',
-                activeClass: 'current',
-                pauseHover: false
-            });
+            <script type="text/javascript">
+                jQuery(document).ready(function(){
+                    jQuery('#slideshow').fadeSlideShow();
+                });
             </script>
+
+            <div id="slideshowWrapper">
+                <ul id="slideshow">
+                    <li><img src="assets/bannerBigImage.jpg" width="1920px" alt="Bass Pro Banner"/></li>
+                    <li><img src="assets/bannerBigImage2.jpg" width="1920px" alt="Bass Pro Banner"/></li>
+                    <li><img src="assets/bannerBigImage3.jpg" width="1920px" alt="Bass Pro Banner"/></li>
+                </ul><br clear="all" />
+            </div>
 
         </div>
     </div>

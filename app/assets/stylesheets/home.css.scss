@@ -249,67 +249,6 @@ p{
     font-family: "Helvetica Neue";
 }
 
-/*Slider CSS*/
-
-.sliderButton {
-    float: right;
-    margin-right: -300px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.dots {
-    display: none; // Overridden by JS, presumably
-    clear: left;
-    height: 20px;
-    padding: 0;
-    list-style: none;
-
-    li {
-        float:left;
-        cursor:pointer;
-        height:20px;
-        width:20px;
-        background:#222;
-        border-radius:20px;
-        margin-right:10px;
-        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
-                    1px 1px 2px -1px #fff;
-    }
-
-    :active, .current {
-        background: $yellow;
-    }
-}
-
-#slides {
-    position:relative;
-    top: 2px;
-    margin: 0;
-}
-
-#slides li {
-    width:1920px;
-    height:100%;
-}
-
-.bassPro-slide {
-    opacity:0;
-    position:absolute;
-}
-
-.bassPro-fade {
-    opacity:1;
-    -webkit-transition:opacity .4s;
-    -moz-transition:opacity .4s;
-    transition:opacity .4s;
-}
-
-#content {
-    width:464px;
-    height:270px;
-}
-
 /*Event Page*/
 
 .bannerMiddleEvent {
@@ -508,21 +447,21 @@ p{
     width: 0;
 }
 
-#slideshow {
+#slideshowMap {
     margin:0 auto;
     width:1100px;
     height:265px;
     background:transparent url(/assets/eventMap.jpg) no-repeat 0 0;
     position:relative;
 }
-#slideshow #slidesContainer {
+#slideshowMap #slidesContainer {
     margin:0 auto;
     width:1000px;
     height:265px;
     overflow:auto;
     position:relative;
 }
-#slideshow #slidesContainer .slide {
+#slideshowMap #slidesContainer .slide {
     margin:0 auto;
     width:540px;
     height:265px;
@@ -576,4 +515,108 @@ p{
 .mapTextContainer {
     padding: 85px 0 0 195px;
     position: absolute;
+}
+
+/*New Home Slider*/
+
+#slideshowWrapper {
+    position:relative;
+    width:1920px;
+    margin:auto;
+}
+
+#prevSlide {
+    display: none;
+}
+
+#nextSlide {
+    position:absolute;
+    top:230px;
+    left:1520px;
+    background:url(nextButton.png) no-repeat;
+    width:50px;
+    height:50px;
+    text-indent:-999999px;
+}
+
+ul#slideshow {
+    list-style:none;
+    border:1px solid #999;
+    margin:auto;
+    width:1920px;
+    height:515px;
+    overflow:hidden;
+    border: none;
+}
+
+a#dotPlayPause {
+    display: none;
+}
+
+#dotList {
+    list-style:none;
+    position: absolute;
+    z-index: 2033333;
+    top: 300px;
+    left: 800px;
+}
+
+#dotList li {
+    float: left;
+    cursor:pointer;
+    height:20px;
+    width:20px;
+    background:#222;
+    border-radius:20px;
+    margin-right:10px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
+                1px 1px 2px -1px #fff;
+}
+
+#dotList li.dotActive {
+    background-color: $yellow;
+}
+
+#dotList li a {
+    background-size: 100%;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#dotList li.dotActive a {
+    height:20px;
+    width:20px;
+    display: none;
+}
+
+#top {
+    background:#3b5998;
+    width:100%;
+    height:40px;
+    margin-bottom:20px;
+}
+
+#top h1 {
+    color:#fff;
+    font-weight:normal;
+    font-size:18px;
+    padding:7px 0 0 15px
+}
+
+#top h1 span {
+    font-size:11px;
+}
+
+#top h1 a {
+    text-decoration:underline;
+    color:#fff;
+}
+
+#top h1 a:hover {
+    text-decoration:none;
+}
+
+.dotBack {
+    width: 30px;
+    height: 30px;
 }
