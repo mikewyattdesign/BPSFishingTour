@@ -468,25 +468,20 @@ p{
 }
 
 .control {
-    display:block;
     width:39px;
     height:100%;
     position:absolute;
     cursor: pointer;
 }
 #leftControl {
-    margin-top: 55px;
-    margin-left: 63px;
-    top:0;
-    left:0;
+    top:55px;
+    left:63px;
     background:transparent url(/assets/control_left.png) no-repeat 0 0;
     z-index: 20;
 }
 #rightControl {
-    margin-top: 55px;
-    margin-right: 43px;
-    top:0;
-    right:0;
+    top:55px;
+    right:43px;
     background:transparent url(/assets/control_right.png) no-repeat 0 0;
     z-index: 20;
 }
