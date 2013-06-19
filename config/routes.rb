@@ -20,10 +20,6 @@ BpsFishingTour::Application.routes.draw do
         confirmations: 'confirmations'
     }
 
-    authenticated :user do
-        # root :to => "main#dashboard", as: :user_root
-    end
-
     # Team Routing
     match '/teams' => 'teams#index', via: :get
     match '/teammate/search' => 'teams/requests#search', as: 'invite_teammate', via: :post
@@ -38,4 +34,7 @@ BpsFishingTour::Application.routes.draw do
     end
 
     resources :teams
+
+    # Anglers Routing
+    get '/anglers' => 'anglers#index'
 end

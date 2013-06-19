@@ -1,0 +1,7 @@
+<h1>Anglers</h1>
+<% @directory.each_key do |letter| %>
+    <h2><%= letter %></h2>
+    <% @directory[letter].each do |name| %>
+        <p><%= name %></p>
+    <% end %>
+<% end %>

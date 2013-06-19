@@ -24,7 +24,7 @@
             <%= link_to 'Tour Events', '/events' %>
             <%= link_to 'Leaderboard', '#' %>
             <%= link_to 'News', '#' %>
-            <%= link_to 'Anglers', '#' %>
+            <%= link_to 'Anglers', anglers_path %>
             <%= link_to 'Register', edit_profile_path(current_user) if user_signed_in? && !is_registered? %>
         </div>
     </div>
