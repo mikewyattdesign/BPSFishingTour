@@ -578,7 +578,7 @@ a#dotPlayPause {
 
 .anglersListContainer, .aboutTextContainer, .leaderListContainer, .newsListContainer{
     width: 750px;
-    margin-left: 250px;
+    margin-left: 275px;
 }
 
 .anglersListContainer, .aboutTextContainer, .leaderListContainer, .newsListContainer {
@@ -690,3 +690,23 @@ a#dotPlayPause {
 .mediaCont a {
     color: #65421a;
 }
+
+#aboutContainer, #anglersContainer, #leaderContainer, #newsContainer {
+    width: 1050px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(rgba(10,10,10,0.5)));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* IE 10 */
+    background: -ms-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, transparent, rgba(10,10,10,0.5));
+}
+
+
