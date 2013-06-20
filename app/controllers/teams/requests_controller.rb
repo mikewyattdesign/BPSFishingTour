@@ -48,7 +48,7 @@ class Teams::RequestsController < ApplicationController
     end
 
     def team_invitations
-        @invites = Request.where(invitee_id: current_user.id)
+        @invites = Request.allwhere(invitee_id: current_user.id)
         # puts current_user.full_name
     end
 

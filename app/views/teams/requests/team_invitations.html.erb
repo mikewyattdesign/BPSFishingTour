@@ -1,18 +1,22 @@
-<h1>You have the following Pending Team Request</h1>
-<table>
+<div id="invitationCont">
+    <div class="invitationText">
+        <h1>You have the following Pending Team Request</h1>
+        <table>
 
-    <tr>
-        <th>Invited By</th>
-        <th>Accept</th>
-        <th>Reject</th>
-    </tr>
+            <tr>
+                <th>Invited By</th>
+                <th>Accept</th>
+                <th>Reject</th>
+            </tr>
 
-    <% @invites.each do |invitation| %>
-        <tr>
-            <td><%= User.find(invitation.requester).full_name %></td>
-            <td><%= link_to "Accept Invitation", accept_invite_path(invitation.id) %></td>
-            <td><%= link_to "Don't Join", reject_invite_path(invitation.id) %></td>
-        </tr>
-    <% end %>
+            <% @invites.each do |invitation| %>
+                <tr>
+                    <td><%= User.find(invitation.requester).full_name %></td>
+                    <td><%= link_to "Accept Invitation", accept_invite_path(invitation.id) %></td>
+                    <td><%= link_to "Don't Join", reject_invite_path(invitation.id) %></td>
+                </tr>
+            <% end %>
 
-</table>
+        </table>
+    </div>
+</div>
