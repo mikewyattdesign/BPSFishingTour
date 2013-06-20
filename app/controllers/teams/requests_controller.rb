@@ -60,6 +60,7 @@ class Teams::RequestsController < ApplicationController
         if request.save
             @team = Team.create
             @team.users<<([current_user, requester])
+            @team.save
         end
        render text: "success"
     end

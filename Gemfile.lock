@@ -50,6 +50,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    connection_pool (1.1.0)
     devise (3.0.0.rc)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -190,6 +191,7 @@ DEPENDENCIES
   bourbon (= 3.1.6)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.0)
+  connection_pool
   devise (= 3.0.0.rc)
   factory_girl_rails (= 4.2.1)
   guard-rspec (= 3.0.0)

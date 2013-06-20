@@ -7,21 +7,22 @@ class ApplicationController < ActionController::Base
   # after_filter :any_invites?
 
     def after_sign_in_path_for(resource)
+        return team_invitations_path(current_user) if session.delete(:respond_to_invitation)
         if !current_user.profile
             "/thanks"
         else
             if current_user.teams.empty?
-                flash[:notice] = "What's next? Find a teammate so you two can join some tournaments! #{ActionController::Base.helpers.link_to "Grab A Teammate", requests_new_path }"
-                return "/"
+                flash[:notice] = "What's next? Find a teammate so you two can join some tournaments! <a href=\"/teams/requests/new\">Grab A Teammate</a>"
+                return "/myprofile"
             end
 
-            "/"
+            "/myprofile"
         end
     end
 
     def please_register
         unless !user_signed_in? || view_context.is_registered?
-            flash[:please_register] = "You have not completed your registration, please navigate to \'Register\' to do so!"
+            flash[:please_register] = 'You have not completed your registration, please navigate to \'Register\' to do so! <a href=\"/teams/requests/new\">Grab A Teammate</a>'.html_safe
         end
     end
 end

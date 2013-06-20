@@ -52,7 +52,6 @@
                     icon: true,
                     history: false,
                     width: "300px",
-                    text_escape: false,
                     insert_brs: false
                 };
 
@@ -74,6 +73,7 @@
                         settings.title =  "<%= name.capitalize %>" ;
                         settings.text = "<%= msg %>";
                         $.pnotify(settings);
+                        console.log('its running!');
                     <% end %>
                 <% end %>
             });

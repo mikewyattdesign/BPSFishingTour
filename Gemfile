@@ -10,6 +10,7 @@ group :development, :test do
     gem 'rspec-rails', '2.13.1'
     gem 'guard-rspec', '3.0.0'
     gem 'factory_girl_rails', '4.2.1'
+    gem 'connection_pool'
 end
 
 group :test do

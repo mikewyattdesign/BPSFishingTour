@@ -1,12 +1,12 @@
 require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
-    given(:bob) { FactoryGirl.create(:profile).user }
-    given(:tom) { OpenStruct.new FactoryGirl.attributes_for(:user) }
+    let(:bob) { FactoryGirl.create(:profile).user }
+    let(:tom) { OpenStruct.new FactoryGirl.attributes_for(:user) }
 
-    scenario "User sends team request" do
+    scenario "User sends team request", js: true do
         sign_in_with(bob.email, bob.password)
-        page.current_path.should eq "/profiles/#{bob.profile.id}"
+        page.current_path.should eq "/myprofile"
         page.should have_content('What\'s next? Find a teammate so you two
             can join some tournaments!')
         click_link "Grab A Teammate"
@@ -17,8 +17,8 @@ feature "Teammate Request" do
         last_email.body.should have_content("#{bob.profile.first_name} #{bob.profile.last_name} wants you on his team")
     end
 
-    context "Receiving teammate request" do
-        given(:request) { FactoryGirl.create(:request, requester: bob.id, invitee_email: tom.email)}
+    context "Receiving teammate request", js: true do
+        let(:request) { FactoryGirl.create(:request, requester: bob.id, invitee_email: tom.email)}
 
         context "accept teammate invite" do
             scenario "as an unregistered user" do
@@ -34,7 +34,7 @@ feature "Teammate Request" do
                 expect(page).to have_content("#{bob.full_name}")
 
                 expect{ click_link "Accept Invitation" }.to change{Team.count}.from(0).to(1)
-
+                # puts Request.count
                 expect(Team.first.users.count).to eq 2
             end
 
@@ -42,6 +42,7 @@ feature "Teammate Request" do
                 sign_up_with(tom.email, tom.password)
                 click_link :Logout
                 visit request.invitation_url
+                puts request.invitation_url
                 expect(current_path).to eq '/users/sign_in'
 
                 sign_in_with tom.email, tom.password
