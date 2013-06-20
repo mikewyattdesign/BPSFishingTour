@@ -25,14 +25,14 @@ h1 {
     margin: 0;
     color: $yellow;
     font-size: 46px;
-    font-family: Aachen, sans-serif;
+    @include aachen;
     text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
 }
 
 h2 {
     margin: 0;
     color: white;
-    font-family: Aachen, sans-serif;
+    @include aachen;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -42,11 +42,10 @@ h3 {
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.37);
 }
 
-p{
+p {
     color: #b3b3b3;
     line-height:140%;
     font-weight: lighter;
-    font-family: "Helvetica Neue";
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
 }
 
@@ -109,7 +108,6 @@ p{
             color: white;
             font-size: 20px;
             line-height: 40px;
-            font-family: "Helvetica Neue";
         }
 
     .eventLeaderContainer {
@@ -209,7 +207,6 @@ p{
 
 #user_nav a, #user_nav h2{
     font-weight: bold;
-    font-family: "Helvetica Neue";
 }
 
 /*Event Page*/
@@ -259,7 +256,7 @@ p{
     margin-top: 95px;
     margin-left: 235px;
     font-size: 25px;
-    font-family: Aachen;
+    @include aachen;
     color: white;
 }
 

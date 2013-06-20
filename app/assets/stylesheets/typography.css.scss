@@ -10,12 +10,21 @@
          url('/assets/Bebas.eot'); /* IE9 */
 }
 
-body {
+@mixin aachen {
+    font-family: Aachen, sans-serif;
+    font-weight: normal;
+}
+
+@mixin titillium {
     font-family: 'Titillium Web', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    @include titillium;
 }
 
 .main-navigation a {
-    font-family: Aachen, sans-serif;
+    @include aachen;
     font-size: 18px;
-    font-weight: bold;
 }
