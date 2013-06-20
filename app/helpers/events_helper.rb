@@ -3,7 +3,7 @@ module EventsHelper
         if event.date.past?
             return "Processing"
         else
-            return "Comming Soon"
+            return "Coming Soon"
         end
     end
 end
