@@ -9,12 +9,13 @@ feature "Teammate Request" do
         page.current_path.should eq "/myprofile"
         page.should have_content('What\'s next? Find a teammate so you two
             can join some tournaments!')
-        click_link "Grab A Teammate"
+        visit '/teams/requests/new'
         expect {send_teammate_request tom.email }.to change{Request.count}.from(0).to(1)
         last_email.to.should include tom.email
         last_email.subject.should have_content("#{bob.full_name} wants to go fishing!")
+        last_email.body.should have_content('http')
         page.current_path.should eq '/'
-        last_email.body.should have_content("#{bob.profile.first_name} #{bob.profile.last_name} wants you on his team")
+        last_email.body.should have_content("#{bob.profile.first_name} #{bob.profile.last_name} wants you on their team")
     end
 
     context "Receiving teammate request", js: true do

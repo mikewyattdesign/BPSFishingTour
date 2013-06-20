@@ -21,7 +21,7 @@ class Teams::RequestsController < ApplicationController
     def send_invite
         @request = Request.create({requester: current_user.id, invitee_email: params[:email]})
         if @request
-            TeammateInviteMailer.sign_up_and_team_up(params[:email], current_user, @request.invitation_url).deliver
+            TeammateInviteMailer.sign_up_and_team_up(params[:email], current_user, "http://#{request.host_with_port}#{@request.invitation_url}").deliver
             flash[:notice] = "Your request has been sent to your teammate. If #{params[:email]} accepts, you may enter a tournament."
             redirect_to '/'
         end

@@ -1,5 +1,5 @@
 class TeammateInviteMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "do-not-reply@bassprofishingtour.com"
 
   def sign_up_and_team_up( invitee_email, current_user, request_url )
     @requester = current_user
