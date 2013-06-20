@@ -4,7 +4,7 @@ class Profile < ActiveRecord::Base
     validates :first_name, :last_name, :city, :street_address, :state, :presence => true, :on => :update
 
     def self.directory
-        names = Profile.all.map { |profile|
+        names = Profile.order('last_name').map { |profile|
             {
                 name: "#{profile.last_name}, #{profile.first_name}",
                 id: profile.id,
