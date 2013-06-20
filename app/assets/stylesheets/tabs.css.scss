@@ -480,7 +480,7 @@ p {
     background: -o-linear-gradient(top, #6b4302, #5b3902);
 }
 
-.topBlue {
+.topBlue, .anglersTopBar{
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0b597d), to(#083e58));
     /* Safari 5.1, Chrome 10+ */

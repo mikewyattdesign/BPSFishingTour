@@ -568,3 +568,50 @@ a#dotPlayPause {
     display: none;
 }
 
+
+/*Anglers*/
+
+#anglersContainer {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.anglersListContainer {
+    width: 750px;
+    margin-left: 250px;
+    box-shadow: 0px 0px 20px black;
+}
+
+
+.anglersTopBar {
+    height: 55px;
+    width: 100%;
+    position: left;
+}
+
+.anglersTopBar h1 {
+    font-size: 30px;
+    float: left;
+    padding: 10px 0;
+    color: white;
+}
+
+.iconAnglers {
+    margin: 5px 20px;
+    float: left;
+}
+
+.anglersBotCont {
+    height: 800px;
+    width: 100%;
+    background-color: #cccece;
+}
+
+.anglersBotCont h1, .anglersBotCont h2, .anglersBotCont p {
+    text-shadow:none;
+    color: white;
+}
+
+.anglersGroup {
+    padding: 20px 40px;
+}

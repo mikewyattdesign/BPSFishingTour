@@ -1,7 +1,21 @@
-<h1>Anglers</h1>
-<% @directory.each_key do |letter| %>
-    <h2><%= letter %></h2>
-    <% @directory[letter].each do |name| %>
-        <p><%= name %></p>
-    <% end %>
-<% end %>
+<%= render "shared/ads_bps" %>
+
+<div id="anglersContainer">
+    <div class="anglersListContainer">
+        <div class="anglersTopBar">
+            <%= image_tag 'iconAnglers.png', class: 'iconAnglers', alt: 'Anglers' %>
+            <h1>Anglers</h1>
+        </div>
+
+        <div class="anglersBotCont">
+            <div class="anglersGroup">
+                <% @directory.each_key do |letter| %>
+                    <h2><%= letter %></h2>
+                    <% @directory[letter].each do |name| %>
+                        <p><%= name %></p>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
