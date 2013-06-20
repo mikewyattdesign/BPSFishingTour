@@ -1,3 +1,5 @@
+$gutter: 16px;
+
 %grid-unit {
     @include box-sizing(border-box);
     float: left;

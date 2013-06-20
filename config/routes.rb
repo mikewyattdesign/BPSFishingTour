@@ -42,4 +42,7 @@ BpsFishingTour::Application.routes.draw do
 
     # Leaderboard Routing
     get '/leaderboard' => 'leaderboard#index'
+
+    # News Routing
+    get '/news' => 'news#index'
 end

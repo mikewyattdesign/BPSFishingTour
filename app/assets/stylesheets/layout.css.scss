@@ -1,0 +1,24 @@
+// The media object.
+//
+// Used for placing image and text side-by-side, like a blog entry preview
+//
+// See:
+//     http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+//     https://github.com/csswizardry/inuit.css/blob/master/objects/_media.scss
+.media {
+    display: block;
+    @include clearfix;
+}
+
+.media-image {
+    float:left;
+    margin-right: $gutter;
+
+    img {
+        display: block;
+    }
+}
+
+.media-body {
+    overflow: hidden;
+}
