@@ -410,7 +410,15 @@ p {
     width: 97%;
     height: 265px;
     margin: 25px 25px 25px 10px;
+    background: #cccece;
     box-shadow: 0px 0px 35px black;
+
+    p {
+        font-size: 18px;
+        padding: 16px;
+        color: inherit;
+        text-shadow: none;
+    }
 }
 
 .teamEvents {

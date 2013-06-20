@@ -589,19 +589,24 @@ a#dotPlayPause {
 }
 
 .anglersBotCont, .leaderBotCont {
+    clear: both;
     height: 800px;
-    width: 100%;
+    padding: 32px;
     background-color: #cccece;
+    color: #333;
+    overflow: hidden;
+
+    p {
+        font-size: 18px;
+        color: inherit;
+        text-shadow: none;
+    }
 }
 
 .anglersBotCont h1, .anglersBotCont h2, .anglersBotCont p, .aboutTextContainer h1, .aboutTextContainer p, .aboutPara h3, .leaderGroup p, .mediaCont h2, .mediaCont p, .mediaCont a  {
     font-style: normal;
     text-shadow:none;
     color: white;
-}
-
-.anglersGroup {
-    padding: 20px 40px;
 }
 
 .aboutHead {
@@ -624,13 +629,6 @@ a#dotPlayPause {
 
 .aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
     color: #58605d;
-}
-
-.leaderGroup {
-    background-image: url('/assets/leaderBack.jpg');
-    display: inline-block;
-    width: 97.5%;
-    margin: 0px 10px;
 }
 
 .leaderNumber p, .leaderName p, .leaderPoint p {
