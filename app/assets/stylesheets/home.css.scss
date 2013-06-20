@@ -569,34 +569,34 @@ a#dotPlayPause {
 }
 
 
-/*Anglers, About, Leaderboard*/
+/*Anglers, About, Leaderboard, News*/
 
-#anglersContainer, #aboutContainer, #leaderContainer {
+#anglersContainer, #aboutContainer, #leaderContainer, #newsContainer {
     width: 1000px;
     margin: 20px auto;
 }
 
-.anglersListContainer, .aboutTextContainer, .leaderListContainer {
+.anglersListContainer, .aboutTextContainer, .leaderListContainer, .newsListContainer{
     width: 750px;
     margin-left: 250px;
 }
 
-.anglersListContainer, .aboutTextContainer, .leaderListContainer {
+.anglersListContainer, .aboutTextContainer, .leaderListContainer, .newsListContainer {
     box-shadow: 0px 0px 20px black;
 }
 
-.aboutTextContainer {
+.aboutTextContainer, .newsBotCont {
     height: 1000px;
     background-color: #d7c8b9;
 }
 
-.anglersTopBar, .leaderTopBar {
+.anglersTopBar, .leaderTopBar, .newsTopBar {
     height: 55px;
     width: 100%;
     position: left;
 }
 
-.anglersTopBar h1, .leaderTopBar h1 {
+.anglersTopBar h1, .leaderTopBar h1, .newsTopBar h1 {
     font-size: 30px;
     float: left;
     padding: 10px 0;
@@ -619,7 +619,7 @@ a#dotPlayPause {
     background-color: #cccece;
 }
 
-.anglersBotCont h1, .anglersBotCont h2, .anglersBotCont p, .aboutTextContainer h1, .aboutTextContainer p, .aboutPara h3, .leaderGroup p {
+.anglersBotCont h1, .anglersBotCont h2, .anglersBotCont p, .aboutTextContainer h1, .aboutTextContainer p, .aboutPara h3, .leaderGroup p, .mediaCont h2, .mediaCont p, .mediaCont a  {
     font-style: normal;
     text-shadow:none;
     color: white;
@@ -676,4 +676,17 @@ a#dotPlayPause {
 .leaderPoint {
     float: right;
     width: 75px;
+}
+
+.mediaCont {
+    padding: 20px;
+    border-bottom: solid 1px white;
+}
+
+.mediaCont h2 {
+    color: #616262;
+}
+
+.mediaCont a {
+    color: #65421a;
 }
