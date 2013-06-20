@@ -11,14 +11,14 @@ module Features
         end
 
         def sign_up_with(email, password)
-            visit '/'
-
-            click_link 'Sign up', match: :first
+            unless page.current_path == '/users/sign_up'
+                visit '/'
+                click_link 'Sign up', match: :first
+            end
             fill_in :Email, with: email
             fill_in :Password, with: password
             fill_in 'Password confirmation', with: password
             click_button :GO
-
             confirm_registration!(email, last_email)
         end
 

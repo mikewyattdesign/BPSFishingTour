@@ -54,13 +54,12 @@ class Teams::RequestsController < ApplicationController
 
     def accept_invitation
         request = Request.find params[:request_id]
+
         requester = User.find request.requester
         request.accepted = true
         request.replied_at = Time.now
         if request.save
-            @team = Team.create
-            @team.users<<([current_user, requester])
-            @team.save
+            @team = Team.create.users<<([current_user, requester])
         end
        redirect_to my_profile_path
     end
