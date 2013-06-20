@@ -23,5 +23,12 @@ feature "profile_managment" do
             expect(page).to have_content("We could not update your profile!")
             expect(current_path).to eq "/profiles/#{user.id}"
         end
+
+        scenario "visits her profile via /profiles/:id" do
+            user = FactoryGirl.create(:profile).user
+            sign_in_with user.email, user.password
+            visit "/profiles/#{user.profile.id}"
+            expect(current_path).to eq '/myprofile'
+        end
     end
 end
