@@ -390,6 +390,7 @@ p {
 .adImg2, .adImg3, .adImg4 {
     display: none;
 }
+
 /*Bottom Containers*/
 
 .tabMiddleContainer {
@@ -429,7 +430,7 @@ p {
 }
 
 .bottomBrown {
-    background-image: url('/assets/doubleLineBackground.jpg');
+    background-image: image-url('doubleLineBackground.jpg');
     background-position: top;
     background-size: 100%;
     height: 460px;
@@ -586,7 +587,7 @@ table {
     height: 190px;
     padding: 15px;
     background-color: #cccece;
-    background-image: url('/assets/iconMap.png');
+    background-image: image-url('iconMap.png');
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -697,7 +698,7 @@ table {
 }
 
 .greyCont {
-    background-image: url('/assets/leaderBackground.jpg');
+    background-image: image-url('leaderBackground.jpg');
 }
 
 .faceCont {

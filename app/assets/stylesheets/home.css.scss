@@ -357,10 +357,6 @@ p {
 
 .bassEventAttendButton {
     float:right;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 105%;
     margin: 5px 30px;
@@ -376,11 +372,14 @@ p {
     font-size: 10px;
 }
 
-.enterEventButton, .noEventButton {
+.enterEventButton, .noEventButton, .bassEventAttendButton {
     color: white;
+    cursor: pointer;
     text-align: center;
     background-repeat: no-repeat;
-    cursor: pointer;
+}
+
+.enterEventButton, .noEventButton {
     width: 250px;
     height: 50px;
     line-height: 40px;
@@ -404,20 +403,21 @@ p {
 
 /*Map Slider*/
 
-#slideshowMap {
-    margin:0 auto;
-    width:1100px;
-    height:265px;
-    background:transparent url(/assets/eventMap.jpg) no-repeat 0 0;
-    position:relative;
-}
-#slideshowMap #slidesContainer {
+#slideshowMap, #slideshowMap #slidesContainer {
     margin:0 auto;
     width:1000px;
     height:265px;
-    overflow:auto;
     position:relative;
 }
+
+#slideshowMap {
+    background:transparent url(/assets/eventMap.jpg) no-repeat 0 0;
+}
+
+#slideshowMap #slidesContainer {
+    overflow:auto;
+}
+
 #slideshowMap #slidesContainer .slide {
     margin:0 auto;
     width:540px;
@@ -430,17 +430,19 @@ p {
     position:absolute;
     cursor: pointer;
 }
-#leftControl {
+
+#leftControl, #rightControl {
     top:55px;
-    left:63px;
     background:transparent url(/assets/control_left.png) no-repeat 0 0;
     z-index: 20;
 }
+
+#leftControl {
+    left:63px;
+}
+
 #rightControl {
-    top:55px;
     right:43px;
-    background:transparent url(/assets/control_right.png) no-repeat 0 0;
-    z-index: 20;
 }
 
 #mapContainer {
@@ -629,6 +631,13 @@ a#dotPlayPause {
 
 .aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
     color: #58605d;
+}
+
+.leaderGroup {
+    background-image: image-url('leaderBack.jpg');
+    display: inline-block;
+    width: 97.5%;
+    margin: 0px 10px;
 }
 
 .leaderNumber p, .leaderName p, .leaderPoint p {
