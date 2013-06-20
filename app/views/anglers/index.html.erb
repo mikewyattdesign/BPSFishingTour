@@ -12,7 +12,7 @@
                 <% @directory.each_key do |letter| %>
                     <h2><%= letter %></h2>
                     <% @directory[letter].each do |name| %>
-                        <p><%= name %></p>
+                        <p><%= link_to name[:name], profile_path(name[:id]) %></p>
                     <% end %>
                 <% end %>
             </div>
