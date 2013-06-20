@@ -559,7 +559,7 @@ a#dotPlayPause {
     box-shadow: 0px 0px 20px black;
 }
 
-.aboutTextContainer, .newsBotCont {
+.aboutTextContainer, .newsBotCont, .invitationText {
     height: 1000px;
     background-color: #d7c8b9;
 }
@@ -685,11 +685,15 @@ a#dotPlayPause {
 
 .invitationText h1 {
     font-size: 30px;
+    text-shadow: none;
+    color: #75521a;
+    padding: 20px 20px 0px 20px;
 }
 
 tr {
     float: left;
     clear: both;
+    padding: 0 20px;
 }
 
 th {

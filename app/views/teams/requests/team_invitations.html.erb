@@ -1,14 +1,16 @@
+<%= render "shared/ads_bps" %>
+
 <div id="invitationCont">
     <div class="invitationText">
-        <h1>You have the following Pending Team Request</h1>
+        <div class="invitationHead">
+            <h1>You have the following Pending Team Request</h1>
+        </div>
         <table>
-
             <tr>
                 <th>Invited By</th>
                 <th>Accept</th>
                 <th>Reject</th>
             </tr>
-
             <% @invites.each do |invitation| %>
                 <tr>
                     <td><%= User.find(invitation.requester).full_name %></td>
@@ -16,7 +18,6 @@
                     <td><%= link_to "Don't Join", reject_invite_path(invitation.id) %></td>
                 </tr>
             <% end %>
-
         </table>
     </div>
 </div>
