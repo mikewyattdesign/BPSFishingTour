@@ -20,4 +20,9 @@ feature "authentication" do
         expect(current_path).to eq('/users/sign_in')
         expect(page).to have_content('Invalid email or password')
     end
+
+    scenario "user goes to /join" do
+        visit '/join'
+        expect(current_path).to eq('/users/sign_up')
+    end
 end

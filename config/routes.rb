@@ -20,6 +20,8 @@ BpsFishingTour::Application.routes.draw do
         confirmations: 'confirmations'
     }
 
+    get '/join', to: redirect('/users/sign_up')
+
     # Team Routing
     match '/teams' => 'teams#index', via: :get
     match '/teammate/search' => 'teams/requests#search', as: 'invite_teammate', via: :post
