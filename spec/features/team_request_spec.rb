@@ -4,7 +4,7 @@ feature "Teammate Request" do
     let(:bob) { FactoryGirl.create(:profile).user }
     let(:tom) { OpenStruct.new FactoryGirl.attributes_for(:user) }
 
-    scenario "User sends team request", js: true do
+    scenario "User sends team request" do
         sign_in_with(bob.email, bob.password)
         page.current_path.should eq "/myprofile"
         page.should have_content('What\'s next? Find a teammate so you two
@@ -18,7 +18,7 @@ feature "Teammate Request" do
         last_email.body.should have_content("#{bob.profile.first_name} #{bob.profile.last_name} wants you on their team")
     end
 
-    context "Receiving teammate request", js: true do
+    context "Receiving teammate request" do
         let(:request) { FactoryGirl.create(:request, requester: bob.id, invitee_email: tom.email)}
 
         context "accept teammate invite" do
