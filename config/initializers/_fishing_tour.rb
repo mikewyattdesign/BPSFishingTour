@@ -1,0 +1,1 @@
+ENABLE_S3 = Rails.env.production? ? true : false

@@ -1,0 +1,12 @@
+development:
+  access_key_id: AKIAJEYPUIB65MBB4J7Q
+  secret_access_key: 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
+  bucket: fishing-tour-test
+production:
+  access_key_id: AKIAJEYPUIB65MBB4J7Q
+  secret_access_key: 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
+  bucket: fishing-tour-test
+test:
+  access_key_id: AKIAJEYPUIB65MBB4J7Q
+  secret_access_key: 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
+  bucket: fishing-tour-test

@@ -1,0 +1,26 @@
+<div class="teamRegContainer">
+    <div class="topGreenBanner">
+        <p>Upload A Profile Picture</p>
+    </div>
+
+    <%= form_for @profile, :url => upload_profile_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
+
+        <div class="teamRegContainerForm">
+                <div class="regTopText">
+                    <h3>Upload a Picture of that Mug!</h3>
+                    <div class="divideLine"></div>
+                    <ul>
+                        <li>This photo will can be edited from your profile page.</li>
+                        <li>Say Cheese.</li>
+                    </ul>
+                </div>
+                <%= form.file_field :picture %>
+
+        </div>
+        <div class="actions">
+            <%= link_to 'Back', profiles_path %>
+            <%= submit_tag :continue, value: 'Continue' %>
+        </div>
+    <% end %>
+
+</div>
