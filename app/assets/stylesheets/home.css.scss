@@ -67,32 +67,6 @@ p{
         z-index: 20;
     }
 
-        .bannerBigTextCont {
-            margin: 0px 0 30px 0;
-        }
-
-        .bannerBigTextContButton {
-            padding: 2px 12px;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border: 2px solid #81140e;
-            box-shadow: inset 0 0 0 1px #dd483b;
-            background-color: mix(#d0362b, #a91d17);
-            @include background-image(linear-gradient(#d0362b, #a91d17));
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-
-            &:hover {
-                background-color: #a91d17;
-                background-position: center -10px;
-                background-repeat: no-repeat;
-            }
-        }
-
     .bannerBigImage {
         margin-left: -500px;
         margin-top: -15px;
@@ -536,37 +510,37 @@ a#dotPlayPause {
     z-index: 2033333;
     top: 290px;
     left: 760px;
+
+    li {
+        float: left;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        background: #222;
+        border-radius: 20px;
+        margin-right: 10px;
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
+                    1px 1px 2px -1px #fff;
+
+        a {
+            font-size: 12px;
+            color: #222;
+            border:1px solid none;
+            text-decoration : none;
+            padding : 0px 6px;
+            border-radius:20px;
+            position: absolute;
+        }
+    }
+
+    li.dotActive {
+        background-color: $yellow;
+        a {
+            display: none;
+        }
+    }
 }
 
-#dotList li {
-    float: left;
-    cursor:pointer;
-    height:20px;
-    width:20px;
-    background:#222;
-    border-radius:20px;
-    margin-right:10px;
-    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
-                1px 1px 2px -1px #fff;
-}
-
-#dotList li.dotActive {
-    background-color: $yellow;
-}
-
-#dotList li a {
-    font-size: 12px;
-    color: #222;
-    border:1px solid none;
-    text-decoration : none;
-    padding : 0px 6px;
-    border-radius:20px;
-    position: absolute;
-}
-
-#dotList li.dotActive a {
-    display: none;
-}
 
 
 /*Anglers, About, Leaderboard, News*/
