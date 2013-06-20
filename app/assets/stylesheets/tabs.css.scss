@@ -163,34 +163,28 @@ p {
     clear: both;
 }
 
-.iconMedal {
-    margin: 5px 20px 5px 0px;
-    display: block;
-    float: left;
-}
-
-.iconMedalText {
-    width: 132px;
-    margin: 25px 0 0 0;
-    display: block;
-    float: right;
+.tour-rank {
+    padding: 32px;
+    font-size: 24px;
     text-align: center;
 }
 
-    .iconMedalText h1 {
-        font-size: 90px;
-        line-height: 100px;
-        margin-top: -30px
+.tour-progress {
+    margin: 32px 0 0;
+    line-height: 0;
+    font-size: 16px;
+    border: 2px solid #cbbdaa;
+    border-right: none;
+    border-left: none;
+
+    p {
+        margin: 5px 0 0;
     }
 
-    .iconMedalText h3 {
-        font-size: 40px;
-        line-height: 35px;
+    img {
+        margin: 8px;
     }
-
-    .iconMedalText p {
-        font-size: 10px;
-    }
+}
 
 .myTourCont {
     display: inline;
@@ -200,14 +194,6 @@ p {
     display: block;
     float: left;
     margin-left: 60px;
-}
-
-.iconMedalText.divideLine {
-    margin: 0;
-}
-
-.iconFish {
-    margin: 3px -3px;
 }
 
 .tourContRight {
@@ -226,7 +212,7 @@ p {
 }
 
 .picBox {
-    width: 320px;
+    width: 356px;
     height: 200px;
 }
 
@@ -321,7 +307,7 @@ p {
 
 .manFishRight {
     position: absolute;
-    margin: 40px auto auto 140px;
+    margin: 40px auto auto 148px;
 }
 
 .manFishLeft {
@@ -332,7 +318,7 @@ p {
 .manFishTextRight {
     position: absolute;
     font-size: 12px;
-    margin: 150px 0 0 100px;
+    margin: 150px 0 0 108px;
 }
 
 .manFishTextLeft {
@@ -372,7 +358,7 @@ p {
 
 .tourPersonMain {
     float: left;
-    margin: -5px 0 0 19px;
+    margin: -5px 0 0 27px;
 }
 
 .teamPerson {

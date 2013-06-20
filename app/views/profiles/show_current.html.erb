@@ -31,35 +31,18 @@
         <div class="tabbable">
             <div class="tab-content">
                 <div id="tab1" class="tab-pane active">
-                    <div class="tourContLeft">
-                        <div class="overRank"><h3>Overall Rankings:</h3></div>
-                        <%= image_tag 'iconMedal.png', class: 'iconMedal', alt: 'Medal Logo' %>
-                        <div class="iconMedalText">
-                            <h1>00</h1>
-                            <h3>Event Points</h3>
-                            <div class="divideLine"></div>
-                                <p>3 Events Needed to Qualify</p>
-                                <div class="lineFish">
-                                    <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
-                                    <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
-                                    <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
-                                    <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
-                                    <%= image_tag 'iconFish.png', class: 'iconFish', alt: 'Fish' %>
-                                </div>
-                            <div class="divideLine"></div>
+                    <div class="tour-rank half">
+                        <p>You haven't attended any events yet.  Check back after your first event for your rankings.</p>
+                        <div class="tour-progress">
+                            <p>5 events needed to qualify</p>
+                            <%= image_tag 'icons/fish.png', alt: 'One Event' %>
+                            <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
+                            <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
+                            <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
+                            <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
                         </div>
                     </div>
-                    <div class="tourContRight">
-    <!--
-                        <div class="cutOutContainer">
-                            <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
-                            <%= image_tag 'tourPic.jpg', class: 'tourPic', alt: 'Team Picture' %>
-                            <div class="cutOutText">
-                                <h2>My Teammates</h2>
-                                <p>Franki “Five-Fishes” Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
-                            </div>
-                        </div>
-     -->
+                    <div class="half">
                         <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
                         <div class="manFishTextRight"><p>Upload a Team Photo Here</p></div>
                         <div class="picBoxContainer">
