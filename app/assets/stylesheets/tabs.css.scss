@@ -283,8 +283,12 @@ p {
 }
 
 .cutOutTextTeam h2 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 15px;
+    text-shadow:none;
+    color: #856a43;
+    font-family: titillium, sans-serif;
+    font-weight: bold;
 }
 
 .cutOutTextTeam p {
@@ -496,7 +500,7 @@ p {
     display: block;
     overflow: hidden;
     float: right;
-    width: 380px;
+    width: 385px;
     height: 100%;
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee9de), to(#e1cfb6));
