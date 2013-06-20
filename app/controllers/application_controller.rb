@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
 
     def please_register
         unless !user_signed_in? || view_context.is_registered?
-            flash[:please_register] = 'You have not completed your registration, please navigate to \'Register\' to do so! <a href=\"/teams/requests/new\">Grab A Teammate</a>'.html_safe
+            flash[:please_register] = 'You have not completed your registration, please navigate to \'Register\' to do so!'
         end
     end
 end

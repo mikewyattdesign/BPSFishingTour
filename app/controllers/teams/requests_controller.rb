@@ -62,7 +62,7 @@ class Teams::RequestsController < ApplicationController
             @team.users<<([current_user, requester])
             @team.save
         end
-       render text: "success"
+       redirect_to my_profile_path
     end
 
     def reject_invitation
