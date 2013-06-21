@@ -9,7 +9,7 @@ BpsFishingTour::Application.routes.draw do
     get '/select_profile_picture' => 'profiles#select_profile_pic'
     post '/upload_profile_pic' => 'profiles#upload_profile_pic'
     get'/team_select_profile_picture' => 'teams#select_profile_pic'
-    post '/team_upload_profile_pic' => 'teams#upload_profile_pic'
+    post '/upload_team_pic' => 'teams#upload_team_pic'
     # Profile Routing
     get '/myprofile' => 'profiles#show_current', as: 'my_profile'
     resources :profiles

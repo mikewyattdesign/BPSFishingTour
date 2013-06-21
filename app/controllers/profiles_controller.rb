@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
     def show_current
         @can_register = current_user.teams.size > 0
         @profile = current_user.profile
+        @team = current_user.teams.first
     end
 
   # GET /profiles/new

@@ -3,7 +3,7 @@
         <p>Upload A Team Picture</p>
     </div>
 
-    <%= form_for @team, :url => team_upload_profile_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
+    <%= form_for @team, :url => upload_team_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
 
         <div class="teamRegContainerForm">
             <% if @team.errors.any? %>

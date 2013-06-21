@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130619201902) do
+ActiveRecord::Schema.define(version: 20130621232327) do
 
   create_table "divisions", force: true do |t|
     t.string   "name"
@@ -83,6 +83,10 @@ ActiveRecord::Schema.define(version: 20130619201902) do
   end
 
   create_table "teams", force: true do |t|
+    t.string   "team_picture_file_name"
+    t.string   "team_picture_content_type"
+    t.integer  "team_picture_file_size"
+    t.datetime "team_picture_updated_at"
   end
 
   create_table "teams_users", id: false, force: true do |t|
