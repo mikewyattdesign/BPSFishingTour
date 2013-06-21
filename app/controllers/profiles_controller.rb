@@ -36,9 +36,13 @@ class ProfilesController < ApplicationController
 
   def upload_profile_pic
     @profile = current_user.profile
-    @profile.update_attributes(params[:profile])
-    if @profile.save
-      redirect_to my_profile_path, notice: "Your Profile picture has been uploaded"
+    @profile.attributes = profile_params
+    if @profile.save(validate: false)
+      redirect_to my_profile_path, notice: "Your Profile picture has been uploaded!"
+    else
+      flash.clear
+      flash.now[:notice] = "Uh oh! There seems to be an issue with uploading your image!"
+      render :select_profile_pic
     end
   end
 

@@ -3,9 +3,20 @@
         <p>Upload A Profile Picture</p>
     </div>
 
-    <%= form_for @profile, :html => { :multipart => true } do |form| %>
+    <%= form_for @profile, :url => upload_profile_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
 
         <div class="teamRegContainerForm">
+            <% if @profile.errors.any? %>
+                <div id="error_explanation">
+                    <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+                    <ul>
+                        <% @profile.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
                 <div class="regTopText">
                     <h3>Upload a Picture of that Mug!</h3>
                     <div class="divideLine"></div>
