@@ -568,11 +568,18 @@ a#dotPlayPause {
 
 .anglersListContainer, .aboutTextContainer, .leaderListContainer, .newsListContainer {
     box-shadow: 0px 0px 20px black;
+    overflow: scroll;
 }
 
-.aboutTextContainer, .newsBotCont, .invitationText {
-    height: 1000px;
+.newsBotCont, .invitationText {
+    height: 830px;
     background-color: #d7c8b9;
+}
+
+.aboutTextContainer {
+    height: 890px;
+    background-color: #d7c8b9;
+    overflow: scroll;
 }
 
 .anglersTopBar, .leaderTopBar, .newsTopBar {
@@ -605,7 +612,7 @@ a#dotPlayPause {
 
 .anglersBotCont, .leaderBotCont {
     clear: both;
-    height: 800px;
+    height: 765px;
     padding: 32px;
     background-color: #cccece;
     color: #333;

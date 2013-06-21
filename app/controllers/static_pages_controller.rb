@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
     end
 
     def about
+        @fullads = true
     end
 
     def events

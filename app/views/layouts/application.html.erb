@@ -4,6 +4,7 @@
     <title>Bass Pro Shops Fishing Tour</title>
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    "ads", media: "all", "data-turbolinks-track" => true if @fullads%>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 
