@@ -20,6 +20,10 @@ class TeamsController < ApplicationController
 
     def select_profile_pic
         @team = current_user.teams.first
-        render text: @team.as_json
+
+    end
+
+    def upload_profile_pic
+        render text: "awesome"
     end
 end

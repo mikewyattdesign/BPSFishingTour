@@ -360,6 +360,7 @@ p {
 
 .smallPicButton, .bigPicButton {
     position: absolute;
+    z-index: 50;
 }
 
 .smallPicButton {
@@ -367,6 +368,7 @@ p {
     height: 85px;
     margin-top: 225px;
     margin-left: 20px;
+
 }
 
 .bigPicButton {

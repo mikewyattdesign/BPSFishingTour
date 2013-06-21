@@ -43,8 +43,12 @@
                         </div>
                     </div>
                     <div class="half">
-                        <div class="smallPicButton"></div>
-                        <div class="bigPicButton"></div>
+                        <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
+                        <% end %>
+
+                        <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
+                        <% end %>
+
 
                          <div class="cutOutContainer">
                             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>

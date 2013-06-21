@@ -1,0 +1,37 @@
+<div class="teamRegContainer">
+    <div class="topGreenBanner">
+        <p>Upload A Team Picture</p>
+    </div>
+
+    <%= form_for @team, :url => team_upload_profile_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
+
+        <div class="teamRegContainerForm">
+            <% if @team.errors.any? %>
+                <div id="error_explanation">
+                    <h2><%= pluralize(@team.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+                    <ul>
+                        <% @team.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+                <div class="regTopText">
+                    <h3>Upload a Picture that represents your team!</h3>
+                    <div class="divideLine"></div>
+                    <ul>
+                        <li>This photo will can be edited from your profile page.</li>
+                        <li>Say Cheese.</li>
+                    </ul>
+                </div>
+                <%= form.file_field :team_picture %>
+
+        </div>
+        <div class="actions">
+            <%= link_to :back, my_profile_path  %>
+            <%= submit_tag :continue, value: 'Continue' %>
+        </div>
+    <% end %>
+
+</div>
