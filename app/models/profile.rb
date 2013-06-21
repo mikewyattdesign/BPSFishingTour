@@ -4,8 +4,8 @@ class Profile < ActiveRecord::Base
     picture_options = {
         styles: {
             medium: '300x300>}',
-            teamP: '96x96>',
-            tour: '80x80>'
+            teamP: '96x96#',
+            tour: '80x80#'
         },
         :url => "/system/:attachment/:id/:style.:extension",
     }
