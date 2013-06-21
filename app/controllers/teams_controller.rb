@@ -17,4 +17,9 @@ class TeamsController < ApplicationController
                 redirect_to '/'
         end
     end
+
+    def select_profile_pic
+        @team = current_user.teams.first
+        render text: @team.as_json
+    end
 end
