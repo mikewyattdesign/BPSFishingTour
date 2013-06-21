@@ -3,9 +3,9 @@ class Profile < ActiveRecord::Base
     validates :first_name, :last_name, :city, :street_address, :state, :presence => true, :on => :update
     picture_options = {
         styles: {
-            medium: "300x300>}",
-            teamP: "96x96>",
-            tour: "80x80>"
+            medium: '300x300>}',
+            teamP: '96x96>',
+            tour: '80x80>'
         },
         :url => "/system/:attachment/:id/:style.:extension",
     }
