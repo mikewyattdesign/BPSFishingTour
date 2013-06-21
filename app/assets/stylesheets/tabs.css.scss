@@ -261,7 +261,7 @@ p {
 .cutOutText {
     position: absolute;
     width: 200px;
-    margin: 220px 0 0 120px;
+    margin: 220px 0 0 130px;
     z-index: 15;
 }
 
@@ -270,6 +270,7 @@ p {
     font-size: 15px;
     text-shadow:none;
     color: #c5af91;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .cutOutText p {
@@ -356,6 +357,22 @@ p {
         font-size: 12px;
         line-height: 14px;
     }
+
+.smallPicButton, .bigPicButton {
+    position: absolute;
+}
+
+.smallPicButton {
+    width: 95px;
+    height: 85px;
+    margin-top: 225px;
+    margin-left: 20px;
+}
+
+.bigPicButton {
+    width: 370px;
+    height: 190px;
+}
 
 .tourPerson {
     position: absolute;
