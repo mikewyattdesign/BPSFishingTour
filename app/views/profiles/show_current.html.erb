@@ -23,7 +23,7 @@
                 <a data-toggle="tab" href="#tab3">
                     <div class="tabIconContainer">
                         <%= image_tag 'iconSettings.png', id: 'setSolo', class: 'iconSmall', alt: 'Settings Icon Icon' %>
-                        <div class="tabText">My Accounts</div>
+                        <div class="tabText">My Account</div>
                     </div>
                 </a>
             </li>
@@ -201,11 +201,11 @@
                                 </div>
                                 <div class="shirtSize">
                                     <%= f.label :shirt %>
-                                    <%= f.select :shirt, [['Select Size', 1], ['XS', 2], ['S', 3], ['M', 4], ['L', 5], ['XXL', 6], ['XXXL', 7]] %>
+                                    <%= f.select :shirt, [['Select Size', 1], ['XS', 2], ['S', 3], ['M', 4], ['L', 5], ['XL', 6], ['XXL', 7], ['XXXL', 8]] %>
                                 </div>
                                 <div class="full">
                                     <%= f.label :outdoor_rewards_number, "Outdoor Rewards Number" %>
-                                    <%= f.text_field :outdoor_rewards_number %>
+                                    <%= f.password_field :outdoor_rewards_number %>
                                 </div>
                                 <div class="actions no">
                                     <%= f.submit 'Submit' %>
