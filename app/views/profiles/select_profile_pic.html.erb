@@ -3,7 +3,7 @@
         <p>Upload A Profile Picture</p>
     </div>
 
-    <%= form_for @profile, :url => upload_profile_pic_path, :html => { :multipart => true }, method: "post" do |form| %>
+    <%= form_for @profile, :html => { :multipart => true } do |form| %>
 
         <div class="teamRegContainerForm">
                 <div class="regTopText">

@@ -6,6 +6,8 @@ BpsFishingTour::Application.routes.draw do
     get '/about'   => 'static_pages#about'
     get '/confirm' => 'static_pages#confirm'
 
+    get '/select_profile_picture' => 'profiles#select_profile_pic'
+    post '/upload_profile_pic' => 'profiles#upload_profile_pic'
     # Profile Routing
     get '/myprofile' => 'profiles#show_current', as: 'my_profile'
     resources :profiles

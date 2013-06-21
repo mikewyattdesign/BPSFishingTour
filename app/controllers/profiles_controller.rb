@@ -30,6 +30,18 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile
   end
 
+  def select_profile_pic
+    @profile = current_user.profile
+  end
+
+  def upload_profile_pic
+    @profile = current_user.profile
+    @profile.update_attributes(params[:profile])
+    if @profile.save
+      redirect_to my_profile_path, notice: "Your Profile picture has been uploaded"
+    end
+  end
+
   # POST /profiles
   # POST /profiles.json
   def create
@@ -93,6 +105,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :first_name, :last_name, :street_address, :suite, :city, :state, :zip, :phone, :ext, :shirt)
+      params.require(:profile).permit(:user_id, :first_name, :last_name, :street_address, :suite, :city, :state, :zip, :phone, :ext, :shirt, :picture)
     end
 end
