@@ -6,7 +6,7 @@ feature "profile_managment" do
     context "A newly created user" do
         scenario "should have one profile" do
             sign_in_with(user.email, user.password)
-            expect(current_path).to eq '/'
+            expect(current_path).to eq '/myprofile'
             expect(user.profile).to_not be_nil
         end
 
@@ -15,13 +15,14 @@ feature "profile_managment" do
             expect(user.profile.created_at).to eq(user.profile.updated_at)
         end
 
-        scenario "should not update without valid information", :js => true do
+        scenario "should not update without valid information" do
             sign_in_with(user.email, user.password)
+            puts user.id
             click_link "Register"
             fill_in "First name", with: "Edu"
             click_button :Continue
             expect(page).to have_content("We could not update your profile!")
-            expect(current_path).to eq "/profiles/#{user.id}"
+            expect(current_path).to eq "/profiles/#{user.profile.id}"
         end
 
         scenario "visits her profile via /profiles/:id" do
