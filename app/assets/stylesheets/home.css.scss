@@ -403,9 +403,16 @@ p {
 
 /*Map Slider*/
 
-#slideshowMap, #slideshowMap #slidesContainer {
+#slideshowMap, #slideshowMap {
     margin:0 auto;
-    width:1000px;
+    width:1100px;
+    height:265px;
+    position:relative;
+}
+
+#slidesContainer {
+    margin:0 auto;
+    width: 1000px;
     height:265px;
     position:relative;
 }
@@ -433,16 +440,17 @@ p {
 
 #leftControl, #rightControl {
     top:55px;
-    background:transparent url(/assets/control_left.png) no-repeat 0 0;
     z-index: 20;
 }
 
 #leftControl {
     left:63px;
+    background:transparent url(/assets/control_left.png) no-repeat 0 0;
 }
 
 #rightControl {
     right:43px;
+    background:transparent url(/assets/control_right.png) no-repeat 0 0;
 }
 
 #mapContainer {
