@@ -340,7 +340,7 @@ p {
 }
 
 .tourPersonText {
-    margin-left: 110px;
+    margin-left: 140px;
     width: 210px;
 
 }
@@ -357,18 +357,24 @@ p {
 
 .tourPerson {
     position: absolute;
-    margin: -10px 0 0 8px;
+    margin: -8px 0 0 8px;
+    border-radius: 40px;
+    box-shadow: 0 0 0 4px #e6d7c4, 0 0 0 6px #cebca5;
 }
 
 .tourPersonMain {
     float: left;
     margin: -5px 0 0 27px;
+    border-radius: 42px;
+    box-shadow: 0 0 0 6px #e7e0d8, 0 0 0 8px #cebca5;
 }
 
 .teamPerson {
     position: absolute;
     margin: -21px 0 0 14px;
     z-index: 11;
+    border-radius: 48px;
+    box-shadow: 0 0 0 4px #e7e0d8, 0 0 0 6px #cebca5;
 }
 
 .teamPersonText {
