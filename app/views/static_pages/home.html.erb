@@ -1,7 +1,7 @@
 <div class="homeContainer">
     <% content_for :leaderboard do %>
         <div class="standingsLogo">
-            <img src="/assets/standingsBackground.png" alt="Standings">
+            <%= image_tag 'standingsBackground.png', alt: 'Standings' %>
             <div class="standingsText">
                 <h2>Standings</h2>
                 <h1>Ontario Region</h1>
@@ -33,9 +33,9 @@
 
                 <div id="slideshowWrapper">
                     <ul id="slideshow">
-                        <li><img src="assets/bannerBigImage.jpg" alt="Bass Pro Banner"/></li>
-                        <li><img src="assets/bannerBigImage2.jpg" alt="Bass Pro Banner"/></li>
-                        <li><img src="assets/bannerBigImage3.jpg" alt="Bass Pro Banner"/></li>
+                        <li><%= image_tag 'bannerBigImage.jpg', alt: 'Bass Pro Banner' %></li>
+                        <li><%= image_tag 'bannerBigImage2.jpg', alt: 'Bass Pro Banner' %></li>
+                        <li><%= image_tag 'bannerBigImage3.jpg', alt: 'Bass Pro Banner' %></li>
                     </ul><br clear="all" />
                 </div>
 

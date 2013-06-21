@@ -247,13 +247,13 @@
                 <% unless @can_register %>
                     <div class="teamEvents">
                         <div class="topDarkBrown">
-                            <img class="iconSmallEvents" src="/assets/iconCal.png" alt="Icon">
+                            <%= image_tag 'iconCal.png', class: 'iconSmallEvents', alt: 'Calendar icon' %>
                             <h2>My Events</h2>
                         </div>
                         <div class="topLightBrown">
                             <div class="teamListCover">
                                 <h1>You Have No Events</h1>
-                                <p>To register for an event, first you need to <a href="/teams/requests/new">find a teammate!</a></p>
+                                <p>To register for an event, first you need to <%= link_to 'find a teammate!', requests_new_path %></p>
                             </div>
                             <div class="teamList"><h3>Date</h3></div>
                             <div class="teamListM"><h3>Event Title</h3></div>
