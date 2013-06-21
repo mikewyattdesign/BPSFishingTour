@@ -631,6 +631,11 @@ a#dotPlayPause {
     color: white;
 }
 
+.anglersBotCont h1 {
+    font-size: 30px;
+    color: #515151;
+}
+
 .aboutHead {
     padding: 40px 40px 0 40px;
 }
@@ -646,7 +651,6 @@ a#dotPlayPause {
 
 .aboutPara h3 {
     color: #58605d;
-    margin-top: 30px;
 }
 
 .aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
@@ -687,6 +691,12 @@ a#dotPlayPause {
 
 .mediaCont h2 {
     color: #616262;
+}
+
+.mediaCont p {
+    color: inherit;
+    font-size: 18px;
+    font-style: italic;
 }
 
 .mediaCont a {
