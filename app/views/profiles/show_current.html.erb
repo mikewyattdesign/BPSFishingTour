@@ -52,7 +52,7 @@
 
                          <div class="cutOutContainer">
                             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
-                            <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' if @team.team_picture.exists? %>
+                            <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
                             <div class="cutOutText">
                                 <h2><%= @profile.first_name || "My Profile" %></h2>
                                 <p>Franki â€œFive-Fishesâ€ Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
@@ -116,7 +116,7 @@
 
                              <div class="cutOutContainerLeft">
                                 <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
-                                <%= image_tag @team.team_picture(:teampro), class: 'teamPic', alt: 'Team Picture' if @team.team_picture.exists? %>
+                                <%= image_tag @team.team_picture(:teampro), class: 'teamPic', alt: 'Team Picture' unless !@team || @team.team_picture.exists? %>
                                 <div class="cutOutTextTeam">
                                     <h2>My Teammates</h2>
                                     <p>Franki â€œFive-Fishesâ€ Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
@@ -238,7 +238,7 @@
                 if((($(this).attr("id")) != "active")){
                     $(".adImg2").show();
                 }
-            });
+            })
         </script>
 
         <div class="tabMiddleContainer">
@@ -314,6 +314,13 @@
         <script type="text/javascript">
 
             $(function() {
+
+                if(<%= @team.nil? %>) {
+                    $('.bigPicButton').on('click', function (e) {
+                      e.preventDefault();
+                      alert("Get A Team Together First!");
+                    });
+                }
                 // if the there are errors make sure MyAccounts tab is displayed
                 if(<%= defined?(@showTab) != nil && @showTab %>) {
                     $('#myTabs a:last').tab('show');
