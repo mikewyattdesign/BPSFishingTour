@@ -16,12 +16,14 @@ class ProfilesController < ApplicationController
         @team = user.my_team
         redirect_to my_profile_path if user_signed_in? && @profile.id == current_user.profile.id
         @can_register = @profile.user.teams.size > 0
+        @is_current_user = false
     end
 
     def show_current
         @can_register = current_user.teams.size > 0
         @profile = current_user.profile
         @team = current_user.teams.first
+        @is_current_user = true
     end
 
   # GET /profiles/new
