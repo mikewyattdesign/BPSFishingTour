@@ -76,7 +76,7 @@
                         <% when "error" %>
                             settings.type = 'error'
                         <% end %>
-                        settings.title =  "<%= name.capitalize %>" ;
+                        settings.title =  "<%= name.to_s.humanize.titleize %>" ;
                         settings.text = "<%= msg %>";
                         $.pnotify(settings);
                         console.log('its running!');
