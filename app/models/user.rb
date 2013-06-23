@@ -30,8 +30,12 @@ class User < ActiveRecord::Base
 
     def teammate
       my_team = self.teams.first
-      team_members = my_team.users
-      teammate = team_members.select { |member|  member.id != self.id  }
-      return teammate.first
+      if my_team
+        team_members = my_team.users
+        teammate = team_members.select { |member|  member.id != self.id  }
+        return teammate.first
+      else
+        return false
+      end
     end
 end
