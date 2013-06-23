@@ -27,4 +27,11 @@ class User < ActiveRecord::Base
     def create_user_profile
       self.create_profile
     end
+
+    def teammate
+      my_team = self.teams.first
+      team_members = my_team.users
+      teammate = team_members.select { |member|  member.id != self.id  }
+      return teammate.first
+    end
 end
