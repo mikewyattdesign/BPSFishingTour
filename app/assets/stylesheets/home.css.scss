@@ -117,6 +117,10 @@ p {
             line-height: 40px;
         }
 
+        .bassHandText a {
+            color: $yellow;
+        }
+
     .eventLeaderContainer {
         width: 780px;
         clear: both;
@@ -667,6 +671,10 @@ a#dotPlayPause {
 
 .aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
     color: #58605d;
+}
+
+.aboutPara a {
+    color: #75521a;
 }
 
 .leaderGroup {
