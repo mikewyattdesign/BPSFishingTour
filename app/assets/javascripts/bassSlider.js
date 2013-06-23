@@ -4,7 +4,7 @@ jQuery.fn.fadeSlideShow = function(options) {
      		width: 1920, // default width of the slideshow
      		height: 515, // default height of the slideshow
 			speed: 'slow', // default animation transition speed
-			interval: 3000, // default interval between image change
+			interval: 12000, // default interval between image change
 			PlayPauseElement: 'dotPlayPause', // default css id for the play / pause element
 			PlayText: 'Play', // default play text
 			PauseText: 'Pause', // default pause text
@@ -17,7 +17,7 @@ jQuery.fn.fadeSlideShow = function(options) {
 			ListLiActive: 'dotActive', // default class for active state in the controll list
 			addListToId: false, // add the controll list to special id in your code - default false
 			allowKeyboardCtrl: true, // allow keyboard controlls left / right / space
-			autoplay: false // autoplay the slideshow
+			autoplay: true // autoplay the slideshow
 	 	}, options);
 
 		// set style for wrapper element
