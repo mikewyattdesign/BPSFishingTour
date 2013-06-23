@@ -22,38 +22,7 @@
         </ul>
         <div class="tabbable">
             <div class="tab-content">
-                <div id="tab1" class="tab-pane active">
-                    <div class="tour-rank half">
-                        <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
-                        <div class="tour-progress">
-                            <p>5 events needed to qualify</p>
-                            <%= image_tag 'icons/fish.png', alt: 'One Event' %>
-                            <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
-                            <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
-                            <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
-                            <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
-                        </div>
-                    </div>
-                    <div class="half">
-                        <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
-                        <div class="manFishTextRight"><p>No Photo Available</p></div>
-                        <div class="picBoxContainer">
-                            <%= image_tag 'picBox.png', class: 'picBox', alt: 'Picture Box' %>
-                        </div>
-                        <div class="tourContRightBot">
-                            <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
-                            <div class="tourPersonText">
-                                <% if @teammate %>
-                                    <h3><%= @teammate.profile.first_name %> <%= @teammate.profile.last_name %></h3>
-                                    <p>Team information will propagate here once this angler's teammate completes registration. </p>
-                                <% else %>
-                                    <h3>Teammate</h3>
-                                    <p>Team information will propagate here once this angler's teammate completes registration.</p>
-                                <% end %>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%= render "tour_tab" %>
                 <div id="tab2" class="tab-pane">
                     <div class="myTourCont">
                         <div class="teamContRight">
