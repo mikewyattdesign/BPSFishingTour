@@ -2,29 +2,46 @@
     <div class="myTourCont">
         <div class="teamContRight">
             <div class="myCont">
-                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                 <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
                 <h3>Tournament Boat:</h3>
-                <p>Tell us what boat your team will be using for the Bass Pro Fishing Tour here.</p>
+
+                <% if @is_current_user %>
+                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                    <p><%= @team.boat_description || "Tell us what boat your team will be using for the Bass Pro Fishing Tour here." %></p>
+                <% else %>
+                    <p>No boat info available.</p>
+                <% end %>
+
             </div>
             <div class="divideLine"></div>
             <div class="myCont no">
-                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                 <%= image_tag 'iconLure.png', class: 'tourLure', alt: 'Lure Icon' %>
                 <h3>Favorite Gear:</h3>
-                <div class="gearTextCont">
-                    <form method="post">
-                        <textarea name="comments" cols="25" rows="3" placeholder="Share your favorite gear here or the equipment you have had the best luck with!"></textarea>
-                    </form>
-                </div>
+
+                <% if @is_current_user %>
+                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                    <p><%= @team.favorite_gear || "Share your favorite gear here or the equipment you have had the best luck with!" %></p>
+                <% else %>
+                    <p>No favorite gear available.</p>
+                <% end %>
+
             </div>
             <div class="divideLine"></div>
             <div class="myCont">
-                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
 
-                <%= drop_profile_teammate_pic(current_user.teammate, "tourPerson", :tour, "Person Icon") %>
-                <h3>My Teammates</h3>
-                <p>This information will propagate once your teammate has completed the registration process. </p>
+                <%= drop_profile_teammate_pic(@user.teammate, "tourPerson", :tour, "Person Icon") %>
+
+                <% if @is_current_user %>
+                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
+                <% end %>
+
+                <% if @teammate %>
+                    <h3><%= @teammate.full_name %></h3>
+                <% else %>
+                    <h3>Angler Teammate</h3>
+                    <p>This information will propagate once a teammate has completed the registration process. </p>
+                <% end %>
+                
             </div>
         </div>
 
@@ -32,9 +49,9 @@
 
              <div class="cutOutContainerLeft">
                 <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
-                <%= team_picture(current_user.my_team, 'teamPic', :teampro, 'Team Picture') %>
+                <%= team_picture(@user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                 <div class="cutOutTextTeam">
-                    <h2>My Teammates</h2>
+                    <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
                     <p><!-- At some point we should have a status here --></p>
                 </div>
             </div>
