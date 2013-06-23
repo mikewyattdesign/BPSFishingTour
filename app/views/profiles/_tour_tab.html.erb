@@ -1,6 +1,6 @@
 <div id="tab1" class="tab-pane active">
     <div class="tour-rank half">
-        <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
+        <p>Sign up to fish in Tour Events, then check back to track your performance.</p>
         <div class="tour-progress">
             <p>5 events needed to qualify</p>
             <%= image_tag 'icons/fish.png', alt: 'One Event' %>
@@ -11,21 +11,38 @@
         </div>
     </div>
     <div class="half">
+        <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
+        <% end %>
+
+        <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
+        <% end %>
+
+
+         <div class="cutOutContainer">
+            <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
+            <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
+            <div class="cutOutText">
+                <h2><%= @profile.first_name || "My Profile" %></h2>
+                <p>Franki Five-Fishes Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
+            </div>
+        </div>
+
         <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
-        <div class="manFishTextRight"><p>No Photo Available</p></div>
+        <div class="manFishTextRight"><p>Upload a Team Photo Here</p></div>
         <div class="picBoxContainer">
             <%= image_tag 'picBox.png', class: 'picBox', alt: 'Picture Box' %>
         </div>
         <div class="tourContRightBot">
-            <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
-            <div class="tourPersonText">
-                <% if @teammate %>
-                    <h3><%= @teammate.profile.first_name %> <%= @teammate.profile.last_name %></h3>
-                    <p>Team information will propagate here once this angler's teammate completes registration. </p>
+            <%= link_to select_profile_picture_path  do %>
+                <% if @profile.picture? %>
+                    <%= image_tag @profile.picture.url(:tour), class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% else %>
-                    <h3>Teammate</h3>
-                    <p>Team information will propagate here once this angler's teammate completes registration.</p>
+                    <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% end %>
+            <% end %>
+            <div class="tourPersonText">
+                <h3>My Teammate</h3>
+                <p>Your team information will propagate here once your teammate completes registration.</p>
             </div>
         </div>
     </div>
