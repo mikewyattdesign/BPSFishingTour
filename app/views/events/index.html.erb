@@ -63,7 +63,7 @@
                   <div class="bassEventAttendContainer">
                       <div class="bassEventAttendText">
                           <h2><%= event.name %></h2>
-                          <p><%= "#{event.address}, #{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+                          <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
                       </div>
                       <%= button_to "Details", event_path(event), class: 'bassEventAttendButton', method: :get %>
                   </div>
