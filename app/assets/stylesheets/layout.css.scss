@@ -22,3 +22,10 @@
 .media-body {
     overflow: hidden;
 }
+
+// General layout:
+
+#container {
+    clear: both; // prevent issues in top banner from messing with the
+                 // rest of the site's layout.
+}
