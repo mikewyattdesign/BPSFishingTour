@@ -340,7 +340,12 @@ p {
 
 .bassEventAttendText h2 {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
+    text-shadow:none;
+}
+
+.bassEventAttendText p {
+    font-size: 12px;
 }
 
 .bassEventAttendText, .eventEnterPic {
@@ -379,6 +384,13 @@ p {
     font-size: 10px;
 }
 
+.yesNoContainer {
+    float: right;
+    width: 180px;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+
 .enterEventButton, .noEventButton, .bassEventAttendButton {
     color: white;
     cursor: pointer;
@@ -387,25 +399,34 @@ p {
 }
 
 .enterEventButton, .noEventButton {
-    width: 250px;
-    height: 50px;
-    line-height: 40px;
+    width: 70px;
+    height: 30px;
+    line-height: 20px;
     background-size: 288px;
-    margin: 40px auto 15px auto;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 12px;
+    border: none;
 }
 
 .enterEventButton {
     float: left;
+    margin-right: 20px;
     background-position: center;
     background-image: image-url('registerButtonGreen.png');
 }
 
 .noEventButton {
-    float: right;
-    background-position: -10px -1px;
+    float: left;
+    background-position: center;
     background-image: image-url('registerButtonRed.png');
+}
+
+.ifYes, .ifNo {
+    position: absolute;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0px 45px;
 }
 
 /*Map Slider*/

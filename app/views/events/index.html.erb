@@ -61,12 +61,17 @@
               <% @events.each do |event| %>
                 <div class="bassEventAttendBackbround">
                   <div class="bassEventAttendContainer">
-                      <div class="bassEventAttendText">
+                        <div class="bassEventAttendText">
                           <h2><%= event.name %></h2>
                           <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-                      </div>
-                      <%= button_to "Details", event_path(event), class: 'bassEventAttendButton', method: :get %>
-                  </div>
+                        </div>
+                        <div class="yesNoContainer">
+                            <%= image_tag 'iconCheck.png', class: "ifYes", alt: 'Check Mark' %></li>
+                            <%= button_to "Yes", register_event_path(@event), class: 'enterEventButton', method: :post %>
+                            <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %></li>
+                            <%= button_to "No", '#', class: 'noEventButton', method: :post %>
+                        </div>
+                    </div>
                 </div>
               <% end %>
             </div>
