@@ -30,7 +30,7 @@
             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
-                <h2><%= @profile.first_name || "My Profile" %></h2>
+                <h2><%= @profile.user.full_name  || "My Profile" %></h2>
                 <p>Franki Five-Fishes Andolini Partners with Joe Pesce for 2 years. 21 points for the 2014 season.  </p>
             </div>
         </div>
