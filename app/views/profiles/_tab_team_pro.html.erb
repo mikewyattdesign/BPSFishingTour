@@ -32,6 +32,7 @@
 
                              <div class="cutOutContainerLeft">
                                 <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
+                                <%= team_picture(current_user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                                 <%= image_tag @team.team_picture(:teampro), class: 'teamPic', alt: 'Team Picture' unless @team.nil? || @team.team_picture.exists? %>
                                 <div class="cutOutTextTeam">
                                     <h2>My Teammates</h2>

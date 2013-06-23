@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
                 flash[:notice] = "What's next? Find a teammate so you two can join some tournaments! <a href=\"/teams/requests/new\">Grab A Teammate</a>"
                 return "/myprofile"
             end
-
             "/myprofile"
         end
     end

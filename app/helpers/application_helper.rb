@@ -19,4 +19,10 @@ module ApplicationHelper
             return image_tag 'iconPersonSmall.png', class: the_class, alt: alt
         end
     end
+
+    def team_picture(team, the_class, area, alt)
+        if team && team.team_picture?
+            image_tag team.team_picture.url(area), class: the_class, alt: alt
+        end
+    end
 end

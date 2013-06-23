@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
         end
     end
 
+    def my_team
+      self.teams.first
+    end
+
     def create_user_profile
       self.create_profile
     end
