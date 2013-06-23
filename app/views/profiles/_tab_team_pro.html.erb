@@ -5,7 +5,7 @@
                 <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
                 <h3>Tournament Boat:</h3>
 
-                <% if @is_current_user %>
+                <% if @team && @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                     <p><%= @team.boat_description || "Tell us what boat your team will be using for the Bass Pro Fishing Tour here." %></p>
                 <% else %>
@@ -18,7 +18,7 @@
                 <%= image_tag 'iconLure.png', class: 'tourLure', alt: 'Lure Icon' %>
                 <h3>Favorite Gear:</h3>
 
-                <% if @is_current_user %>
+                <% if @team && @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                     <p><%= @team.favorite_gear || "Share your favorite gear here or the equipment you have had the best luck with!" %></p>
                 <% else %>
