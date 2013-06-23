@@ -18,12 +18,13 @@
         </div>
     </div>
     <div class="half">
-        <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
-        <% end %>
+        <% if @is_current_user %>
+            <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
+            <% end %>
 
-        <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
-        <% end %>
-
+            <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
+            <% end %>
+        <% end %> 
 
          <div class="cutOutContainer">
             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
@@ -47,10 +48,6 @@
                     <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% end %>
             <% end %>
-            <div class="tourPersonText">
-                <h3>My Teammate</h3>
-                <p>Your team information will propagate here once your teammate completes registration.</p>
-            </div>
         </div>
     </div>
 </div>
