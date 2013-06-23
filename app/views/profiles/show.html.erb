@@ -7,7 +7,7 @@
                 <a data-toggle="tab" href="#tab1">
                     <div class="tabIconContainer">
                         <%= image_tag 'iconFishTab.png', id: 'fishSolo', class: 'iconSmall', alt: 'Fish Icon' %>
-                        <div class="tabText">My Tour</div>
+                        <div class="tabText">Tour</div>
                     </div>
                 </a>
             </li>
@@ -15,7 +15,7 @@
                 <a data-toggle="tab" href="#tab2">
                     <div class="tabIconContainer">
                         <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>
-                        <div class="tabText">My Team Profile</div>
+                        <div class="tabText">Team Profile</div>
                     </div>
                 </a>
             </li>
@@ -24,7 +24,7 @@
             <div class="tab-content">
                 <div id="tab1" class="tab-pane active">
                     <div class="tour-rank half">
-                        <p>This user hasn't attended any events yet.  Check back later for their rankings.</p>
+                        <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
                         <div class="tour-progress">
                             <p>5 events needed to qualify</p>
                             <%= image_tag 'icons/fish.png', alt: 'One Event' %>
@@ -36,15 +36,20 @@
                     </div>
                     <div class="half">
                         <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
-                        <div class="manFishTextRight"><p>Upload a Team Photo Here</p></div>
+                        <div class="manFishTextRight"><p>No Photo Available</p></div>
                         <div class="picBoxContainer">
                             <%= image_tag 'picBox.png', class: 'picBox', alt: 'Picture Box' %>
                         </div>
                         <div class="tourContRightBot">
                             <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
                             <div class="tourPersonText">
-                                <h3>My Teammate</h3>
-                                <p>Your team information will propagate here once your teammate completes registration.</p>
+                                <% if @teammate %>
+                                    <h3><%= @teammate.profile.first_name %> <%= @teammate.profile.last_name %></h3>
+                                    <p>Team information will propagate here once this angler's teammate completes registration. </p>
+                                <% else %>
+                                    <h3>Teammate</h3>
+                                    <p>Team information will propagate here once this angler's teammate completes registration.</p>
+                                <% end %>
                             </div>
                         </div>
                     </div>
@@ -53,14 +58,12 @@
                     <div class="myTourCont">
                         <div class="teamContRight">
                             <div class="myCont">
-                                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                                 <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
                                 <h3>Tournament Boat:</h3>
                                 <p>Tell us what boat your team will be using for the Bass Pro Fishing Tour here.</p>
                             </div>
                             <div class="divideLine"></div>
                             <div class="myCont no">
-                                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                                 <%= image_tag 'iconLure.png', class: 'tourLure', alt: 'Lure Icon' %>
                                 <h3>Favorite Gear:</h3>
                                 <div class="gearTextCont">
@@ -71,7 +74,6 @@
                             </div>
                             <div class="divideLine"></div>
                             <div class="myCont">
-                                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                                 <%= image_tag 'iconPersonSmall.png', class: 'tourPerson', alt: 'Person Icon' %>
                                 <h3>My Teammates</h3>
                                 <p>This information will propagate once your teammate has completed the registration process. </p>
@@ -90,12 +92,11 @@
                             </div>
      -->
                             <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
-                            <div class="manFishTextLeft"><p>Upload a Team Photo Here</p></div>
+                            <div class="manFishTextLeft"><p>No Photo Available</p></div>
                             <div class="picBoxContainerLeft">
                                 <%= image_tag 'picBoxLeft.png', class: 'picBoxLeft', alt: 'Picture Box' %>
                             </div>
                             <div class="teamContLeftBot">
-                                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                                 <%= image_tag 'iconPersonFull.png', class: 'teamPerson', alt: 'Person Icon' %>
                                 <div class="teamPersonText">
                                     <h3>Your Name</h3>

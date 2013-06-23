@@ -11,7 +11,9 @@ class ProfilesController < ApplicationController
     # GET /profiles/1.json
     def show
         @profile = Profile.find(params[:id])
-        @teammate = @profile.user.teammate
+        user = @profile.user
+        @teammate = user.teammate
+        @team = user.my_team
         redirect_to my_profile_path if user_signed_in? && @profile.id == current_user.profile.id
         @can_register = @profile.user.teams.size > 0
     end
