@@ -44,14 +44,16 @@ class EventsController < ApplicationController
 
   def register_event
     event = Event.find params[:id]
-    # if current_user.teams.first.events.where(id: event.id).empty?
-    current_user.teams.first.events << event
+    current_user.my_team.events << event
     flash[:register_event] = "Your team is now registered to participate in #{event.name}!"
     redirect_to :back
-    # else
-    #   flash[:alert] = "You are already registered for this event!"
-    #   redirect_to :back
-    # end
+  end
+
+  def unregister_event
+    event = Event.find params[:id]
+    current_user.my_team.events.delete(event)
+    flash[:unregister_event] = "Your team is now unregistered from #{event.name}!"
+    redirect_to :back
   end
 
   # PATCH/PUT /events/1

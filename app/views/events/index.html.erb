@@ -66,10 +66,14 @@
                           <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
                         </div>
                         <div class="yesNoContainer">
-                            <%= image_tag 'iconCheck.png', class: "ifYes", alt: 'Check Mark' %></li>
-                            <%= button_to "Yes", register_event_path(@event), class: 'enterEventButton', method: :post %>
-                            <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %></li>
-                            <%= button_to "No", '#', class: 'noEventButton', method: :post %>
+                            <% if current_user.my_team.events.include?(event) %>
+                                <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
+                            <% end %>
+                            <%= button_to "Yes", register_event_path(event), class: 'enterEventButton', method: :post %>
+                            <% if !current_user.my_team.events.include?(event) %>
+                                <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                            <% end %>
+                            <%= button_to "No", unregister_event_path(event), class: 'noEventButton', method: :post %>
                         </div>
                     </div>
                 </div>
