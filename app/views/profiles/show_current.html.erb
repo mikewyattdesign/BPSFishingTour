@@ -158,16 +158,16 @@
                 <div class="leaderboard">
                     <div class="topBlue">
                         <%= image_tag 'iconGlobe.png', class: 'iconSmallEvents', alt: 'Icon' %>
-                        <h2>Leaderboard</h2>
+                        <h2><%= link_to 'Leaderboard', leaderboard_path %></h2>
                     </div>
-                    <p>Check back soon to track results from the first events of the 2013 Bass Pro Shops Fishing Tour!</p>
+                    <p><%= link_to 'Check back soon to track results from the first events of the 2013 Bass Pro Shops Fishing Tour!', leaderboard_path %></p>
                 </div>
                 <div class="myRegion">
                     <div class="topGreen">
                         <%= image_tag 'iconMed.png', class: 'iconSmallEvents', alt: 'Icon' %>
-                        <h2>My Region</h2>
+                        <h2><%= link_to 'My Region', events_path %></h2>
                     </div>
-                    <div class="bottomGreyFlat"></div>
+                    <div class="bottomGreyFlat"><%= link_to 'Events in my region', events_path %></div>
                 </div>
             </div>
         </div>
