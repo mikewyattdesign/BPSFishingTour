@@ -7,7 +7,7 @@
 
                 <% if @team && @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                    <p><%= @team.boat_description || "Tell us what boat your team will be using for the Bass Pro Fishing Tour here." %></p>
+                    <p><%= best_in_place @team, :boat_description, nil: "Tell us what boat your team will be using for the Bass Pro Fishing Tour here." %></p>
                 <% else %>
                     <p>No boat info available.</p>
                 <% end %>
@@ -20,7 +20,7 @@
 
                 <% if @team && @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                    <p><%= @team.favorite_gear || "Share your favorite gear here or the equipment you have had the best luck with!" %></p>
+                    <p><%= best_in_place @team, :favorite_gear, nil: "Share your favorite gear here or the equipment you have had the best luck with!" %></p>
                 <% else %>
                     <p>No favorite gear available.</p>
                 <% end %>
@@ -36,12 +36,12 @@
                 <% end %>
 
                 <% if @teammate %>
-                    <h3><%= @teammate.full_name %></h3>
+                    <h3><%= @teammate.full_name || "Your Teammate" %></h3>
                 <% else %>
                     <h3>Angler Teammate</h3>
                     <p>This information will propagate once a teammate has completed the registration process. </p>
                 <% end %>
-                
+
             </div>
         </div>
 

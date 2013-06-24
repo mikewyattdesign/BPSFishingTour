@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap/js/bootstrap
 //= require pnotify/pnotify
+//= require best_in_place
 //= require_tree .

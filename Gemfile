@@ -30,7 +30,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'bourbon', '3.1.6'
 gem 'aws-sdk'
-
+gem 'best_in_place', github: 'bernat/best_in_place'
 group :production do
     gem 'pg', '0.15.1'
 end

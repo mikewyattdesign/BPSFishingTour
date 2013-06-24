@@ -1,6 +1,5 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:update, :destroy]
-
   # GET /profiles
   # GET /profiles.json
   def index

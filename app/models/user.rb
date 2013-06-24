@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     after_create :create_user_profile
 
     def full_name
-        if self.profile.nil?
+        if self.profile.first_name.nil? || self.profile.last_name.nil?
             return nil
         end
         "#{self.profile.first_name} #{self.profile.last_name}"
