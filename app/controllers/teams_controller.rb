@@ -18,6 +18,15 @@ class TeamsController < ApplicationController
         end
     end
 
+    def update
+        @team = Team.find(params[:id])
+        @team.update_attributes(team_params)
+        respond_to do |format|
+            format.html
+            format.json { render json: @team }
+        end
+    end
+
     def select_profile_pic
         @team = current_user.teams.first
 
@@ -36,6 +45,6 @@ class TeamsController < ApplicationController
     end
 
     def team_params
-      params.require(:team).permit(:team_picture)
+      params.require(:team).permit(:team_picture, :favorite_gear, :boat_description)
     end
 end
