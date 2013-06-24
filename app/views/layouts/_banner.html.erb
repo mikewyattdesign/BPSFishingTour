@@ -25,7 +25,13 @@
             <%= link_to 'Leaderboard', '/leaderboard' %>
             <%= link_to 'News', '/news' %>
             <%= link_to 'Anglers', anglers_path %>
-            <%= link_to 'Register', edit_profile_path(current_user) if user_signed_in? && !is_registered? %>
+            <% if user_signed_in? %>
+                <% if is_registered? %>
+                    <%= link_to 'Profile', my_profile_path %>
+                <% else %>
+                    <%= link_to 'Register', edit_profile_path(current_user) %>
+                <% end %>
+            <% end %>
         </div>
     </div>
 </div>
