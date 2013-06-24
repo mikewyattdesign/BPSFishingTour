@@ -1,6 +1,6 @@
 <div id="tab1" class="tab-pane active">
     <div class="tour-rank half">
-        
+
         <% if @is_current_user %>
             <!-- THIS NEEDS HELP -->
             <p>Sign up to fish in Tour Events, then check back to track your performance.</p>
@@ -24,14 +24,14 @@
 
             <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
             <% end %>
-        <% end %> 
+        <% end %>
 
          <div class="cutOutContainer">
             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
                 <h2><%= @profile.user.full_name  || "My Profile" %></h2>
-                <p><!-- At some point we should have a status here --></p>
+                <p><%= best_in_place @profile, :status, nil: "Tell us a little about your self and why your are here!" %></p>
             </div>
         </div>
 

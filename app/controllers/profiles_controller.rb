@@ -77,7 +77,7 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
-        format.json { head :no_content }
+        format.json { render json: @profile }
       else
         if(current_user.teams.size > 0)
           @can_register = true
@@ -117,6 +117,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :first_name, :last_name, :street_address, :suite, :city, :state, :zip, :phone, :ext, :shirt, :picture, :outdoor_rewards_number)
+      params.require(:profile).permit(:user_id, :first_name, :last_name, :street_address, :suite, :city, :state, :zip, :phone, :ext, :shirt, :picture, :outdoor_rewards_number, :status)
     end
 end
