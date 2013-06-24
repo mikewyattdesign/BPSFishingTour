@@ -36,7 +36,7 @@
                 <% end %>
 
                 <% if @teammate %>
-                    <h3><%= @teammate.full_name || "Your Teammate" %></h3>
+                    <h3>Teammate: <%= @teammate.full_name ? link_to(@teammate.full_name.titleize, profile_path(@teammate.profile))  : "Your Teammate" %></h3>
                     <p><%= @teammate.profile.status || " " %></p>
                 <% else %>
                     <h3>Angler Teammate</h3>
