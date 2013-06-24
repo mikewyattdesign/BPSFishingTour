@@ -29,3 +29,14 @@
     clear: both; // prevent issues in top banner from messing with the
                  // rest of the site's layout.
 }
+
+.actions-container {
+    float: right;
+    clear: left;
+    margin-top: 16px;
+}
+
+.is-fishing {
+    float: left;
+    line-height: 30px;
+}
