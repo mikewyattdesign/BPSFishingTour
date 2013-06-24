@@ -59,7 +59,8 @@
                     icon: true,
                     history: false,
                     width: "300px",
-                    insert_brs: false
+                    insert_brs: false,
+                    text_escape: false
                 };
 
                 <% unless flash.empty? %>
@@ -78,7 +79,7 @@
                             settings.type = 'error'
                         <% end %>
                         settings.title =  "<%= name.to_s.humanize.titleize %>" ;
-                        settings.text = "<%= msg %>";
+                        settings.text = "<%= msg.html_safe %>";
                         $.pnotify(settings);
                         console.log('its running!');
                     <% end %>
