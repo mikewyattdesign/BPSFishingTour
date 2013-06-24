@@ -1,6 +1,6 @@
   namespace :load_data do
     desc "loads all of the event data into the database"
-    task :events => :environment do
+    task :events => [:environment, :divisions] do
       # BM Great Lakes Tour = 1
       # BM SouthWestern Tour = 2
       # BM Wildcards = 3
@@ -81,5 +81,28 @@
           puts new_event.divisions.size
         end
       end
+      puts Event.count
+
+    end
+
+    desc "Creates all the Divisions"
+
+    task :divisions => :environment do
+
+      Division.destroy_all
+
+      division1 = Division.create({name: "BM Great Lakes Tour"})
+
+      division2 = Division.create({name: "BM SouthWestern Tour"})
+
+      division3 = Division.create({name: "BM Wildcards"})
+
+      division4 = Division.create({name: "BM 100 Tour"})
+
+      division5 = Division.create({name: "BM Central Tour"})
+
+      division6 = Division.create({name: "BM Eastern Tour"})
+
+      division7 = Division.create({name: "BM Northwestern Tour"})
     end
   end
