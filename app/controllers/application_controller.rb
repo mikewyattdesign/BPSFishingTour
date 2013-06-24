@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
     before_filter :please_register
-    # before_filter :get_teammember
+    before_filter :get_teammember
   # after_filter :any_invites?
 
     def after_sign_in_path_for(resource)
@@ -18,10 +18,10 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    # def get_teammember
-    #     if current_user && current_user.teammate
-    #         flash[:find_a_teammate] = %Q[So, whats next? Find a teammate so you can register for tournament events! <a href=\\"/teams/requests/new\\">Grab A Teammate</a>]
-    #     end
-    # end
+    def get_teammember
+        if current_user && !current_user.teammate
+            flash[:find_a_teammate] = %Q[So, whats next? Find a teammate so you can register for tournament events! <a href=\\"/teams/requests/new\\">Grab A Teammate</a>]
+        end
+    end
 end
 
