@@ -18,14 +18,6 @@
         </div>
     </div>
     <div class="half">
-        <% if @is_current_user %>
-            <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
-            <% end %>
-
-            <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
-            <% end %>
-        <% end %>
-
          <div class="cutOutContainer">
             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>

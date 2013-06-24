@@ -47,8 +47,14 @@
         </div>
 
         <div class="teamContLeft">
+            <% if @is_current_user %>
+            <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
+            <% end %>
 
-             <div class="cutOutContainerLeft">
+            <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
+            <% end %>
+        <% end %>
+            <div class="cutOutContainerLeft">
                 <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
                 <%= team_picture(@user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                 <div class="cutOutTextTeam">
