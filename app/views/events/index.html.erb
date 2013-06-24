@@ -66,7 +66,7 @@
                           <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
                         </div>
                         <div class="yesNoContainer">
-                            <% if current_user.my_team %>
+                            <% if user_signed_in? &&  current_user.my_team %>
                                 <% if current_user.my_team.events.include?(event) %>
                                     <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
                                 <% end %>
