@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bass Pro Shops Fishing Tour</title>
+    </head>
+    <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="font-size: 16px; color: #ffffff;">
+        <table width="100%" bgcolor="#383838" style="color:#ffffff" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" width="600">
+                    <table id="Header" width="600" height="" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td bgcolor="#F9F2DE">
+                                <a href="http://bassprofishingtour.com" style="font-size: 30px;color:#ed1c24;">
+                                    <%= image_tag 'email/bass-pro-fishing-tour.png', style: 'display: block;', width: '600', height: '202', border: '0', alt: 'Bass Pro Shops Fishing Tour' %>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#F9F2DE"><%= yield :mail_heading_image %></td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:#F9F2DE;font-family: arial;font-size:22px;color:#754c29;font-weight: bold;padding:20px;">
+                                <%= yield :mail_heading %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:#F9F2DE;font-family: arial;font-size:14px;color:#754c29;padding: 0 20px;">
+                                <%= yield %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:#F9F2DE;font-family: arial;font-size:14px;color:#754c29;padding: 0 20px;">
+                                <p style="font-size:11px;margin-bottom: 40px;">
+                                    * For full rules and eligibility visit <a href="http://bassprofishingtour.com">BassProFishingTour.com</a><br><br>
+                                    The Ontario region of the Bass Pro Shops Fishing Tour is sponsored by:<br>
+                                    <strong>Bass Pro Shops and Tracker Marine Group</strong><br>
+                                    One Bass Pro Mills Drive<br>
+                                    Vaughn, Ontario, Canada L4K 5W4
+                                </p>
+                                <p>
+                                    CONFIDENTIALITY NOTICE: The information contained in this e-mail message is intended only for the personal and confidential use of the recipient(s) named above.  If the reader of this message is not the intended recipient or an agent responsible for delivering it to the intended recipient, you are hereby notified that you have received this document in error and that any review, dissemination, distribution, or copying of this message is strictly prohibited. If you have received this communication in error, please notify us immediately by e-mail, and delete the original message.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

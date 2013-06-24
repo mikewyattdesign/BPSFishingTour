@@ -6,18 +6,6 @@ class TeamsController < ApplicationController
         render :text => params
     end
 
-    def invite_teammate
-        if @user
-            TeammateInviteMailer.sign_up_and_team_up(@user, params[:first_name], params[:last_name], current_user).deliver
-            flash[:notice] = "Your request has been sent to your teammate. If #{params[:first_name]} #{params[:last_name]} accepts, you may eneter a tournament."
-            redirect_to '/'
-        else
-            TeammateInviteMailer.sign_up_and_team_up(params[:first_name], params[:last_name], params[:email], current_user).deliver
-                flash[:notice] = "Your request has been sent to your teammate. If #{params[:first_name]} #{params[:last_name]} accepts, you may eneter a tournament."
-                redirect_to '/'
-        end
-    end
-
     def update
         @team = Team.find(params[:id])
         @team.update_attributes(team_params)
