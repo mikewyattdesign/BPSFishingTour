@@ -53,7 +53,7 @@
                 <%= team_picture(@user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                 <div class="cutOutTextTeam">
                     <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
-                    <p><!-- At some point we should have a status here --></p>
+                    <p><%= @profile.status || " " %></p>
                 </div>
             </div>
 
