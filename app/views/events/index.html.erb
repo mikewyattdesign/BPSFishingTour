@@ -26,6 +26,7 @@
         <div class="bassEventAttendText">
             <h2><%= event.name %></h2>
             <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+            <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
         </div>
         <div class="actions-container">
             <p class="is-fishing">Is your team fishing in this event?</p>
