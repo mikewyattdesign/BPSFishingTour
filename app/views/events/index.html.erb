@@ -1,87 +1,46 @@
-<div class="tourContrainer">
-
-    <div class="bannerMiddleBackground">
-        <div class="bannerMiddleEvent">
-            <div class="findAnEvent">
-                <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
-                <div class="findAnEventSmall"><h2>Ontario, Canada Region</h2></div>
-            </div>
-            <div class="bassEventMap">
-                <div id="mapContainer">
-                    <div id="slideshowMap">
-                        <div id="slidesContainer">
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2>CSFL BassMania (BM) </br>Central Tour</h2>
-                                </div>
-                                <%= image_tag 'mapOntario.png', alt: 'Ontario', class: 'mapOntario' %>
-                                <div class="mapLine"></div>
-                            </div>
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2> CSFL BassMania (BM) </br>100 Tour</h2>
-                                </div>
-                                <img class="mapOntario" src="/assets/mapOntario.png">
-                                <div class="mapLine"></div>
-                            <p>
-                            </div>
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2>CSFL BassMania (BM) </br> Eastern Tour</h2>
-                                </div>
-                                <img class="mapOntario" src="/assets/mapOntario.png">
-                                <div class="mapLine"></div>
-                            </div>
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2>CSFL BassMania (BM) </br> Great Lakes Tour</h2>
-                                </div>
-                                <img class="mapOntario" src="/assets/mapOntario.png">
-                                <div class="mapLine"></div>
-                            </div>
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2>CSFL BassMania (BM) </br> NorthWestern Tour</h2>
-                                </div>
-                                <img class="mapOntario" src="/assets/mapOntario.png">
-                                <div class="mapLine"></div>
-                            </div>
-                            <div class="slide">
-                                <div class="mapTextContainer">
-                                    <h2>CSFL BassMania (BM) </br> Wildcards</h2>
-                                </div>
-                                <img class="mapOntario" src="/assets/mapOntario.png">
-                                <div class="mapLine"></div>
-                            </div>
-                        </div>
-                    </div>
+<div class="findAnEvent">
+    <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
+    <div class="findAnEventSmall"><h2>Ontario, Canada Region</h2></div>
+</div>
+<div class="bassEventMap">
+    <div id="slideshowMap" class="carousel slide">
+        <div id="slidesContainer" class="carousel-inner">
+            <% @divisions.each_with_index do |division, index| %>
+                <% next if division.events.empty? %>
+                <div class="item <%= 'active' if index == 0 %>" data-division="<%= division.id %>">
+                    <%= image_tag 'mapOntario.png', alt: 'Ontario', class: 'mapOntario' %>
+                    <h2 class="mapTextContainer">
+                        CSFL BassMania (BM)
+                        <hr>
+                        <%= division.name %>
+                    </h2>
                 </div>
-            </div>
-            <div class="bassEventAttend">
-              <% @events.each do |event| %>
-                <div class="bassEventAttendBackbround">
-                  <div class="bassEventAttendContainer">
-                        <div class="bassEventAttendText">
-                          <h2><%= event.name %></h2>
-                          <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-                        </div>
-                        <div class="yesNoContainer">
-                            <% if user_signed_in? &&  current_user.my_team %>
-                                <% if current_user.my_team.events.include?(event) %>
-                                    <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
-                                <% end %>
-                                <%= button_to "Yes", register_event_path(event), class: 'enterEventButton', method: :post %>
-                                <% if !current_user.my_team.events.include?(event) %>
-                                    <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
-                                <% end %>
-                                <%= button_to "No", unregister_event_path(event), class: 'noEventButton', method: :post %>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
-              <% end %>
-            </div>
+            <% end %>
         </div>
+        <a class="control left" href='#slideshowMap' data-slide="prev"><%= image_tag 'icons/previous.png', alt: 'Previous Division' %></a>
+        <a class="control right" href='#slideshowMap' data-slide="next"><%= image_tag 'icons/next.png', alt: 'Next Division' %></a>
     </div>
 </div>
+<% @events.each do |event| %>
+    <div class="bassEventAttendBackground" data-division="<%= event.divisions.map { |division| division.id }.join(' ') %>">
+        <div class="bassEventAttendText">
+            <h2><%= event.name %></h2>
+            <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+        </div>
+        <div class="yesNoContainer">
+            <% if user_signed_in? && current_user.my_team %>
+                <% if current_user.my_team.events.include?(event) %>
+                    <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
+                <% end %>
 
+                <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
+
+                <% if !current_user.my_team.events.include?(event) %>
+                    <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                <% end %>
+
+                <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
+            <% end %>
+        </div>
+    </div>
+<% end %>

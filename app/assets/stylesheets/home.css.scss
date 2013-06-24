@@ -222,11 +222,6 @@ p {
 
 /*Event Page*/
 
-.bannerMiddleEvent {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .findAnEvent {
     text-align: center;
 }
@@ -272,12 +267,12 @@ p {
 }
 
 .bassEventMap {
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: 70%;
-    height: 200px;
     width: 100%;
-    opacity: .8;
+    height: 200px;
+    margin: 0 0 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
 }
 
 .bannerSmallTopBackground {
@@ -291,27 +286,28 @@ p {
     margin-right: auto;
 }
 
-.bassEventAttend {
-    margin-top: 50px;
-    margin-bottom: 125px;
-}
-
 .bassEventEnter {
     margin-top: 75px;
     margin-bottom: 100px;
 }
 
-.bassEventAttendBackbround {
-    height: 70px;
+.bassEventAttendBackground {
+    display: none;
+    overflow: hidden;
     width: 600px;
+    padding: 15px 0 15px 25px;
+
+    &.active-event {
+        display: block;
+    }
 }
 
-.bassEventEnterBackbround {
+.bassEventEnterBackground {
     height: 530px;
     width: 1400px;
 }
 
-.bassEventEnterBackbround, .bassEventAttendBackbround {
+.bassEventEnterBackground, .bassEventAttendBackground {
     /* Safari 4-5, Chrome 1-9 */
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255, 0.1)), to(rgba(8,8,8,0.4)));
     /* Safari 5.1, Chrome 10+ */
@@ -446,7 +442,14 @@ p {
 }
 
 #slideshowMap {
-    background:transparent url(/assets/eventMap.jpg) no-repeat 0 0;
+    background: transparent image-url('event-map.png') no-repeat 0 0;
+
+    hr {
+        margin: 0;
+        width: 425px;
+        border: none;
+        border-top: 1px solid white;
+    }
 }
 
 #slideshowMap #slidesContainer {
@@ -460,10 +463,19 @@ p {
 }
 
 .control {
+    position:absolute;
+    top: 55px;
     width:39px;
     height:100%;
-    position:absolute;
     cursor: pointer;
+
+    &.left {
+        left: 55px;
+    }
+
+    &.right {
+        right: 55px;
+    }
 }
 
 #leftControl, #rightControl {
@@ -481,27 +493,12 @@ p {
     background:transparent url(/assets/control_right.png) no-repeat 0 0;
 }
 
-#mapContainer {
-    margin:0 auto;
-    width:1400px;
-}
-
 .slide h2, .slide p {
     margin:5px;
     height: 50px;
-    width: 1100px;
 }
 .slide h2 {
     letter-spacing:-1px;
-}
-
-.mapLine {
-    float: right;
-    margin-top: 120px;
-    margin-right: 470px;
-    width: 425px;
-    height: 3px;
-    background:transparent url(/assets/mapLine.png)
 }
 
 .mapOntario {
