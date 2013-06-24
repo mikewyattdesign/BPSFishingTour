@@ -182,14 +182,14 @@
 
         [{
             name: "Coboconk, Balsam Lake",
-            city: "Government Docks, Cococonk",
+            city: "Government Docks, Coboconk",
             province: "ON",
             country: "Canada",
             date: DateTime.new(2013, 8, 17)}, {division: [3]}],
 
         [{
             name: "Coboconk, Balsam Lake",
-            city: "Government Docks, Cococonk",
+            city: "Government Docks, Coboconk",
             province: "ON",
             country: "Canada",
             date: DateTime.new(2013, 8, 18)}, {division: [3]}]
