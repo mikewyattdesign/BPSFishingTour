@@ -23,15 +23,21 @@ class User < ActiveRecord::Base
             true
         end
     end
-
+    # At the moment each user only has one team
+    # later on users may have multiple teams.. this
+    # method will change to access specific teams  and will likely
+    # take parameters.
     def my_team
       self.teams.first
     end
+
 
     def create_user_profile
       self.create_profile
     end
 
+    # Currently each user only has one teammate. This method will change
+    # see above `my_team` method.
     def teammate
       my_team = self.teams.first
       if my_team
