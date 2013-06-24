@@ -4,7 +4,7 @@ jQuery.fn.fadeSlideShow = function(options) {
      		width: 1920, // default width of the slideshow
      		height: 515, // default height of the slideshow
 			speed: 'slow', // default animation transition speed
-			interval: 10000, // default interval between image change
+			interval: 15000, // default interval between image change
 			PlayPauseElement: 'dotPlayPause', // default css id for the play / pause element
 			PlayText: 'Play', // default play text
 			PauseText: 'Pause', // default pause text
