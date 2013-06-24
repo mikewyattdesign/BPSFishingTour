@@ -37,6 +37,7 @@
 
                 <% if @teammate %>
                     <h3><%= @teammate.full_name || "Your Teammate" %></h3>
+                    <p><%= @teammate.profile.status || " " %></p>
                 <% else %>
                     <h3>Angler Teammate</h3>
                     <p>This information will propagate once a teammate has completed the registration process. </p>
