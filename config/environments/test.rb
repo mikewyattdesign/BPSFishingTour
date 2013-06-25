@@ -33,5 +33,7 @@ BpsFishingTour::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  config.action_mailer.default_url_options = { :host => 'localhost' }
+
   Paperclip::Attachment.default_options[:url] = "/tmp/test/uploads/:style/:filename"
 end
