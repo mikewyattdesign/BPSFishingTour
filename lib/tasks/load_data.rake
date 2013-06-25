@@ -214,18 +214,18 @@
 
       Division.destroy_all
 
-      division1 = Division.create({id: 1, name: "BM Great Lakes Tour"})
+      division1 = Division.create({id: 1, name: "Great Lakes Tour"})
 
-      division2 = Division.create({id: 2, name: "BM SouthWestern Tour"})
+      division2 = Division.create({id: 2, name: "SouthWestern Tour"})
 
-      division3 = Division.create({id: 3, name: "BM Wildcards"})
+      division3 = Division.create({id: 3, name: "Wildcards"})
 
-      division4 = Division.create({id: 4, name: "BM 100 Tour"})
+      division4 = Division.create({id: 4, name: "100 Tour"})
 
-      division5 = Division.create({id: 5, name: "BM Central Tour"})
+      division5 = Division.create({id: 5, name: "Central Tour"})
 
-      division6 = Division.create({id: 6, name: "BM Eastern Tour"})
+      division6 = Division.create({id: 6, name: "Eastern Tour"})
 
-      division7 = Division.create({id: 7, name: "BM Northwestern Tour"})
+      division7 = Division.create({id: 7, name: "Northwestern Tour"})
     end
   end
