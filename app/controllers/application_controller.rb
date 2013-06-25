@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
     end
 
     def please_register
+        return unless current_user.profile
+
         unless !user_signed_in? || view_context.is_registered?
             flash[:please_register] = %Q[You have not completed your registration, please navigate to  <a href=\\"/profiles/#{current_user.profile.id}/edit\\">the registration page</a> to do so!]
         end
