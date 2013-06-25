@@ -24,7 +24,7 @@ feature "Add Images" do
             page.should_not have_content "To register for an event, first you need to find a teammate!"
             page.body.should_not have_link "find a teammate!"
             url = bob.profile.picture.url(:tour)
-            page.body.should find("img[src='#{url}']")
+            expect(page.body).to have_css("img[src='#{url}']")
         end
 
 
