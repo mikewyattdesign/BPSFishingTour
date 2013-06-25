@@ -22,6 +22,7 @@ class ProfilesController < ApplicationController
         @user = current_user
         @teammate = @user.teammate
         @can_register = current_user.teams.size > 0
+        current_user.create_profile unless current_user.profile
         @profile = current_user.profile
         @team = current_user.teams.first
         @is_current_user = true
