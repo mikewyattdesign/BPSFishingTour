@@ -150,7 +150,7 @@
                         </div>
                     </div>
                 <% end %>
-                <% if @team.events.count < 1 %>
+                <% if @team && @team.events.count < 1 %>
                     <div class="teamEvents">
                         <div class="topDarkBrown">
                             <%= image_tag 'iconCal.png', class: 'iconSmallEvents', alt: 'Calendar icon' %>
