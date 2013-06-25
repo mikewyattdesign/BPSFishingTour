@@ -2,19 +2,19 @@
 
 input {
     display: block;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
+    border: 1px solid #adadad;
+    padding: 3px 25px 3px 25px;
+    height: 28px;
     @include box-sizing(border-box);
+    outline: none;
 
-    &[type=text], &[type=email], &[type=password] {
-        box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
-        border: 1px solid #adadad;
-        padding: 3px 25px 3px 25px;
-        height: 28px;
-        outline: none;
+    &[type=text] {
         width: 100%;
+    }
 
-        &:focus {
-            box-shadow: 0 0 5px green;
-        }
+    &:focus {
+        box-shadow: 0 0 5px green;
     }
 }
 
