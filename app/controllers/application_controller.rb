@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
     def get_teammember
         if current_user && !current_user.teammate
-            flash[:find_a_teammate] = %Q[So, whats next? Find a teammate so you can register for tournament events! <a href=\\"/teams/requests/new\\">Grab A Teammate</a>]
+            flash[:find_a_teammate] = %Q[So, what's next? Find a teammate so you can register for tournament events! <a href=\\"/teams/requests/new\\">Grab A Teammate</a>]
         end
     end
 end

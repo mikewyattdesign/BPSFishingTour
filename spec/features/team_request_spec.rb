@@ -1,21 +1,20 @@
 require 'spec_helper'
 # in need of major refactor
 feature "Teammate Request" do
-    let(:bob) { FactoryGirl.create(:profile).user }
+    let!(:bob) { FactoryGirl.create(:profile).user }
     let(:tom) { OpenStruct.new FactoryGirl.attributes_for(:user) }
 
     scenario "User sends team request" do
         sign_in_with(bob.email, bob.password)
         page.current_path.should eq "/myprofile"
-        page.should have_content('What\'s next? Find a teammate so you two
-            can join some tournaments!')
+        page.should have_content('Find a teammate')
         visit '/teams/requests/new'
         expect {send_teammate_request tom.email }.to change{Request.count}.from(0).to(1)
-        last_email.to.should include tom.email
-        last_email.subject.should have_content("#{bob.full_name} wants to go fishing!")
-        last_email.body.should have_content('http')
+        expect(emails.first.to).to include tom.email
+        expect(emails.last.to).to include bob.email
+        emails.first.body.should have_link('Click here to sign yourself up')
         page.current_path.should eq '/'
-        last_email.body.should have_content("#{bob.profile.first_name} #{bob.profile.last_name} wants you on their team")
+        emails.first.body.should have_content("#{bob.full_name} invited you to become")
     end
 
     context "Receiving teammate request" do
@@ -43,7 +42,6 @@ feature "Teammate Request" do
                 sign_up_with(tom.email, tom.password)
                 click_link :Logout
                 visit request.invitation_url
-                puts request.invitation_url
                 expect(current_path).to eq '/users/sign_in'
 
                 sign_in_with tom.email, tom.password
