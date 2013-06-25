@@ -29,7 +29,9 @@
             <div class="divideLine"></div>
             <div class="myCont">
 
-                <%= drop_profile_teammate_pic(@user.teammate, "tourPerson", :tour, "Person Icon") %>
+                <% if @user.teammate %>
+                    <%= drop_profile_teammate_pic(@user.teammate, "tourPerson", :tour, "Person Icon") %>
+                <% end %>
 
                 <% if @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
