@@ -4,6 +4,8 @@ module ApplicationHelper
     end
 
     def is_registered?
+        return false unless current_user && current_user.profile
+
         if current_user.profile.valid?
             return true
         else
