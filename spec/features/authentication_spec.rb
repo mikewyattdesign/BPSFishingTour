@@ -7,7 +7,7 @@ feature "authentication" do
         sign_up_with user.email, user.password
         click_link :Logout
         sign_in_with user.email, user.password
-        expect(current_path).to eq '/thanks'
+        expect(current_path).to eq '/myprofile'
     end
 
     scenario "user can register and confirm account" do
