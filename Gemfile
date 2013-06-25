@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0.rc1'
-gem 'rails_12factor'
 
 gem 'devise', '3.0.0.rc'
 gem 'bootstrap-sass', '2.3.2.0'
@@ -35,4 +34,5 @@ gem 'aws-sdk'
 gem 'best_in_place', github: 'bernat/best_in_place'
 group :production do
     gem 'pg', '0.15.1'
+    gem 'rails_12factor'
 end
