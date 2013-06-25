@@ -42,7 +42,7 @@
                     <%= link_to 'Leaderboard', '/leaderboard' %>
                     <%= link_to 'News', '/news' %>
                     <%= link_to 'Anglers', '/anglers' %>
-                    <%= link_to 'My Profile', '/myprofile' %>
+                    <%= user_signed_in? ? link_to( 'My Profile', '/myprofile') : link_to('Sign Up', '/join') %>
                     <%= link_to 'Contact Us', '/about#contact-us' %>
                 </nav>
 
