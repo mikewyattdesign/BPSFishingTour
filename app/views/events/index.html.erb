@@ -28,23 +28,23 @@
             <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
             <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
         </div>
-        <div class="actions-container">
-            <p class="is-fishing">Is your team fishing in this event?</p>
-            <div class="yesNoContainer">
-                <% if user_signed_in? && current_user.my_team %>
-                    <% if current_user.my_team.events.include?(event) %>
-                        <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
-                    <% end %>
+        <% if user_signed_in? && current_user.my_team %>
+            <div class="actions-container">
+                <p class="is-fishing">Is your team fishing in this event?</p>
+                <div class="yesNoContainer">
+                        <% if current_user.my_team.events.include?(event) %>
+                            <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
+                        <% end %>
 
-                    <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
+                        <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
 
-                    <% if !current_user.my_team.events.include?(event) %>
-                        <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
-                    <% end %>
+                        <% if !current_user.my_team.events.include?(event) %>
+                            <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                        <% end %>
 
-                    <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
-                <% end %>
+                        <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
+                </div>
             </div>
-        </div>
+        <% end %>
     </div>
 <% end %>
