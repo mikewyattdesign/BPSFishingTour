@@ -22,7 +22,11 @@
             <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
-                <h2><%= @profile.user.full_name  || "My Profile" %></h2>
+                <% if @profile && @profile.user.full_name %>
+                    <h2><%= @profile.user.full_name %></h2>
+                <% else %>
+                    <h2>My Profile</h2>
+                <% end %>
                 <p><%= best_in_place @profile, :status, nil: "Tell us a little about your self and why your are here!" %></p>
             </div>
         </div>
