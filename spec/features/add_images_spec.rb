@@ -15,6 +15,9 @@ feature "Add Images" do
             # puts bob.profile.picture?
         }
 
+        after(:each) do
+            bob.profile.picture.destroy
+        end
 
         scenario "try to upload a team photo" do
             sign_in_with(bob.email, bob.password)
