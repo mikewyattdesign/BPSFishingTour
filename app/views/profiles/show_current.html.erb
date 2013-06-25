@@ -133,7 +133,7 @@
         <div class="tabMiddleContainer">
             <div class="tabMidLeftCont">
    <!-- add render of partial with locals -->
-                <% unless @can_register %>
+                <% if !@can_register %>
                     <div class="teamEvents">
                         <div class="topDarkBrown">
                             <%= image_tag 'iconCal.png', class: 'iconSmallEvents', alt: 'Calendar icon' %>
@@ -149,8 +149,7 @@
 
                         </div>
                     </div>
-                <% end %>
-                <% if @team && @team.events.count < 1 %>
+                <% elsif @team && @team.events.count < 1 %>
                     <div class="teamEvents">
                         <div class="topDarkBrown">
                             <%= image_tag 'iconCal.png', class: 'iconSmallEvents', alt: 'Calendar icon' %>
@@ -166,6 +165,9 @@
 
                         </div>
                     </div>
+
+                <% else %>
+                    <%= render 'my_events', :locals => { :profile => @profile } %>
                 <% end %>
             </div>
 
