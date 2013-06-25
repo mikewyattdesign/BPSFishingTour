@@ -11,10 +11,10 @@ feature "Add Images" do
             bob.teams.create.users<<jane
             # jane adds a profile picture
             bob.profile.picture = File.open(Rails.root.join('spec', 'features', 'files', 'images.jpeg'))
-            bob.save(validate: false).should be_true
-            puts bob.vaild?
+            bob.profile.save(validate: false).should be_true
             # puts bob.profile.picture?
         }
+
 
         scenario "try to upload a team photo" do
             sign_in_with(bob.email, bob.password)
@@ -24,10 +24,9 @@ feature "Add Images" do
             page.should_not have_content "To register for an event, first you need to find a teammate!"
             page.body.should_not have_link "find a teammate!"
             url = bob.profile.picture.url(:tour)
-            # puts page.body
-            page.body.should have_xpath("//img[@src=\"#{url}\"]")
-
+            page.body.should find("img[src='#{url}']")
         end
+
 
 
     end
