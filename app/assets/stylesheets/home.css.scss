@@ -295,7 +295,7 @@ p {
     display: none;
     overflow: hidden;
     width: 600px;
-    padding: 15px 0 15px 25px;
+    padding: 15px 25px;
 
     &.active-event {
         display: block;
@@ -382,7 +382,7 @@ p {
 
 .yesNoContainer {
     float: right;
-    width: 180px;
+    width: 160px;
     margin-left: 25px;
 }
 
