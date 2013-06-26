@@ -51,14 +51,14 @@ class EventsController < ApplicationController
     else
       flash[:alreay_registered_event] = "Your team is already registered to attend this event!"
     end
-    redirect_to :back
+    redirect_to my_profile_path
   end
 
   def unregister_event
     event = Event.find params[:id]
     current_user.my_team.events.delete(event)
     flash[:unregister_event] = "Your team is now unregistered from #{event.name}!"
-    redirect_to :back
+    redirect_to my_profile_path
   end
 
   # PATCH/PUT /events/1

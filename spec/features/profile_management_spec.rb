@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "profile_managment" do
-    given(:user) {FactoryGirl.create(:user) }
+    given (:user) { FactoryGirl.create(:user) }
 
     context "A newly created user" do
         scenario "should have one profile" do
@@ -17,11 +17,10 @@ feature "profile_managment" do
 
         scenario "should not update without valid information" do
             sign_in_with(user.email, user.password)
-            puts user.id
-            click_link "Register"
-            fill_in "First name", with: "Edu"
+            click_link 'Register Team'
+            fill_in 'First name', with: 'Edu'
             click_button :Continue
-            expect(page).to have_content("We could not update your profile!")
+            expect(page).to have_content('We could not update your profile!')
             expect(current_path).to eq "/profiles/#{user.profile.id}"
         end
 
