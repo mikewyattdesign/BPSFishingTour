@@ -40,9 +40,11 @@
 
                         <% if !current_user.my_team.events.include?(event) %>
                             <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                            <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
+                        <% else %>
+                            <%= button_to "No", unregister_event_path(event), class: 'noEventButton deemphasized' %>
                         <% end %>
 
-                        <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
                 </div>
             </div>
         <% else %>
