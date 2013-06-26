@@ -427,7 +427,7 @@ p {
 
 .upcomingTeamEvents, .leaderboard, .myRegion {
     width: 97%;
-    height: 265px;
+    min-height: 265px;
     margin: 25px 25px 25px 10px;
     background: #cccece;
     box-shadow: 0px 0px 35px black;
@@ -567,8 +567,7 @@ table {
 }
 
 .bottomGrey {
-    height: 220px;
-    overflow: scroll;
+    min-height: 220px;
 }
 
 .bottomGreyFlat {
@@ -748,8 +747,7 @@ tbody .odd, tbody .even {
 }
 
 .table-container {
-    overflow: scroll;
-    height: 460px;
+    min-height: 460px;
     background-color: #d6c7b8;
     padding: 0 20px;
     font-size: 14px;
