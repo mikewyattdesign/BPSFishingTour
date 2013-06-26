@@ -71,7 +71,6 @@
                 <%= image_tag 'picBoxLeft.png', class: 'picBoxLeft', alt: 'Picture Box' %>
             </div>
             <div class="teamContLeftBot">
-                <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
                 <% if @profile.picture.exists? %>
                    <%= image_tag @profile.picture.url(:teamP), class: 'teamPerson', alt: 'Person Icon' %>
                 <% else %>
