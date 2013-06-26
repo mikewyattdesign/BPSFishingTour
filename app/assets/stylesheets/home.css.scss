@@ -282,30 +282,13 @@ p {
         margin: 30px 0;
     }
 
-.bassEventAttendButton {
-    float:right;
-    background-position: center;
-    background-size: 100% 105%;
-    margin: 5px 30px;
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    border: none;
-    background-image: image-url('registerButtonGreen.png');
-}
-
-.bassEventAttendButton h2 {
-    padding-top: 10px;
-    font-size: 10px;
-}
-
 .yesNoContainer {
     float: right;
     width: 160px;
     margin-left: 25px;
 }
 
-.enterEventButton, .noEventButton, .bassEventAttendButton {
+.enterEventButton, .noEventButton {
     color: white;
     cursor: pointer;
     text-align: center;
@@ -316,7 +299,6 @@ p {
     width: 70px;
     height: 30px;
     line-height: 20px;
-    background-size: 288px;
     border-radius: 10px;
     font-size: 12px;
     border: none;
@@ -325,14 +307,13 @@ p {
 .enterEventButton {
     float: left;
     margin-right: 20px;
-    background-position: center;
-    background-image: image-url('registerButtonGreen.png');
+    @extend %green-button;
 }
 
 .noEventButton {
     float: left;
-    background-position: center;
-    background-image: image-url('registerButtonRed.png');
+    @extend %red-button;
+    cursor: pointer;
 }
 
 .ifYes, .ifNo {
