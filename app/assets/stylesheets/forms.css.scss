@@ -20,6 +20,10 @@ input {
         background-color: transparent;
     }
 
+    &[type=password] {
+        font-family: sans-serif; // Fix IE8 invisibility issues
+    }
+
     &:focus {
         box-shadow: 0 0 5px green;
     }
