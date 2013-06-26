@@ -15,6 +15,11 @@ input {
         width: 100%;
     }
 
+    &[type=checkbox] {
+        border: none;
+        background-color: transparent;
+    }
+
     &:focus {
         box-shadow: 0 0 5px green;
     }
