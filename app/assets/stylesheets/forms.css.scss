@@ -400,7 +400,7 @@ button.close {
     border: 0;
     cursor: pointer;
     background: transparent;
-    -webkit-appearance: none;
+    @include appearance(none);
 }
 
 .close {
