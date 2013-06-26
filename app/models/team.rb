@@ -7,8 +7,7 @@ class Team < ActiveRecord::Base
             medium: '300x300>}',
             tourpro: '370x220#',
             teampro: '370x233#'
-        },
-        :url => "/system/:attachment/:id/:style.:extension",
+        }
     }
     picture_options.update({
         storage: :s3,
