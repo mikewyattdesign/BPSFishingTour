@@ -1,0 +1,48 @@
+.bannerBottomSponsorBackground {
+    padding: 15px 0 5px;
+    background-image: image-url('bannerBottomBlack.jpg');
+    background-position: 0px 2px;
+    background-size: 120%;
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+}
+
+.bannerBottomBackground {
+    background-image: image-url('bannerBottomGreen.jpg');
+    background-position: center;
+    height:105px;
+    overflow: hidden;
+}
+
+.navBottom {
+    margin: 30px 0 0;
+    clear: both;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        margin: 0 15px;
+        color: $yellow;
+        font-weight: normal;
+        font-size: 15px;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.43);
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
+
+.navBottomLegal {
+    clear: both;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.navBottomLegal p {
+    margin-top: 10px;
+    font-size: 12px;
+}
