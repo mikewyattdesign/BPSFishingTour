@@ -116,6 +116,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.4)
+    newrelic_rpm (3.6.1.88)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
     paperclip (3.4.2)
@@ -231,6 +232,7 @@ DEPENDENCIES
   guard-rspec (= 3.0.0)
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
+  newrelic_rpm
   paperclip (= 3.4.2)
   pg (= 0.15.1)
   rails (= 4.0.0.rc1)

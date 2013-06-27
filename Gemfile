@@ -5,6 +5,8 @@ gem 'rails', '4.0.0.rc1'
 
 gem 'unicorn', '4.6.3'
 
+gem 'newrelic_rpm'
+
 gem 'devise', '3.0.0.rc'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'paperclip', '3.4.2'
