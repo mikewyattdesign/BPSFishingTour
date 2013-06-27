@@ -15,9 +15,4 @@ feature 'Thanks page' do
         expect(page).to have_link('Create Your Profile')
         # pending 'test for the href on the "register team" link'
     end
-
-    scenario 'should have a skip team registration link' do
-        expect(page).to have_link('Skip')
-        pending 'test for the href on the "skip team registration" link'
-    end
 end
