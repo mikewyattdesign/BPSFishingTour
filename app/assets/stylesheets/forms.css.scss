@@ -144,34 +144,29 @@ form + .BottomBanner {
 }
 
 #error_explanation {
-    background-color: red;
+    background-color: $red;
     width: 255px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 10px;
     border-radius: 10px;
-}
-
-#error_explanation {
     padding: 1px 15px 1px 15px;
+
+    h2 {
+        margin-top: 10px;
+        @include titillium;
+        font-size: 14px;
+        color: white;
+    }
+
+    ul {
+        font-weight: normal;
+        font-size: 13px;
+        color: white;
+        border-radius: 10px;
+    }
 }
 
-#error_explanation h2 {
-    margin-top: 10px;
-    font-size: 14px;
-    color: white;
-}
-
-#error_explanation ul {
-    font-weight: normal;
-    font-size: 13px;
-    color: white;
-    border-radius: 10px;
-}
-
-#error_explanation {
-    color: white;
-}
 
 /*Thanks Page*/
 
