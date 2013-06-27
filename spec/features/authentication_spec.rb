@@ -25,4 +25,9 @@ feature "authentication" do
         visit '/join'
         expect(current_path).to eq('/users/sign_up')
     end
+
+    scenario "user navigates to /thanks when not logged in" do
+        visit '/thanks'
+        expect(current_path).to eq '/users/sign_in'
+    end
 end

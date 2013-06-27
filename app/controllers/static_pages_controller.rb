@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
     end
 
     def thanks
+        authenticate_user!
         @user = current_user
     end
 
