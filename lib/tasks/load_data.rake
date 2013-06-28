@@ -210,7 +210,7 @@ namespace :load_data do
         events.each do |event|
             id = event.first[:id]
 
-            if Event.find(id)
+            if Event.exists?(id)
                 event.first.delete :id #remove :id from hash
                 Event.update id, event.first
             else
@@ -240,7 +240,7 @@ namespace :load_data do
 
         divisions.each do |division|
             id = division[:id]
-            if Division.find(id)
+            if Division.exists?(id)
                 division.delete :id
                 Division.update id, division
             else
