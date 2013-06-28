@@ -49,4 +49,5 @@ BpsFishingTour::Application.routes.draw do
 
     # News Routing
     get '/news' => 'news#index'
+    get '/news/:year/:month/:day/:title' => 'news#story'
 end

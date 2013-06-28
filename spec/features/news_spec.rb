@@ -5,4 +5,10 @@ feature 'News' do
         visit '/news'
         expect(page).to have_content 'News'
     end
+
+    scenario 'Reading the competitive sports fishing league announcement' do
+        visit '/news'
+        click_link 'Competitive Sport Fishing League Announcement'
+        expect(page).to have_content 'Competitive Sport Fishing League Announcement'
+    end
 end

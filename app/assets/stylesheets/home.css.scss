@@ -523,6 +523,16 @@ a#dotPlayPause {
     float: left;
     padding: 10px 0;
     color: white;
+
+    a {
+        font-family: inherit;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .iconAnglers {
@@ -628,9 +638,9 @@ a#dotPlayPause {
 }
 
 .mediaCont p {
+    margin: 1em 0;
     color: inherit;
     font-size: 18px;
-    font-style: italic;
 }
 
 .mediaCont a {
