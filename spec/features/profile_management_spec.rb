@@ -1,9 +1,26 @@
 require 'spec_helper'
 
-feature "profile_managment" do
-    given (:user) { FactoryGirl.create(:user) }
+feature "Profile managment" do
+    scenario "User signs up and creates her profile" do
+        user = FactoryGirl.build(:user)
+        sign_up_with user.email, user.password
+        expect(current_path).to eq '/thanks'
+
+        click_link 'Create Your Profile'
+        fill_in 'First name', with: 'Adam'
+        fill_in 'Last name', with: 'Bowen'
+        fill_in 'Street address', with: '123 Fake Street'
+        fill_in 'City', with: 'St. Louis'
+        fill_in 'State', with: 'MO'
+        fill_in 'Zip', with: '63110'
+        click_button 'Continue'
+
+        expect(current_path).to eq '/teams/requests/new'
+    end
 
     context "A newly created user" do
+        given (:user) { FactoryGirl.create(:user) }
+
         scenario "should have one profile" do
             sign_in_with(user.email, user.password)
             expect(current_path).to eq '/myprofile'
