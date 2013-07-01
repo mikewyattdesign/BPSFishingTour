@@ -576,6 +576,18 @@ a#dotPlayPause {
     color: #515151;
 }
 
+.anglersGroup {
+    a {
+        color: #58605d;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color:white;
+        border-radius: 3px;
+    }
+}
+
 .aboutHead {
     padding: 40px 40px 0 40px;
 }
