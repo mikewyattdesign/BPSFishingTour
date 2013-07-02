@@ -373,7 +373,7 @@ p {
     }
 
     &.right {
-        right: 55px;
+        right: 66px;
     }
 }
 
@@ -425,13 +425,13 @@ p {
 }
 
 #nextSlide {
-    position:absolute;
-    top:230px;
-    left:1480px;
-    background:url(nextButton.png) no-repeat;
-    width:50px;
-    height:50px;
-    text-indent:-999999px;
+    position: absolute;
+    top: 230px;
+    left: 1480px;
+    width: 50px;
+    height: 50px;
+    text-indent: -999999px;
+    background: image-url("icons/next.png") no-repeat;
 }
 
 ul#slideshow {
