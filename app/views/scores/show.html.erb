@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @score.event_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @score.position %>
+</p>
+
+<p>
+  <strong>Angler:</strong>
+  <%= @score.angler %>
+</p>
+
+<p>
+  <strong>Angler rewards:</strong>
+  <%= @score.angler_rewards %>
+</p>
+
+<p>
+  <strong>Co angler:</strong>
+  <%= @score.co_angler %>
+</p>
+
+<p>
+  <strong>Co angler rewards:</strong>
+  <%= @score.co_angler_rewards %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @score.weight %>
+</p>
+
+<p>
+  <strong>Bf:</strong>
+  <%= @score.bf %>
+</p>
+
+<p>
+  <strong>Hp:</strong>
+  <%= @score.hp %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>

@@ -1,0 +1,30 @@
+<% board.sort! { |x, y| x[:total_score] <=> y[:total_score] } %>
+
+<table class="board table table-hover">
+    <caption>Teams with
+             <%= board[0][:events_attended] %>
+             <% if board[0][:events_attended] > 1 %>
+                Events
+             <% else %>
+                Event
+             <% end %>
+             </caption>
+    <thead>
+        <tr>
+            <th>Position</th>
+            <th>Anglers</th>
+            <th>Total Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% board.each_with_index do |team, index| %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td><%= link_to team[:team].users.first.full_name, profile_path(team[:team].users.first.id) %>
+                    and
+                    <%= link_to team[:team].users.last.full_name, profile_path(team[:team].users.last.id) %></td>
+                <td><strong><%= team[:total_score] %></strong></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

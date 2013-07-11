@@ -1,0 +1,53 @@
+<%= form_for(@score) do |f| %>
+  <% if @score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% @score.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_id %><br>
+    <%= f.number_field :event_id %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :angler %><br>
+    <%= f.text_field :angler %>
+  </div>
+  <div class="field">
+    <%= f.label :angler_rewards %><br>
+    <%= f.text_field :angler_rewards %>
+  </div>
+  <div class="field">
+    <%= f.label :co_angler %><br>
+    <%= f.text_field :co_angler %>
+  </div>
+  <div class="field">
+    <%= f.label :co_angler_rewards %><br>
+    <%= f.text_field :co_angler_rewards %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :bf %><br>
+    <%= f.text_field :bf %>
+  </div>
+  <div class="field">
+    <%= f.label :hp %><br>
+    <%= f.text_field :hp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

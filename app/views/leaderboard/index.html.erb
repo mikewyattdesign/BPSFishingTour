@@ -8,7 +8,25 @@
         </div>
 
         <div class="leaderBotCont">
-            <p>The Bass Pro Fishing Tour just got started, so we don't have event data yet.  Check back later for results from our first event!</p>
+            <p>The Bass Pro Fishing Tour just got started, so we don't have have qualifying teams yet.  Check back later as we get more results from events to find out who's on top!</p>
+
+            <% board = @boards[5] %>
+            <%= render(partial: 'table', locals: { board: board }) if board.present? %>
+
+            <% board = @boards[4] %>
+            <%= render(partial: 'table', locals: { board: board }) if board.present? %>
+
+            <% board = @boards[3] %>
+            <%= render(partial: 'table', locals: { board: board }) if board.present? %>
+
+            <% board = @boards[2] %>
+            <%= render(partial: 'table', locals: { board: board }) if board.present? %>
+
+            <% board = @boards[1] %>
+            <%= render(partial: 'table', locals: { board: board }) if board.present? %>
+
+
         </div>
+
     </div>
 </div>
