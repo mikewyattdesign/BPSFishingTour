@@ -57,7 +57,11 @@
             <% end %>
         <% end %>
             <div class="cutOutContainerLeft">
-                <%= image_tag 'cutOutLeft.png', class: 'cutOutLeft', alt: 'Cut Out' %>
+                <div class="cutOutLeft">
+                    <div class="cutTeamLeft"></div>
+                    <div class="cutTeamMiddle"><%= image_tag 'cutTourV.png', class: 'cutTeamV', alt: 'Cut Out' %></div>
+                    <div class="cutTeamRight"></div>
+                </div>
                 <%= team_picture(@user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                 <div class="cutOutTextTeam">
                     <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>

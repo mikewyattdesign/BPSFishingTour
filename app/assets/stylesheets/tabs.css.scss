@@ -74,7 +74,7 @@ p {
 }
 
 #tab1, #tab2, #tab3 {
-    background-image: image-url('tabBackground.jpg');
+    background-color: #ebe4de;
     background-size: 100%;
 }
 
@@ -295,13 +295,51 @@ p {
     position: absolute;
     margin-top: 191px;
     width: 100%;
-    z-index: 10;
+    height: 140px;
+}
+
+.cutTourLeft {
+    background-color: #ebe4de;
+    width: 50px;
+    height: 17px;
+    float: left;
+}
+
+.cutTourMiddle {
+    float: left;
+}
+
+.cutTourRight {
+    background-color: #ebe4de;
+    width: 285px;
+    height: 17px;
+    float: left;
 }
 
 .cutOutLeft {
     position: absolute;
     margin-top: 217px;
+    width: 100%;
+    height: 140px;
     z-index: 1;
+}
+
+.cutTeamLeft {
+    background-color: #ebe4de;
+    width: 271px;
+    height: 17px;
+    float: left;
+}
+
+.cutTeamMiddle {
+    float: left;
+}
+
+.cutTeamRight {
+    background-color: #ebe4de;
+    width: 65px;
+    height: 17px;
+    float: left;
 }
 
 .manFishRight {

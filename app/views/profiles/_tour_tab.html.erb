@@ -19,7 +19,11 @@
     </div>
     <div class="half">
          <div class="cutOutContainer">
-            <%= image_tag 'cutOutRight.png', class: 'cutOutRight', alt: 'Cut Out' %>
+            <div class="cutOutRight">
+                <div class="cutTourLeft"></div>
+                <div class="cutTourMiddle"><%= image_tag 'cutTourV.png', class: 'cutTourV', alt: 'Cut Out' %></div>
+                <div class="cutTourRight"></div>
+            </div>
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
                 <h2><%= @profile.user.full_name  || "My Profile" %></h2>
