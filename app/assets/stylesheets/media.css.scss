@@ -1,0 +1,18 @@
+// Media Q
+@media (max-width: 1024px) {
+    .user-navigation {
+        margin-right: 70px;
+    }
+
+    .aboutTextContainer, .leaderListContainer, .newsListContainer, .anglersListContainer {
+        width: 680px;
+    }
+
+    #aboutContainer {
+        width: 980px;
+    }
+
+    .bassEventMap {
+        margin-left: -65px;
+    }
+}
