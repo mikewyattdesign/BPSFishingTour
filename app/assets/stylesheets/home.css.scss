@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-    color: #b3b3b3;
+    color: $lightGrey;
     line-height:140%;
     font-weight: lighter;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
@@ -462,7 +462,7 @@ a#dotPlayPause {
         cursor: pointer;
         height: 18px;
         width: 18px;
-        background: #222;
+        background: $darkGrey;
         border-radius: 20px;
         margin-right: 10px;
         box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5),
@@ -470,7 +470,7 @@ a#dotPlayPause {
 
         a {
             font-size: 12px;
-            color: #222;
+            color: $darkGrey;
             border:1px solid none;
             text-decoration : none;
             padding : 0px 6px;
@@ -507,11 +507,11 @@ a#dotPlayPause {
 
 .newsBotCont, .invitationText {
     min-height: 830px;
-    background-color: #d7c8b9;
+    background-color: $beige;
 }
 
 .aboutTextContainer {
-    background-color: #d7c8b9;
+    background-color: $beige;
 }
 
 .anglersTopBar, .leaderTopBar, .newsTopBar {
@@ -557,7 +557,7 @@ a#dotPlayPause {
     min-height: 765px;
     padding: 32px;
     background-color: #cccece;
-    color: #333;
+    color: $darkGrey;
     overflow: hidden;
 
     p {
@@ -575,12 +575,12 @@ a#dotPlayPause {
 
 .anglersBotCont h1 {
     font-size: 30px;
-    color: #515151;
+    color: $darkGrey;
 }
 
 .anglersGroup {
     a {
-        color: #58605d;
+        color: $darkGrey;
         text-decoration: none;
     }
 
@@ -599,20 +599,20 @@ a#dotPlayPause {
 }
 
 .aboutHead h1 {
-    color: #75521a;
+    color: $brown;
     font-size: 30px;
 }
 
 .aboutPara h3 {
-    color: #58605d;
+    color: $darkGrey;
 }
 
 .aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
-    color: #58605d;
+    color: $darkGrey;
 }
 
 .aboutPara a {
-    color: #75521a;
+    color: $brown;
 }
 
 .leaderGroup {
@@ -648,7 +648,7 @@ a#dotPlayPause {
 }
 
 .mediaCont h2 {
-    color: #616262;
+    color: $grey;
 }
 
 .mediaCont p {
@@ -674,7 +674,7 @@ a#dotPlayPause {
 .invitationText h1 {
     font-size: 30px;
     text-shadow: none;
-    color: #75521a;
+    color: $brown;
     padding: 20px 20px 0px 20px;
 }
 

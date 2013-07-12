@@ -5,7 +5,7 @@ input {
     height: 28px;
     padding: 3px 25px 3px 25px;
     background-color: #f9eddf;
-    border: 1px solid #adadad;
+    border: 1px solid $lightGrey;
     @include box-sizing(border-box);
     box-shadow: inset 1px 1px 5px rgba(0,0,0,.24);
     outline: none;
