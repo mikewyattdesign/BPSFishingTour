@@ -34,7 +34,13 @@
         <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
         <div class="manFishTextRight"><p>Go to My Team Profile to upload a Team Photo</p></div>
         <div class="picBoxContainer">
-            <%= image_tag 'picBox.png', class: 'picBox', alt: 'Picture Box' %>
+            <div class="picBox">
+                <% unless @team && @team.team_picture.exists? %>
+                <div class="tourDot">
+                    <%= image_tag 'tourDot.png', alt: 'Doted' %>
+                </div>
+                <% end %>
+            </div>
         </div>
         <div class="tourContRightBot">
             <%= link_to select_profile_picture_path  do %>

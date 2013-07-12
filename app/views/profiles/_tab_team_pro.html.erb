@@ -72,7 +72,13 @@
             <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
             <div class="manFishTextLeft"><p>Upload a Team Photo Here</p></div>
             <div class="picBoxContainerLeft">
-                <%= image_tag 'picBoxLeft.png', class: 'picBoxLeft', alt: 'Picture Box' %>
+                <div class="picBoxTeam">
+                    <% unless @team && @team.team_picture.exists? %>
+                        <div class="teamDot">
+                            <%= image_tag 'teamDot.png', alt: 'Doted' %>
+                        </div>
+                    <% end %>
+                </div>
             </div>
             <div class="teamContLeftBot">
                 <% if @profile.picture.exists? %>
