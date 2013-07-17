@@ -35,5 +35,8 @@ module BpsFishingTour
     config.assets.precompile += %w(bootstrap.css bootstrap.js)
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
   end
 end
