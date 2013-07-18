@@ -1,4 +1,13 @@
 <h1>Listing scores</h1>
+
+<nav>
+    <ul>
+        <% @events.each do |event| %>
+            <li><%= link_to "#{event.name_and_date} scores", "/scores?event_id=#{event.id}" %></li>
+        <% end %>
+    </ul>
+</nav>
+
 <% @events_with_scores.each do |event| %>
     <h2>Event: #<%= event.id %> <%= event.name %></h2>
     <table>

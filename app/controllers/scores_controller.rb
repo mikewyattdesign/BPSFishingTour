@@ -10,6 +10,10 @@ class ScoresController < ApplicationController
     @events = Event.all
     @events_with_scores = @events.reject { |event| @scores.where(event_id: event.id).empty? }
     @profiles = Profile.all
+
+    if params[:event_id]
+        @events_with_scores = @events_with_scores.select { |event| event.id == params[:event_id].to_i }
+    end
   end
 
   # GET /scores/1
@@ -70,17 +74,17 @@ class ScoresController < ApplicationController
 
   def import
     Score.import(params[:file], params[:event])
-    redirect_to scores_path, notice: 'Added scores'
+    redirect_to :back, notice: 'Added scores'
   end
 
   def angler
     Score.update params[:id], angler_id: params[:angler_id]
-    redirect_to scores_path, notice: "Angler set to #{User.find(params[:angler_id]).full_name}"
+    redirect_to :back, notice: "Angler set to #{User.find(params[:angler_id]).full_name}"
   end
 
   def co_angler
     Score.update params[:id], co_angler_id: params[:co_angler_id]
-    redirect_to scores_path, notice: "Co-Angler set to #{User.find(params[:co_angler_id]).full_name}"
+    redirect_to :back, notice: "Co-Angler set to #{User.find(params[:co_angler_id]).full_name}"
   end
 
   private

@@ -1,6 +1,6 @@
 class Score < ActiveRecord::Base
     def self.import(file, event)
-        CSV.foreach(file.path, headers: true) do |row|
+        CSV.foreach(file.path, headers: true, encoding: 'utf-8') do |row|
             score = row.to_hash
             score[:event_id] = event
             Score.create! score
