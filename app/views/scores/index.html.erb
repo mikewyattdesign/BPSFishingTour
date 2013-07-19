@@ -3,103 +3,101 @@
 <nav>
     <ul>
         <% @events.each do |event| %>
-            <li><%= link_to "#{event.name_and_date} scores", "/scores?event_id=#{event.id}" %></li>
+            <li><%= link_to "#{event.name_and_date}", "/scores?event_id=#{event.id}" %></li>
         <% end %>
     </ul>
 </nav>
 
-<% @events_with_scores.each do |event| %>
-    <h2>Event: #<%= event.id %> <%= event.name %></h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Position</th>
-          <th>Angler</th>
-          <th>Angler rewards</th>
-          <th>Co angler</th>
-          <th>Co angler rewards</th>
-          <th>Weight</th>
-          <th>Bf</th>
-          <th>Hp</th>
-          <th>Link Angler</th>
-          <th>Link Co-Angler</th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
+<h2>Event: #<%= @event.id %> <%= @event.name %></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Angler</th>
+      <th>Angler rewards</th>
+      <th>Co angler</th>
+      <th>Co angler rewards</th>
+      <th>Weight</th>
+      <th>Bf</th>
+      <th>Hp</th>
+      <th>Link Angler</th>
+      <th>Link Co-Angler</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-      <tbody>
-        <% @scores.select{ |score| score.event_id == event.id }.each do |score| %>
-          <tr>
-            <td><%= score.position %></td>
-            <td><%= score.angler %></td>
-            <td><%= score.angler_rewards %></td>
-            <td><%= score.co_angler %></td>
-            <td><%= score.co_angler_rewards %></td>
-            <td><%= score.weight %></td>
-            <td><%= score.bf %></td>
-            <td><%= score.hp %></td>
-            <td>
-                <% first_name_matches = @profiles.where('lower(first_name) =?', score.angler.split.first.downcase) %>
-                <% unless first_name_matches.empty? %>
-                    <strong>First name matches:</strong><br>
-                    <% first_name_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+  <tbody>
+    <% @scores.select{ |score| score.event_id == @event.id }.each do |score| %>
+      <tr>
+        <td><%= score.position %></td>
+        <td><%= score.angler %></td>
+        <td><%= score.angler_rewards %></td>
+        <td><%= score.co_angler %></td>
+        <td><%= score.co_angler_rewards %></td>
+        <td><%= score.weight %></td>
+        <td><%= score.bf %></td>
+        <td><%= score.hp %></td>
+        <td>
+            <% first_name_matches = @profiles.where('lower(first_name) =?', score.angler.split.first.downcase) %>
+            <% unless first_name_matches.empty? %>
+                <strong>First name matches:</strong><br>
+                <% first_name_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-                <% last_name_matches = @profiles.where('lower(last_name) =?', score.angler.split.last.downcase) %>
-                <% unless last_name_matches.empty? %>
-                    <strong>Last name matches:</strong><br>
-                    <% last_name_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+            <% end %>
+            <% last_name_matches = @profiles.where('lower(last_name) =?', score.angler.split.last.downcase) %>
+            <% unless last_name_matches.empty? %>
+                <strong>Last name matches:</strong><br>
+                <% last_name_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-                <% outdoor_matches = @profiles.where(outdoor_rewards_number: score.angler_rewards) %>
-                <% if !outdoor_matches.empty? && score.angler_rewards.present? %>
-                    <strong>Outdoor Rewards matches:</strong><br>
-                    <% outdoor_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+            <% end %>
+            <% outdoor_matches = @profiles.where(outdoor_rewards_number: score.angler_rewards) %>
+            <% if !outdoor_matches.empty? && score.angler_rewards.present? %>
+                <strong>Outdoor Rewards matches:</strong><br>
+                <% outdoor_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-            </td>
-            <td>
-                <% first_name_matches = @profiles.where('lower(first_name) =?', score.co_angler.split.first.downcase) %>
-                <% unless first_name_matches.empty? %>
-                    <strong>First name matches:</strong><br>
-                    <% first_name_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+            <% end %>
+        </td>
+        <td>
+            <% first_name_matches = @profiles.where('lower(first_name) =?', score.co_angler.split.first.downcase) %>
+            <% unless first_name_matches.empty? %>
+                <strong>First name matches:</strong><br>
+                <% first_name_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-                <% last_name_matches = @profiles.where('lower(last_name) =?', score.co_angler.split.last.downcase) %>
-                <% unless last_name_matches.empty? %>
-                    <strong>Last name matches:</strong><br>
-                    <% last_name_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+            <% end %>
+            <% last_name_matches = @profiles.where('lower(last_name) =?', score.co_angler.split.last.downcase) %>
+            <% unless last_name_matches.empty? %>
+                <strong>Last name matches:</strong><br>
+                <% last_name_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-                <% outdoor_matches = @profiles.where(outdoor_rewards_number: score.co_angler_rewards) %>
-                <% if !outdoor_matches.empty? && score.co_angler_rewards.present? %>
-                    <strong>Outdoor Rewards matches:</strong><br>
-                    <% outdoor_matches.each do |angler| %>
-                        <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
-                        <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
-                    <% end %>
+            <% end %>
+            <% outdoor_matches = @profiles.where(outdoor_rewards_number: score.co_angler_rewards) %>
+            <% if !outdoor_matches.empty? && score.co_angler_rewards.present? %>
+                <strong>Outdoor Rewards matches:</strong><br>
+                <% outdoor_matches.each do |angler| %>
+                    <%= '✓' if @scores.find(score.id).co_angler_id == angler.user.id %>
+                    <%= link_to "#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}" %><br>
                 <% end %>
-            </td>
-            <td><%= link_to 'Show', score %></td>
-            <td><%= link_to 'Edit', edit_score_path(score) %></td>
-            <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-<% end %>
+            <% end %>
+        </td>
+        <td><%= link_to 'Show', score %></td>
+        <td><%= link_to 'Edit', edit_score_path(score) %></td>
+        <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <br>
 

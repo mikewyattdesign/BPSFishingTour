@@ -8,11 +8,12 @@ class ScoresController < ApplicationController
   def index
     @scores = Score.all
     @events = Event.all
-    @events_with_scores = @events.reject { |event| @scores.where(event_id: event.id).empty? }
     @profiles = Profile.all
 
     if params[:event_id]
-        @events_with_scores = @events_with_scores.select { |event| event.id == params[:event_id].to_i }
+        @event = Event.find(params[:event_id])
+    else
+        redirect_to "/scores/?event_id=#{Event.all.first.id}"
     end
   end
 
