@@ -29,7 +29,7 @@
   </thead>
 
   <tbody>
-    <% @scores.select{ |score| score.event_id == @event.id }.each do |score| %>
+    <% @scores.select{ |score| score.event_id == @event.id }.sort { |x, y| x.position <=> y.position }.each do |score| %>
       <tr>
         <td><%= score.position %></td>
         <td><%= score.angler %></td>
