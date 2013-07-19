@@ -75,7 +75,7 @@ class ScoresController < ApplicationController
 
   def import
     Score.import(params[:file], params[:event])
-    redirect_to :back, notice: 'Added scores'
+    redirect_to "/scores?event_id=#{params[:event]}", notice: 'Added scores'
   end
 
   def angler
