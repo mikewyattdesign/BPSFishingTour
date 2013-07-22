@@ -1,0 +1,269 @@
+/*Event Page*/
+
+.findAnEvent {
+    width: 500px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.findAnEventText {
+    margin-top: 80px;
+}
+
+.findAnEventText h2 {
+    color: white;
+    margin: 0;
+    font-size: 40px;
+}
+
+.findAnEventSmall {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.findAnEventSmall h2 {
+    color: $yellow;
+}
+
+.eventMapContainer {
+    width:1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mapOntario {
+    margin-left: 430px;
+    margin-top: 15px;
+    width: 32%;
+}
+
+.mapOntarioText {
+    width: 450px;
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 235px;
+    font-size: 25px;
+    @include aachen;
+    color: white;
+}
+
+.bassEventMap {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+.bannerSmallTopBackground {
+    background: none;
+}
+
+.bannerSmallTop {
+    height:200px;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bassEventEnter {
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+.bassEventAttendBackground {
+    display: none;
+    overflow: hidden;
+    width: 600px;
+    padding: 15px 25px;
+
+    &.active-event {
+        display: block;
+    }
+}
+
+.bassEventEnterBackground {
+    min-height: 530px;
+    width: 1400px;
+}
+
+.bassEventEnterBackground, .bassEventAttendBackground {
+    background: black; // Fallback for browsers without gradient and rgba
+    background: mix(rgba(255, 255, 255, 0.1), rgba(8, 8, 8, 0.4));
+    @include background(linear-gradient(rgba(255, 255, 255, 0.1), rgba(8, 8, 8, 0.4)));
+
+    box-shadow: 0px 0px 5px black;
+    @include border-radius(2px);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.bassEventAttendContainer {
+    padding: 15px 0px 0px 25px;
+}
+
+.bassEventEnterContainer {
+    padding: 70px 0px 70px 90px;
+}
+
+.bassEventAttendText h2 {
+    color: white;
+    font-size: 16px;
+    text-shadow:none;
+}
+
+.bassEventAttendText p {
+    font-size: 14px;
+}
+
+.bassEventAttendText, .eventEnterPic {
+    float: left;
+}
+
+.bassEventEnterText {
+    float: left;
+    width: 600px;
+    margin-left: 70px;
+}
+
+    .bassEventEnterText h2 {
+        font-size: 40px;
+    }
+
+    .bassEventEnterText p {
+        font-size: 18px;
+        margin: 30px 0;
+    }
+
+.yesNoContainer {
+    float: right;
+    width: 160px;
+    margin-left: 25px;
+}
+
+.enterEventButton, .noEventButton {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.enterEventButton, .noEventButton {
+    width: 70px;
+    height: 30px;
+    line-height: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    border: none;
+}
+
+.enterEventButton {
+    float: left;
+    margin-right: 20px;
+    @extend %green-button;
+}
+
+.noEventButton {
+    float: left;
+    @extend %red-button;
+    cursor: pointer;
+}
+
+.ifYes, .ifNo {
+    position: absolute;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0px 45px;
+}
+
+/*Map Slider*/
+
+#slideshowMap, #slideshowMap {
+    margin:0 auto;
+    width:1100px;
+    height:265px;
+    position:relative;
+}
+
+#slidesContainer {
+    margin:0 auto;
+    width: 1000px;
+    height:265px;
+    position:relative;
+}
+
+#slideshowMap {
+
+    background: transparent image-url('event-map.png') no-repeat 0 0;
+
+    hr {
+        margin: 0;
+        width: 425px;
+        border: none;
+        border-top: 1px solid white;
+    }
+}
+
+#slideshowMap #slidesContainer {
+    overflow:auto;
+}
+
+#slideshowMap #slidesContainer .slide {
+    margin:0 auto;
+    width:540px;
+    height:265px;
+}
+
+.control {
+    position:absolute;
+    top: 55px;
+    width:39px;
+    height:100%;
+    cursor: pointer;
+
+    &.left {
+        left: 165px;
+    }
+
+    &.right {
+        right: 165px;
+    }
+}
+
+#leftControl, #rightControl {
+    top:55px;
+    z-index: 20;
+}
+
+#leftControl {
+    left:63px;
+    background:transparent url(/assets/control_left.png) no-repeat 0 0;
+}
+
+#rightControl {
+    right:43px;
+    background:transparent url(/assets/control_right.png) no-repeat 0 0;
+}
+
+.slide h2, .slide p {
+    margin:5px;
+    height: 50px;
+}
+.slide h2 {
+    letter-spacing:-1px;
+}
+
+.mapOntario {
+    width: 430px;
+    position: absolute;
+    margin-left: 315px;
+    margin-top: 0px;
+}
+
+.mapTextContainer {
+    padding: 90px 0 0 199px;
+    position: absolute;
+}
