@@ -31,16 +31,14 @@
     margin-right: auto;
 }
 .mapOntario {
-    margin-left: 430px;
-    margin-top: 15px;
+    margin: 15px auto auto 430px;
     width: 32%;
 }
 
 .mapOntarioText {
     width: 450px;
     position: absolute;
-    margin-top: 95px;
-    margin-left: 235px;
+    margin: 95px auto auto 235px;
     font-size: 25px;
     @include aachen;
     color: white;
@@ -226,10 +224,12 @@
 
     &.left {
         left: 165px;
+        height: 45px;
     }
 
     &.right {
         right: 165px;
+        height: 45px;
     }
 }
 
