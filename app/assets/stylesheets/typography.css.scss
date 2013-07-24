@@ -1,17 +1,12 @@
 @font-face {
-    font-family: Aachen;
-    src: font-url('AachenRegular.ttf'),
-         font-url('AachenRegular.eot'); /* IE9 */
-}
-
-@font-face {
-    font-family: Bebas;
-    src: font-url('Bebas.ttf'),
-         font-url('Bebas.eot'); /* IE9 */
-}
+    font-family: 'Aachen';
+    src: font-url('AachenRegular.eot');
+    src: font-url('AachenRegular.eot?#iefix') format('embedded-opentype'),
+         font-url('AachenRegular.ttf') format('truetype');
+ }
 
 @mixin aachen {
-    font-family: Aachen, sans-serif;
+    font-family: 'Aachen', sans-serif;
     font-weight: normal;
 }
 
