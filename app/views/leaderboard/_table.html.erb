@@ -1,14 +1,16 @@
 <% board.sort! { |x, y| x[:total_score] <=> y[:total_score] } %>
 
 <table class="board table table-hover">
-    <caption>Teams with
-             <%= board[0][:events_attended] %>
-             <% if board[0][:events_attended] > 1 %>
-                Events
-             <% else %>
-                Event
-             <% end %>
-             </caption>
+    <caption>
+        Teams with
+        <% if board[0][:events_attended] >= 5 %>
+            5+ Events
+        <% elsif board[0][:events_attended] > 1 %>
+            <%= board[0][:events_attended] %> Events
+        <% else %>
+            1 Event
+        <% end %>
+    </caption>
     <thead>
         <tr>
             <th>Position</th>
