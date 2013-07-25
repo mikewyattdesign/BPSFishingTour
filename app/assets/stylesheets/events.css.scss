@@ -256,6 +256,20 @@
     letter-spacing:-1px;
 }
 
+.slide {
+    .carousel-indicators {
+        top: auto;
+        right: 0;
+        bottom: 45px;
+        left: 250px;
+        padding: 0;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
+
 .mapOntario {
     width: 430px;
     position: absolute;

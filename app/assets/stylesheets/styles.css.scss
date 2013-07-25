@@ -192,6 +192,9 @@ a#dotPlayPause {
     top: 290px;
     left: 760px;
 
+}
+
+#dotList, .carousel-indicators {
     li {
         float: left;
         cursor: pointer;
@@ -214,7 +217,7 @@ a#dotPlayPause {
         }
     }
 
-    li.dotActive {
+    li.dotActive, .active {
         background-color: $yellow;
         a {
             display: none;

@@ -6,8 +6,7 @@
 <div class="bassEventMap">
     <div id="slideshowMap" class="carousel slide">
         <div id="slidesContainer" class="carousel-inner">
-            <% @divisions.each_with_index do |division, index| %>
-                <% next if division.events.empty? %>
+            <% @divisions.select { |division| division.events.present? }.each_with_index do |division, index| %>
                 <div class="item <%= 'active' if index == 0 %>" data-division="<%= division.id %>">
                     <%= image_tag 'mapOntario.png', alt: 'Ontario', class: 'mapOntario' %>
                     <h2 class="mapTextContainer">
@@ -20,6 +19,11 @@
         </div>
         <a class="control left" href='#slideshowMap' data-slide="prev"><%= image_tag 'icons/previous.png', alt: 'Previous Division' %></a>
         <a class="control right" href='#slideshowMap' data-slide="next"><%= image_tag 'icons/next.png', alt: 'Next Division' %></a>
+        <ol class="carousel-indicators">
+            <% @divisions.select { |division| division.events.present? }.count.times do |index| %>
+                <li data-target="#slideshowMap" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+            <% end %>
+        </ol>
     </div>
 </div>
 <% @events.each do |event| %>
