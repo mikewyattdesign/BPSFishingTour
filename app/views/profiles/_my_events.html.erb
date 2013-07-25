@@ -24,7 +24,7 @@
                         <tr class="<%= cycle("odd", "even") %>">
                             <td class="tdDate"><%= event.date.to_date %></td>
                             <td class="tdName"><%= event.name %></td>
-                            <td class="tdStatus"><%= add_status(event) %></td>
+                            <td class="tdStatus"><%= add_status(@team, event) %></td>
                         </tr>
                     <% end %>
                 </tbody>

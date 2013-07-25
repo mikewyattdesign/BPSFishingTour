@@ -25,6 +25,14 @@ class Team < ActiveRecord::Base
              .uniq
     end
 
+    def event_score(event)
+        score = scores.select { |score| score.event_id ==  event.id }
+        if score.present?
+            return score.first.points
+        end
+        return nil
+    end
+
     def total_score
         scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
     end
