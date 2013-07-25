@@ -12,6 +12,7 @@ class ProfilesController < ApplicationController
         @user = @profile.user
         @teammate = @user.teammate
         @team = @user.my_team
+        @events = @team ? @team.events : nil
         redirect_to my_profile_path if user_signed_in? && @profile.id == current_user.profile.id
         @can_register = @profile.user.teams.size > 0
         @is_current_user = false

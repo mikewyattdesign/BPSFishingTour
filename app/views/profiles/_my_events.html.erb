@@ -13,14 +13,14 @@
         </tbody>
     </table>
     <div class="table-container">
-        <% if @profile.user.teams.first.nil? %>
+        <% if @team.nil? %>
             <p>This user is not yet part of a team, and can't attend events.</p>
-        <% elsif @profile.user.teams.first.events.nil? %>
+        <% elsif @events.nil? %>
             <p>This team isn't signed up for any events yet.</p>
         <% else %>
             <table>
                 <tbody>
-                    <% @profile.user.teams.first.events.each do |event| %>
+                    <% @events.each do |event| %>
                         <tr class="<%= cycle("odd", "even") %>">
                             <td class="tdDate"><%= event.date.to_date %></td>
                             <td class="tdName"><%= event.name %></td>
