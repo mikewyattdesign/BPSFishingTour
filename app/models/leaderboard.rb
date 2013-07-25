@@ -1,6 +1,8 @@
 class Leaderboard
     def self.boards
-        boards = teams.group_by { |team| team[:events_attended] }
+        boards = teams.group_by { |team|
+            (team[:events_attended] > 5) ? 5 : team[:events_attended]
+        }
         boards.delete(0)
         # boards.each do |board|
         #     next unless board.present?
