@@ -31,5 +31,7 @@ If you want a copy of the production database on your local machine:
 
 1. Run `taps server sqlite://db/development.sqlite3 test test` in one
    terminal window
-1. In a separate window, run `taps push postgres://urbsyouofqkpta:V1q0JqjGTikeWH2DtyTeNyQq86@ec2-54-235-194-252.compute-1.amazonaws.com:5432/dbohm023umngst http://test:test@localhost:9000`
+1. In a separate window, run `taps push postgres://urbsyouofqkpta:V1q0JqjGTikeWH2DtyTeNyQq86@ec2-54-235-194-252.compute-1.amazonaws.com:5432/dbohm023umngst http://test:test@localhost:5000`
    to push data from production into your local development database.
+   (make sure that the port of localhost corresponds to the port of your
+   taps server)
