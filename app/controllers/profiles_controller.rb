@@ -22,6 +22,10 @@ class ProfilesController < ApplicationController
         @user = current_user
         @teammate = @user.teammate
         @can_register = current_user.teams.size > 0
+        @new_user = current_user.profile ? false : true
+
+        #@new_user = true if params[:edit] && params[:edit] = true
+
         current_user.create_profile unless current_user.profile
         @profile = current_user.profile
         @team = current_user.teams.first
@@ -69,27 +73,31 @@ class ProfilesController < ApplicationController
     # PATCH/PUT /profiles/1
     def update
         @team = current_user.teams.first
-        if @profile.update(profile_params)
-            if @team.nil?
-                redirect_to requests_new_path
-            else
-                redirect_to @profile, notice: 'Profile was successfully updated.'
-            end
-        else
-            if(current_user.teams.size > 0)
-                @can_register = true
-            else
-                @can_register = false
-            end
 
-            path = URI::parse(request.referrer).path
-            @showTab = true
-            flash.now[:error] = "We could not update your profile!"
-
-            if path == "/myprofile"
-                render action: 'show_current'
+        respond_to do |format|
+            if @profile.update(profile_params)
+                if @team.nil?
+                    format.html { redirect_to requests_new_path}
+                else
+                    format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+                    format.json { respond_with_bip(@profile) }
+                end
             else
-                render action: 'edit'
+                if(current_user.teams.size > 0)
+                    @can_register = true
+                else
+                    @can_register = false
+                end
+
+                path = URI::parse(request.referrer).path
+                @showTab = true
+                flash.now[:error] = "We could not update your profile!"
+
+                if path == "/myprofile"
+                    format.html { render action: 'show_current' }
+                else
+                    format.html { render action: 'edit' }
+                end
             end
         end
     end
