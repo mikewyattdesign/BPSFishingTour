@@ -1,0 +1,11 @@
+<% content_for :mail_heading_image do %>
+    <a href="http://bassprofishingtour.com/join" style="font-size: 20px;color:#ed1c24;">
+        <%= image_tag 'email/youre-invited.jpg', style: 'display: block;', width: '600', height: '83', border: '0', alt: "You're Invited!" %>
+    </a>
+<% end %>
+
+<% content_for :mail_heading do %>Hello,<% end %>
+
+<p>Your team has been registered for <%= @event.name %> on <%= @event.date.strftime("%A, %B %d, %Y") %></p>
+<p>You can manage all your tour events or sign up for more events <%= link_to "here", root_path %>. </p>
+<p>Thanks for signing up, good luck in the event and we'll see you on the water!</p>
