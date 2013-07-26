@@ -58,7 +58,7 @@
 }
 
 .bannerSmallTop {
-    height:200px;
+    height: 200px;
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
@@ -180,16 +180,16 @@
 /*Map Slider*/
 
 #slideshowMap, #slideshowMap {
-    margin:0 auto;
-    width:1100px;
-    height:265px;
+    margin: 0 auto;
+    width: 1100px;
+    height: 265px;
     position:relative;
 }
 
 #slidesContainer {
-    margin:0 auto;
+    margin: 0 auto;
     width: 1000px;
-    height:265px;
+    height: 265px;
     position:relative;
 }
 
@@ -206,20 +206,20 @@
 }
 
 #slideshowMap #slidesContainer {
-    overflow:auto;
+    overflow: hidden;
 }
 
 #slideshowMap #slidesContainer .slide {
-    margin:0 auto;
-    width:540px;
-    height:265px;
+    margin: 0 auto;
+    width: 540px;
+    height: 265px;
 }
 
 .control {
     position:absolute;
     top: 55px;
-    width:39px;
-    height:100%;
+    width: 39px;
+    height: 100%;
     cursor: pointer;
 
     &.left {
@@ -234,22 +234,22 @@
 }
 
 #leftControl, #rightControl {
-    top:55px;
+    top: 55px;
     z-index: 20;
 }
 
 #leftControl {
-    left:63px;
+    left: 63px;
     background:transparent url(/assets/control_left.png) no-repeat 0 0;
 }
 
 #rightControl {
-    right:43px;
+    right: 43px;
     background:transparent url(/assets/control_right.png) no-repeat 0 0;
 }
 
 .slide h2, .slide p {
-    margin:5px;
+    margin: 5px;
     height: 50px;
 }
 .slide h2 {
