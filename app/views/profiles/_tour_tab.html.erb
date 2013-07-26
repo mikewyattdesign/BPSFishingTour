@@ -44,7 +44,7 @@
         </div>
         <div class="tourContRightBot">
             <%= link_to select_profile_picture_path  do %>
-                <% if @profile.picture? %>
+                <% if @profile.picture.exists? %>
                     <%= image_tag @profile.picture.url(:tour), class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% else %>
                     <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
