@@ -43,6 +43,8 @@ class EventsController < ApplicationController
     if !current_user.my_team.events.include? event
       current_user.my_team.events << event
       flash[:register_event] = "Your team is now registered to participate in #{event.name}!"
+      #Email them Here
+      RegisterEventMailer.event_registered(event, current_user).deliver
     else
       flash[:alreay_registered_event] = "Your team is already registered to attend this event!"
     end
