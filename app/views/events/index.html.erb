@@ -35,7 +35,7 @@
         </div>
         <% if user_signed_in? && current_user.my_team %>
             <div class="actions-container">
-                <p class="is-fishing">Is your team fishing in this event?</p>
+                <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
                 <div class="yesNoContainer">
                         <% if current_user.my_team.events.include?(event) %>
                             <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
