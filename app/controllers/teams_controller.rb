@@ -11,7 +11,10 @@ class TeamsController < ApplicationController
         @team.update_attributes(team_params)
         respond_to do |format|
             format.html
-            format.json { render json: @team }
+            #format.json { render json: @team }
+
+            #returns field update to best in place via AJAX
+            format.json { respond_with_bip(@team) }
         end
     end
 
