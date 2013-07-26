@@ -13,7 +13,7 @@ module ApplicationHelper
     end
 
     def drop_profile_teammate_pic(user, the_class, area, alt)
-        if user && user.profile.picture?
+        if user && user.profile.picture.exists?
              return image_tag user.profile.picture.url(area), class: the_class, alt: alt
          else
             return image_tag 'iconPersonSmall.png', class: the_class, alt: alt
