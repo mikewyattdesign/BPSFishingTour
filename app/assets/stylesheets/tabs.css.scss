@@ -34,6 +34,15 @@
     background-color: none;
     background-repeat: no-repeat;
     background-image: image-url('tabMiddle.png');
+    opacity: 0.75;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .nav-tabs > li > a {
