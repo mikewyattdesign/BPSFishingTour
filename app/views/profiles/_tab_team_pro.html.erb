@@ -6,8 +6,8 @@
                 <h3>Tournament Boat:</h3>
 
                 <% if @team && @is_current_user %>
-                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                    <p><%= best_in_place @team, :boat_description, nil: "Tell us what boat your team will be using for the Bass Pro Fishing Tour here." %></p>
+                    <%= link_to(image_tag('iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon'),'#', :id => 'boat_description') %>
+                    <p><%= best_in_place @team, :boat_description, nil: "Tell us what boat your team will be using for the Bass Pro Fishing Tour here.", :activator => '#boat_description' %></p>
                 <% else %>
                     <p>No boat info available.</p>
                 <% end %>
@@ -19,8 +19,8 @@
                 <h3>Favorite Gear:</h3>
 
                 <% if @team && @is_current_user %>
-                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                    <p><%= best_in_place @team, :favorite_gear, nil: "Share your favorite gear here or the equipment you have had the best luck with!" %></p>
+                    <%= link_to(image_tag('iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon'),'#',:id => 'favorite_gear') %>
+                    <p><%= best_in_place @team, :favorite_gear, nil: "Share your favorite gear here or the equipment you have had the best luck with!",:activator => '#favorite_gear'%></p>
                 <% else %>
                     <p>No favorite gear available.</p>
                 <% end %>
@@ -33,9 +33,9 @@
                     <%= drop_profile_teammate_pic(@user.teammate, "tourPerson", :tour, "Person Icon") %>
                 <% end %>
 
-                <% if @is_current_user %>
+               <!--  <% if @is_current_user %>
                     <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                <% end %>
+                <% end %> -->
 
                 <% if @teammate %>
                     <h3>Teammate: <%= @teammate.full_name ? link_to(@teammate.full_name.titleize, profile_path(@teammate.profile))  : "Your Teammate" %></h3>
