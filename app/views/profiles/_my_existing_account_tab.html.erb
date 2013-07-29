@@ -55,7 +55,7 @@
             <div class="full">
                 <div class="shirtSize">
                     <%= f.label :shirt %>
-                    <p><%= best_in_place @profile, :shirt, :type => :select, :collection => [[1,'Select Size'], [2,'XS'], [3,'S'], [4,'M'], [5,'L'], [6,'XL'], [7,'XXL'], [8,'XXXL']], :activator => '' %></p>
+                    <p><%= best_in_place @profile, :shirt, :type => :select, :collection => [[1,'Select Size'], ['XS','XS'], ['S','S'], ['M','M'], ['L','L'], ['XL','XL'], ['XXL','XXL'], ['XXXL','XXXL']], :activator => '' %></p>
                 </div>
             </div>
             <div class="full">
