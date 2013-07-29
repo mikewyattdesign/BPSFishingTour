@@ -22,9 +22,9 @@
         <% board.each_with_index do |team, index| %>
             <tr>
                 <td><%= index + 1 %></td>
-                <td><%= link_to team[:team].users.first.full_name, profile_path(team[:team].users.first.id) %>
+                <td><%= link_to team[:team].users.first.full_name, profile_path(team[:team].users.first.profile.id) %>
                     and
-                    <%= link_to team[:team].users.last.full_name, profile_path(team[:team].users.last.id) %></td>
+                    <%= link_to team[:team].users.last.full_name, profile_path(team[:team].users.last.profile.id) %></td>
                 <td><strong><%= team[:total_score] %></strong></td>
             </tr>
         <% end %>
