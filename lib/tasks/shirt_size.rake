@@ -25,7 +25,7 @@ namespace :shirt_size do
                 when "8"
                     profile.shirt = "XXXL"
             end
-            puts "Shirt after: " + shirt
+            puts "Shirt after: " + profile.shirt
             profile.save!
         end
     end
