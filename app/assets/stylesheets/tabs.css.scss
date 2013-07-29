@@ -800,6 +800,17 @@ table {
     margin-left: 10px;
 }
 
+.full .shirtSize, .full {
+    margin-left: 0;
+    .street-address, p {
+        color: #b3b3b3;
+        line-height: 140%;
+        font-weight: lighter;
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
 tbody .odd, tbody .even {
     line-height: 38px;
 }

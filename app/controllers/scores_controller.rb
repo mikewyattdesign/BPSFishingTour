@@ -1,6 +1,8 @@
 class ScoresController < ApplicationController
   layout 'bare'
 
+  http_basic_authenticate_with name: 'Group360', password: 'scoreimport'
+
   before_action :set_score, only: [:show, :edit, :update, :destroy]
 
   # GET /scores

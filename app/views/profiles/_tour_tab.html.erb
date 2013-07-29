@@ -27,7 +27,7 @@
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
                 <h2><%= @profile.user.full_name  || "My Profile" %></h2>
-                <p><%= @profile.id == current_user.id ? best_in_place(@profile, :status, nil: "Tell us a little about your self and why your are here!") : @profile.status %></p>
+                <p><%= best_in_place_if @profile.id == current_user.id, @profile, :status, nil: "Tell us a little about your self and why your are here!"  %></p>
             </div>
         </div>
 

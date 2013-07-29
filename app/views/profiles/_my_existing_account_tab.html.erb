@@ -1,0 +1,71 @@
+<div id="tab3" class="tab-pane">
+    <div class="teamRegContainer no">
+        <%= form_for(@profile) do |f| %>
+        <div class="teamRegContainerForm">
+            <% if @profile.errors.any? %>
+            <div id="error_explanation">
+                <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+                <ul>
+                    <% @profile.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+            <% end %>
+            <div class="headText">
+                <h3>Account Information</h3><%= link_to(image_tag('iconWriteLight.png', class: 'writeIcon', alt: 'Click on Field to Edit'),'#tab3',:id => '') %>
+            </div>
+            <div class="divideLine"></div>
+            <div class="half">
+                <%= f.label :first_name %>
+                <p><%= best_in_place @profile, :first_name, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="half">
+                <%= f.label :last_name %>
+                <p><%= best_in_place @profile, :last_name, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="full">
+                <%= f.label :street_address %>
+                <p><%= best_in_place @profile, :street_address, :type => :input, :activator => '', class: 'street-address' %></p>
+            </div>
+            <div class="third">
+                <%= f.label :suite %>
+                <p><%= best_in_place @profile, :suite, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="two thirds">
+                <%= f.label :city %>
+                <p><%= best_in_place @profile, :city, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="thirds">
+                <%= f.label :state %>
+                <p><%= best_in_place @profile, :state, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="two thirds">
+                <%= f.label :zip %>
+                <p><%= best_in_place @profile, :zip, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="two thirds">
+                <%= f.label :phone %>
+                <p><%= best_in_place @profile, :phone, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="third">
+                <%= f.label :ext %>
+                <p><%= best_in_place @profile, :ext, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="full">
+                <div class="shirtSize">
+                    <%= f.label :shirt %>
+                    <p><%= best_in_place @profile, :shirt, :type => :select, :collection => [[1,'Select Size'], [2,'XS'], [3,'S'], [4,'M'], [5,'L'], [6,'XL'], [7,'XXL'], [8,'XXXL']], :activator => '' %></p>
+                </div>
+            </div>
+            <div class="full">
+                <%= f.label :outdoor_rewards_number, "Outdoor Rewards Number" %>
+                <p><%= best_in_place @profile, :outdoor_rewards_number, :type => :input, :activator => '' %></p>
+            </div>
+            <div class="actions no">
+                <!--<%= f.submit 'Submit' %>-->
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
