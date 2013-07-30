@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('page:load ready', function(){
     $("input:file").change(function() {
         if ($("input:file").val() != "")
         {
