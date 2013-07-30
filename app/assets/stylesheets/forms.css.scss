@@ -438,6 +438,7 @@ button.close {
     background: none;
 }
 
-.actions input[disabled].disabled {
-    background: none;
+.actions input[disabled].disabled, .actions input[disabled].disabled:hover {
+    background-image: none ;
+    background-color: #cacfb1;
 }
