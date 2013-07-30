@@ -43,13 +43,19 @@ class ProfilesController < ApplicationController
     end
 
     def select_profile_pic
-        @profile = current_user.profile
+        unless current_user.nil? || !current_user.profile
+            @profile = current_user.profile
+        else
+            flash.clear
+            flash.now[:notice] = "Please login to upload your photo"
+            redirect_to '/'
+        end
     end
 
     def upload_profile_pic
         @profile = current_user.profile
-        @profile.attributes = profile_params
-        if @profile.save(validate: false)
+        @profile.attributes = profile_params if params[:profile]
+        if @profile.save(validate: false) && params[:profile]
             redirect_to my_profile_path, notice: "Your Profile picture has been uploaded!"
         else
             flash.clear

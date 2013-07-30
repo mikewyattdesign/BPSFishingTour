@@ -25,13 +25,13 @@ class TeamsController < ApplicationController
 
     def upload_team_pic
         @team = current_user.teams.first
-        @team.attributes = team_params
-        if @team.save(validate: false)
+        @team.attributes = team_params if params[:team]
+        if @team.save(validate: false) && params[:team]
           redirect_to my_profile_path, notice: "Your Team Picture has been uploaded!"
         else
           flash.clear
           flash.now[:notice] = "Uh oh! There seems to be an issue with uploading your image!"
-          render :select_team_pic
+          render :select_profile_pic
         end
     end
 
