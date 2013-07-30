@@ -25,10 +25,10 @@ class ProfilesController < ApplicationController
         @new_user = current_user.profile ? false : true
 
         #@new_user = true if params[:edit] && params[:edit] = true
-
         current_user.create_profile unless current_user.profile
         @profile = current_user.profile
-        @team = current_user.teams.first
+        @team = current_user.my_team
+        @events = @team ? @team.events : nil
         @is_current_user = true
     end
 
