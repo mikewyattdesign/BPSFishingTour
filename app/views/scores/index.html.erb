@@ -32,9 +32,9 @@
     <% @scores.select{ |score| score.event_id == @event.id }.sort { |x, y| x.position <=> y.position }.each do |score| %>
       <tr>
         <td><%= score.position %></td>
-        <td><%= "#{score.angler} (#{score.angler_id})" %></td>
+        <td><%= "#{score.angler} <b>(#{score.angler_id})</b>".html_safe %></td>
         <td><%= score.angler_rewards %></td>
-        <td><%= "#{score.co_angler} (#{score.co_angler_id})" %></td>
+        <td><%= "#{score.co_angler} <b>(#{score.co_angler_id})</b>".html_safe %></td>
         <td><%= score.co_angler_rewards %></td>
         <td><%= score.weight %></td>
         <td><%= score.bf %></td>
