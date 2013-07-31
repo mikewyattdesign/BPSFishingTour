@@ -16,4 +16,7 @@ class Score < ActiveRecord::Base
         return self.position unless self.position > 50
         return 50
     end
+
+    belongs_to :team
+    belongs_to :event
 end
