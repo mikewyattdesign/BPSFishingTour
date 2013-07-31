@@ -1,4 +1,4 @@
-<div id="tab1" class="tab-pane active">
+<div id="tab1" class="tab-pane <%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
     <div class="tour-rank half">
 
         <% if @is_current_user %>

@@ -27,7 +27,7 @@ class TeamsController < ApplicationController
         @team = current_user.teams.first
         @team.attributes = team_params if params[:team]
         if @team.save(validate: false) && params[:team]
-          redirect_to my_profile_path, notice: "Your Team Picture has been uploaded!"
+          redirect_to my_profile_path(:tab => 'team'), notice: "Your Team Picture has been uploaded!"
         else
           flash.clear
           flash.now[:notice] = "Uh oh! There seems to be an issue with uploading your image!"

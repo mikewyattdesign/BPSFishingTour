@@ -56,7 +56,7 @@ class ProfilesController < ApplicationController
         @profile = current_user.profile
         @profile.attributes = profile_params if params[:profile]
         if @profile.save(validate: false) && params[:profile]
-            redirect_to my_profile_path, notice: "Your Profile picture has been uploaded!"
+            redirect_to my_profile_path(:tab => 'team'), notice: "Your Profile picture has been uploaded!"
         else
             flash.clear
             flash.now[:notice] = "Uh oh! There seems to be an issue with uploading your image!"
