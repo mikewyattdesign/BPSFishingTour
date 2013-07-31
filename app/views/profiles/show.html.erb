@@ -3,7 +3,7 @@
 <div class="tabContBackground">
     <div class="tabContainer">
         <ul class="nav nav-tabs" id="myTabs">
-            <li class="active">
+            <li class="<%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
                 <a data-toggle="tab" href="#tab1">
                     <div class="tabIconContainer">
                         <%= image_tag 'iconFishTab.png', id: 'fishSolo', class: 'iconSmall', alt: 'Fish Icon' %>
@@ -11,7 +11,7 @@
                     </div>
                 </a>
             </li>
-            <li>
+            <li class="<%= "active" if params[:tab] && params[:tab] == 'team' %>">
                 <a data-toggle="tab" href="#tab2">
                     <div class="tabIconContainer">
                         <%= image_tag 'iconPerson.png', class: 'iconSmall', alt: 'Person Icon' %>

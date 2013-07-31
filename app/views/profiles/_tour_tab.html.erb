@@ -1,4 +1,4 @@
-<div id="tab1" class="tab-pane active">
+<div id="tab1" class="tab-pane <%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
     <div class="tour-rank half">
 
         <% if @is_current_user %>
@@ -27,7 +27,7 @@
             <%= image_tag @team.team_picture.url(:tourpro), class: 'tourPic', alt: 'Tour Picture' unless !@team || !@team.team_picture.exists? %>
             <div class="cutOutText">
                 <h2><%= @profile.user.full_name  || "My Profile" %></h2>
-                <p><%= best_in_place_if @profile.id == current_user.id, @profile, :status, nil: "Tell us a little about your self and why your are here!"  %></p>
+                <p><%= best_in_place_if (!current_user.nil? && @profile.id == current_user.profile.id), @profile, :status, nil: "Tell us a little about yourself and why you are here!"  %></p>
             </div>
         </div>
 

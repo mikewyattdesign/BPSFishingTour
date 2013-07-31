@@ -25,10 +25,10 @@ class ProfilesController < ApplicationController
         @new_user = current_user.profile ? false : true
 
         #@new_user = true if params[:edit] && params[:edit] = true
-
         current_user.create_profile unless current_user.profile
         @profile = current_user.profile
-        @team = current_user.teams.first
+        @team = current_user.my_team
+        @events = @team ? @team.events : nil
         @is_current_user = true
     end
 
@@ -43,14 +43,20 @@ class ProfilesController < ApplicationController
     end
 
     def select_profile_pic
-        @profile = current_user.profile
+        unless current_user.nil? || !current_user.profile
+            @profile = current_user.profile
+        else
+            flash.clear
+            flash.now[:notice] = "Please login to upload your photo"
+            redirect_to '/'
+        end
     end
 
     def upload_profile_pic
         @profile = current_user.profile
-        @profile.attributes = profile_params
-        if @profile.save(validate: false)
-            redirect_to my_profile_path, notice: "Your Profile picture has been uploaded!"
+        @profile.attributes = profile_params if params[:profile]
+        if @profile.save(validate: false) && params[:profile]
+            redirect_to my_profile_path(:tab => 'team'), notice: "Your Profile picture has been uploaded!"
         else
             flash.clear
             flash.now[:notice] = "Uh oh! There seems to be an issue with uploading your image!"

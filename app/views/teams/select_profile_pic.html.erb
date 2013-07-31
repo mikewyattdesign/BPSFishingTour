@@ -30,7 +30,7 @@
         </div>
         <div class="actions">
             <%= link_to :back, my_profile_path  %>
-            <%= submit_tag :continue, value: 'Continue' %>
+            <%= submit_tag :continue, value: 'Continue', :disabled => 'disabled', class: 'disabled' %>
         </div>
     <% end %>
 

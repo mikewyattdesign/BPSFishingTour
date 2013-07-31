@@ -5,10 +5,8 @@
         Teams with
         <% if board[0][:events_attended] >= 5 %>
             5+ Events
-        <% elsif board[0][:events_attended] > 1 %>
-            <%= board[0][:events_attended] %> Events
         <% else %>
-            1 Event
+            <%= pluralize("#{board[0][:events_attended]}",'Event') %>
         <% end %>
     </caption>
     <thead>

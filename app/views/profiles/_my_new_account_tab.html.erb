@@ -1,4 +1,4 @@
-<div id="tab3" class="tab-pane">
+<div id="tab3" class="tab-pane <%= "active" if params[:tab] && params[:tab] == 'account' %>">
     <div class="teamRegContainer no">
         <%= form_for(@profile) do |f| %>
         <div class="teamRegContainerForm">

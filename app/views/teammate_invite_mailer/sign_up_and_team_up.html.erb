@@ -6,6 +6,6 @@
 
 <% content_for :mail_heading do %>Hello,<% end %>
 
-<p><%= @requester.full_name %> has registered for the Bass Pro Shops Fishing Tour and invited you to become their teammate.</p>
+<p><%= @requester.full_name.blank? ? @requester.email : @requester.full_name %> has registered for the Bass Pro Shops Fishing Tour and invited you to become their teammate.</p>
 <p>The Bass Pro Fishing Tour is brand new in 2013, free to join and can net you and your team over $25,000 in cash and prizes.</p>
 <p><%= link_to "Click here to sign yourself up, complete your angler profile and finish your team's registration.", @request_url %></p>

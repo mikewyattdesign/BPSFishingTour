@@ -13,7 +13,7 @@
             </tr>
             <% @invites.each do |invitation| %>
                 <tr>
-                    <td><%= User.find(invitation.requester).full_name %></td>
+                    <td><%= User.find(invitation.requester).full_name.blank? ? User.find(invitation.requester).email : User.find(invitation.requester).full_name %></td>
                     <td><%= link_to "Accept Invitation", accept_invite_path(invitation.id) %></td>
                     <td><%= link_to "Don't Join", reject_invite_path(invitation.id) %></td>
                 </tr>

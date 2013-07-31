@@ -5,13 +5,14 @@ BpsFishingTour::Application.routes.draw do
     end
     get 'scores/angler/:id/:angler_id' => 'scores#angler'
     get 'scores/co_angler/:id/:co_angler_id' => 'scores#co_angler'
+    get '/score/remove-angler' => 'scores#remove_angler'
+    get 'score/remove-co-angler' => 'scores#remove_co_angler'
 
     # Static Page Routing
     root to: 'static_pages#home'
-    get '/thanks'  => 'static_pages#thanks'
-    get '/about'   => 'static_pages#about'
-    get '/confirm' => 'static_pages#confirm'
-    get '/help' => 'static_pages#help'
+    %w[thanks about confirm help].each do |page|
+        get page, controller: 'static_pages', action: page
+    end
 
     get '/select_profile_picture' => 'profiles#select_profile_pic'
     post '/upload_profile_pic' => 'profiles#upload_profile_pic'
