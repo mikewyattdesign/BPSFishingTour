@@ -5,6 +5,8 @@ BpsFishingTour::Application.routes.draw do
     end
     get 'scores/angler/:id/:angler_id' => 'scores#angler'
     get 'scores/co_angler/:id/:co_angler_id' => 'scores#co_angler'
+    get '/score/remove-angler' => 'scores#remove_angler'
+    get 'score/remove-co-angler' => 'scores#remove_co_angler'
 
     # Static Page Routing
     root to: 'static_pages#home'
