@@ -31,7 +31,7 @@ feature "Teammate Request" do
                 expect(Request.first.invitee_id).to eq User.last.id
 
                 page.current_path.should eq "/users/#{User.find_by_email(tom.email).id}/team_invitations"
-                expect(page).to have_content("#{bob.full_name}")
+                expect(page).to have_content("#{bob.full_name}" || "#{bob.email}")
 
                 expect{ click_link "Accept Invitation" }.to change{Team.count}.from(0).to(1)
                 # puts Request.count
