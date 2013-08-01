@@ -17,6 +17,13 @@ namespace :orphans do
 
     desc "TODO"
     task connect_team_to_event: :environment do
+        # Get applicable scores
+        team_scores = Score.where.not(team_id: nil)
+
+        team_scores.each do |score|
+            # Check for orphanage
+            score.team.events << score.event unless score.team.events.nil? || score.team.events.include?(score.event)
+        end
     end
 
 end
