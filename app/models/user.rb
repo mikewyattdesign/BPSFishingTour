@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
     has_and_belongs_to_many :teams
     has_one :profile, dependent: :destroy
     after_create :create_user_profile
+    has_many :scores, through: :teams
+    has_many :events, through: :teams
+
 
     def full_name
         if self.profile.first_name.nil? || self.profile.last_name.nil?

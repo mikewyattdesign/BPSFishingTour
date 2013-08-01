@@ -1,7 +1,7 @@
 class Team < ActiveRecord::Base
     has_and_belongs_to_many :users
     has_and_belongs_to_many :events
-    has_many :scores, through: :events
+    has_many :scores
 
     picture_options = {
         styles: {
@@ -17,14 +17,14 @@ class Team < ActiveRecord::Base
 
   has_attached_file :team_picture, picture_options
 
-    def scores
-        angler = self.users.first
-        co_angler = self.users.last
+    # def scores
+    #     angler = self.users.first
+    #     co_angler = self.users.last
 
-        Score.where(angler_id: angler.id, co_angler_id: co_angler.id)
-             .concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id))
-             .uniq
-    end
+    #     Score.where(angler_id: angler.id, co_angler_id: co_angler.id)
+    #          .concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id))
+    #          .uniq
+    # end
 
     def event_score(event)
         score = scores.select { |score| score.event_id ==  event.id }

@@ -19,4 +19,8 @@ class Score < ActiveRecord::Base
 
     belongs_to :team
     belongs_to :event
+    belongs_to :user
+    belongs_to :angler_user, foreign_key: "angler_id", :class_name => "User"
+    belongs_to :co_angler_user, foreign_key: "co_angler_id", :class_name => "User"
+
 end
