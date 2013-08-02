@@ -51,4 +51,9 @@ class User < ActiveRecord::Base
         return false
       end
     end
+
+    def total_score
+        self.scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
+    end
+
 end
