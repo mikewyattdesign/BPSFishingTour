@@ -1,7 +1,7 @@
 <h1>Overall Rating</h1>
 <div class="half medalIcon">
-    <h2>88th</h2>
-    <%= image_tag 'iconMedalGreen.png', alt: 'One Event' %>
+    <!-- <h2>88th</h2> -->
+    <%= image_tag @user.scores.count < 5 ? 'iconMedal.png':'iconMedalGreen.png' %>
 </div>
 <div class="half ratingText">
     <% score_digits = Math.log10(@user.total_score) +1 %>
