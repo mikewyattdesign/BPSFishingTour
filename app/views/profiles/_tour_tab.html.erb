@@ -1,9 +1,9 @@
 <div id="tab1" class="tab-pane <%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
     <div class="tour-rank half">
-        <% if @user.scores.count >= 5 %>
-            <%= render 'profiles/tour_tab_qualified' %>
+        <% if @user.scores.count > 0 %>
+            <%= render 'profiles/tour_tab_events' %>
         <% else %>
-            <%= render 'profiles/tour_tab_unqualified' %>
+            <%= render 'profiles/tour_tab_noevents' %>
         <% end %>
     </div>
     <div class="half">
