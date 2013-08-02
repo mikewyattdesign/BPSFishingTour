@@ -1,0 +1,16 @@
+<!-- Replace this -->
+<% if @is_current_user %>
+            <!-- THIS NEEDS HELP -->
+            <p>Sign up to fish in Tour Events, then check back to track your performance.</p>
+        <% else %>
+            <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
+        <% end %>
+
+        <div class="tour-progress">
+            <p>5 events needed to qualify</p>
+            <%= image_tag 'icons/fish.png', alt: 'One Event' %>
+            <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
+            <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
+            <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
+            <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
+        </div>
