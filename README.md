@@ -35,3 +35,5 @@ If you want a copy of the production database on your local machine:
    to push data from production into your local development database.
    (make sure that the port of localhost corresponds to the port of your
    taps server)
+
+* If taps isn't there at first, run 'gem install taps', then 'rbenv rehash'
