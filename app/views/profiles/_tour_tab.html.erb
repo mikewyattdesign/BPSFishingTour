@@ -1,21 +1,10 @@
 <div id="tab1" class="tab-pane <%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
     <div class="tour-rank half">
-
-        <% if @is_current_user %>
-            <!-- THIS NEEDS HELP -->
-            <p>Sign up to fish in Tour Events, then check back to track your performance.</p>
+        <% if @user.scores.count >= 5 %>
+            <%= render 'profiles/tour_tab_qualified' %>
         <% else %>
-            <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
+            <%= render 'profiles/tour_tab_unqualified' %>
         <% end %>
-
-        <div class="tour-progress">
-            <p>5 events needed to qualify</p>
-            <%= image_tag 'icons/fish.png', alt: 'One Event' %>
-            <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
-            <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
-            <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
-            <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
-        </div>
     </div>
     <div class="half">
          <div class="cutOutContainer">
