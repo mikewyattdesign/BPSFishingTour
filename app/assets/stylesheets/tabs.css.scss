@@ -877,9 +877,12 @@ table .even {
 
 .medalIcon {
     margin-top: 10px;
+    position: relative;
     h2 {
         position: absolute;
         text-shadow: none;
-        margin: 40px 30px;
+        top: 40px;
+        left: 0;
+        right: 0;
     }
 }
