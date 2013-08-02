@@ -16,4 +16,8 @@ class TeammateInviteMailer < ActionMailer::Base
     def team_created(emails)
         mail(to: emails, subject: 'Introducing the newest team on the tour')
     end
+
+    def invite_reminder(email)
+        mail(to: email, subject: 'Important Bass Pro Fishing Tour Reminder')
+    end
 end

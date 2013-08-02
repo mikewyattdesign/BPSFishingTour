@@ -48,6 +48,7 @@ BpsFishingTour::Application.routes.draw do
     match '/users/:id/team_invitations' => 'teams/requests#team_invitations', as: 'team_invitations', via: :get
     scope '/teams' do
         match '/requests/new' => 'teams/requests#new', via: :get
+        get '/requests/invite-reminder' => 'teams/requests#invite_reminder'
     end
 
     resources :teams

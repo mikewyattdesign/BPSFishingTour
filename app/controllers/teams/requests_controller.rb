@@ -69,4 +69,9 @@ class Teams::RequestsController < ApplicationController
     def reject_invitation
 
     end
+
+    def invite_reminder
+        TeammateInviteMailer.invite_reminder(params[:email]).deliver
+        render text: 'Reminders sent.'
+    end
 end
