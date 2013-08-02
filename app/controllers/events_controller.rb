@@ -9,7 +9,7 @@ class EventsController < ApplicationController
 
   # GET /events/1
   def show
-    if(current_user.teams.size > 0)
+    if(current_user.teams.size > 0 && current_user.teammate)
       @can_register = true
     else
       @can_register = false

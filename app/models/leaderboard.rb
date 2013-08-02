@@ -29,8 +29,7 @@ class Leaderboard
         angler = team.users.first
         co_angler = team.users.last
 
-        scores = Score.where(angler_id: angler.id, co_angler_id: co_angler.id).concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id)).uniq
-
+        scores = team.scores
         scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
     end
 end

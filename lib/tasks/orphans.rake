@@ -1,21 +1,20 @@
 namespace :orphans do
-  desc "TODO"
+  desc "Connects existing teams to their scores through team_id"
   task connect_team_to_score: :environment do
-        # Get applicable scores for anglers
-        angler_scores = Score.where(team_id: nil).where.not(angler_id: nil)
-        angler_scores.each do |score|
-            # Assign Correct Team to Score
-            score.update(team_id: score.angler_user.teams.first.id) unless score.angler_user.teams.nil?
-        end
-        # Get applicable scores for co-anglers
-        co_angler_scores = Score.where(team_id: nil).where.not(co_angler_id: nil)
-        co_angler_scores.each do |score|
-            # Assign Correct Team to Score
-            score.update(team_id: score.co_angler_user.teams.first.id) unless score.co_angler_user.teams.nil?
+        # Get applicable teams
+        teams = Team.all.reject { |team| team.users.count < 2 }
+
+        teams.each do | team |
+            angler = team.users.first
+            co_angler = team.users.last
+
+            Score.where(angler_id: angler.id, co_angler_id: co_angler.id)
+            .concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id))
+            .uniq.each {|score| score.update(team_id: team.id)}
         end
     end
 
-    desc "TODO"
+    desc "Connects teams with a score for event to the event"
     task connect_team_to_event: :environment do
         # Get applicable scores
         team_scores = Score.where.not(team_id: nil)
@@ -25,5 +24,7 @@ namespace :orphans do
             score.team.events << score.event unless score.team.events.nil? || score.team.events.include?(score.event)
         end
     end
+
+    task :rescue => [:connect_team_to_score, :connect_team_to_event]
 
 end
