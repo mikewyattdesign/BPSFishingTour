@@ -1,15 +1,20 @@
-<div class="half">
-    <%= image_tag 'iconMedal.png', alt: 'One Event' %>
-</div>
-<div class="half">
-    <h1>00</h1>
-    <h3>Event Points</h3>
-    <div class="tour-progress">
-        <p>5 events needed to qualify</p>
-        <%= image_tag 'icons/fish.png', alt: 'One Event' %>
-        <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
-    </div>
+<% if @is_current_user %>
+    <!-- THIS NEEDS HELP -->
+    <p>Sign up to fish in Tour Events, then check back to track your performance.</p>
+<% else %>
+    <% if @user.events.count == 0 %>
+    <p><%= @profile.first_name %> hasn't attended any events yet.  Check back later for their rankings.</p>
+    <% else %>
+    <% past_events = @user.events.where("date < ?", Date.today) %>
+    <p><%= @profile.first_name %> has attended <%= pluralize(past_events.count, "event") %>.  Check back later for their rankings.</p>
+    <% end %>
+<% end %>
+
+<div class="tour-progress">
+    <p>5 events needed to qualify</p>
+    <%= image_tag 'icons/fish.png', alt: 'One Event' %>
+    <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
+    <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
+    <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
+    <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
 </div>
