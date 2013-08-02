@@ -1,5 +1,6 @@
 class Teams::RequestsController < ApplicationController
     def new
+        redirect_to user_session_path unless user_signed_in?
     end
 
     # def search
@@ -68,10 +69,5 @@ class Teams::RequestsController < ApplicationController
 
     def reject_invitation
 
-    end
-
-    def invite_reminder
-        TeammateInviteMailer.invite_reminder(params[:email]).deliver
-        render text: 'Reminders sent.'
     end
 end
