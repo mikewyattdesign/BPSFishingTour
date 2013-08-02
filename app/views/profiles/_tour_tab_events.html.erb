@@ -3,14 +3,22 @@
     <%= image_tag 'iconMedalGreen.png', alt: 'One Event' %>
 </div>
 <div class="half ratingText">
-    <h3>00</h3>
+    <% score_digits = Math.log10(@user.total_score) +1 %>
+    <h3 class="<%= "digits-"+score_digits.to_int.to_s%>"><%= @user.total_score %></h3>
     <h4>Event Points</h4>
     <div class="tour-progress">
         <p>5 events needed to qualify</p>
-        <%= image_tag 'icons/fish.png', alt: 'One Event' %>
-        <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Three Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Four Events' %>
-        <%= image_tag 'icons/fish.png', alt: 'Five Events' %>
+        <% if @user.scores.count >= 5 %>
+            <% 5.times do |i| %>
+                <%= image_tag 'icons/green-fish.png', alt: "#{pluralize(i, "Event")}" %>
+            <% end %>
+        <% else %>
+            <% @user.scores.count.times do |i| %>
+                <%= image_tag 'icons/green-fish.png', alt: "#{pluralize(i, "Event")}" %>
+            <% end %>
+            <% (5 - @user.scores.count).times do |i| %>
+                <%= image_tag 'icons/fish.png', alt: 'Two Events' %>
+            <% end %>
+        <% end %>
     </div>
 </div>

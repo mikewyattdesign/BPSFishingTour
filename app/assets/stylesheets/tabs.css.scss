@@ -852,6 +852,21 @@ table .even {
         font-size: 120px;
         line-height: 120px;
         color: $beige;
+        letter-spacing: -2px;
+        text-align: center;
+        margin-left: -30px;
+        &.digits-3 {
+            margin-left: -15px;
+            font-size: 100px;
+        }
+        &.digits-2 {
+            margin-left: -10px;
+            font-size: 120px;
+        }
+        &.digits-1 {
+            margin-left: 0px;
+            font-size: 125px;
+        }
     }
 
     h4 {
