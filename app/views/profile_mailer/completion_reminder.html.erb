@@ -1,0 +1,18 @@
+<% content_for :mail_heading_image do %>
+    <a href="http://bassprofishingtour.com/" style="font-size: 20px;color:#ed1c24;">
+        <%= image_tag 'email/complete-your-registration-by-august-15.jpg', style: 'display: block;', width: '600', height: '83', border: '0', alt: "Complete your registration by August 15" %>
+    </a>
+<% end %>
+
+<% content_for :mail_heading do %>Dear Angler,<% end %>
+
+<p>Thank you for registering for the Bass Pro Shops Fishing Tour! Our records show that you have not fully completed your profile. This is a reminder that your team’s scores will not be added to the leaderboard and you will not be eligible for prizes from the Bass Pro Fishing Tour until you have fully completed the registration process.</p>
+<p>To Complete Your Registration:</p>
+<ul>
+    <li>Log Into Your Account At <%= link_to 'BassProFishingTour.com', 'http://bassprofishingtour.com/' %></li>
+    <li>Click on the MY ACCOUNT Tab</li>
+    <li>Fill Out Your Profile</li>
+</ul>
+<p>YOU HAVE UNTIL AUGUST 15TH</p>
+<p>If you complete your registration AFTER August 15th, only scores earned after your completed registration date will apply to your Bass Pro Shops Fishing Tour leaderboard standings.</p>
+<p>If you have any questions about your account, please contact us at <a href="mailto:support@bassprofishingtour.com">support@bassprofishingtour.com</a>.</p>

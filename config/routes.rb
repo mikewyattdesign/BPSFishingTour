@@ -20,7 +20,10 @@ BpsFishingTour::Application.routes.draw do
     post '/upload_team_pic' => 'teams#upload_team_pic'
     # Profile Routing
     get '/myprofile' => 'profiles#show_current', as: 'my_profile'
+
+    get '/profiles/completion-reminder' => 'profiles#completion_reminder'
     resources :profiles
+
 
     # Event Routing
     resources :events

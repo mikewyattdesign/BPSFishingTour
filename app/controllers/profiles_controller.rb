@@ -114,6 +114,11 @@ class ProfilesController < ApplicationController
         redirect_to profiles_url
     end
 
+    def completion_reminder
+        ProfileMailer.completion_reminder(params[:email]).deliver
+        render text: 'Reminders sent.'
+    end
+
     private
         # Use callbacks to share common setup or constraints between actions.
         def set_profile
