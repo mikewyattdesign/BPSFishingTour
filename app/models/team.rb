@@ -35,7 +35,7 @@ class Team < ActiveRecord::Base
     end
 
     def total_score
-        scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
+        scores.sort{ |x, y| x.points <=> y.points }.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
     end
 
     def name
