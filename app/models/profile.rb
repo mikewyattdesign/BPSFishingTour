@@ -16,7 +16,9 @@ class Profile < ActiveRecord::Base
   has_attached_file :picture, picture_options
 
     def self.directory
-        names = Profile.order('last_name').map { |profile|
+        names = Profile.all.sort{|x,y|
+            x.last_name.to_s.strip.capitalize <=> y.last_name.to_s.strip.capitalize }
+            .map { |profile|
             {
                 name: "#{profile.last_name.to_s.capitalize}, #{profile.first_name.to_s.capitalize}",
                 id: profile.id,
