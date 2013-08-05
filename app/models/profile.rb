@@ -20,11 +20,11 @@ class Profile < ActiveRecord::Base
             x.last_name.to_s.strip.capitalize <=> y.last_name.to_s.strip.capitalize }
             .map { |profile|
             {
-                name: "#{profile.last_name.to_s.capitalize}, #{profile.first_name.to_s.capitalize}",
+                name: "#{profile.last_name.to_s.strip.capitalize}, #{profile.first_name.to_s.strip.capitalize}",
                 id: profile.id,
             }
         }
-        names.select { |name| name[:name] !~ /^,/ }.group_by {|name| name[:name][0].upcase }
+        names.select { |name| name[:name] !~ /^,/ }.group_by {|name| name[:name][0] }
     end
 
 
