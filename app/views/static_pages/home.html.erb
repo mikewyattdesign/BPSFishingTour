@@ -4,8 +4,7 @@
             <%= image_tag 'standingsBackground.png', alt: 'Standings' %>
             <div class="standingsText">
                 <h2>Standings</h2>
-                <h1>Ontario Region</h1>
-                <p>Introducing for the first time, the 2013 Bass Pro Shops Fishing Tour!</p>
+                <%= render 'leaderboard/team_scores_mini' %>
             </div>
         </div>
     <% end %>

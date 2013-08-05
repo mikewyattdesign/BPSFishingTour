@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
     def home
+        @board = Leaderboard.qualified_teams
     end
 
     def about

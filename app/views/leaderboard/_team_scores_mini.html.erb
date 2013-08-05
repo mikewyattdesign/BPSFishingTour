@@ -1,0 +1,12 @@
+<% if @board.nil? %>
+    <h1>Ontario Region</h1>
+    <p>Introducing for the first time, the 2013 Bass Pro Shops Fishing Tour!</p>
+<% else %>
+    <div class="mini-scores-container">
+        <% @position = 1 %>
+        <%  @board.each do |team| %>
+            <%= render 'leaderboard/single_team_score_position_and_name',team: Team.find(team[:team].id), index: @position %>
+            <% @position += 1 %>
+        <% end %>
+    </div>
+<% end %>
