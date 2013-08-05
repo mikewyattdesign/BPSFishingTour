@@ -37,4 +37,8 @@ class Team < ActiveRecord::Base
     def total_score
         scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
     end
+
+    def name
+        "#{self.users.first.profile.last_name.capitalize} / #{self.users.last.profile.last_name.capitalize}"
+    end
 end
