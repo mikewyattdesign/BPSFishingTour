@@ -12,3 +12,46 @@
         text-align: left;
     }
 }
+.small-scores-container {
+    max-height: 215px;
+    overflow-y: auto;
+}
+.team-score {
+    display: block;
+
+    border-top: 1px solid white;
+    border-bottom: 1px solid $lightGrey;
+    overflow: hidden;
+
+    &:first-child {
+        border-top: none;
+    }
+}
+.team-photo, .team-name, .team-points {
+    @include box-sizing(border-box);
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    margin: 0;
+    height: 65px;
+    line-height: 65px;
+    color: $grey;
+    text-shadow: 1px 1px 0px #EEE;
+    font-size: 100%;
+}
+.team-photo {
+    width: 20%;
+}
+.team-name {
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 120%;
+    padding-left: 5%;
+}
+.team-points {
+    width: 20%;
+    text-align: right;
+    padding-right: 5%;
+}

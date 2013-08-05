@@ -2,8 +2,8 @@
     <p><%= link_to 'Check back soon to track results from the first events of the 2013 Bass Pro Shops Fishing Tour!',leaderboard_path %></p>
 <% else %>
     <div class="small-scores-container">
-    <%  @board.each do |team| %>
-        <%= render 'leaderboard/single_team_score',team: Team.find(team[:team].id) %>
-    <% end %>
+        <%  @board.each do |team| %>
+            <%= render 'leaderboard/single_team_score',team: Team.find(team[:team].id) %>
+        <% end %>
     </div>
 <% end %>
