@@ -18,7 +18,7 @@ class Profile < ActiveRecord::Base
     def self.directory
         names = Profile.order('last_name').map { |profile|
             {
-                name: "#{profile.last_name}, #{profile.first_name}",
+                name: "#{profile.last_name.to_s.capitalize}, #{profile.first_name.to_s.capitalize}",
                 id: profile.id,
             }
         }
