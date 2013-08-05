@@ -458,6 +458,9 @@ p {
     z-index: 11;
     border-radius: 48px;
     box-shadow: 0 0 0 4px #e7e0d8, 0 0 0 6px #cebca5;
+}
+
+.pulse{
     border : 2px solid $green;
     -webkit-animation: toggle-border 1s infinite; /* Safari 4+ */
     -moz-animation:    toggle-border 1s infinite; /* Fx 5+ */
