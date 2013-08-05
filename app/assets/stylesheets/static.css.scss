@@ -94,9 +94,27 @@
     }
 
     a:hover {
-        color:white;
-        border-radius: 3px;
+        background-color:rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        font-size: 30px;
     }
+
+    h2 {
+        font-size: 30px;
+        background-color: $darkGrey;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    p, h2 {
+        padding: 0 20px;
+    }
+}
+
+.anglersOrder {
+    border: solid 2px $darkGrey;
+    border-radius: 10px;
+    margin: 10px auto;
 }
 
 .aboutHead {

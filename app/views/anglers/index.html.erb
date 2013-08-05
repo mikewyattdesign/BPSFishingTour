@@ -11,10 +11,12 @@
             <h1>Find a friend, or your new rival.</h1>
             <div class="anglersGroup">
                 <% @directory.each_key do |letter| %>
-                    <h2><%= letter %></h2>
-                    <% @directory[letter].each do |name| %>
-                        <p><%= link_to name[:name], profile_path(name[:id]) %></p>
-                    <% end %>
+                    <div class="anglersOrder">
+                        <h2><%= letter %></h2>
+                        <% @directory[letter].each do |name| %>
+                            <p><%= link_to name[:name], profile_path(name[:id]) %></p>
+                        <% end %>
+                    </div>
                 <% end %>
             </div>
         </div>
