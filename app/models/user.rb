@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
         if self.profile.first_name.nil? || self.profile.last_name.nil?
             return nil
         end
-        "#{self.profile.first_name} #{self.profile.last_name}"
+        "#{self.profile.first_name.capitalize} #{self.profile.last_name.capitalize}"
     end
     def hit_team_limit?
         max_teams = 1
