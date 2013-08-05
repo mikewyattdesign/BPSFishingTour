@@ -1,9 +1,9 @@
-<div class="team-score">
+<div class="team-score <%= 'my-team' if !@user.teams.empty? && team.id == @user.teams.first.id %>">
 <% if team.users.first.profile.picture.exists? %>
     <%= image_tag team.users.first.profile.picture.url(:tour), class: 'team-photo', alt: 'Person Icon' %>
 <% else %>
     <%= image_tag 'iconPersonSmallGrey.png', class: 'team-photo', alt: 'Person Icon' %>
 <% end %>
-<h2 class="team-name"><%="#{team.users.first.profile.last_name.capitalize}/#{team.users.last.profile.last_name.capitalize}"%></h2>
+<h2 class="team-name"><%="#{team.users.first.profile.last_name.capitalize} / #{team.users.last.profile.last_name.capitalize}"%></h2>
 <span class="team-points"><%= "#{team.total_score}pts"%></span>
 </div>
