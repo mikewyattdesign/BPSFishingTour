@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
         redirect_to my_profile_path if user_signed_in? && @profile.id == current_user.profile.id
         @can_register = @profile.user.teams.size > 0
         @is_current_user = false
-        @board = Leaderboard.teams
+        @board = Leaderboard.qualified_teams
     end
 
     def show_current
@@ -31,7 +31,7 @@ class ProfilesController < ApplicationController
         @team = current_user.my_team
         @events = @team ? @team.events : nil
         @is_current_user = true
-        @board = Leaderboard.teams
+        @board = Leaderboard.qualified_teams
     end
 
     # GET /profiles/new
