@@ -23,7 +23,8 @@ class ProfilesController < ApplicationController
         @user = current_user
         @teammate = @user.teammate
         @can_register = current_user.teams.size > 0
-        @new_user = current_user.profile ? false : true
+        @new_user = current_user.profile.valid? ? false : true
+        current_user.profile.errors.clear
 
         #@new_user = true if params[:edit] && params[:edit] = true
         current_user.create_profile unless current_user.profile
