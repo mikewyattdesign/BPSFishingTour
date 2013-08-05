@@ -20,7 +20,7 @@ BpsFishingTour::Application.routes.draw do
     post '/upload_team_pic' => 'teams#upload_team_pic'
     # Profile Routing
     get '/myprofile' => 'profiles#show_current', as: 'my_profile'
-    get '/profiles' => 'anglers#index'
+    get '/profiles', to: redirect('/anglers')
     get '/profiles/completion-reminder' => 'profiles#completion_reminder'
     resources :profiles
 
@@ -40,7 +40,7 @@ BpsFishingTour::Application.routes.draw do
     get '/join', to: redirect('/users/sign_up')
 
     # Team Routing
-    match '/teams' => 'teams#index', via: :get
+    get '/teams', to: redirect('/leaderboard')
     match '/teammate/send_invite' => 'teams/requests#send_invite', as: 'send_invite', via: :post
     match '/teammate/invite_response/:id' => 'teams/requests#respond_to_invite', as: 'invite_response', via: :get
     match '/teammate/accept_invite/:request_id' => 'teams/requests#accept_invitation', as: 'accept_invite', via: :get
