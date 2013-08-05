@@ -457,7 +457,33 @@ p {
     z-index: 11;
     border-radius: 48px;
     box-shadow: 0 0 0 4px #e7e0d8, 0 0 0 6px #cebca5;
+    border : 2px solid $green;
+    -webkit-animation: toggle-border 1s infinite; /* Safari 4+ */
+    -moz-animation:    toggle-border 1s infinite; /* Fx 5+ */
+    -o-animation:      toggle-border 1s infinite; /* Opera 12+ */
+    animation:         toggle-border 1s infinite;
 }
+
+@-webkit-keyframes toggle-border {
+  0%, 100%   { border : 0px solid $green; }
+  50%   { border : 1px solid $green; }
+/*   { border : 2px solid $green; }
+*/}
+@-moz-keyframes toggle-border {
+  0%, 100%   { border : 0px solid $green; }
+  50%   { border : 1px solid $green; }
+/*  100% { border : 2px solid $green; }
+*/}
+@-o-keyframes toggle-border {
+  0%, 100%   { border : 0px solid $green; }
+  50%   { border : 1px solid $green; }
+/*  100% { border : 2px solid $green; }
+*/}
+@keyframes toggle-border {
+  0%, 100%   { border : 0px solid $green; }
+  50%   { border : 1px solid $green; }
+/*  100% { border : 2px solid $green; }
+*/}
 
 .teamPersonText {
     margin-left: 135px;
@@ -884,3 +910,4 @@ table .even {
         right: 0;
     }
 }
+
