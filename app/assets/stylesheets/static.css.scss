@@ -93,10 +93,17 @@
         text-decoration: none;
     }
 
-    a:hover {
+    p:hover {
         background-color:rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
         font-size: 30px;
+        &:last-child{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    h2, p {
+        padding: 0 20px;
     }
 
     h2 {
@@ -106,8 +113,12 @@
         border-top-right-radius: 5px;
     }
 
-    p, h2 {
-        padding: 0 20px;
+    p {
+        border-bottom: 1px dotted $darkGrey;
+
+        &:last-child{
+            border-bottom: none;
+        }
     }
 }
 
