@@ -562,7 +562,7 @@ p {
 
 .seeAll {
     float: right;
-    margin-right: 28px;
+    margin-right: 23px;
 }
 
 .seeAll a{
@@ -652,7 +652,7 @@ table {
 }
 
 .thMiddle {
-    width: 49.5%;
+    width: 50%;
     text-align: left;
 }
 
@@ -663,6 +663,7 @@ table {
 }
 
 .thRight {
+    width: 25%;
     text-align: left;
 }
 
@@ -850,10 +851,12 @@ tbody .odd, tbody .even {
 }
 
 .tdDate {
+    width: 23.5%;
     font-style: italic;
 }
 
 .tdName {
+    width: 53%;
     font-weight: bold;
 }
 
