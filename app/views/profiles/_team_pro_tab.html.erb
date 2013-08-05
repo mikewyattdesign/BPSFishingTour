@@ -66,11 +66,14 @@
                 <div class="cutOutTextTeam">
                     <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
                     <p><%= @profile.status || " " %></p>
+                    <% unless @profile.picture.exists? %>
+                        <p class="profPicAlert blink"><a href="<%= select_profile_picture_path %>"><< Upload a Profile Picture  </a></p>
+                    <% end %>
                 </div>
             </div>
 
             <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
-            <div class="manFishTextLeft"><p>Upload a Team Photo Here</p></div>
+            <div class="manFishTextLeft"><p class='blink'>Upload a Team Photo Here</p></div>
             <div class="picBoxContainerLeft">
                 <div class="picBoxTeam">
                     <% unless @team && @team.team_picture.exists? %>
