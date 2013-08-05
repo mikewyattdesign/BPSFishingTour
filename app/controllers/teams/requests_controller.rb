@@ -1,6 +1,9 @@
 class Teams::RequestsController < ApplicationController
     def new
-        redirect_to user_session_path unless user_signed_in?
+            unless user_signed_in?
+                store_location
+                redirect_to new_user_session_path
+            end
     end
 
     # def search
