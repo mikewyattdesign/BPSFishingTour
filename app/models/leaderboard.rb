@@ -12,7 +12,7 @@ class Leaderboard
     end
 
     def self.teams
-        teams = Team.all.reject { |team| team.users.empty? }
+        teams = Team.all.reject { |team| team.users.empty? || team.scores.empty? }
 
         teams.map { |team|
             {
@@ -21,7 +21,7 @@ class Leaderboard
                 scores: team.scores,
                 total_score: team.total_score,
             }
-        }
+        }.sort!{ |x, y| x[:total_score] <=> y[:total_score] }
     end
 
 
@@ -32,4 +32,5 @@ class Leaderboard
         scores = team.scores
         scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
     end
+
 end

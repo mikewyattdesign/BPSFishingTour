@@ -62,7 +62,7 @@
                         <%= image_tag 'iconGlobe.png', class: 'iconSmallEvents', alt: 'Icon' %>
                         <h2><%= link_to 'Leaderboard', leaderboard_path %></h2>
                     </div>
-                    <p><%= link_to 'Check back soon to track results from the first events of the 2013 Bass Pro Shops Fishing Tour!', leaderboard_path %></p>
+                    <%= render 'leaderboard/team_scores_small' %>
                 </div>
                 <div class="myRegion">
                     <div class="topGreen">
