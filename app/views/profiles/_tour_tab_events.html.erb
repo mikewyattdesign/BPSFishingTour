@@ -1,6 +1,6 @@
 <h1>Overall Rating</h1>
 <div class="half medalIcon">
-    <!-- <h2>88th</h2> -->
+    <h2><%= (@board.index{|team|team[:team].id == @user.teams.first.id}+1).ordinalize unless @user.teams.empty? || @user.teams.first.scores.count < 5 %></h2>
     <%= image_tag @user.scores.count < 5 ? 'iconMedal.png':'iconMedalGreen.png' %>
 </div>
 <div class="half ratingText">
