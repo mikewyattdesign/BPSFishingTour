@@ -53,16 +53,22 @@ describe Team do
 
     it 'should have at most 2 users' do
         team1 = FactoryGirl.create(:team)
+        user0 = FactoryGirl.create(:user)
         user2 = FactoryGirl.create(:user)
         user3 = FactoryGirl.create(:user)
-        team1.users << user1
+        team1.users << user0
         expect(team1.users.count).to eq(1)
         team1.users << user2
         expect(team1.users.count).to eq(2)
-        team1.users << user3
-        expect(team1.users.count).to eq(2)
-        expect(team1.users.first).to eq(user1)
-        expect(team1.users.last).to eq(user2)
+        begin
+            team1.users << user3
+        rescue Team::FullTeamError => exception
+            puts "Team was full"
+        ensure
+            expect(team1.users.count).to eq(2)
+            expect(team1.users.first).to eq(user0)
+            expect(team1.users[1]).to eq(user2)
+        end
     end
 
     it 'should respond to :users' do

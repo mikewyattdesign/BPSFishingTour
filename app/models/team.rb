@@ -1,5 +1,6 @@
 class Team < ActiveRecord::Base
-    has_and_belongs_to_many :users, -> {uniq.limit(2)}
+    has_and_belongs_to_many :users, -> {uniq.limit(2)},
+        before_add: [:unique_users, :room_to_grow]
     has_and_belongs_to_many :events
     has_many :scores
 
@@ -41,4 +42,16 @@ class Team < ActiveRecord::Base
     def name
         "#{self.users.first.profile.last_name.capitalize} / #{self.users.last.profile.last_name.capitalize}"
     end
+
+    def room_to_grow(user)
+        raise FullTeamError if self.users.count == 2
+    end
+
+    def unique_users(user)
+       self.users.delete(user) if self.users.include?(user)
+    end
+
+    class FullTeamError < StandardError
+    end
+
 end
