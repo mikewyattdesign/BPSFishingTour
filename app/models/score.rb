@@ -17,6 +17,8 @@ class Score < ActiveRecord::Base
         return 50
     end
 
+    validates :position, :event_id, :presence => true
+
     belongs_to :team
     belongs_to :event
     belongs_to :user
