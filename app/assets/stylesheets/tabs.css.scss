@@ -462,10 +462,10 @@ p {
 
 .pulse{
     border : 2px solid $green;
-    -webkit-animation: toggle-border 1s infinite; /* Safari 4+ */
-    -moz-animation:    toggle-border 1s infinite; /* Fx 5+ */
-    -o-animation:      toggle-border 1s infinite; /* Opera 12+ */
-    animation:         toggle-border 1s infinite;
+    -webkit-animation: toggle-border 4s infinite; /* Safari 4+ */
+    -moz-animation:    toggle-border 4s infinite; /* Fx 5+ */
+    -o-animation:      toggle-border 4s infinite; /* Opera 42+ */
+    animation:         toggle-border 4s infinite;
 }
 
 @-webkit-keyframes toggle-border {
@@ -924,5 +924,8 @@ table .even {
 
     a {
         text-decoration: none;
+        &:hover { color: $green;}
+        &:visited { color: $green;}
+
     }
 }

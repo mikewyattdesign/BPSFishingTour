@@ -85,9 +85,9 @@
             </div>
             <div class="teamContLeftBot">
                 <% if @profile.picture.exists? %>
-                   <%= image_tag @profile.picture.url(:teamP), class: "teamPerson #{'pulse' unless @profile.picture.exists?}", alt: 'Person Icon' %>
+                   <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
                 <% else %>
-                   <%= image_tag 'iconPersonFull.png', class: 'teamPerson', alt: 'Person Icon' %>
+                   <%= image_tag 'iconPersonFull.png', class: 'teamPerson pulse', alt: 'Person Icon' %>
                 <% end %>
             </div>
         </div>
