@@ -40,6 +40,7 @@
     }
     .team-photo {
         width: 20%;
+        border-right: 1px solid $lightGrey;
     }
     .team-name {
         width: 60%;
@@ -48,6 +49,7 @@
         text-overflow: ellipsis;
         font-size: 120%;
         padding-left: 5%;
+        border-left: 1px solid white;
     }
     .team-points {
         width: 20%;
