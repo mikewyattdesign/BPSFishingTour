@@ -26,8 +26,8 @@ class Leaderboard
 
 
     def self.aggregate_team_points(team)
-        angler = team.users.first
-        co_angler = team.users.last
+        angler = team.users[0]
+        co_angler = team.users[1]
 
         scores = team.scores
         scores.map { |score| score.points }.take(5).inject { |sum, x| sum + x }
