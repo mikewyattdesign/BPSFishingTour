@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-feature "Add Images" do
-    given (:bob) { FactoryGirl.create(:user)}
+feature "Add Images", js: true do
+    let(:bob) { FactoryGirl.create(:user)}
 
     context "user with a teammate who has a profile picture" do
         given (:jane) { FactoryGirl.create(:user) }
@@ -28,7 +28,7 @@ feature "Add Images" do
         end
 
         scenario "team photos are visible" do
-            sign_in_with bob.email, bob.password
+            sign_in_with(bob.email, bob.password)
             expect(current_path).to eq "/myprofile"
             visit '/team_select_profile_picture'
             attach_file 'team_team_picture', Rails.root.join('spec', 'features', 'files', 'images.jpeg')
