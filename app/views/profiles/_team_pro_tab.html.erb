@@ -67,13 +67,13 @@
                     <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
                     <p><%= @profile.status || " " %></p>
                     <% unless @profile.picture.exists? %>
-                        <p class="profPicAlert blink"><a href="<%= select_profile_picture_path %>"><< Upload a Profile Picture  </a></p>
+                        <p class="profPicAlert <%= 'blink' if @profile == current_user.profile %>"><a href="<%= select_profile_picture_path %>"><%= '<< Upload a Profile Picture' if @profile == current_user.profile %> </a></p>
                     <% end %>
                 </div>
             </div>
 
             <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
-            <div class="manFishTextLeft"><p class='blink'>Upload a Team Photo Here</p></div>
+            <div class="manFishTextLeft"><p class='<%= 'blink' if @profile == current_user.profile %>'>Upload a Team Photo Here</p></div>
             <div class="picBoxContainerLeft">
                 <div class="picBoxTeam">
                     <% unless @team && @team.team_picture.exists? %>
@@ -87,7 +87,7 @@
                 <% if @profile.picture.exists? %>
                    <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
                 <% else %>
-                   <%= image_tag 'iconPersonFull.png', class: 'teamPerson pulse', alt: 'Person Icon' %>
+                   <%= image_tag 'iconPersonFull.png', class: "teamPerson #{'pulse' if @profile == current_user.profile}", alt: 'Person Icon' %>
                 <% end %>
             </div>
         </div>

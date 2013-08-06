@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Add Images", js: true do
-    let(:bob) { FactoryGirl.create(:user)}
+    given (:bob) { FactoryGirl.create(:user)}
 
     context "user with a teammate who has a profile picture" do
         given (:jane) { FactoryGirl.create(:user) }
@@ -25,6 +25,7 @@ feature "Add Images", js: true do
 
             url = bob.profile.picture.url(:tour)
             expect(page.body).to have_css("img[src='#{url}']")
+            bob.email = "bob@example.com"
         end
 
         scenario "team photos are visible" do

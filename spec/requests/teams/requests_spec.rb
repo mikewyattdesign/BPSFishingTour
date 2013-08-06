@@ -11,7 +11,7 @@ describe Teams::RequestsController do
         end
 
         it 'should have "Login" as the submit button' do
-            expect(page).to have_button('Continue')
+            expect(page).to have_button('Login')
         end
 
         pending 'Test submission of form, and display of potential users'
