@@ -63,4 +63,7 @@ BpsFishingTour::Application.routes.draw do
     # News Routing
     get '/news' => 'news#index'
     get '/news/:year/:month/:day/:title' => 'news#story'
+
+    # Secret Admin Routing
+    get '/admin/users-report' => 'admin#users_report'
 end
