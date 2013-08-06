@@ -75,8 +75,7 @@ describe User do
         new_team.users << dan
         expect(dan.teams.count).to eq(1)
         expect(dan.my_team).to eq(new_team)
-        benedict = new_team.users.first
-        benedict.destroy
+        dan.teams.delete(new_team)
         expect(dan.teams).to be_empty
     end
 
