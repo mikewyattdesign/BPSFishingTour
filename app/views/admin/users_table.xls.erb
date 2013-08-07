@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <% ["ID","Email", "Last Name", "First Name","Street Address",
+        "City", "State", "ZIP", "Phone", "Extension", "Shirt Size",
+        "Outdoor Rewards Number", "Teammate User ID", "Teammate Email",
+        "Teammate Last Name", "Teammate First Name","Team Score"].each do |column| %>
+        <Cell><Data ss:Type="String"><%= column %></Data></Cell>
+        <% end %>
+      </Row>
+    <% @users.each do |user| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.email %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.last_name unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.first_name unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.street_address unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.city unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.state unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.zip unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.profile.phone unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.ext unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.shirt unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.profile.outdoor_rewards_number unless user.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.teammate.id unless !user.teammate %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.teammate.email unless !user.teammate %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.teammate.profile.last_name unless !user.teammate || user.teammate.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.teammate.profile.first_name unless !user.teammate || user.teammate.profile.nil? %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.total_score unless user.teams.empty? %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
