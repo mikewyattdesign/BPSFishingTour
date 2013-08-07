@@ -3,6 +3,9 @@ class Event < ActiveRecord::Base
     has_and_belongs_to_many :teams
     has_many :scores
 
+
+    validates :name, :date, :presence => true
+
     default_scope {
         order('date ASC')
     }
