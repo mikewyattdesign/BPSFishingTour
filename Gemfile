@@ -24,6 +24,7 @@ group :test do
     gem 'terminal-notifier-guard', '1.5.3'
     gem 'poltergeist'
     gem 'launchy'
+    gem 'simplecov', :require => false
 end
 
 group :assets do
