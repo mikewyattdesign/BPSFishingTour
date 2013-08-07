@@ -1,3 +1,5 @@
-<p>Number of users: <%= User.all.count %> <%= link_to 'Export to Excel', user_report_path(format: "xls"),target: "_blank" %></p>
-<p>Number of users without a profile: <%= User.select{|user| user.profile.nil? || user.profile.first_name.blank? || user.profile.last_name.blank?}.count %> <%= link_to 'Export to Excel', user_report_path(:report_type => "no-profile", format: "xls"),target: "_blank" %></p>
-<p>Number of users without a team:<%= User.select{|user| user.teams.empty?}.count %>  <%= link_to 'Export to Excel', user_report_path(:report_type => "no-team", format: "xls"), target: "_blank" %></p>
+<div class="span12">
+<p>Number of users: <%= User.all.count %> <%= link_to "Export to Excel <i class='icon-file icon-white'></i>".html_safe, user_report_path(format: "xls"),target: "_blank", class: "btn btn-info" %></p>
+<p>Number of users without a profile: <%= User.no_profile.count %>  <%="("+number_to_percentage(100 * User.no_profile.count.to_f / User.all.count)+" of users have no profile)" %> <%= link_to "Export to Excel <i class='icon-file icon-white'></i>".html_safe, user_report_path(:report_type => "no-profile", format: "xls"),target: "_blank", class: "btn btn-info" %></p>
+<p>Number of users without a team:<%= User.no_team.count %> <%="("+number_to_percentage(100 * User.no_team.count.to_f / User.all.count)+" of users have no team)" %> <%= link_to "Export to Excel <i class='icon-file icon-white'></i>".html_safe, user_report_path(:report_type => "no-team", format: "xls"), target: "_blank", class: "btn btn-info" %></p>
+</div>

@@ -56,4 +56,12 @@ class User < ActiveRecord::Base
         my_team.total_score
     end
 
+    def self.no_profile
+        User.select{|user| user.profile.nil? || user.profile.first_name.blank? || user.profile.last_name.blank?}
+    end
+
+    def self.no_team
+        User.select{|user| user.teams.empty?}
+    end
+
 end
