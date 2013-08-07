@@ -6,5 +6,25 @@ class AdminController < ApplicationController
 
     end
 
+    def users_table
+
+        case params[:report_type]
+        when 'no-profile'
+            @users = User.select{|user| user.profile.nil? ||
+                user.profile.first_name.blank? ||
+                user.profile.last_name.blank?}
+        when 'no-team'
+            @users = User.select{|user| user.teams.empty?}
+        else
+            @users = User.all
+        end
+
+        @users = @users.reject{|user| user.nil?}
+
+        respond_to do |format|
+            format.xls
+        end
+    end
+
 end
 

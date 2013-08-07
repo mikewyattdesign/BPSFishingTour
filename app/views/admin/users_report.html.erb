@@ -1,3 +1,3 @@
-<p>Number of users: <%= User.all.count %> <%= link_to 'Export to Excel', '#' %></p>
-<p>Number of users without a profile: <%= User.select{|user| user.profile.nil? || user.profile.first_name.blank? || user.profile.last_name.blank?}.count %> <%= link_to 'Export to Excel', '#'%></p>
-<p>Number of users without a team:<%= User.select{|user| user.teams.empty?}.count %>  <%= link_to 'Export to Excel', '#' %></p>
+<p>Number of users: <%= User.all.count %> <%= link_to 'Export to Excel', user_report_path(format: "xls") %></p>
+<p>Number of users without a profile: <%= User.select{|user| user.profile.nil? || user.profile.first_name.blank? || user.profile.last_name.blank?}.count %> <%= link_to 'Export to Excel', user_report_path(:report_type => "no-profile", format: "xls") %></p>
+<p>Number of users without a team:<%= User.select{|user| user.teams.empty?}.count %>  <%= link_to 'Export to Excel', user_report_path(:report_type => "no-team", format: "xls") %></p>
