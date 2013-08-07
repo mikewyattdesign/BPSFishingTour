@@ -105,3 +105,6 @@ node_modules/bower/node_modules/read-package-json/node_modules/npmlog/node_modul
 node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/json2yaml
 node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/lodash
 node_modules/bower/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/yaml2json
+
+# Simplecov files
+/coverage

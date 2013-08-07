@@ -2,7 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start 'rails'
 
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -52,6 +52,13 @@ RSpec.configure do |config|
   config.include(MailerMacros)
   config.before(:each) { reset_email }
   Capybara.javascript_driver = :poltergeist
+
+  SimpleCov.at_exit do
+    SimpleCov.result.format!
+    puts Rails.root.join("coverage","index.html")
+    Launchy.open("file://"+Rails.root.join("coverage","index.html").to_s)
+  end
+
 
   class ActiveRecord::Base
     mattr_accessor :shared_connection
