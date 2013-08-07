@@ -27,5 +27,25 @@ class Profile < ActiveRecord::Base
         names.select { |name| name[:name] !~ /^,/ }.group_by {|name| name[:name][0] }
     end
 
+    def shirt_size
+        case self.shirt
+        when "1"
+            "1"
+        when "2"
+            "XS"
+        when "3"
+            "S"
+        when "4"
+            "M"
+        when "5"
+            "L"
+        when "6"
+            "XL"
+        when "7"
+            "XXL"
+        when "8"
+            "XXXL"
+        end
+    end
 
 end
