@@ -585,12 +585,12 @@ p {
     font-size: 20px;
 }
 
-.topDarkBrown, .newsTopBar {
+.topDarkBrown {
     background-color: mix(#6b4302, #5b3902);
     @include background-image(linear-gradient(#6b4302, #5b3902));
 }
 
-.topBlue, .anglersTopBar, .leaderTopBar{
+.topBlue {
     background-color: mix(#0b597d, #083e58);
     @include background-image(linear-gradient(#0b597d, #083e58));
 }
