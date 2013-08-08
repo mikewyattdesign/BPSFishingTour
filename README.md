@@ -37,3 +37,9 @@ If you want a copy of the production database on your local machine:
    taps server)
 
 * If taps isn't there at first, run 'gem install taps', then 'rbenv rehash'
+
+## Testing
+
+1. migrate test database: `rake db:migrate RAILS_ENV=test`
+2. run test suit: `rspec` in terminal
+3. runt test suit and launch Simple-Cov test coverage report: `SIMPLECOV=true rspec`
