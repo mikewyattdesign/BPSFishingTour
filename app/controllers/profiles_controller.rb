@@ -44,6 +44,7 @@ class ProfilesController < ApplicationController
     # GET /profiles/1/edit
     def edit
         @profile = current_user.profile
+        @edit_view = true
     end
 
     def select_profile_pic
@@ -102,8 +103,9 @@ class ProfilesController < ApplicationController
                 path = URI::parse(request.referrer).path
                 @showTab = true
                 flash.now[:error] = "We could not update your profile!"
-
-                if path == "/myprofile"
+                # raise 
+                # return render text: params[:id] == @profile.id.to_s
+                unless params[:from_edit]
                     @user = @profile.user
                     @new_user = current_user.profile.valid? ? false : true
                     format.html { render action: 'show_current' }

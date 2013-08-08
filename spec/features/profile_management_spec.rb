@@ -48,6 +48,18 @@ feature "Profile managment" do
             expect(current_path).to eq '/myprofile'
         end
 
+        scenario "should return relevant validation errors" do
+            sign_in_with user.email, user.password
+            expect(current_path).to eq '/myprofile'
+            click_link 'My Account'
+            fill_in 'First name', with: " Bob"
+            fill_in 'Last name', with: "Dole "
+            fill_in 'Street address', with: ' 123 Main St'
+            fill_in 'City', with: 'St. Louis '
+            fill_in 'State', with: ' MO'
+
+        end
+
         scenario "should return to /myprofile view after validation error" do 
             sign_in_with user.email, user.password
             expect(current_path).to eq '/myprofile'

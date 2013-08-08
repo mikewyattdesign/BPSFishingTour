@@ -3,7 +3,7 @@
         <p>Team Registration</p>
     </div>
 
-    <%= form_for(@profile, url: profile_path(@profile.id), method: "patch") do |f| %>
+    <%= form_for(@profile, url: profile_path(@profile.id, from_edit: @edit_view), method: "patch") do |f| %>
     <div class="teamRegContainerForm">
             <% if @profile.errors.any? %>
                 <div id="error_explanation">
