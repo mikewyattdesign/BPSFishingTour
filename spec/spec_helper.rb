@@ -56,7 +56,7 @@ RSpec.configure do |config|
   SimpleCov.at_exit do
     SimpleCov.result.format!
     puts Rails.root.join("coverage","index.html")
-    Launchy.open("file://"+Rails.root.join("coverage","index.html").to_s)
+    # Launchy.open("file://"+Rails.root.join("coverage","index.html").to_s)
   end
 
 

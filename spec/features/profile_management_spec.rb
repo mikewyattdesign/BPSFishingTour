@@ -47,5 +47,15 @@ feature "Profile managment" do
             visit "/profiles/#{user.profile.id}"
             expect(current_path).to eq '/myprofile'
         end
+
+        scenario "should return to /myprofile view after validation error" do 
+            sign_in_with user.email, user.password
+            expect(current_path).to eq '/myprofile'
+            click_link 'My Account'
+            fill_in 'First name', with: 'Edu'
+            click_button 'Submit'
+            expect(current_path).to eq "/profiles/#{user.profile.id}"
+            expect(page).to have_content("Account Information")
+        end
     end
 end

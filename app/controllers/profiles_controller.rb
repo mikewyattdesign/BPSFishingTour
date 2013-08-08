@@ -19,6 +19,7 @@ class ProfilesController < ApplicationController
         @board = Leaderboard.qualified_teams
     end
 
+    # GET /myprofile
     def show_current
         @user = current_user
         @teammate = @user.teammate
@@ -103,6 +104,7 @@ class ProfilesController < ApplicationController
                 flash.now[:error] = "We could not update your profile!"
 
                 if path == "/myprofile"
+                    @user = @profile.user
                     format.html { render action: 'show_current' }
                 else
                     format.html { render action: 'edit' }
