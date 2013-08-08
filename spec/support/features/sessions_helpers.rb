@@ -37,5 +37,10 @@ module Features
 
             click_button :Login
         end
+
+        def basic_auth(username, password)
+            credentials = ActionController::HttpAuthentication::Basic.encode_credentials(username, password)
+            Capybara.current_session.driver.header('Authorization', credentials)
+        end
     end
 end
