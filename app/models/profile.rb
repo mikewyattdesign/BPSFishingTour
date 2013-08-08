@@ -1,11 +1,11 @@
 class Profile < ActiveRecord::Base
     belongs_to :user
     validates :first_name, :last_name, :city, :street_address, :state, :presence => true, :on => :update
-    validates_format_of :first_name, :last_name, :city, :street_address, :state,
+    validates_format_of :first_name, :last_name, :city, :street_address, :state, :zip, :allow_blank => true,
         without: /\A[ \t]+|[ \t]+\z/,
         on: :update,
         message: "- please remove trailing and/or leading whitespace"
-  
+
     picture_options = {
         styles: {
             medium: '300x300>}',
