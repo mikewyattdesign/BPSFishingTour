@@ -105,6 +105,7 @@ class ProfilesController < ApplicationController
 
                 if path == "/myprofile"
                     @user = @profile.user
+                    @new_user = current_user.profile.valid? ? false : true
                     format.html { render action: 'show_current' }
                 else
                     format.html { render action: 'edit' }

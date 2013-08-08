@@ -57,5 +57,17 @@ feature "Profile managment" do
             expect(current_path).to eq "/profiles/#{user.profile.id}"
             expect(page).to have_content("Account Information")
         end
+
+        scenario "Should not show 'best-in-place' view after validation error" do 
+            sign_in_with user.email, user.password
+            expect(current_path).to eq '/myprofile'
+            click_link 'My Account'
+            fill_in 'First name', with: 'Edu'
+            click_button 'Submit'
+            expect(current_path).to eq "/profiles/#{user.profile.id}"
+            # image we are testing for
+            url = '/assets/iconWriteLight.png'
+            expect(page).to_not have_css("img[src='#{url}']")
+        end
     end
 end
