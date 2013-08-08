@@ -87,13 +87,13 @@ class ScoresController < ApplicationController
 
   def co_angler
     Score.update params[:id], co_angler_id: params[:co_angler_id]
-    redirect_to '/scores', notice: "Co-Angler set to #{User.find(params[:co_angler_id]).full_name}"
+    redirect_to :back, notice: "Co-Angler set to #{User.find(params[:co_angler_id]).full_name}"
   end
 
   def remove_angler
     #return render text: params
     Score.update params[:id], angler_id: nil
-    redirect_to '/scores', notice: "Angler removed"
+    redirect_to :back, notice: "Angler removed"
   end
 
   def remove_co_angler
