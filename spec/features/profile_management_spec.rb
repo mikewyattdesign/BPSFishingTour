@@ -57,6 +57,21 @@ feature "Profile managment" do
             fill_in 'Street address', with: ' 123 Main St'
             fill_in 'City', with: 'St. Louis '
             fill_in 'State', with: ' MO'
+            click_button 'Submit'
+            expect(current_path).to eq "/profiles/#{user.profile.id}"
+
+            expect(page).to have_content('errors prohibited this profile from being saved:')
+
+            [
+                'First name',
+                'Last name',
+                'Street address',
+                'City',
+                'State'
+            ].each do |attribute|  
+                expect(page).to have_content("#{attribute} - please remove trailing and/or leading whitespace")
+            end
+
 
         end
 
