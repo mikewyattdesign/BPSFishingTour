@@ -2,7 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' if ENV["SIMPLECOV"]
 
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -56,7 +56,7 @@ RSpec.configure do |config|
   SimpleCov.at_exit do
     SimpleCov.result.format!
     puts Rails.root.join("coverage","index.html")
-    # Launchy.open("file://"+Rails.root.join("coverage","index.html").to_s)
+    Launchy.open("file://"+Rails.root.join("coverage","index.html").to_s)
   end
 
 
