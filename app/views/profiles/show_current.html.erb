@@ -2,6 +2,8 @@
 
 <div class="tabContBackground">
     <div class="tabContainer">
+        <%= render_notification %>
+
         <ul class="nav nav-tabs" id="myTabs">
             <li class="<%= "active" unless params[:tab] && (params[:tab] == 'team' || params[:tab] == 'account') %>">
                 <a data-toggle="tab" href="#tab1">

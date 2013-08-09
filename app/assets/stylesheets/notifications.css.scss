@@ -2,6 +2,22 @@
     padding: 16px;
 }
 
+.tabContainer {
+    .alert {
+        margin: 16px 0 0 255px;
+    }
+}
+
+.tabContainer, .staticContainer {
+    .alert {
+        p {
+            font-style: normal;
+            color: inherit;
+            text-shadow: none;
+        }
+    }
+}
+
 // pnotify-specific classes
 
 .ui-pnotify-sticker {
