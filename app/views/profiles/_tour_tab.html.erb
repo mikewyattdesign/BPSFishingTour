@@ -21,7 +21,7 @@
         </div>
 
         <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
-        <div class="manFishTextRight"><p>Go to My Team Profile to upload a Team Photo</p></div>
+        <div class="manFishTextRight"><p><%= !current_user.nil? && @profile.id == current_user.profile.id ? "Go to My Team Profile to upload a Team Photo" : "No Team Photo" %></p></div>
         <div class="picBoxContainer">
             <div class="picBox">
                 <% unless @team && @team.team_picture.exists? %>
