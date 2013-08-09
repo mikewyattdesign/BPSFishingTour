@@ -12,9 +12,9 @@ describe 'nameize function' do
     end
 
     it 'should work correctly with Mc and Mac' do
-        new_string = "mcdonald"
+        new_string = "mcdonald".nameize
         expect(new_string).to eq("McDonald")
-        new_string = "macdonald"
+        new_string = "macdonald".nameize
         expect(new_string).to eq("MacDonald")
     end
 end

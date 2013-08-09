@@ -28,7 +28,17 @@ module ApplicationHelper
 
     String.class_eval do
         def nameize
-            name = self.strip.downcase.split("-").map{|section| section.capitalize}.join("-")
+            name = self.downcase.split("-").map{|section| section.capitalize}.join("-")
+            case
+            when name.match(/^Mac/).present?
+                "Mac" + name.split("Mac").last.slice(0,1).capitalize + name.split("Mac").last.slice(1..-1)
+            when name.match(/^Mc/).present?
+                "Mc" + name.split("Mc").last.slice(0,1).capitalize + name.split("Mc").last.slice(1..-1)
+            when name.match(/^O\'/).present?
+                "O\'" + name.split("O\'").last.slice(0,1).capitalize + name.split("O\'").last.slice(1..-1)
+            else
+                name
+            end
         end
     end
 end
