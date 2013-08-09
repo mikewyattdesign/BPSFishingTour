@@ -12,11 +12,15 @@ class User < ActiveRecord::Base
     has_many :events, through: :teams
 
 
-    def full_name
+    def full_name(arrangement = 'f l')
         if self.profile.first_name.nil? || self.profile.last_name.nil?
             return nil
         end
-        "#{self.profile.first_name.capitalize} #{self.profile.last_name.capitalize}"
+        if arrangement == 'f l'
+            "#{self.profile.first_name.capitalize} #{self.profile.last_name.capitalize}"
+        else
+            "#{self.profile.last_name.to_s.strip.capitalize}, #{self.profile.first_name.to_s.strip.capitalize}"
+        end
     end
     def hit_team_limit?
         max_teams = 1

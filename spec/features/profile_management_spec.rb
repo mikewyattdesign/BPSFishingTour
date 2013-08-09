@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Profile managment" do
+feature "Profile management" do
     scenario "User signs up and creates her profile" do
         user = FactoryGirl.build(:user)
         sign_up_with user.email, user.password
@@ -97,6 +97,17 @@ feature "Profile managment" do
             # image we are testing for
             url = '/assets/iconWriteLight.png'
             expect(page).to_not have_css("img[src='#{url}']")
+        end
+    end
+
+    context "non logged in user" do
+        # given (:user) { FactoryGirl.create(:profile).user}
+        scenario "should be able to view other users' profiles" do 
+            user = FactoryGirl.create(:user_with_profile)
+            visit '/anglers'
+            click_link user.full_name('l f')
+            expect(current_path).to eq "/profiles/#{user.profile.id}"
+            expect(page).to have_content user.full_name
         end
     end
 end
