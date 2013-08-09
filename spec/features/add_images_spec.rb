@@ -9,7 +9,7 @@ feature "Add Images", js: true do
         before(:each) do
             #bob and jane for a team
             bob.teams.create.users<<jane
-            bob.profile.picture = File.open(Rails.root.join('spec', 'features', 'files', 'images.jpeg'))
+            bob.profile.picture = File.open(Rails.root.join('spec', 'features', 'files', 'images0.jpeg'))
             bob.profile.save(validate: false).should be_true
 
             # puts bob.profile.picture?
@@ -32,7 +32,7 @@ feature "Add Images", js: true do
             sign_in_with(bob.email, bob.password)
             expect(current_path).to eq "/myprofile"
             visit '/team_select_profile_picture'
-            attach_file 'team_team_picture', Rails.root.join('spec', 'features', 'files', 'images.jpeg')
+            attach_file 'team_team_picture', Rails.root.join('spec', 'features', 'files', 'images0.jpeg')
             click_button 'Continue'
 
             url = bob.my_team.team_picture.url(:teampro)
