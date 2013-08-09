@@ -25,7 +25,7 @@ class Profile < ActiveRecord::Base
             x.last_name.to_s.strip.capitalize <=> y.last_name.to_s.strip.capitalize }
             .map { |profile|
             {
-                name: profile.user.full_name('L,F').to_s,
+                name: "#{profile.last_name.to_s.nameize}, #{profile.first_name.to_s.nameize}",
                 id: profile.id,
             }
         }
