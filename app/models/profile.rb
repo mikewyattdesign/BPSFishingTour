@@ -21,11 +21,11 @@ class Profile < ActiveRecord::Base
   has_attached_file :picture, picture_options
 
     def self.directory
-        names = Profile.all.sort{|x,y|
+        names = Profile.all.reject{|profile| profile.first_name.blank? || profile.last_name.blank?}.sort{|x,y|
             x.last_name.to_s.strip.capitalize <=> y.last_name.to_s.strip.capitalize }
             .map { |profile|
             {
-                name: "#{profile.last_name.to_s.strip.capitalize}, #{profile.first_name.to_s.strip.capitalize}",
+                name: profile.user.full_name('L,F').to_s,
                 id: profile.id,
             }
         }

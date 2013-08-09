@@ -17,9 +17,9 @@ class User < ActiveRecord::Base
             return nil
         end
         if arrangement == 'f l'
-            "#{self.profile.first_name.capitalize} #{self.profile.last_name.capitalize}"
+            "#{self.profile.first_name.nameize} #{self.profile.last_name.nameize}"
         else
-            "#{self.profile.last_name.to_s.strip.capitalize}, #{self.profile.first_name.to_s.strip.capitalize}"
+            "#{self.profile.last_name.to_s.nameize}, #{self.profile.first_name.to_s.nameize}"
         end
     end
     def hit_team_limit?

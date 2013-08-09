@@ -25,4 +25,10 @@ module ApplicationHelper
             return image_tag team.team_picture.url(area), class: the_class, alt: alt
         end
     end
+
+    String.class_eval do
+        def nameize
+            name = self.strip.downcase.split("-").map{|section| section.capitalize}.join("-")
+        end
+    end
 end
