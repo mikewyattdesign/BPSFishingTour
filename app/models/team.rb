@@ -40,7 +40,7 @@ class Team < ActiveRecord::Base
     end
 
     def name
-        "#{self.users[0].profile.last_name.to_s.nameize} / #{self.users[1].profile.last_name.to_s.nameize}"
+        "#{self.users.first.profile.last_name.to_s.nameize} / #{self.users.first.teammate.profile.last_name.to_s.nameize}"
     end
 
     def room_to_grow(user)
