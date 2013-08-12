@@ -2,7 +2,11 @@
 
 FactoryGirl.define do
     factory :event do
-        name "Chippawa, Upper Niagara"
+        sequence(:name) do |n|
+            locations = %w(Toronto Windsor Edmonton Calgary Banff Jasper Vancouver Saskatoon Penetanguishene Coboconk)
+            "#{locations[n % locations.length]}"
+
+        end
         country "Canada"
         postal_code "123456"
         date Time.now
