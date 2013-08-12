@@ -148,7 +148,7 @@
     background-repeat: no-repeat;
 }
 
-.enterEventButton, .noEventButton {
+.enterEventButton, .noEventButton, .seeRankButton {
     width: 70px;
     height: 30px;
     line-height: 20px;
@@ -280,6 +280,19 @@
 .mapTextContainer {
     padding: 90px 0 0 199px;
     position: absolute;
+}
+
+.rankingsButton {
+    float: right;
+
+    .seeRankButton {
+        padding: 0;    
+        text-align: center;
+        color: white;
+        background-color: $darkGrey;
+        background-image: -webkit-linear-gradient( $lightGrey, $darkGrey);
+        background-image: linear-gradient( $lightGrey, $darkGrey);        
+    }
 }
 
 // event scores table 

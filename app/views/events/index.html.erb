@@ -33,6 +33,7 @@
             <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
             <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
         </div>
+        <div class="rankingsButton"> <%= button_to 'Rankings', event_scores_path(event.id), method: :get, class: :seeRankButton if Score.where(event_id: event.id).length > 0 %> </div>
         <% if user_signed_in? && current_user.my_team %>
             <div class="actions-container">
                 <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
