@@ -2,19 +2,25 @@
     padding: 16px;
 }
 
-.tabContainer {
-    .alert {
-        margin: 16px 0 0 255px;
-    }
-}
-
-.tabContainer, .staticContainer {
+.tabContainer, .staticContainer, .findAnEvent {
     .alert {
         p {
             font-style: normal;
             color: inherit;
             text-shadow: none;
         }
+    }
+}
+
+.tabContainer {
+    .alert {
+        margin: 16px 0 0 255px;
+    }
+}
+
+.findAnEvent {
+    .alert {
+        margin: 16px 0 0;
     }
 }
 

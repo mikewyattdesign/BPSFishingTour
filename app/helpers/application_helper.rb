@@ -48,5 +48,13 @@ module ApplicationHelper
         if current_user.profile.first_name.blank? || current_user.profile.last_name.blank?
             return render template: 'notifications/add_name_to_profile'
         end
+
+        if current_user.teams.empty?
+            if Request.where(requester: current_user.id).empty?
+                return render template: 'notifications/request_a_teammate'
+            else
+                return render template: 'notifications/remind_your_teammate_to_accept'
+            end
+        end
     end
 end
