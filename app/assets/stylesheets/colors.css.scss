@@ -7,6 +7,8 @@ $darkGrey: #515151;
 $lightGrey: #b3b3b3;
 $brown: #75521a;
 $beige: #d7c8b9;
+$lightBlue: #778899;
+$darkBlue: #6495ED;
 
 // Gradients:
 
@@ -18,6 +20,11 @@ $beige: #d7c8b9;
 %green-gradient {
     background-color: $green;
     @include background-image(linear-gradient(lighten($green, 10%), $green));
+}
+
+%blue-gradient {
+    background-color: $darkBlue;
+    @include background-image(linear-gradient(lighten($darkBlue, 10%), $darkBlue));
 }
 
 // Buttons:
@@ -53,5 +60,22 @@ $beige: #d7c8b9;
         box-shadow: inset 0 1px 1px lighten($green, 20%),
                     inset 0 -1px 2px darken($green, 20%),
                     0 0 1px 1px darken($green, 30%);
+    }
+}
+
+%blue-button {
+    @extend %blue-gradient;
+    color: white;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow: inset 0 2px 2px lighten($darkBlue, 20%),
+                inset 0 -1px 2px darken($darkBlue, 20%),
+                0 0 1px 1px darken($darkBlue, 30%);
+
+    &:hover {
+        background-position: center -10px;
+        box-shadow: inset 0 1px 1px lighten($darkBlue, 20%),
+                    inset 0 -1px 2px darken($darkBlue, 20%),
+                    0 0 1px 1px darken($darkBlue, 30%);
     }
 }
