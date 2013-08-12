@@ -37,5 +37,18 @@ FactoryGirl.define do
 
         end
     end
+
+    factory :score_with_specific_team do
+        ignore do
+            team nil
+        end
+        after(:create) do |score, evaluator|
+            score.update(angler_id: evaluator.team.users.first.id)
+            score.update(co_angler_id: evaluator.team.users.first.teammate.id)
+            score.update(angler: score.angler_user.full_name)
+            score.update(co_angler: score.co_angler_user.full_name)
+
+        end
+    end
   end
 end
