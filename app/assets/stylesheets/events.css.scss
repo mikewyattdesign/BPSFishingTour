@@ -274,27 +274,3 @@
     }
 }
 
-// event scores table
-
-.eventScoreInnerContainer {
-
-    table {
-        thead{
-            background-color: $grey;
-            color: black;
-            th {
-                border: 1px solid $darkGrey;
-            }
-        }
-
-        tbody {
-            background-color: $lightGrey;
-
-            td {
-                border: 1px solid $darkGrey;
-            }
-        }
-
-
-    }
-}
