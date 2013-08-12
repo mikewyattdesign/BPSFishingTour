@@ -15,7 +15,7 @@ feature "Manage events" do
 
         scenario "User can register for a new event" do
             expect {
-                expect(page).to have_content 'Chippawa, Upper Niagara'
+                expect(page).to have_content "#{event.name}"
                 click_button 'Yes'
                 expect(page).to have_content "Your team is now registered to participate in #{Event.first.name}"
             }.to change{user.teams.first.events.count}.from(0).to(1)
@@ -36,7 +36,7 @@ feature "Manage events" do
 
         scenario "User should not be allowed to register an event they are already registered for" do
             expect {
-                expect(page).to have_content 'Chippawa, Upper Niagara'
+                expect(page).to have_content "#{event.name}"
                 click_button 'Yes' # add the event once
                 click_link 'Tour Events'
                 click_button 'Yes' # attempt to add the event again
@@ -56,7 +56,7 @@ feature "Manage events" do
             sign_in_with(user.email, user.password)
             expect(current_path).to eq '/myprofile'
             click_link 'Tour Events'
-            expect(page).to have_content 'Chippawa, Upper Niagara'
+            expect(page).to have_content "#{event.name}"
             expect(page).to_not have_content 'Is your team fishing in this event?'
             expect(page).to have_content 'Sign up and register your team to attend.'
         end

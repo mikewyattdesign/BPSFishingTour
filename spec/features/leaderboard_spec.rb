@@ -17,7 +17,6 @@ feature "Leaderboard" do
         team = event.teams.first
         score = FactoryGirl.create(:score_with_specific_team, team: team)
         visit '/leaderboard'
-        save_and_open_page
     end
 
     scenario 'I expect a tour bus to roll up' do
@@ -27,7 +26,7 @@ feature "Leaderboard" do
         FactoryGirl.create_list(:team_with_users, num_teams)
         FactoryGirl.create_list(:division_with_full_events, num_divisions, events: num_events, make_teams: false)
         visit '/leaderboard'
-        click_link 'Joe1 Degrassi 1'
+        click_link "#{Event.first.teams.first.users.first.full_name}"
     end
 
     scenario 'I expect to see team pictures in the profile leaderboard' do
@@ -38,4 +37,5 @@ feature "Leaderboard" do
             expect(page).to have_css("img[src='#{url}']")
         end
     end
+
 end
