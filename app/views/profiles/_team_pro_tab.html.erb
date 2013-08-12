@@ -1,6 +1,6 @@
 <div id="tab2" class="tab-pane <%= "active" if params[:tab] && params[:tab] == 'team' %>">
     <div class="myTourCont">
-        <div class="teamContRight">
+        <div class="teamContRight half">
             <div class="myCont">
                 <%= image_tag 'iconBoat.png', class: 'tourBoat', alt: 'Boat Icon' %>
                 <h3>Tournament Boat:</h3>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="teamContLeft">
+        <div class="teamContLeft half">
             <% if @is_current_user %>
             <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
             <% end %>
