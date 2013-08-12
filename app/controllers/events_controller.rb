@@ -16,6 +16,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def event_scores
+    @fullads = true
+    @scores = Score.where(event_id: params[:id])    
+    # render text: @scores.inspect
+  end
+
   # GET /events/new
   def new
     @event = Event.new

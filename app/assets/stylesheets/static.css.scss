@@ -1,6 +1,6 @@
 /*Anglers, About, Leaderboard, News*/
 
-#anglersContainer, #aboutContainer, #leaderContainer, #newsContainer, #invitationCont {
+#anglersContainer, #aboutContainer, #leaderContainer, #newsContainer, #invitationCont, #eventScoresContainer {
     width: 1000px;
     margin: 20px auto;
 }
@@ -33,6 +33,7 @@
         float: left;
         padding: 7px 0;
         color: white;
+        margin-left: 5px;
 
         a {
             font-family: inherit;
@@ -61,7 +62,7 @@
     float: left;
 }
 
-.anglersBotCont, .leaderBotCont {
+.anglersBotCont, .leaderBotCont, .eventScoreInnerContainer {
     clear: both;
     min-height: 765px;
     padding: 32px;

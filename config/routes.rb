@@ -30,6 +30,7 @@ BpsFishingTour::Application.routes.draw do
     match '/events/:id/attend' => 'events#register_event', as: 'register_event', via: :post
     match '/events/:id/unattend' => 'events#unregister_event', as: 'unregister_event', via: :post
     get '/events' => 'events#index', as: 'events_path'
+    get '/event-scores/:id' => 'events#event_scores', as: :event_scores, via: :get
 
     # Authentication Routing
     devise_for :users, controllers: {
