@@ -1,5 +1,7 @@
 <div class="team-score <%= 'my-team' if !@user.teams.empty? && team.id == @user.teams.first.id %>">
-<% if team.users.first.profile.picture.exists? %>
+<% if team.team_picture.exists? %>
+    <%= image_tag team.team_picture.url(), class: 'team-photo', alt: 'Person Icon' %>
+<% elsif team.users.first.profile.picture.exists? %>
     <%= image_tag team.users.first.profile.picture.url(:tour), class: 'team-photo', alt: 'Person Icon' %>
 <% else %>
     <%= image_tag 'iconPersonSmallGrey.png', class: 'team-photo', alt: 'Person Icon' %>
