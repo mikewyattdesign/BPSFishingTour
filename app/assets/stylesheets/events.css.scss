@@ -1,13 +1,13 @@
 /*Event Page*/
 
-.findAnEvent {
-    width: 500px;
-    margin: 0 auto 32px;
-    text-align: center;
+#eventContainer {
+    width: 725px;
+    padding: 16px 0 0 275px;
+    margin: 0 auto;
 }
 
-.findAnEventText {
-    margin-top: 80px;
+.findAnEvent {
+    margin: 0 0 16px;
 }
 
 .findAnEventText h2 {
@@ -17,8 +17,7 @@
 }
 
 .findAnEventSmall {
-    margin-top: 5px;
-    margin-bottom: 50px;
+    margin: 5px 0;
 }
 
 .findAnEventSmall h2 {
@@ -46,7 +45,7 @@
 
 .bassEventMap {
     width: 100%;
-    height: 200px;
+    height: 127px;
     margin: 0 0 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,7 +71,6 @@
 .bassEventAttendBackground {
     display: none;
     overflow: hidden;
-    width: 600px;
     padding: 15px 25px;
 
     &.active-event {
@@ -179,23 +177,21 @@
 
 /*Map Slider*/
 
-#slideshowMap, #slideshowMap {
+#slideshowMap {
     margin: 0 auto;
-    width: 1100px;
-    height: 265px;
+    height: 200px;
     position:relative;
 }
 
 #slidesContainer {
     margin: 0 auto;
-    width: 1000px;
-    height: 265px;
+    height: 200px;
     position:relative;
 }
 
 #slideshowMap {
-
     background: transparent image-url('event-map.png') no-repeat 0 0;
+    background-size: contain;
 
     hr {
         margin: 0;
@@ -217,35 +213,20 @@
 
 .control {
     position:absolute;
-    top: 55px;
+    top: 26px;
     width: 39px;
     height: 100%;
     cursor: pointer;
 
     &.left {
-        left: 165px;
+        left: 55px;
         height: 45px;
     }
 
     &.right {
-        right: 165px;
+        right: 60px;
         height: 45px;
     }
-}
-
-#leftControl, #rightControl {
-    top: 55px;
-    z-index: 20;
-}
-
-#leftControl {
-    left: 63px;
-    background:transparent url(/assets/control_left.png) no-repeat 0 0;
-}
-
-#rightControl {
-    right: 43px;
-    background:transparent url(/assets/control_right.png) no-repeat 0 0;
 }
 
 .slide h2, .slide p {
@@ -271,14 +252,14 @@
 }
 
 .mapOntario {
-    width: 425px;
+    width: 273px;
     position: absolute;
-    margin-left: 315px;
+    margin-left: 245px;
     margin-top: 0px;
 }
 
 .mapTextContainer {
-    padding: 90px 0 0 199px;
+    padding: 40px 0 0 110px;
     position: absolute;
 }
 
@@ -286,14 +267,14 @@
     float: right;
 
     .seeRankButton {
-        padding: 0;    
+        padding: 0;
         text-align: center;
         color: white;
-        @extend %blue-button;    
+        @extend %blue-button;
     }
 }
 
-// event scores table 
+// event scores table
 
 .eventScoreInnerContainer {
 

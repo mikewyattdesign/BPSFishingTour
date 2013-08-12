@@ -1,65 +1,67 @@
+<div id="eventContainer">
+    <div class="findAnEvent">
+        <%= render_notification %>
 
-<div class="findAnEvent">
-    <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
-    <div class="findAnEventSmall"><h2>Ontario, Canada Region</h2></div>
-    <p>The Ontario Region of the Bass Pro Shops Fishing Tour features all 2013 CSFL tournaments as sanctioned qualifying events. Use the left and right arrows below to scroll through each CSFL division and add events to your Bass Pro Shops Fishing Tour.</p>
+        <div class="findAnEventText"><h2>FIND AN EVENT</h2></div>
+        <div class="findAnEventSmall"><h2>Ontario, Canada Region</h2></div>
+        <p>The Ontario Region of the Bass Pro Shops Fishing Tour features all 2013 CSFL tournaments as sanctioned qualifying events. Use the left and right arrows below to scroll through each CSFL division and add events to your Bass Pro Shops Fishing Tour.</p>
 
-    <%= render_notification %>
-</div>
-<div class="bassEventMap">
-    <div id="slideshowMap" class="carousel slide">
-        <div id="slidesContainer" class="carousel-inner">
-            <% @divisions.select { |division| division.events.present? }.each_with_index do |division, index| %>
-                <div class="item <%= 'active' if index == 0 %>" data-division="<%= division.id %>">
-                    <%= image_tag 'mapOntario.png', alt: 'Ontario', class: 'mapOntario' %>
-                    <h2 class="mapTextContainer">
-                        CSFL BassMania (BM)
-                        <hr>
-                        <%= division.name %>
-                    </h2>
+    </div>
+    <div class="bassEventMap">
+        <div id="slideshowMap" class="carousel slide">
+            <div id="slidesContainer" class="carousel-inner">
+                <% @divisions.select { |division| division.events.present? }.each_with_index do |division, index| %>
+                    <div class="item <%= 'active' if index == 0 %>" data-division="<%= division.id %>">
+                        <%= image_tag 'mapOntario.png', alt: 'Ontario', class: 'mapOntario' %>
+                        <h2 class="mapTextContainer">
+                            CSFL BassMania (BM)
+                            <hr>
+                            <%= division.name %>
+                        </h2>
+                    </div>
+                <% end %>
+            </div>
+            <a class="control left" href='#slideshowMap' data-slide="prev"><%= image_tag 'icons/previous.png', alt: 'Previous Division' %></a>
+            <a class="control right" href='#slideshowMap' data-slide="next"><%= image_tag 'icons/next.png', alt: 'Next Division' %></a>
+            <ol class="carousel-indicators">
+                <% @divisions.select { |division| division.events.present? }.count.times do |index| %>
+                    <li data-target="#slideshowMap" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+                <% end %>
+            </ol>
+        </div>
+    </div>
+    <% @events.each do |event| %>
+        <div class="bassEventAttendBackground" data-division="<%= event.divisions.map { |division| division.id }.join(' ') %>">
+            <div class="bassEventAttendText">
+                <h2><%= event.name %></h2>
+                <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+                <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
+            </div>
+            <div class="rankingsButton"> <%= button_to 'Rankings', event_scores_path(event.id), method: :get, class: :seeRankButton if Score.where(event_id: event.id).length > 0 %> </div>
+            <% if user_signed_in? && current_user.my_team %>
+                <div class="actions-container">
+                    <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
+                    <div class="yesNoContainer">
+                            <% if current_user.my_team.events.include?(event) %>
+                                <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
+                            <% end %>
+
+                            <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
+
+                            <% if !current_user.my_team.events.include?(event) %>
+                                <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                                <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
+                            <% else %>
+                                <%= button_to "No", unregister_event_path(event), class: 'noEventButton deemphasized' %>
+                            <% end %>
+
+                    </div>
+                </div>
+            <% else %>
+                <div class="actions-container">
+                    <p class="is-fishing">Sign up and register your team to attend.</p>
                 </div>
             <% end %>
         </div>
-        <a class="control left" href='#slideshowMap' data-slide="prev"><%= image_tag 'icons/previous.png', alt: 'Previous Division' %></a>
-        <a class="control right" href='#slideshowMap' data-slide="next"><%= image_tag 'icons/next.png', alt: 'Next Division' %></a>
-        <ol class="carousel-indicators">
-            <% @divisions.select { |division| division.events.present? }.count.times do |index| %>
-                <li data-target="#slideshowMap" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
-            <% end %>
-        </ol>
-    </div>
+    <% end %>
 </div>
-<% @events.each do |event| %>
-    <div class="bassEventAttendBackground" data-division="<%= event.divisions.map { |division| division.id }.join(' ') %>">
-        <div class="bassEventAttendText">
-            <h2><%= event.name %></h2>
-            <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-            <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
-        </div>
-        <div class="rankingsButton"> <%= button_to 'Rankings', event_scores_path(event.id), method: :get, class: :seeRankButton if Score.where(event_id: event.id).length > 0 %> </div>
-        <% if user_signed_in? && current_user.my_team %>
-            <div class="actions-container">
-                <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
-                <div class="yesNoContainer">
-                        <% if current_user.my_team.events.include?(event) %>
-                            <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
-                        <% end %>
-
-                        <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
-
-                        <% if !current_user.my_team.events.include?(event) %>
-                            <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
-                            <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
-                        <% else %>
-                            <%= button_to "No", unregister_event_path(event), class: 'noEventButton deemphasized' %>
-                        <% end %>
-
-                </div>
-            </div>
-        <% else %>
-            <div class="actions-container">
-                <p class="is-fishing">Sign up and register your team to attend.</p>
-            </div>
-        <% end %>
-    </div>
-<% end %>
