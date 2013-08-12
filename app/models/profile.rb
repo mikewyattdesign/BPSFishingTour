@@ -53,4 +53,15 @@ class Profile < ActiveRecord::Base
         end
     end
 
+    def full_name(arrangement = 'f l')
+        if self.first_name.nil? || self.last_name.nil?
+            return nil
+        end
+        if arrangement == 'f l'
+            "#{self.first_name.nameize} #{self.last_name.nameize}"
+        else
+            "#{self.last_name.to_s.nameize}, #{self.first_name.to_s.nameize}"
+        end
+    end
+
 end
