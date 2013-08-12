@@ -5,6 +5,7 @@ class Score < ActiveRecord::Base
         CSV.foreach(file.path, headers: true, encoding: 'utf-8') do |row|
             score = row.to_hash
             score[:event_id] = event
+            score.delete(nil)
             Score.create score
         end
     end
