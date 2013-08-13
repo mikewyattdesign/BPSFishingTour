@@ -7,8 +7,8 @@ namespace :profile do
             puts "Fixed "+profile.first_name.strip+" "+profile.last_name.strip
             fix_count += 1
         end
-        profile.update_attributes(last_name: profile.last_name.strip) unless profile.last_name.nil?
-        profile.update_attributes(first_name: profile.first_name.strip) unless profile.first_name.nil?
+        profile.update_attribute('last_name', profile.last_name.strip) unless profile.last_name.nil?
+        profile.update_attribute('first_name', profile.first_name.strip) unless profile.first_name.nil?
     }
 
     puts "Fixed #{fix_count} #{"name".pluralize(fix_count)}"
