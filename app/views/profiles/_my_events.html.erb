@@ -23,7 +23,7 @@
                     <% @events.each do |event| %>
                         <tr class="<%= cycle("odd", "even") %>">
                             <td class="tdDate"><%= event.date.to_date %></td>
-                            <td class="tdName"><%= event.name %></td>
+                            <td class="tdName"><%= event.date < Time.now && !event.scores.empty? ? link_to(event.name, event_scores_path(event.id)) : event.name %></td>
                             <td class="tdStatus"><%= add_status(@team, event) %></td>
                         </tr>
                     <% end %>

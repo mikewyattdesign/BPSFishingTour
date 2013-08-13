@@ -854,6 +854,12 @@ tbody .odd, tbody .even {
 .tdName {
     width: 53%;
     font-weight: bold;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .table-container {
