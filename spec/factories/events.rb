@@ -16,7 +16,7 @@ FactoryGirl.define do
 
         factory :event_with_scores do
             ignore do
-                scores 10
+                scores 5
             end
             after(:create) do |event, evaluator|
                 FactoryGirl.create_list(:score_with_team, evaluator.scores, event: event)
