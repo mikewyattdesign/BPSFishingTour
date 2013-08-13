@@ -67,13 +67,13 @@
                     <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
                     <p><%= @profile.status || " " %></p>
                     <% unless @profile.picture.exists? %>
-                        <p class="profPicAlert <%= 'blink' if user_signed_in? && @profile == current_user.profile %>"><a href="<%= select_profile_picture_path %>"><%= '<< Upload a Profile Picture' if user_signed_in? && @profile == current_user.profile %> </a></p>
+                        <p class="profPicAlert <%= '' if user_signed_in? && @profile == current_user.profile %>"><a href="<%= select_profile_picture_path %>"><%= '<< Upload a Profile Picture' if user_signed_in? && @profile == current_user.profile %> </a></p>
                     <% end %>
                 </div>
             </div>
 
             <%= image_tag 'iconManFish.png', class: 'manFishLeft', alt: 'Man Fish' %>
-            <div class="manFishTextLeft"><p class='<%= 'blink' if user_signed_in? && @profile == current_user.profile %>'><%= user_signed_in? && @profile == current_user.profile ? "Upload a Team Photo Here" : "No Team Photo" %></p></div>
+            <div class="manFishTextLeft"><p class='<%= '' if user_signed_in? && @profile == current_user.profile %>'><%= user_signed_in? && @profile == current_user.profile ? "Upload a Team Photo Here" : "No Team Photo" %></p></div>
             <div class="picBoxContainerLeft">
                 <div class="picBoxTeam">
                     <% unless @team && @team.team_picture.exists? %>
