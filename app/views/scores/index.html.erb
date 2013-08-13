@@ -9,7 +9,7 @@
 </nav>
 
 <h2>Event: #<%= @event.id %> <%= @event.name %></h2>
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Position</th>
@@ -74,7 +74,7 @@
                     <%= score.co_angler_id == angler.user.id ? link_to("#{angler.first_name} #{angler.last_name}", "/score/remove-co-angler?id=#{score.id}") : link_to("#{angler.first_name} #{angler.last_name}", "/scores/co_angler/#{score.id}/#{angler.user.id}") %><br>
                 <% end %>
             <% end %>
-            <% last_name_matches = @profiles.where('lower(last_name) =?', score.co_angler.split.last.downcase) unless score.co_angler.blank? %>
+            <% last_name_matches = @profiles.where('lower(last_name) = ?', score.co_angler.split.last.downcase) unless score.co_angler.blank? %>
             <% unless last_name_matches.nil? || last_name_matches.empty? %>
                 <strong>Last name matches:</strong><br>
                 <% last_name_matches.each do |angler| %>
