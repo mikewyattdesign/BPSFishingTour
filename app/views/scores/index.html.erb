@@ -1,3 +1,4 @@
+<div class="container" style="width:90%;">
 <h1>Listing scores</h1>
 
 <nav>
@@ -9,6 +10,16 @@
 </nav>
 
 <h2>Event: #<%= @event.id %> <%= @event.name %></h2>
+<% unless @event.possible_duplicates.empty? %>
+<div class="alert">
+    <p class="lead">There can be only one.</p>
+<p>You may have a duplicate of this event. Use the form below to merge events together.</p>
+<%= form_tag "/events/#{@event.id}/merge", class: "form form-inline" do %>
+<%= select_tag :merge_event_id, options_from_collection_for_select(@event.possible_duplicates, 'id', 'name_and_date') %>
+<%= submit_tag 'Merge', class: "btn btn-info" %>
+<% end %>
+</div>
+<% end %>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -108,3 +119,4 @@
     <%= file_field_tag :file %>
     <%= submit_tag 'Import' %>
 <% end %>
+</div>

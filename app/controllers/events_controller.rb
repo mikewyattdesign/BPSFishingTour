@@ -18,7 +18,7 @@ class EventsController < ApplicationController
 
   def event_scores
     @fullads = true
-    @scores = Score.where(event_id: params[:id])    
+    @scores = Score.where(event_id: params[:id])
     # render text: @scores.inspect
   end
 
@@ -82,6 +82,15 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
     end
   end
+
+  # GET /events/1/merge
+  def merge
+    #render text: params
+    @event = Event.find(params[:id]) unless Event.where(id: params[:id]).empty?
+    @event.merge(Event.find(params[:merge_event_id])) unless Event.where(id: params[:merge_event_id]).empty?
+    redirect_to :back, notice: "Merged Events"
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

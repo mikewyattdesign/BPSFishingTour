@@ -42,4 +42,9 @@ class Event < ActiveRecord::Base
     def merge_into(event)
         event.merge(self)
     end
+
+    def possible_duplicates
+        @event = self
+        return Event.where("name LIKE ?", @event.name).where.not("date > ?", (@event.date+1.day).to_s(:db)).where.not("date < ?", (@event.date-1.day+1.day).to_s(:db)).where.not(id: @event.id)
+    end
 end
