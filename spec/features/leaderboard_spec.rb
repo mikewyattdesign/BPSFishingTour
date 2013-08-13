@@ -38,4 +38,11 @@ feature "Leaderboard" do
         end
     end
 
+    scenario 'I expect profiles with scores to be linked on the event scores page' do
+        event = FactoryGirl.create(:event_with_scores)
+        visit "/event-scores/#{event.id}"
+        click_link click_link "#{Event.first.teams.first.users.first.full_name}"
+        expect(current_path).to eq("/profiles/#{Event.first.teams.first.users.first.profile.id}")
+    end
+
 end

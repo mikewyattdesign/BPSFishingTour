@@ -21,8 +21,8 @@
 					<% @scores.each do |score| %>
 						<tr>
 							<td> <%= score.position %> </td>
-							<td> <%= score.angler %> </td>
-							<td> <%= score.co_angler %> </td>
+							<td> <%= score.angler_id.present? ? link_to(score.angler_user.full_name.upcase, profile_path(score.angler_user.profile.id)) : score.angler %> </td>
+							<td> <%= score.co_angler_id.present? ? link_to(score.co_angler_user.full_name.upcase, profile_path(score.co_angler_user.profile.id)) : score.co_angler %> </td>
 							<td> <%= '%.2f' % score.weight if score.weight %> </td>
 							<td> <%= score.bf %> </td>
 							<td> <%= score.hp %> </td>
