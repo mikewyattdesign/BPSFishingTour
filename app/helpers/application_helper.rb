@@ -26,6 +26,13 @@ module ApplicationHelper
         end
     end
 
+    def team_link(team_id)
+        unless Team.where(id: team_id).empty?
+            team = Team.find(team_id)
+            return link_to("#{team.users.first.profile.last_name.to_s.nameize}","/profiles/#{team.users.first.profile.id}") + " / " + link_to("#{team.users.first.teammate.profile.last_name.to_s.nameize}", "/profiles/#{team.users.first.teammate.profile.id}")
+        end
+    end
+
     String.class_eval do
         def nameize
             name = self.downcase.split("-").map{|section| section.capitalize}.join("-")
