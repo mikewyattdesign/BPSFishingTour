@@ -1,10 +1,32 @@
+<style type="text/css">
+.city-events {
+    clear: both;
+    margin: 5px 0;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+}
+.city-name {
+    float:left;
+    vertical-align: middle;
+    font-size: 120%;
+}
+</style>
 <div class="container" style="width:90%;">
 <h1>Listing scores</h1>
 
 <nav>
     <ul>
-        <% @events.each do |event| %>
-            <li><%= link_to "#{event.name_and_date}", "/scores?event_id=#{event.id}" %></li>
+        <% event_cities = @events.group_by{|event| event.city } %>
+        <% event_cities.each_key do |city| %>
+            <div class="city-events">
+                <p class="city-name"><%= city %>:</p>
+                <ul class="inline city-event-list">
+                <% event_cities[city].each do |event| %>
+                    <li><%= link_to "#{event.date.strftime("%B %d, %Y")} (#{event.id})", "/scores?event_id=#{event.id}", class: "btn" %></li>
+                <% end %>
+                </ul>
+            </div>
         <% end %>
     </ul>
 </nav>
