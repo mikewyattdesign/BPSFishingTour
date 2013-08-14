@@ -11,7 +11,7 @@
             </div>
             <% end %>
             <div class="headText">
-                <h3>Account Information</h3><% if activated %><%= link_to(image_tag('iconWriteLight.png', class: 'writeIcon editActivate', alt: 'Click on Field to Edit'),'/myprofile#tab3',:id => '') %><% end %>
+                <h3>Account Information</h3><% if activated.present? && activated %><%= link_to(image_tag('iconWriteLight.png', class: 'writeIcon editActivate', alt: 'Click on Field to Edit'),'/myprofile#tab3',:id => '') %><% end %>
             </div>
             <div class="divideLine"></div>
             <div class="half">
@@ -52,7 +52,7 @@
             </div>
             <div class="shirtSize">
                 <%= f.label :shirt %>
-                <%= f.select :shirt, [['Select Size', 1], ['XS', '2'], ['S', '3'], ['M', '4'], ['L', '5'], ['XL', '6'], ['XXL', '7'], ['XXXL', '8']] %>
+                <%= f.select :shirt, [['Select Size', '1'], ['XS', '2'], ['S', '3'], ['M', '4'], ['L', '5'], ['XL', '6'], ['XXL', '7'], ['XXXL', '8']] %>
             </div>
             <div class="full">
                 <%= f.label :outdoor_rewards_number, "Outdoor Rewards Number" %>

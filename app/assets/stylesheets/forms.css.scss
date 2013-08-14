@@ -320,9 +320,8 @@ form + .BottomBanner {
     clear: left;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 120px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    text-align: center;
 
     a {
         font-size: 12px;
@@ -331,7 +330,8 @@ form + .BottomBanner {
         color: #7d7d7d;
         left: 150px;
         margin-top: 25px;
-        position: absolute;
+        margin-right: 10px;
+
     }
 
     input {

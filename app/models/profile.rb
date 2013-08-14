@@ -35,7 +35,7 @@ class Profile < ActiveRecord::Base
     def shirt_size
         case self.shirt
         when "1"
-            "1"
+            "-"
         when "2"
             "XS"
         when "3"
