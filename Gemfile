@@ -18,6 +18,7 @@ group :development, :test do
     gem 'factory_girl_rails', '4.2.1'
     gem 'better_errors', '0.9.0'
     gem 'binding_of_caller', '0.7.2'
+    gem "fuubar", "~> 1.1.1"
 end
 
 group :test do
