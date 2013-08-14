@@ -19,26 +19,26 @@
                 <p><%= best_in_place_if (!current_user.nil? && @profile.id == current_user.profile.id && !@new_user), @profile, :status, nil: "Tell us a little about yourself and why you are here!"  %></p>
             </div>
         </div>
-
-        <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
-        <div class="manFishTextRight"><p><%= !current_user.nil? && @profile.id == current_user.profile.id ? "Go to My Team Profile to upload a Team Photo" : "No Team Photo" %></p></div>
         <div class="picBoxContainer">
+            <% unless @team && @team.team_picture.exists? %>
+            <%= image_tag 'iconManFish.png', class: 'manFishRight', alt: 'Man Fish' %>
+            <div class="manFishTextRight"><p><%= !current_user.nil? && @profile.id == current_user.profile.id ? "Go to My Team Profile to upload a Team Photo" : "No Team Photo" %></p></div>
+            <% end %>
+            <% unless @team && @team.team_picture.exists? %>
             <div class="picBox">
-                <% unless @team && @team.team_picture.exists? %>
+
                 <div class="tourDot">
                     <%= image_tag 'tourDot.png', alt: 'Doted' %>
                 </div>
-                <% end %>
             </div>
+            <% end %>
         </div>
         <div class="tourContRightBot">
-            <%= link_to select_profile_picture_path  do %>
                 <% if @profile.picture.exists? %>
                     <%= image_tag @profile.picture.url(:tour), class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% else %>
                     <%= image_tag 'iconPersonBig.png', class: 'tourPersonMain', alt: 'Person Icon' %>
                 <% end %>
-            <% end %>
         </div>
     </div>
 </div>

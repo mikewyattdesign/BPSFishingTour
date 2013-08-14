@@ -287,8 +287,14 @@ p {
 .cutOutText {
     position: absolute;
     width: 200px;
-    margin: 240px 0 0 130px;
     z-index: 15;
+    bottom: 0;
+    right: 33px;
+    top: 75%;
+}
+#tab2 .cutOutText, #tab2 .cutOutTextTeam {
+    bottom: 20%;
+    right: 25%;
 }
 
 .cutOutText h2 {
@@ -327,7 +333,7 @@ p {
 
 .cutOutRight {
     position: absolute;
-    margin-top: 215px;
+    top: 215px;
     width: 100%;
     z-index: 10;
 }
@@ -375,26 +381,23 @@ p {
     float: left;
 }
 
-.manFishRight {
+.manFishRight, .manFishLeft {
     position: absolute;
-    margin: 40px auto auto 148px;
+    margin-top: -75px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
 }
-
 .manFishLeft {
-    position: absolute;
-    margin: 40px auto auto 160px;
+    margin-top: -95px;
 }
 
-.manFishTextRight {
+.manFishTextRight, .manFishTextLeft {
     position: absolute;
     font-size: 12px;
-    margin: 150px 0 0 60px;
-}
-
-.manFishTextLeft {
-    position: absolute;
-    font-size: 12px;
-    margin: 150px 0 0 120px;
+    top: 150px;
+    width: 100%;
+    text-align: center;
 }
 
 .tourContRightBot {
@@ -425,7 +428,8 @@ p {
 .smallPicButton {
     width: 115px;
     height: 115px;
-    margin-top: 230px;
+    bottom: 1%;
+    left: 4%;
 }
 
 .bigPicButton {
@@ -449,7 +453,7 @@ p {
 
 .teamPerson {
     position: absolute;
-    margin: -45px 0 0 14px;
+    //margin: -45px 0 0 14px;
     z-index: 11;
     border-radius: 48px;
     box-shadow: 0 0 0 4px #e7e0d8, 0 0 0 6px #cebca5;
@@ -599,8 +603,6 @@ p {
     display: block;
     overflow: hidden;
     float: right;
-    height: 100%;
-
     background-color: mix(#eee9de, #e1cfb6);
     @include background-image(linear-gradient(#eee9de, #e1cfb6));
 }
@@ -608,8 +610,13 @@ p {
 .teamContLeft {
     display: block;
     float: left;
+    position: relative;
 }
 
+.teamContLeft, .teamContRight, .tour-rank, .tour-rank + .half {
+    height: 360px;
+    position: relative;
+}
 .teamContLeftBot {
     margin-top: 15px;
 }
