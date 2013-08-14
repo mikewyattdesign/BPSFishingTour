@@ -9,7 +9,7 @@ FactoryGirl.define do
         end
         country "Canada"
         postal_code "123456"
-        date Time.now
+        date Time.now+1.day
 
         # :event_with_scores
         # usage: FactoryGirl.create(:event_with_scores, name: "Gateway Classic"), FactoryGirl.create(:event_with_scores, scores: 5)
