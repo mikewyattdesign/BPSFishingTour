@@ -51,6 +51,18 @@ class Team < ActiveRecord::Base
        self.users.delete(user) if self.users.include?(user)
     end
 
+    def team_up(angler, co_angler)
+        begin
+            raise unless !angler.teammate && !co_angler.teammate && self.users.empty?
+        rescue Exception => e
+            puts "One or more users are already on a team"
+            return false
+        end
+        angler.teams << self
+        co_angler.teams << self
+        return true
+    end
+
     class FullTeamError < StandardError
     end
 

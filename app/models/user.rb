@@ -68,4 +68,10 @@ class User < ActiveRecord::Base
         User.select{|user| user.teams.empty?}
     end
 
+    def team_with(teammate)
+        return false if self.teammate
+        team = Team.create
+        team.team_up(self,teammate)
+    end
+
 end

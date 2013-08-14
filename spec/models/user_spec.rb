@@ -111,5 +111,14 @@ describe User do
         expect(dave.my_team).to eq(new_team)
     end
 
+    it 'should be able to team up with another user' do
+        dan = FactoryGirl.create(:user_with_profile)
+        dave = FactoryGirl.create(:user_with_profile)
+        darryl = FactoryGirl.create(:user_with_profile)
+        dan.team_with(dave)
+        expect(dan.teammate).to eq(dave)
+        expect(dave.teammate).to eq(dan)
+        expect(darryl.team_with(dave)).to be_false
+    end
 
 end
