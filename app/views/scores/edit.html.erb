@@ -1,6 +1,11 @@
-<h1>Editing score</h1>
+<div class="navbar well">
+    <%= link_to "&larr; Back to Event".html_safe, :back %>
+</div>
+<div class="container">
+<h1>Editing Score #<%= @score.id %></h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @score %> |
 <%= link_to 'Back', scores_path %>
+</div>

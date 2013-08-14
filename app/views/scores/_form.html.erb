@@ -1,3 +1,9 @@
+<style type="text/css">
+.edit_score .field {
+        margin-bottom: 10px;
+}
+</style>
+
 <%= form_for(@score) do |f| %>
   <% if @score.errors.any? %>
     <div id="error_explanation">
@@ -12,39 +18,39 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :event_id %><br>
-    <%= f.number_field :event_id %>
+    <%= f.label :event_id %>
+    <%= f.select :event_id, options_from_collection_for_select(Event.all, 'id', 'name_and_date') %>
   </div>
   <div class="field">
-    <%= f.label :position %><br>
+    <%= f.label :position %>
     <%= f.number_field :position %>
   </div>
   <div class="field">
-    <%= f.label :angler %><br>
+    <%= f.label :angler %>
     <%= f.text_field :angler %>
   </div>
   <div class="field">
-    <%= f.label :angler_rewards %><br>
+    <%= f.label :angler_rewards %>
     <%= f.text_field :angler_rewards %>
   </div>
   <div class="field">
-    <%= f.label :co_angler %><br>
+    <%= f.label :co_angler %>
     <%= f.text_field :co_angler %>
   </div>
   <div class="field">
-    <%= f.label :co_angler_rewards %><br>
+    <%= f.label :co_angler_rewards %>
     <%= f.text_field :co_angler_rewards %>
   </div>
   <div class="field">
-    <%= f.label :weight %><br>
+    <%= f.label :weight %>
     <%= f.text_field :weight %>
   </div>
   <div class="field">
-    <%= f.label :bf %><br>
+    <%= f.label :bf %>
     <%= f.text_field :bf %>
   </div>
   <div class="field">
-    <%= f.label :hp %><br>
+    <%= f.label :hp %>
     <%= f.text_field :hp %>
   </div>
   <div class="actions">
