@@ -4,7 +4,11 @@
     margin: 5px 0;
     height: 40px;
     line-height: 40px;
-    box-sizing: border-box;
+    border-bottom: 1px dotted #999;
+    padding-bottom: 5px;
+}
+.city-events:last-child{
+    border-bottom: none;
 }
 .city-name {
     float:left;
@@ -17,13 +21,19 @@
 
 <nav>
     <ul>
-        <% event_cities = @events.group_by{|event| event.city } %>
-        <% event_cities.each_key do |city| %>
+        <% event_names = @events.group_by{|event| event.name } %>
+        <% event_names.each_key do |name| %>
             <div class="city-events">
-                <p class="city-name"><%= city %>:</p>
+                <p class="city-name"><%= name %>:</p>
                 <ul class="inline city-event-list">
-                <% event_cities[city].each do |event| %>
+                <% event_names[name].each do |event| %>
+                    <% if params[:event_id].to_i == event.id %>
+                    <li><%= link_to "#{event.date.strftime("%B %d, %Y")} (#{event.id})", "/scores?event_id=#{event.id}", class: "btn disabled", title: "This is the current event." %></li>
+                    <% else %>
                     <li><%= link_to "#{event.date.strftime("%B %d, %Y")} (#{event.id})", "/scores?event_id=#{event.id}", class: "btn" %></li>
+                    <% end %>
+
+
                 <% end %>
                 </ul>
             </div>
