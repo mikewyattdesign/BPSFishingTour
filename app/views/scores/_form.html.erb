@@ -27,7 +27,7 @@
   </div>
   <div class="field">
     <%= f.label :angler %>
-    <%= f.text_field :angler %>
+    <%= f.text_field :angler, :autocomplete=>"off", :data=>{:provide=>"typeahead", :source=>Profile.all.reject{|profile| profile.first_name.blank? || profile.last_name.blank?}.map{|profile| profile.full_name.upcase}} %>
   </div>
   <div class="field">
     <%= f.label :angler_rewards %>
@@ -35,7 +35,7 @@
   </div>
   <div class="field">
     <%= f.label :co_angler %>
-    <%= f.text_field :co_angler %>
+    <%= f.text_field :co_angler, :autocomplete=>"off", :data=>{:provide=>"typeahead", :source=>Profile.all.reject{|profile| profile.first_name.blank? || profile.last_name.blank?}.map{|profile| profile.full_name.upcase}} %>
   </div>
   <div class="field">
     <%= f.label :co_angler_rewards %>

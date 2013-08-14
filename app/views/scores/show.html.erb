@@ -1,8 +1,12 @@
+<div class="navbar well">
+    <%= link_to "&larr; Back to Event".html_safe, "/scores/?event_id=#{@score.event_id}" %>
+</div>
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Event:</strong>
-  <%= @score.event_id %>
+  <%= @score.event.name_and_date+" (#{@score.event_id})" %>
 </p>
 
 <p>
@@ -47,3 +51,4 @@
 
 <%= link_to 'Edit', edit_score_path(@score) %> |
 <%= link_to 'Back', scores_path %>
+</div>
