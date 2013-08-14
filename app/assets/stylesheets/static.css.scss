@@ -243,3 +243,9 @@
 .hide {
     display: none;
 }
+
+span.team-name {
+    a {
+        color: $lightGrey
+    }
+}
