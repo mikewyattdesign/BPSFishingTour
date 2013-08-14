@@ -18,7 +18,7 @@ class EventsController < ApplicationController
 
   def event_scores
     @fullads = true
-    @scores = Score.where(event_id: params[:id])
+    @scores = Score.where(event_id: params[:id]).order("position ASC")
     # render text: @scores.inspect
   end
 
