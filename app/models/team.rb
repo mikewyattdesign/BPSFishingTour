@@ -60,7 +60,17 @@ class Team < ActiveRecord::Base
         end
         angler.teams << self
         co_angler.teams << self
+        score_check
         return true
+    end
+
+    def score_check
+        angler = self.users.first
+        co_angler = self.users.first.teammate
+
+        Score.where(angler_id: angler.id, co_angler_id: co_angler.id)
+            .concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id))
+            .uniq.each {|score| score.update(team_id: self.id)}
     end
 
     class FullTeamError < StandardError
