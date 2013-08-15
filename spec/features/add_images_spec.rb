@@ -36,7 +36,14 @@ feature "Add Images", js: true do
             click_button 'Continue'
 
             url = bob.my_team.team_picture.url(:teampro)
+            expect(current_path).to eq "/myprofile"
+
+            # save_and_open_page
             expect(page.body).to have_css("img[src='#{url}']")
+            url = bob.my_team.team_picture.url(:tourpro)
+            expect(page.body).to have_css("img[src='#{url}']")
+
+
         end
 
 
