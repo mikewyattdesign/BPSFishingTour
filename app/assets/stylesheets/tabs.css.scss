@@ -100,29 +100,21 @@ p {
 }
 
 .tabIconContainer {
+    position:relative;
     width: 245px;
     height: 40px;
 }
 
 .tabText {
-    float: left;
-    margin-left: 5px;
-    margin-top: 10px;
-}
-
-#fishSolo {
-    padding-left: 30px;
-}
-
-#setSolo {
-    padding-left: 17px;
+    position:absolute;
+    left: 80px;
+    top: 10px;
 }
 
 .iconSmall {
-    float: left;
-    margin-top: 4px;
-    margin-left: 33px;
-    margin-bottom: 0;
+    position: absolute;
+    left: 40px;
+    top: 5px;
 }
 
 .iconSmallEvents {
