@@ -313,7 +313,6 @@ p {
 .cutOutTextTeam {
     position: absolute;
     width: 150px;
-    margin: 230px 0 0 130px;
     z-index: 15;
 }
 
@@ -358,7 +357,7 @@ p {
 
 .cutOutLeft {
     position: absolute;
-    margin-top: 217px;
+    top: 217px;
     width: 100%;
     z-index: 1;
 }
@@ -426,10 +425,10 @@ p {
 }
 
 .smallPicButton {
-    width: 115px;
-    height: 115px;
-    bottom: 1%;
-    left: 4%;
+    width: 95px;
+    height: 95px;
+    bottom: 7%;
+    left: 5%;
 }
 
 .bigPicButton {
