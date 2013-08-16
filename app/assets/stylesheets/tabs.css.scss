@@ -235,10 +235,6 @@ p {
     z-index: 20;
 }
 
-.picBoxLeft {
-
-}
-
 .teamPic {
     position: absolute;
     overflow: hidden;
@@ -307,20 +303,20 @@ p {
     position: absolute;
     width: 150px;
     z-index: 15;
-}
 
-.cutOutTextTeam h2 {
-    margin-bottom: 5px;
-    font-size: 15px;
-    text-shadow:none;
-    color: #856a43;
-    font-family: titillium, sans-serif;
-    font-weight: bold;
-}
+    h2 {
+        margin-bottom: 5px;
+        font-size: 15px;
+        text-shadow:none;
+        color: #856a43;
+        font-family: titillium, sans-serif;
+        font-weight: bold;
+    }
 
-.cutOutTextTeam p {
-    font-size: 12px;
-    line-height: 14px;
+    p {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 
 .cutOutRight {
@@ -380,6 +376,7 @@ p {
     left: 50%;
     top: 50%;
 }
+
 .manFishLeft {
     margin-top: -95px;
 }
@@ -399,7 +396,6 @@ p {
 .tourPersonText {
     margin-left: 140px;
     width: 210px;
-
 }
 
     .tourPersonText h3 {
@@ -485,15 +481,15 @@ p {
     width: 150px;
     margin-bottom: 32px;
     z-index: 15;
-}
 
-.teamPersonText h3 {
-    font-size: 14px;
-}
+    h3 {
+        font-size: 14px;
+    }
 
-.teamPersonText p {
-    font-size: 12px;
-    line-height: 14px;
+    p{
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 
 .adImg2, .adImg3, .adImg4 {
