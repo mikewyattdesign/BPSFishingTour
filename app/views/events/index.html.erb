@@ -1,3 +1,14 @@
+<% content_for :leaderboard do %>
+    <div class="standingsLogo">
+        <%= image_tag 'standingsBackground.png', alt: 'Standings' %>
+        <div class="standingsText">
+            <h2>Standings</h2>
+            <%= render 'leaderboard/team_scores_mini' %>
+            <%= link_to "Full Leaderboard", leaderboard_path %>
+        </div>
+    </div>
+<% end %>
+
 <div id="eventContainer">
     <div class="findAnEvent">
         <%= render_notification %>

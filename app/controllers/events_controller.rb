@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.order('date')
     @divisions = Division.all
+    @board = Leaderboard.qualified_teams
   end
 
   # GET /events/1

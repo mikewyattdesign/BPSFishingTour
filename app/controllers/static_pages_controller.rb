@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
     end
 
     def events
+        @board = Leaderboard.qualified_teams
     end
 
     def thanks
