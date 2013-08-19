@@ -1,37 +1,6 @@
-/*Font Styles Home Container*/
-
-h1 {
-    margin: 0;
-    color: $yellow;
-    @include aachen;
-    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.37);
-}
-
-h2 {
-    margin: 0;
-    color: white;
-    @include aachen;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-h3 {
-    margin: 0;
-    color: $red;
-    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.37);
-}
-
-p {
-    color: $lightGrey;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
-}
-
 /*Home Container*/
 
-#wrapper {
-    overflow: hidden;
-}
-
-.homeContainer {
+#wrapper, .homeContainer {
     overflow: hidden;
 }
 

@@ -33,6 +33,10 @@ html, body {
    height: 100%;
 }
 
+body {
+    background-image: image-url('woodBackground.jpg');
+}
+
 #wrapper {
    min-height: 100%;
    position: relative;

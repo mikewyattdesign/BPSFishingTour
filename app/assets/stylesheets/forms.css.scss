@@ -46,10 +46,6 @@ label, h1, h2, h3, p, a {
     font-family: 'Titillium Web', sans-serif;
 }
 
-body {
-    background-image: image-url('woodBackground.jpg');
-}
-
 select {
     width: 118px;
 }
@@ -71,6 +67,11 @@ select {
     border-radius: 10px;
     box-shadow: 0px 0px 30px black;
     color: #bebebe;
+
+    h2 {
+        color: #5f5f5f;
+    }
+
     > :last-child {
         border-radius:0 0 10px 10px;
     }
@@ -302,10 +303,6 @@ form + .BottomBanner {
         margin-bottom: 20px;
         overflow: hidden;
     }
-}
-
-.formContainer h2 {
-    color: #5f5f5f;
 }
 
 .teamRegContainerForm h1, .teamRegContainerForm h2, .teamRegContainerForm h3, .teamRegContainerForm p, .formContainer h1, .formContainer h2, .formContainer h3, .formContainer p {

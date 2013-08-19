@@ -22,15 +22,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-
     @include background-image(linear-gradient(transparent, rgba(10, 10, 10, 0.5)));
 }
 
 .nav-tabs > li {
     margin-bottom: 0px;
+    border: none;
     background-size: 100% 100%;
     background-position: 0;
-    border: none;
     background-color: none;
     background-repeat: no-repeat;
     background-image: image-url('tabMiddle.png');
@@ -93,11 +92,8 @@ p {
     }
 }
 
-#tab1, #tab2 {
-    min-height: 360px;
-}
-
 #tab1, #tab2, #tab3 {
+    min-height: 360px;
     background-color: #ebe4de;
     background-size: 100%;
 }
@@ -138,8 +134,10 @@ p {
     }
 }
 
-.teamRegMod form{
-    border-radius: 10px;
+.teamRegMod {
+    form {
+        border-radius: 10px;
+    }
 }
 
 .accountInput {
@@ -168,7 +166,7 @@ p {
 
 .tour-progress {
     margin: 5px 0 0;
-    line-height: 0;
+    line-height: 16px;
     font-size: 16px;
     border: 2px solid #cbbdaa;
     border-right: none;
@@ -746,75 +744,8 @@ table {
     }
 }
 
-.teamList {
-    display: inline-block;
-    margin: 5px auto auto 60px;
-    color: white;
-}
-
-.teamListM {
-    display: inline-block;
-    margin: auto 35px auto 140px;
-}
-
-.teamListR {
-    float: right;
-    margin: 5px 60px auto auto;
-}
-
-.dateRow {
-    margin-left: 60px;
-}
-
-.eventRow {
-    margin-left: 120px;
-}
-
-.pointRow {
-    float: right;
-    margin-right: 30px;
-}
-
-.teamList, .teamListM, .teamListR {
-    h3 {
-        color: white;
-    }
-}
-
-.dateRow, .eventRow, .pointRow{
-    display: inline-block;
-
-    p {
-        line-height: 39px;
-        text-shadow: none;
-        color: #62616e;
-    }
-}
-
-.greyCont {
-    background-image: image-url('leaderBackground.jpg');
-
-    p {
-        display: inline;
-        margin-right: 15px;
-        color: #616262;
-        text-shadow: none;
-    }
-}
-
 .faceCont {
     margin: 5px 0px 5px 20px;
-}
-
-.greyContText {
-    float: right;
-    width: 200px;
-    margin-top: 15px;
-    margin-right: 15px;
-}
-
-.bottomGreyPt {
-    float: right;
 }
 
 #profile_shirt {

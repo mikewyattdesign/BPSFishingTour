@@ -89,9 +89,11 @@
     color: white;
 }
 
-.anglersBotCont h1 {
-    font-size: 30px;
-    color: $darkGrey;
+.anglersBotCont {
+    h1 {
+        font-size: 30px;
+        color: $darkGrey;
+    }
 }
 
 .anglersGroup {
@@ -134,6 +136,12 @@
 
 .aboutHead {
     padding: 40px 40px 0 40px;
+
+    h1 {
+        color: $brown;
+        font-size: 30px;
+        text-shadow: none;
+    }
 }
 
 .aboutPara {
@@ -146,12 +154,6 @@
     a {
         color: $brown;
     }
-}
-
-.aboutHead h1 {
-    color: $brown;
-    font-size: 30px;
-    text-shadow: none;
 }
 
 .aboutPara, .leaderNumber, .leaderName, .leaderPoint {
@@ -244,12 +246,12 @@
     }
 }
 
-.hide {
-    display: none;
-}
-
 span.team-name {
     a {
         color: $lightGrey
     }
+}
+
+.hide {
+    display: none;
 }
