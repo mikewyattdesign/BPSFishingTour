@@ -78,6 +78,21 @@ p {
     font-style: italic;
 }
 
+#tab1 {
+    p, h1, h3 {
+        color: #cbbdaa;
+        text-shadow: none;
+        font-family: 'Titillium Web', sans-serif;
+    }
+}
+
+#tab2 {
+    p, h3 {
+        color: #856a43;
+        text-shadow: none;
+    }
+}
+
 #tab1, #tab2 {
     min-height: 360px;
 }
@@ -85,17 +100,6 @@ p {
 #tab1, #tab2, #tab3 {
     background-color: #ebe4de;
     background-size: 100%;
-}
-
-#tab1 p, #tab1 h3, #tab1 h1 {
-    color: #cbbdaa;
-    text-shadow: none;
-    font-family: 'Titillium Web', sans-serif;
-}
-
-#tab2 p, #tab2 h3 {
-    color: #856a43;
-    text-shadow: none;
 }
 
 .tabIconContainer {
@@ -197,7 +201,6 @@ p {
 .picBoxContainer {
     position: relative;
     overflow: hidden;
-    margin: 5px 5px 0 0;
     height: 230px;
 }
 
@@ -209,27 +212,26 @@ p {
 
 .picBox {
     margin-top: 10px;
-    margin-left: 5px;
     border: 2px dashed #cdbca3;
     height: 85%;
 }
 
 .picBoxTeam {
-    margin-top: 8px;
+    margin: 10px;
     border: 2px dashed #cdbca3;
     height: 75%;
 }
 
 .tourDot {
     position: absolute;
-    top: 206px;
+    top: 207px;
     left: 50px;
     z-index: 20;
 }
 
 .teamDot {
     position: absolute;
-    top: 211px;
+    top: 213px;
     left: 263px;
     z-index: 20;
 }
@@ -238,13 +240,13 @@ p {
     position: absolute;
     overflow: hidden;
     height: 233px;
-    width: auto;
+    min-width: 380px;
 }
 
 .tourPic {
     position: absolute;
     overflow: hidden;
-    height: 232px;
+    height: 227px;
     width: auto;
 }
 
@@ -263,8 +265,8 @@ p {
 }
 
 .cutOutContainerLeft {
+    padding: 0;
     position: absolute;
-    margin-left: -8px;
     z-index: 10;
     width: 378px;
     height: 100%;
@@ -321,7 +323,7 @@ p {
 
 .cutOutRight {
     position: absolute;
-    top: 215px;
+    top: 210px;
     width: 100%;
     z-index: 10;
 }
@@ -333,13 +335,13 @@ p {
     float: left;
 }
 
-.cutTourMiddle {
+.cutTourMiddle, .cutTeamMiddle {
     float: left;
 }
 
 .cutTourRight {
     background-color: #ebe4de;
-    width: 285px;
+    width: 286px;
     height: 17px;
     float: left;
 }
@@ -355,10 +357,6 @@ p {
     background-color: #ebe4de;
     width: 271px;
     height: 17px;
-    float: left;
-}
-
-.cutTeamMiddle {
     float: left;
 }
 
@@ -615,6 +613,7 @@ p {
     display: block;
     float: left;
     position: relative;
+    padding: 0;
 }
 
 .teamContLeft, .teamContRight, .tour-rank, .tour-rank + .half {

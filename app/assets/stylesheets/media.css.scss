@@ -28,11 +28,19 @@
     }
 
     .cutTourRight {
-        width: 268px;
+        width: 266px;
+    }
+
+    .cutOutContainerLeft {
+        width: 100%;
+    }
+
+    .cutTeamLeft {
+        width: 262px;
     }
 
     .cutTeamRight {
-        width: 45px;
+        width: 54px;
     }
 
     .tourPic {
@@ -61,7 +69,6 @@
     }
 
     .tour-rank {
-        width: 340px;
         padding: auto 0px;
     }
 
@@ -75,10 +82,6 @@
         h4 {
             font-size: 20px;
         }
-    }
-
-    .picBoxContainer {
-        width: 340px;
     }
 
     .thMiddle {
