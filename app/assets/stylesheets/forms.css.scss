@@ -280,27 +280,28 @@ form + .BottomBanner {
     padding: 30px 50px;
     min-height: 548px;
     color: $textBeige;
+
     p {
         color: $textBeige;
     }
-}
 
-.teamRegContainerForm li {
-    width: 300px;
-    font-size: 12px;
-    margin-left: 10px;
-    margin-bottom: 5px;
-}
+    h3 {
+        font-size: 16px;
+        color: #865105;
+        margin-left: 10px;
+    }
 
-.teamRegContainerForm form {
-    margin-bottom: 20px;
-    overflow: hidden;
-}
+    li {
+        width: 300px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
 
-.teamRegContainerForm h3 {
-    font-size: 16px;
-    color: #865105;
-    margin-left: 10px;
+    form {
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
 }
 
 .formContainer h2 {
@@ -357,42 +358,46 @@ form + .BottomBanner {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top: solid 1px #d8d8d8;
+
+    p {
+        font-size: 12px;
+        color: white;
+        margin: 8px 0 auto 20px;
+    }
 }
 
-.topGreenBanner p{
-    font-size: 12px;
-    color: white;
-    margin: 8px 0 auto 20px;
+.full {
+    p {
+        font-size: 12px;
+        color: #865105;
+        font-style: italic;
+        font-weight: bold;
+        margin: 10px auto 30px auto;
+    }
+
+    a {
+        color: #865105;
+    }
 }
 
-.full p {
-    font-size: 12px;
-    color: #865105;
-    font-style: italic;
-    font-weight: bold;
-    margin: 10px auto 30px auto;
-}
+.regTopText {
+    h2 {
+        font-size: 14px;
+        color: #865105;
+        font-style: italic;
+        font-weight: bold;
+        margin: auto auto 20px 10px;
+    }
 
-.regTopText h2 {
-    font-size: 14px;
-    color: #865105;
-    font-style: italic;
-    font-weight: bold;
-    margin: auto auto 20px 10px;
-}
+    p {
+        font-size: 12px;
+        color: #865105;
+        margin: 5px auto auto 10px;
+    }
 
-.regTopText p {
-    font-size: 12px;
-    color: #865105;
-    margin: 5px auto auto 10px;
-}
-
-.regTopText a {
-    color: #865105;
-}
-
-.full a {
-    color: #865105;
+    a {
+        color: #865105;
+    }
 }
 
 #email, #last_name, #first_name {
@@ -430,7 +435,7 @@ button.close {
     box-shadow: 0px 0px 35px black;
 }
 
-.verticalAds, .verticalAds, .standingsLogo {
+.verticalAds, .standingsLogo {
     width: 223px;
     margin-left: auto;
     margin-right: auto;

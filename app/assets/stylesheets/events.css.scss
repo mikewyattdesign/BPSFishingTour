@@ -18,10 +18,10 @@
 
 .findAnEventSmall {
     margin: 5px 0;
-}
 
-.findAnEventSmall h2 {
-    color: $yellow;
+    h2 {
+        color: $yellow;
+    }
 }
 
 .eventMapContainer {
@@ -29,6 +29,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .mapOntario {
     margin: 15px auto auto 430px;
     width: 32%;
@@ -104,14 +105,17 @@
     padding: 70px 0px 70px 90px;
 }
 
-.bassEventAttendText h2 {
-    color: white;
-    font-size: 16px;
-    text-shadow:none;
-}
+.bassEventAttendText {
 
-.bassEventAttendText p {
-    font-size: 14px;
+    h2 {
+        color: white;
+        font-size: 16px;
+        text-shadow:none;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
 
 .bassEventAttendText, .eventEnterPic {
@@ -122,16 +126,16 @@
     float: left;
     width: 600px;
     margin-left: 70px;
-}
 
-    .bassEventEnterText h2 {
+    h2 {
         font-size: 40px;
     }
 
-    .bassEventEnterText p {
+    p {
         font-size: 18px;
         margin: 30px 0;
     }
+}
 
 .yesNoContainer {
     float: right;
@@ -229,14 +233,6 @@
     }
 }
 
-.slide h2, .slide p {
-    margin: 5px;
-    height: 50px;
-}
-.slide h2 {
-    letter-spacing:-1px;
-}
-
 .slide {
     .carousel-indicators {
         top: auto;
@@ -248,6 +244,15 @@
         li {
             cursor: pointer;
         }
+    }
+
+    h2 {
+        letter-spacing:-1px;
+    }
+
+    h2, p {
+        margin: 5px;
+        height: 50px;
     }
 }
 
