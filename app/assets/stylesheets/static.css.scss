@@ -132,11 +132,14 @@
 }
 
 .aboutHead {
-    padding: 40px 40px 0 40px;
+    padding: 20px 35px 15px 25px;
+    border-left: 15px solid $brown;
+    border-bottom: 1px dotted $darkGrey;
 
     h1 {
         color: $brown;
         font-size: 30px;
+        line-height: 30px;
         text-shadow: none;
     }
 }
@@ -150,6 +153,14 @@
 
     a {
         color: $brown;
+    }
+
+    ul {
+        border-bottom: 1px dotted $darkGrey;
+
+        li:last-child {
+            margin-bottom: 20px;
+        }
     }
 }
 
