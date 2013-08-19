@@ -126,6 +126,9 @@
 .anglersOrder {
     border: solid 1px $darkGrey;
     margin: 10px auto;
+    h2 {
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    }
 }
 
 .aboutHead {
