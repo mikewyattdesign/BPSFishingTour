@@ -31,11 +31,9 @@
 
                 <% if @user.teammate %>
                     <%= drop_profile_teammate_pic(@user.teammate, "tourPerson", :tour, "Person Icon") %>
+                <% else %>
+                    <%= image_tag 'iconPersonSmall.png', class: "tourPerson" %>
                 <% end %>
-
-               <!--  <% if @is_current_user %>
-                    <%= image_tag 'iconWriteLight.png', class: 'writeIcon', alt: 'Write Icon' %>
-                <% end %> -->
 
                 <% if @teammate %>
                     <h3>Teammate: <%= @teammate.full_name ? link_to(@teammate.full_name.titleize, profile_path(@teammate.profile,:tab => 'team'))  : "Your Teammate" %></h3>
@@ -49,38 +47,44 @@
         </div>
 
         <div class="teamContLeft half">
-        <% if @is_current_user %>
-            <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
-                <% if @profile.picture.exists? %>
-                   <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
-                <% else %>
-                   <%= image_tag 'iconPersonFull.png', class: "teamPerson #{'pulse' if user_signed_in? && @profile == current_user.profile}", alt: 'Person Icon' %>
-                <% end %>
-            <% end %>
-            <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
-            <% end %>
-        <% else %>
-                <div class="smallPicButton">
-                <% if @profile.picture.exists? %>
-                   <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
-                <% else %>
-                   <%= image_tag 'iconPersonFull.png', class: "teamPerson #{'pulse' if user_signed_in? && @profile == current_user.profile}", alt: 'Person Icon' %>
-                <% end %>
-                </div>
-        <% end %>
             <div class="cutOutContainerLeft half">
                 <div class="cutOutLeft">
                     <div class="cutTeamLeft"></div>
                     <div class="cutTeamMiddle"><%= image_tag 'cutTourV.png', class: 'cutTeamV', alt: 'Cut Out' %></div>
                     <div class="cutTeamRight"></div>
                 </div>
+                <% if @is_current_user %>
+                    <%= link_to team_select_profile_picture_path, class: "bigPicButton" do %>
+                    <% end %>
+                <% end %>
                 <%= team_picture(@user.my_team, 'teamPic', :teampro, 'Team Picture') %>
                 <div class="cutOutTextTeam">
-                    <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
-                    <p><%= @profile.status || " " %></p>
-                    <% unless @profile.picture.exists? %>
-                        <p class="profPicAlert <%= '' if user_signed_in? && @profile == current_user.profile %>"><a href="<%= select_profile_picture_path %>"><%= '<< Upload a Profile Picture' if user_signed_in? && @profile == current_user.profile %> </a></p>
+
+                    <% if @is_current_user %>
+                        <%= link_to select_profile_picture_path, class: "smallPicButton" do %>
+                            <% if @profile.picture.exists? %>
+                               <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
+                            <% else %>
+                               <%= image_tag 'iconPersonFull.png', class: "teamPerson #{'pulse' if user_signed_in? && @profile == current_user.profile}", alt: 'Person Icon' %>
+                            <% end %>
+                        <% end %>
+                    <% else %>
+                    <div class="smallPicButton">
+                        <% if @profile.picture.exists? %>
+                           <%= image_tag @profile.picture.url(:teamP), class: "teamPerson", alt: 'Person Icon' %>
+                        <% else %>
+                           <%= image_tag 'iconPersonFull.png', class: "teamPerson #{'pulse' if user_signed_in? && @profile == current_user.profile}", alt: 'Person Icon' %>
+                        <% end %>
+                    </div>
                     <% end %>
+
+                    <div class="teamInfo">
+                        <h2><%= @profile.user.full_name  || "Angler Profile" %></h2>
+                        <p><%= @profile.status || " " %></p>
+                        <% unless @profile.picture.exists? %>
+                            <p class="profPicAlert <%= '' if user_signed_in? && @profile == current_user.profile %>"><a href="<%= select_profile_picture_path %>"><%= '<< Upload a Profile Picture' if user_signed_in? && @profile == current_user.profile %> </a></p>
+                        <% end %>
+                    </div>
                 </div>
             </div>
             <div class="picBoxContainerLeft">
@@ -95,9 +99,6 @@
                         </div>
                     </div>
                 <% end %>
-            </div>
-            <div class="teamContLeftBot">
-
             </div>
         </div>
     </div>

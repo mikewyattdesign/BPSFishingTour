@@ -258,7 +258,7 @@ p {
     position: absolute;
     z-index: 10;
     width: 370px;
-    height: 330px;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -271,13 +271,22 @@ p {
     overflow: hidden;
 }
 
+.tourInfo {
+    position: absolute;
+    left: 125px;
+}
+
+.teamInfo {
+    position: absolute;
+    left: 130px;
+}
+
 .cutOutText {
     position: absolute;
-    width: 200px;
+    width: 100%;
     z-index: 15;
     bottom: 0;
-    right: 33px;
-    top: 75%;
+    top: 70%;
 
     h2 {
         margin-bottom: 10px;
@@ -296,12 +305,12 @@ p {
 #tab2 .cutOutText, #tab2 .cutOutTextTeam {
     top: 70%;
     bottom: 0;
-    right: 25%;
+
 }
 
 .cutOutTextTeam {
     position: absolute;
-    width: 150px;
+    width: 100%;
     z-index: 15;
 
     h2 {
@@ -385,10 +394,6 @@ p {
     text-align: center;
 }
 
-.tourContRightBot {
-    margin-top: 20px;
-}
-
 .tourPersonText {
     margin-left: 140px;
     width: 210px;
@@ -412,25 +417,25 @@ p {
 .smallPicButton {
     width: 95px;
     height: 95px;
-    bottom: 7%;
+    bottom: 20%;
     left: 5%;
 }
 
 .bigPicButton {
-    width: 370px;
-    height: 215px;
+    width: 100%;
+    height: 217px;
 }
 
 .tourPerson {
     position: absolute;
-    margin: -8px 0 0 8px;
+    margin: 0 0 0 8px;
     border-radius: 40px;
     box-shadow: 0 0 0 4px #e6d7c4, 0 0 0 6px #cebca5;
 }
 
 .tourPersonMain {
-    float: left;
-    margin: -5px 0 0 27px;
+    position: absolute;
+    left: 27px;
     border-radius: 42px;
     box-shadow: 0 0 0 6px #e7e0d8, 0 0 0 8px #cebca5;
 }
