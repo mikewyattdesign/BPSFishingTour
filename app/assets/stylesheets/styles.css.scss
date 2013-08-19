@@ -84,22 +84,22 @@ p {
         float: left;
         width: 600px;
         margin: 60px 0 0 22px;
-    }
 
-        .bassHandText h3 {
+        h3 {
             font-size: 18px;
         }
 
-        .bassHandText h4 {
+        h4 {
             margin: 0;
             color: white;
             font-size: 20px;
             line-height: 40px;
         }
 
-        .bassHandText a {
+        a {
             color: $yellow;
         }
+    }
 
     .eventLeaderContainer {
         width: 780px;
@@ -140,13 +140,15 @@ p {
         }
     }
 
-#user_nav a {
-    margin-left: 15px;
-    margin-right: 15px;
-}
+#user_nav {
+    a {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
-#user_nav a, #user_nav h2{
-    font-weight: bold;
+    a, h2{
+        font-weight: bold;
+    }
 }
 
 /*New Home Slider*/

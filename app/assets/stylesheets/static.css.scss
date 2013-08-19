@@ -140,6 +140,14 @@
 
 .aboutPara {
     padding: 10px 40px 30px 40px;
+
+    h3 {
+        color: $darkGrey;
+    }
+
+    a {
+        color: $brown;
+    }
 }
 
 .aboutHead h1 {
@@ -148,16 +156,10 @@
     text-shadow: none;
 }
 
-.aboutPara h3 {
-    color: $darkGrey;
-}
-
-.aboutPara p, .leaderNumber p, .leaderName p, .leaderPoint p {
-    color: $darkGrey;
-}
-
-.aboutPara a {
-    color: $brown;
+.aboutPara, .leaderNumber, .leaderName, .leaderPoint {
+    p {
+        color: $darkGrey;
+    }
 }
 
 .leaderGroup {
@@ -167,8 +169,10 @@
     margin: 0px 10px;
 }
 
-.leaderNumber p, .leaderName p, .leaderPoint p {
-    line-height: 43px;
+.leaderNumber, .leaderName, .leaderPoint {
+    p {
+        line-height: 43px;
+    }
 }
 
 .leaderNumber {
@@ -190,20 +194,20 @@
 .mediaCont {
     padding: 20px;
     border-bottom: solid 1px white;
-}
 
-.mediaCont h2 {
-    color: $grey;
-}
+    h2 {
+        color: $grey;
+    }
 
-.mediaCont p {
-    margin: 1em 0;
-    color: inherit;
-    font-size: 18px;
-}
+    p {
+        margin: 1em 0;
+        color: inherit;
+        font-size: 18px;
+    }
 
-.mediaCont a {
-    color: #65421a;
+    a {
+        color: #65421a;
+    }
 }
 
 #aboutContainer, #anglersContainer, #leaderContainer, #newsContainer, #invitationCont {
@@ -216,28 +220,30 @@
     @include background-image(linear-gradient(transparent, rgba(10, 10, 10, 0.5)));
 }
 
-.invitationText h1 {
-    font-size: 30px;
-    text-shadow: none;
-    color: $brown;
-    padding: 20px 20px 0px 20px;
-}
+.invitationText {
+    h1 {
+        font-size: 30px;
+        text-shadow: none;
+        color: $brown;
+        padding: 20px 20px 0px 20px;
+    }
 
-.invitationText tr {
-    float: left;
-    clear: both;
-    padding: 0 20px;
-}
+    tr {
+        float: left;
+        clear: both;
+        padding: 0 20px;
+    }
 
-.invitationText th {
-    width: 300px;
-    text-align: left;
-    color: white;
-}
+    th {
+        width: 300px;
+        text-align: left;
+        color: white;
+    }
 
-.invitationText td {
-    width: 300px;
-    color: white;
+    td {
+        width: 300px;
+        color: white;
+    }
 }
 
 .hide {
