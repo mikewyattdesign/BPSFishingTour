@@ -37,6 +37,11 @@ feature "Notifications" do
         expect(page.body).to have_content 'your teammate must accept your invitation'
         visit '/events'
         expect(page.body).to have_content 'your teammate must accept your invitation'
+    end
 
+    scenario "I don't have an outdoor rewards number" do
+        team = FactoryGirl.create :team_with_users
+        sign_in_with team.users.first.email, team.users.first.password
+        expect(page.body).to have_content 'We need to know your Outdoor Rewards'
     end
 end

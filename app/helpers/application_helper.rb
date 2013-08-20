@@ -63,5 +63,9 @@ module ApplicationHelper
                 return render template: 'notifications/remind_your_teammate_to_accept'
             end
         end
+
+        if current_user.profile.outdoor_rewards_number.blank?
+            return render template: 'notifications/add_outdoor_rewards_to_profile'
+        end
     end
 end
