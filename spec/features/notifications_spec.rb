@@ -41,7 +41,14 @@ feature "Notifications" do
 
     scenario "I don't have an outdoor rewards number" do
         team = FactoryGirl.create :team_with_users
+        team.events << FactoryGirl.create(:event)
         sign_in_with team.users.first.email, team.users.first.password
         expect(page.body).to have_content 'We need to know your Outdoor Rewards'
+    end
+
+    scenario "I'm not signed up for any events" do
+        team = FactoryGirl.create :team_with_users
+        sign_in_with team.users.first.email, team.users.first.password
+        expect(page.body).to have_content 'sign up for an event'
     end
 end

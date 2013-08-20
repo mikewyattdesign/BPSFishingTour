@@ -64,6 +64,10 @@ module ApplicationHelper
             end
         end
 
+        if current_user.teams.first.events.empty?
+            return render template: 'notifications/sign_up_for_an_event'
+        end
+
         if current_user.profile.outdoor_rewards_number.blank?
             return render template: 'notifications/add_outdoor_rewards_to_profile'
         end
