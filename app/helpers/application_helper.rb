@@ -50,7 +50,7 @@ module ApplicationHelper
     end
 
     def render_notification
-        return false unless current_user.present?
+        return nil unless current_user.present?
 
         if current_user.profile.first_name.blank? || current_user.profile.last_name.blank?
             return render template: 'notifications/add_name_to_profile'
