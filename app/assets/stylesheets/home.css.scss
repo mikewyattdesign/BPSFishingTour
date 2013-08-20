@@ -9,19 +9,20 @@
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
     .bannerBigText {
         position: absolute;
-        margin-left: 297px;
-        margin-top: 40px;
+        left: 297px;
+        top: 40px;
         width: 500px;
         z-index: 20;
     }
 
     .bannerBigImage {
-        margin-left: -500px;
-        margin-top: -15px;
+        position: absolute;
+        left: -500px;
     }
 
 .bannerMiddle {
@@ -120,9 +121,10 @@
 /*New Home Slider*/
 
 #slideshowWrapper {
-    position:relative;
-    width:1920px;
-    margin:auto;
+    // position:absolute;
+    // top: 15px;
+    // width:1920px;
+    // margin:auto;
 }
 
 #prevSlide {

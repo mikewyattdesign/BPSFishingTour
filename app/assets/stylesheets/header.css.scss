@@ -30,7 +30,7 @@
 
 .main-navigation {
     float: left;
-    margin: 0 0 0 32px;
+    margin: 0 0 0 42px;
     clear: right;
 
     a {
@@ -93,8 +93,8 @@
 
 .header-container {
     background: #1f2920;
-    margin-top: 15px;
     box-shadow: 0 5px 20px -3px #000000;
+    position: relative;
 
     h1 {
         margin: 0 0 20px;
