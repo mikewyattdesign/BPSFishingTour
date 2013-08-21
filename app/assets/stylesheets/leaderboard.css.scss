@@ -59,9 +59,20 @@
 }
 .mini-scores-container {
     text-align: center;
+    max-height: 200px;
+    overflow: auto;
+
     span {
         display: inline-block;
     }
-    max-height: 200px;
-    overflow: auto;
+    p:hover {
+        background-color:rgba(255, 255, 255, 0.3);
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    a:hover {
+        color: $yellow;
+    }
 }
