@@ -1,9 +1,14 @@
 /*Event Page*/
 
 #eventContainer {
-    width: 725px;
+    width: 750px;
     padding: 16px 0 0 275px;
-    margin: 0 auto;
+    margin: 0 auto 25px auto;
+    // @include background-image(linear-gradient(transparent, rgba(10, 10, 10, 0.5)));
+}
+
+.eventContainer {
+    padding: 0 20px 10px 0;
 }
 
 .findAnEvent {
