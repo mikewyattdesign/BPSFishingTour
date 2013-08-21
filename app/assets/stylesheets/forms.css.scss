@@ -247,6 +247,10 @@ form + .BottomBanner {
         position: static;
     }
 
+    .tab-content {
+        overflow: hidden;
+    }
+
     label {
         font-size: 14px;
         font-weight: bold;
