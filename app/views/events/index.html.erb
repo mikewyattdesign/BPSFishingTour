@@ -43,42 +43,42 @@
             </div>
         </div>
         <% @events.each do |event| %>
-
             <div class="bassAttendBG">
-            <div class="bassEventAttendBackground" data-division="<%= event.divisions.map { |division| division.id }.join(' ') %>">
-                <div class="bassEventAttendText">
-                    <h2><%= event.name %></h2>
-                    <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
-                    <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
-                </div>
-                <div class="rankingsButton"> <%= button_to 'Rankings', event_scores_path(event.id), method: :get, class: :seeRankButton if Score.where(event_id: event.id).length > 0 %> </div>
-                <% if user_signed_in? && current_user.my_team %>
-                    <div class="actions-container">
-                        <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
-                        <div class="yesNoContainer">
-                                <% if current_user.my_team.events.include?(event) %>
-                                    <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
-                                <% end %>
-
-                                <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
-
-                                <% if !current_user.my_team.events.include?(event) %>
-                                    <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
-                                    <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
-                                <% else %>
-                                    <%= button_to "No", unregister_event_path(event), class: 'noEventButton deemphasized' %>
-                                <% end %>
-
+                <div class="bassEventAttendBackground" data-division="<%= event.divisions.map { |division| division.id }.join(' ') %>">
+                    <div class="bassEventAttendText">
+                        <div class="rankingsButton"> <%= button_to 'Rankings', event_scores_path(event.id), method: :get, class: :seeRankButton if Score.where(event_id: event.id).length > 0 %> </div>
+                        <div class="bassET"><h2><%= event.name %></h2></div>
+                        <div class="bassET">
+                            <p><%= "#{event.city}, #{ event.province || event.state } #{event.country} #{event.postal_code}" %></p>
+                            <p><%= "#{event.date.to_date.to_formatted_s :long}" %></p>
                         </div>
                     </div>
-                <% else %>
-                    <div class="actions-container">
-                        <%= link_to event.date > Time.now ? "Sign up and register your team to attend." : "Sorry you missed this event. Sign up and register your team for future events." , new_user_registration_path, class: "is-fishing"%>
-                    </div>
-                <% end %>
-            </div>
-            </div>
+                    <% if user_signed_in? && current_user.my_team %>
+                        <div class="actions-container">
+                            <p class="is-fishing"><%= event.date >= Time.now ? 'Is your team fishing in this event?':'Did your team fish in this event?' %></p>
+                            <div class="yesNoContainer">
+                                    <% if current_user.my_team.events.include?(event) %>
+                                        <%= image_tag 'iconCheck.png', class: "ifYes" , alt: 'Check Mark' %>
+                                    <% end %>
 
+                                    <%= button_to "Yes", register_event_path(event), class: 'enterEventButton' %>
+
+                                    <% if !current_user.my_team.events.include?(event) %>
+                                        <%= image_tag 'iconCheck.png', class: "ifNo", alt: 'Check Mark' %>
+                                        <%= button_to "No", unregister_event_path(event), class: 'noEventButton' %>
+                                    <% else %>
+                                        <%= button_to "No", unregister_event_path(event), class: 'noEventButton deemphasized' %>
+                                    <% end %>
+
+                            </div>
+                        </div>
+                    <% else %>
+                        <div class="actions-container">
+                            <%= link_to event.date > Time.now ? "Sign up and register your team to attend." : "Sorry you missed this event. Sign up and register your team for future events." , new_user_registration_path, class: "is-fishing"%>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
         <% end %>
     </div>
 </div>
