@@ -427,6 +427,8 @@ button.close {
     margin-top: 20px;
     width: 223px;
     box-shadow: 0px 0px 35px black;
+    border-radius:4px;
+    border: 1px solid $darkGrey;
 }
 
 .verticalAds, .standingsLogo {

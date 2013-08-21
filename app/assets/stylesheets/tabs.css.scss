@@ -96,6 +96,7 @@ p {
     min-height: 360px;
     background-color: #ebe4de;
     background-size: 100%;
+    border-radius: 4px;
 }
 
 .tabIconContainer {
@@ -519,6 +520,7 @@ p {
     margin: 25px 25px 25px 10px;
     background: #cccece;
     box-shadow: 0px 0px 35px black;
+    border-radius: 4px;
 
     p {
         font-size: 18px;
@@ -540,6 +542,8 @@ p {
     background-position: top;
     background-size: 100%;
     height: 460px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .tabMidRightCont {
@@ -560,6 +564,8 @@ p {
 }
 
 .topDarkBrown, .topBlue, .topGreen {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     h2 {
         padding: 15px 51px 15px 70px;
         color: white;
@@ -596,6 +602,8 @@ p {
     float: right;
     background-color: mix(#eee9de, #e1cfb6);
     @include background-image(linear-gradient(#eee9de, #e1cfb6));
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 
     p {
         font-size: 12px;
@@ -677,6 +685,8 @@ table {
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 
     a {
         position: absolute;
