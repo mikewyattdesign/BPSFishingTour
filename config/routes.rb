@@ -68,4 +68,5 @@ BpsFishingTour::Application.routes.draw do
     # Secret Admin Routing
     get '/admin/users-report' => 'admin#users_report'
     get '/admin/users-table' => 'admin#users_table', as: 'user_report'
+    get '/admin/team-table' => 'admin#team_table', as: 'team_table'
 end

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+    <Worksheet ss:Name="Sheet1">
+        <Table>
+            <Row>
+                <% [
+                    'Team ID',
+                        'Boat Description', 'Favorite Gear', 'Total Score', '5 events?',
+                    'User ID',
+                        'Email', 'Last Name', 'First Name',
+                        'Street Address', 'City', 'State', 'ZIP',
+                        'Phone', 'Extension', 'Shirt Size', 'Outdoor Rewards Number',
+                    'User 2 ID',
+                        'Email', 'Last Name', 'First Name',
+                        'Street Address', 'City', 'State', 'ZIP',
+                        'Phone', 'Extension', 'Shirt Size', 'Outdoor Rewards Number'
+                    ].each do |column| %>
+                    <Cell><Data ss:Type="String"><%= column %></Data></Cell>
+                <% end %>
+            </Row>
+            <% @teams.each do |team| %>
+                <%# Throw away teams with the wrong number of users %>
+                <% next unless team.users.count == 2 %>
+                <Row>
+                    <Cell><Data ss:Type="Number"><%= team.id %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= team.boat_description %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= team.favorite_gear %></Data></Cell>
+                    <Cell><Data ss:Type="Number"><%= team.total_score %></Data></Cell>
+                    <Cell><Data ss:Type="String"><%= team.scores.count >= 5 %></Data></Cell>
+                    <% team.users.each do |user| %>
+                        <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.email %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.last_name unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.first_name unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.street_address unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.city unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.state unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.zip unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.phone unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.ext unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.shirt_size unless user.profile.nil? %></Data></Cell>
+                        <Cell><Data ss:Type="String"><%= user.profile.outdoor_rewards_number unless user.profile.nil? %></Data></Cell>
+                    <% end %>
+                </Row>
+            <% end %>
+        </Table>
+    </Worksheet>
+</Workbook>

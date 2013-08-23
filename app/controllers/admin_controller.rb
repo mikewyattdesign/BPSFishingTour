@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 
     http_basic_authenticate_with name: 'Group360', password: 'scoreimport'
     def users_report
-
+        @teams = Team.all
     end
 
     def users_table
@@ -26,5 +26,8 @@ class AdminController < ApplicationController
         end
     end
 
+    def team_table
+        @teams = Team.all
+    end
 end
 
