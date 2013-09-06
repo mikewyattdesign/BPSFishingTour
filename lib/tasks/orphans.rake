@@ -6,7 +6,7 @@ namespace :orphans do
 
         teams.each do | team |
             angler = team.users.first
-            co_angler = team.users.last
+            co_angler = team.users.first.teammate
 
             Score.where(angler_id: angler.id, co_angler_id: co_angler.id)
             .concat(Score.where(angler_id: co_angler.id, co_angler_id: angler.id))
