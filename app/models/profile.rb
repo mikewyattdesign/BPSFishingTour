@@ -19,6 +19,8 @@ class Profile < ActiveRecord::Base
     }) if ENABLE_S3
 
   has_attached_file :picture, picture_options
+  acts_as_deactivatable :auto_configure_dependencies => true
+
 
     def self.directory
         names = Profile.all.reject{|profile| profile.first_name.blank? || profile.last_name.blank?}.sort{|x,y|

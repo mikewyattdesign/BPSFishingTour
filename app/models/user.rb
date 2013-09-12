@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
     has_many :scores, through: :teams
     has_many :events, through: :teams
 
+    acts_as_deactivatable :auto_configure_dependencies => true
+
 
     def full_name(arrangement = 'f l')
         if self.profile.first_name.nil? || self.profile.last_name.nil?
