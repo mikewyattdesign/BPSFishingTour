@@ -70,6 +70,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    deactivatable (0.1.1)
+      activerecord (>= 2.3)
     debug_inspector (0.0.2)
     devise (3.0.2)
       bcrypt-ruby (~> 3.0)
@@ -247,6 +249,7 @@ DEPENDENCIES
   bourbon (= 3.1.8)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.0)
+  deactivatable
   devise (= 3.0.2)
   factory_girl_rails (= 4.2.1)
   fuubar (~> 1.1.1)

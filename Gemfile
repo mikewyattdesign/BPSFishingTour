@@ -10,6 +10,7 @@ gem 'newrelic_rpm', '3.6.6.147'
 gem 'devise', '3.0.2'
 gem 'bootstrap-sass', '2.3.2.1'
 gem 'paperclip', '3.5.1'
+gem 'deactivatable'
 
 group :development, :test do
     gem 'sqlite3', '1.3.7'
