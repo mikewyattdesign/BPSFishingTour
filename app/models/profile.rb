@@ -19,7 +19,7 @@ class Profile < ActiveRecord::Base
     }) if ENABLE_S3
 
   has_attached_file :picture, picture_options
-  acts_as_deactivatable :auto_configure_dependencies => true
+  acts_as_deactivatable
 
 
     def self.directory
@@ -64,6 +64,16 @@ class Profile < ActiveRecord::Base
         else
             "#{self.last_name.to_s.nameize}, #{self.first_name.to_s.nameize}"
         end
+    end
+
+    def deactivate
+        self.user.update_attribute('deactivated_at', Time.now) if self.user.deactivated_at.nil?
+        self.update_attribute('deactivated_at', Time.now) if self.user.deactivated_at.nil?
+    end
+
+    def activate
+        self.user.update_attribute('deactivated_at', nil) unless self.user.deactivated_at.nil?
+        self.update_attribute('deactivated_at', nil) unless self.user.deactivated_at.nil?
     end
 
 end

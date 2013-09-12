@@ -73,6 +73,20 @@ class Team < ActiveRecord::Base
             .uniq.each {|score| score.update(team_id: self.id)}
     end
 
+    def deactivate
+        self.users.each { |member|
+            member.update_attribute('deactivated_at', Time.now) if member.deactivated_at.nil?
+            member.profile.update_attribute('deactivated_at', Time.now) if member.deactivated_at.nil?
+        }
+    end
+
+    def activate
+        self.users.each { |member|
+        member.update_attribute('deactivated_at', nil) unless member.deactivated_at.nil?
+        member.profile.update_attribute('deactivated_at', nil) unless member.deactivated_at.nil?
+        }
+    end
+
     class FullTeamError < StandardError
     end
 

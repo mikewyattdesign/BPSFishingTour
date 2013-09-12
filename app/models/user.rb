@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     has_many :scores, through: :teams
     has_many :events, through: :teams
 
-    acts_as_deactivatable :auto_configure_dependencies => true
+    acts_as_deactivatable
 
 
     def full_name(arrangement = 'f l')
@@ -74,6 +74,16 @@ class User < ActiveRecord::Base
         return false if self.teammate
         team = Team.create
         team.team_up(self,teammate)
+    end
+
+    def deactivate
+        self.update_attribute('deactivated_at', Time.now) if self.deactivated_at.nil?
+        self.profile.update_attribute('deactivated_at', Time.now) if self.deactivated_at.nil?
+    end
+
+    def activate
+        self.update_attribute('deactivated_at', nil) unless self.deactivated_at.nil?
+        self.profile.update_attribute('deactivated_at', nil) unless self.deactivated_at.nil?
     end
 
 end
