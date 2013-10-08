@@ -15,7 +15,16 @@
 .top-ten + .board {
     @for $i from 1 through 10 {
          tbody tr:nth-child(#{$i}) {
-            background-color: $yellow;
+            background-color: #618B69;
+            color: white;
+            a {
+                color: lighten(#618B69, 60%);
+                font-weight: bold;
+            }
+            &:hover, &:hover td {
+               background-color: lighten(#618B69, 20%);
+                color: white;
+            }
         }
     }
 }
