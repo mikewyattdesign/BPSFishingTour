@@ -11,7 +11,7 @@
 
         <div class="leaderBotCont">
             <p>The Bass Pro Shops Fishing Tour leaderboards report team scores based on the number of events fished by each team. To qualify for all of the Bass Pro Shops Fishing Tour perks, your team must fish in a minimum of five CSFL sanctioned events. Check back often for updates.</p>
-            <p class="alert top-ten">The top 10 teams qualify for free entry to the Lake Simcoe Open!</p>
+            <a href="/news/2013/10/07/congratulations-to-our-top-ten-finishers" class="alert top-ten">The top 10 teams qualify for free entry to the Lake Simcoe Open!</a>
 
             <% board = @boards[5] %>
             <%= render(partial: 'table', locals: { board: board }) if board.present? %>

@@ -22,6 +22,8 @@
 .alert.top-ten {
     margin-top: 20px;
     margin-bottom: -10px;
+    display: block;
+    text-decoration: none;
 }
 .small-scores-container {
     max-height: 215px;
@@ -94,5 +96,21 @@
 
     a:hover {
         color: $yellow;
+    }
+}
+
+.top-ten-only {
+    span {
+        font-size: 250%;
+        font-weight: bold;
+    }
+    .board {
+        margin-top: 0;
+    }
+    .board caption {
+        display: none;
+    }
+    tbody tr:nth-child(n+11) {
+        display: none;
     }
 }

@@ -1,0 +1,30 @@
+<div id="newsContainer">
+    <div class="staticContainer">
+        <div class="staticTopBar topDarkBrown">
+            <%= image_tag 'iconNews.png', class: 'iconNews', alt: 'Anglers' %>
+            <h1><%= link_to 'News', news_path %></h1>
+        </div>
+
+        <div class="newsBotCont">
+            <div class="mediaCont">
+                <div class="article">
+<h2>Congratulations to our Top Ten Finishers!</h2>
+
+<p>Each team among the Top Ten Finishers in the Bass Pro Shops Fishing Tour is eligible for free entry into the Lake Simcoe Open on Staturday, October 19th.</p>
+<div class="top-ten-only">
+    <span>Top Ten Finishers</span>
+<% board = @boards[5] %>
+            <%= render(partial: 'leaderboard/table', locals: { board: board }) if board.present? %>
+</div>
+<p>If you are among these winners and haven&apos;t secured your free entry into the tournament, please contact Lisa De Bartolo via email at <a href="mailto:ldebartolo@basspro.com">ldebartolo[at]basspro[dot]com</a> or by phone at (905) 761-4002.</p>
+
+<p>Thank you to all anglers participating in the introduction of Bass Pro Shops Fishing Tour. Your ongoing support has provided a successful start to an exciting new program for us.</p>
+
+<p>For more information about the Lake Simcoe Open <a href="http://www.simcoeopen.com">visit the website at www.simcoeopen.com</a>.</p>
+
+<p><a href="/leaderboard">Click here</a> to see the full leader board.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
