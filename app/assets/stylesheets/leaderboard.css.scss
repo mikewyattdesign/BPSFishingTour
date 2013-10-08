@@ -12,6 +12,17 @@
         text-align: left;
     }
 }
+.top-ten + .board {
+    @for $i from 1 through 10 {
+         tbody tr:nth-child(#{$i}) {
+            background-color: $yellow;
+        }
+    }
+}
+.alert.top-ten {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
 .small-scores-container {
     max-height: 215px;
     overflow-y: auto;
